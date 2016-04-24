@@ -3,8 +3,10 @@ package poliues.eisi.fia.edu.sv.poliues;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -36,11 +38,12 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
 
     /**
      * Id to identity READ_CONTACTS permission request.
      */
+
     private static final int REQUEST_READ_CONTACTS = 0;
 
     /**
@@ -65,6 +68,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //////////////////////////////////////////////////////
+
+        Button boton;
+        boton = (Button) findViewById(R.id.entrar_principal);
+        boton.setOnClickListener(this);
+
+
+        //////////////////////////////////////////////////////
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -273,7 +286,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
 
     }
-
+    ///////////////////////////////////////////////////////////////////////////
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.entrar_principal:
+                Intent inte = new Intent(LoginActivity.this, principal.class);
+                startActivity(inte);
+                break;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
