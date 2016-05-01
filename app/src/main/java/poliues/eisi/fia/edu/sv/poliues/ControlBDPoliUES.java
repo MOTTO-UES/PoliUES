@@ -51,78 +51,11 @@ public class ControlBDPoliUES {
 
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");
 
-                /*COMPRUEBA QUE EXISTA LA ACTIVIDAD EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_Solicitud_Actividad" +
-                        " BEFORE INSERT ON Solicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idActividad from Actividad WHERE idActividad = actividad) IS NULL)" +
-                        "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
-                        "   WHEN((SELECT idSolicitante from Solicitante WHERE idSolicitante = solicitante) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO SIRVE')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA TARIFA EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_Solicitud_Tarifa" +
-                        " BEFORE INSERT ON Solicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE LA TARIFA')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA El SOLICITANTE EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_Solicitud_Solicitante" +
-                        " BEFORE INSERT ON Solicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idSolicitante from Solicitante WHERE idSolicitante = solicitante) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE El solicitante')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA SOLICITUD EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Solicitud" +
-                        " BEFORE INSERT ON DetalleSolicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idSolicitud from Solicitud WHERE idSolicitud = solicitud) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE LA SOLICITUD')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA AREA EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Area" +
-                        " BEFORE INSERT ON DetalleSolicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idArea from Area WHERE idArea = area) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE El area')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA AREA EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Area" +
-                        " BEFORE INSERT ON DetalleSolicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idArea from Area WHERE idArea = area) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE El area')" +
-                        " END;" +
-                        " END;");
-
-
-            }
+                            }
             catch (SQLException e){
                 e.printStackTrace();
+
+               // System.out.println(e.getMessage());
             }
 
         }
