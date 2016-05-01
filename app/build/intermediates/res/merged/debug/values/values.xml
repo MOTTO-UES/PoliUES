@@ -267,6 +267,8 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="Actividad">actividad</string>
+    <string name="Administrador">Administrador</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -291,19 +293,29 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="app_name">PoliUES</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="area">area</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="cobroTotal">cobro total</string>
     <string name="entrar_principal">Puerta Tracera</string>
     <string name="error_field_required">Campo requerido</string>
     <string name="error_incorrect_password">Contraseña incorecta</string>
     <string name="error_invalid_email">Direccion de correo erronea</string>
     <string name="error_invalid_password">Contraseña muy corta</string>
+    <string name="fechaCreacion">fecha de creacion</string>
+    <string name="fechaFinal">fecha Final</string>
+    <string name="fechaInicio">fecha Inicio</string>
+    <string name="idDescripcion">idDescripcion</string>
+    <string name="idSolicitud">id solicitud</string>
+    <string name="motivoSolicitud">motivo solicitud</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="tarifa">Tarifa</string>
     <string name="title_activity_principal">principal</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

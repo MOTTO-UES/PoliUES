@@ -30,6 +30,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,11 +65,23 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    ControlBDPoliUES BDhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        BDhelper = new ControlBDPoliUES(this);
+
+        System.out.println("antes de abrir");
+        BDhelper.abrir();
+        System.out.println("despues de abrir");
+        String tost = BDhelper.llenarBDSR11038();
+        System.out.println("despues de llenar");
+        BDhelper.cerrar();
+        System.out.println("despues de cerrar");
+        Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+        System.out.println("el toast");
 
         //////////////////////////////////////////////////////
 

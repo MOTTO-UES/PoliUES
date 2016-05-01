@@ -754,30 +754,30 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040016;
 		public static final int abc_search_view = 0x7f040017;
 		public static final int abc_select_dialog_material = 0x7f040018;
-		public static final int design_bottom_sheet_dialog = 0x7f04001d;
-		public static final int design_layout_snackbar = 0x7f04001e;
-		public static final int design_layout_snackbar_include = 0x7f04001f;
-		public static final int design_layout_tab_icon = 0x7f040020;
-		public static final int design_layout_tab_text = 0x7f040021;
-		public static final int design_menu_item_action_area = 0x7f040022;
-		public static final int design_navigation_item = 0x7f040023;
-		public static final int design_navigation_item_header = 0x7f040024;
-		public static final int design_navigation_item_separator = 0x7f040025;
-		public static final int design_navigation_item_subheader = 0x7f040026;
-		public static final int design_navigation_menu = 0x7f040027;
-		public static final int design_navigation_menu_item = 0x7f040028;
-		public static final int notification_media_action = 0x7f04002a;
-		public static final int notification_media_cancel_action = 0x7f04002b;
-		public static final int notification_template_big_media = 0x7f04002c;
-		public static final int notification_template_big_media_narrow = 0x7f04002d;
-		public static final int notification_template_lines = 0x7f04002e;
-		public static final int notification_template_media = 0x7f04002f;
-		public static final int notification_template_part_chronometer = 0x7f040030;
-		public static final int notification_template_part_time = 0x7f040031;
-		public static final int select_dialog_item_material = 0x7f040032;
-		public static final int select_dialog_multichoice_material = 0x7f040033;
-		public static final int select_dialog_singlechoice_material = 0x7f040034;
-		public static final int support_simple_spinner_dropdown_item = 0x7f040035;
+		public static final int design_bottom_sheet_dialog = 0x7f04001f;
+		public static final int design_layout_snackbar = 0x7f040020;
+		public static final int design_layout_snackbar_include = 0x7f040021;
+		public static final int design_layout_tab_icon = 0x7f040022;
+		public static final int design_layout_tab_text = 0x7f040023;
+		public static final int design_menu_item_action_area = 0x7f040024;
+		public static final int design_navigation_item = 0x7f040025;
+		public static final int design_navigation_item_header = 0x7f040026;
+		public static final int design_navigation_item_separator = 0x7f040027;
+		public static final int design_navigation_item_subheader = 0x7f040028;
+		public static final int design_navigation_menu = 0x7f040029;
+		public static final int design_navigation_menu_item = 0x7f04002a;
+		public static final int notification_media_action = 0x7f04002c;
+		public static final int notification_media_cancel_action = 0x7f04002d;
+		public static final int notification_template_big_media = 0x7f04002e;
+		public static final int notification_template_big_media_narrow = 0x7f04002f;
+		public static final int notification_template_lines = 0x7f040030;
+		public static final int notification_template_media = 0x7f040031;
+		public static final int notification_template_part_chronometer = 0x7f040032;
+		public static final int notification_template_part_time = 0x7f040033;
+		public static final int select_dialog_item_material = 0x7f040034;
+		public static final int select_dialog_multichoice_material = 0x7f040035;
+		public static final int select_dialog_singlechoice_material = 0x7f040036;
+		public static final int support_simple_spinner_dropdown_item = 0x7f040037;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f060000;
@@ -799,9 +799,9 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with = 0x7f060010;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f060011;
 		public static final int abc_toolbar_collapse_description = 0x7f060012;
-		public static final int appbar_scrolling_view_behavior = 0x7f060018;
-		public static final int bottom_sheet_behavior = 0x7f060019;
-		public static final int character_counter_pattern = 0x7f06001a;
+		public static final int appbar_scrolling_view_behavior = 0x7f06001a;
+		public static final int bottom_sheet_behavior = 0x7f06001c;
+		public static final int character_counter_pattern = 0x7f06001d;
 		public static final int status_bar_notification_info_overflow = 0x7f060013;
 	}
 	public static final class style {

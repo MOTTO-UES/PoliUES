@@ -5,15 +5,15 @@ package poliues.eisi.fia.edu.sv.poliues;
  */
 public class DetalleSolicitud {
     private int idDescripcion;
-    private Solicitud solicitud;
-    private Area area;
+    private int solicitud;
+    private int area;
     private String fechaInicio;
     private String fechaFinal;
     private double cobroTotal;
 
 
 
-    public DetalleSolicitud(int idDescripcion, Solicitud solicitud, Area area, String fechaInicio, String fechaFinal, double cobroTotal) {
+    public DetalleSolicitud(int idDescripcion, int solicitud, int area, String fechaInicio, String fechaFinal, double cobroTotal) {
         this.idDescripcion = idDescripcion;
         this.solicitud = solicitud;
         this.area = area;
@@ -33,19 +33,19 @@ public class DetalleSolicitud {
         this.idDescripcion = idDescripcion;
     }
 
-    public Solicitud getSolicitud() {
+    public int getSolicitud() {
         return solicitud;
     }
 
-    public void setSolicitud(Solicitud solicitud) {
+    public void setSolicitud(int solicitud) {
         this.solicitud = solicitud;
     }
 
-    public Area getArea() {
+    public int getArea() {
         return area;
     }
 
-    public void setArea(Area area) {
+    public void setArea(int area) {
         this.area = area;
     }
 
