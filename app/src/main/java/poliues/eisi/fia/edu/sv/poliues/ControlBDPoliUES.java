@@ -46,10 +46,67 @@ public class ControlBDPoliUES {
 
             try{
 
-                db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER, motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
+                db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
                 db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
 
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");
+
+                /*COMPRUEBA QUE EXISTA LA ACTIVIDAD EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
+                db.execSQL("CREATE TRIGGER fk_Solicitud_Actividad" +
+                        " BEFORE INSERT ON Solicitud" +
+                        " FOR EACH ROW" +
+                        " BEGIN" +
+                        "   SELECT CASE" +
+                        "   WHEN((SELECT idActividad from Actividad WHERE idActividad = actividad) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO EXISTE ACTIVIDAD')" +
+                        " END;" +
+                        " END;");
+
+                /*COMPRUEBA QUE EXISTA LA TARIFA EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
+                db.execSQL("CREATE TRIGGER fk_Solicitud_Tarifa" +
+                        " BEFORE INSERT ON Solicitud" +
+                        " FOR EACH ROW" +
+                        " BEGIN" +
+                        "   SELECT CASE" +
+                        "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO EXISTE LA TARIFA')" +
+                        " END;" +
+                        " END;");
+
+                /*COMPRUEBA QUE EXISTA LA SOLICITUD EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
+                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Solicitud" +
+                        " BEFORE INSERT ON DetalleSolicitud" +
+                        " FOR EACH ROW" +
+                        " BEGIN" +
+                        "   SELECT CASE" +
+                        "   WHEN((SELECT idSolicitud from Solicitud WHERE idSolicitud = solicitud) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO EXISTE LA SOLICITUD')" +
+                        " END;" +
+                        " END;");
+
+                /*COMPRUEBA QUE EXISTA LA AREA EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
+                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Area" +
+                        " BEFORE INSERT ON DetalleSolicitud" +
+                        " FOR EACH ROW" +
+                        " BEGIN" +
+                        "   SELECT CASE" +
+                        "   WHEN((SELECT idArea from Area WHERE idArea = area) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO EXISTE El area')" +
+                        " END;" +
+                        " END;");
+
+                /*COMPRUEBA QUE EXISTA LA AREA EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
+                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Area" +
+                        " BEFORE INSERT ON DetalleSolicitud" +
+                        " FOR EACH ROW" +
+                        " BEGIN" +
+                        "   SELECT CASE" +
+                        "   WHEN((SELECT idArea from Area WHERE idArea = area) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO EXISTE El area')" +
+                        " END;" +
+                        " END;");
+
+
             }
             catch (SQLException e){
                 e.printStackTrace();
@@ -62,6 +119,7 @@ public class ControlBDPoliUES {
 
         }
     }
+
 
 
     public void abrir() throws SQLException{
@@ -83,6 +141,7 @@ public class ControlBDPoliUES {
         sol.put("actividad",solicitud.getActividad());
         sol.put("tarifa",solicitud.getTarifa());
         sol.put("administrador",solicitud.getAdministrador());
+        sol.put("solicitante",solicitud.getSolicitante());
         sol.put("motivoSolicitud",solicitud.getMotivoSolicitud());
         sol.put("fechaCreacion",solicitud.getFechaCreacion());
 
@@ -158,6 +217,7 @@ public class ControlBDPoliUES {
         final int[] TSactividad = {1,3};
         final int[] TStarifa = {1,1};
         final int[] TSadministrador = {1,1};
+        final int[] TSsolicitante = {1,2};
         final String[] TSmotivoSolicitud = {"intramuros","juegos interfacultad"};
         final String[] TSfechaCreacion = {"2016-04-29","206-04-30"};
 
@@ -185,6 +245,7 @@ public class ControlBDPoliUES {
             soli.setActividad(TSactividad[i]);
             soli.setTarifa(TDSsolicitud[i]);
             soli.setAdministrador(TSadministrador[i]);
+            soli.setSolicitante(TSsolicitante[i]);
             soli.setMotivoSolicitud(TSmotivoSolicitud[i]);
             soli.setFechaCreacion(TSfechaCreacion[i]);
            insertar(soli);
@@ -206,4 +267,5 @@ public class ControlBDPoliUES {
         return "Guardo Correctamente";
     }
 }
+
 

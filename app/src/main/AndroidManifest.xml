@@ -26,8 +26,8 @@
             android:name=".principal"
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SolicitudActivity" />
-        <activity android:name=".DetalleSolicitudActivity"></activity>
+        <activity android:name=".InsertarSolicitudActivity" />
+        <activity android:name=".InsertarDetalleSolicitudActivity"></activity>
     </application>
 
 </manifest>
