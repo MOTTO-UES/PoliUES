@@ -22,10 +22,9 @@
     <string name="action_settings">Settings</string>
 
 
-
     <!--DERALLE SOLICITUD, RODRIGO-->
 
-   <string name="idDescripcion">idDescripcion</string>
+    <string name="idDescripcion">idDescripcion</string>
     <string name="solicitud">solicitud</string>
     <string name="area">area</string>
     <string name="fechaInicio">fecha Inicio</string>

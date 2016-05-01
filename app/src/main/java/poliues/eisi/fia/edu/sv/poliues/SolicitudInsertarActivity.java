@@ -3,7 +3,7 @@ package poliues.eisi.fia.edu.sv.poliues;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SolicitudActivity extends AppCompatActivity {
+public class SolicitudInsertarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

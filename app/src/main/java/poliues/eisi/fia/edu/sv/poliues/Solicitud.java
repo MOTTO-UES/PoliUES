@@ -8,6 +8,7 @@ public class Solicitud {
     private int actividad;
     private int tarifa;
     private int administrador;
+    private int solicitante;
     private String motivoSolicitud;
     private String fechaCreacion;
 
@@ -15,14 +16,17 @@ public class Solicitud {
 
     }
 
-    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, String motivoSolicitud, String fechaCreacion) {
+    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, int solicitante, String motivoSolicitud, String fechaCreacion) {
         this.idSolicitud = idSolicitud;
         this.actividad = actividad;
         this.tarifa = tarifa;
         this.administrador = administrador;
+        this.solicitante = solicitante;
         this.motivoSolicitud = motivoSolicitud;
         this.fechaCreacion = fechaCreacion;
     }
+
+
 
     public int getIdSolicitud() {
         return idSolicitud;
@@ -54,6 +58,14 @@ public class Solicitud {
 
     public void setAdministrador(int administrador) {
         this.administrador = administrador;
+    }
+
+    public int getSolicitante() {
+        return solicitante;
+    }
+
+    public void setSolicitante(int solicitante) {
+        this.solicitante = solicitante;
     }
 
     public String getMotivoSolicitud() {
