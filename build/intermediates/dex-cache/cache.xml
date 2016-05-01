@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.2.1_9148651b007dee355f52d575cc2e30ff25cf73bb.jar" />
+    </item>
+    <item
         jar="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
@@ -14,13 +21,6 @@
         revision="23.0.2"
         sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
         <dex dex="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.1_4b5e813f50b6bd55ca6c55909e61d6524bfaf03e.jar" />
-    </item>
-    <item
-        jar="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
-        <dex dex="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.2.1_9148651b007dee355f52d575cc2e30ff25cf73bb.jar" />
     </item>
     <item
         jar="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"

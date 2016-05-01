@@ -58,7 +58,9 @@ public class ControlBDPoliUES {
                         " BEGIN" +
                         "   SELECT CASE" +
                         "   WHEN((SELECT idActividad from Actividad WHERE idActividad = actividad) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE ACTIVIDAD')" +
+                        "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
+                        "   WHEN((SELECT idSolicitante from Solicitante WHERE idSolicitante = solicitante) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO SIRVE')" +
                         " END;" +
                         " END;");
 
@@ -70,6 +72,17 @@ public class ControlBDPoliUES {
                         "   SELECT CASE" +
                         "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
                         "   THEN RAISE(ABORT, 'NO EXISTE LA TARIFA')" +
+                        " END;" +
+                        " END;");
+
+                /*COMPRUEBA QUE EXISTA El SOLICITANTE EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
+                db.execSQL("CREATE TRIGGER fk_Solicitud_Solicitante" +
+                        " BEFORE INSERT ON Solicitud" +
+                        " FOR EACH ROW" +
+                        " BEGIN" +
+                        "   SELECT CASE" +
+                        "   WHEN((SELECT idSolicitante from Solicitante WHERE idSolicitante = solicitante) IS NULL)" +
+                        "   THEN RAISE(ABORT, 'NO EXISTE El solicitante')" +
                         " END;" +
                         " END;");
 
@@ -224,9 +237,9 @@ public class ControlBDPoliUES {
 
         /*REGISTROS TABLA DETALLESOLICITUD*/
         final int[] TDSidDescripcion = {1,2};
-        final int[] TDSsolicitud = {1,2};
-        final int[] TDSarea = {1,3};
-        final String[] TDSfechaInicio ={"2016-05-02","2016-05-04"};
+        final int[] TDSsolicitud = {1, 2};
+        final int[] TDSarea = {1, 3};
+        final String[] TDSfechaInicio ={"2016-05-02", "2016-05-04"};
         final String[] TDSfechaFinal ={"2016-05-02", "2016-05-05"};
         final double[] TDScobroTotal = {0,0};
 

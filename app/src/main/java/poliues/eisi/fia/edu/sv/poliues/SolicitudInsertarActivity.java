@@ -3,11 +3,11 @@ package poliues.eisi.fia.edu.sv.poliues;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class InsertarDetalleSolicitudActivity extends AppCompatActivity {
+public class SolicitudInsertarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalle_solicitud);
+        setContentView(R.layout.activity_solicitud);
     }
 }
