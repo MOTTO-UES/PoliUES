@@ -13,7 +13,7 @@ import android.os.Build;
 public class ControlBDPoliUES {
 
     private static final  String[] camposreserva = new  String[]
-            {"idreserva", "idhorario", "facultad", "fechaingreso", "numeropersonas", "motivo","descripcionreserva"};
+            {"idreserva","idhorario","facultad","fechaingreso","numeropersonas","motivo","descripcionreserva"};
 
     private static final  String[] camposSolicitud = new  String[]
         {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud", "fechaCreacion"};
