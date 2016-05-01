@@ -32,6 +32,8 @@
             android:name="poliues.eisi.fia.edu.sv.poliues.principal"
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.SolicitudActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudActivity" />
     </application>
 
 </manifest>

@@ -20,4 +20,25 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+
+
+
+    <!--DERALLE SOLICITUD, RODRIGO-->
+
+   <string name="idDescripcion">idDescripcion</string>
+    <string name="solicitud">solicitud</string>
+    <string name="area">area</string>
+    <string name="fechaInicio">fecha Inicio</string>
+    <string name="fechaFinal">fecha Final</string>
+    <string name="cobroTotal">cobro total</string>
+
+    <!--SOLICITUD, RODRIGO-->
+
+    <string name="idSolicitud">id solicitud</string>
+    <string name="Actividad">actividad</string>
+    <string name="tarifa">Tarifa</string>
+    <string name="Administrador">Administrador</string>
+    <string name="motivoSolicitud">motivo solicitud</string>
+    <string name="fechaCreacion">fecha de creacion</string>
+
 </resources>
