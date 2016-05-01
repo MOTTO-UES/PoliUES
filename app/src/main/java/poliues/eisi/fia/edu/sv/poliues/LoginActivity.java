@@ -43,6 +43,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     /**
      * Id to identity READ_CONTACTS permission request.
      */
+    //ControlDBPoliUES BDhelper;
+
+
 
     private static final int REQUEST_READ_CONTACTS = 0;
 

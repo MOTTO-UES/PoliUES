@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="D:\USB\PoliUES\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\USB\PoliUES\app\src\debug\jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\debug\jniLibs"/></dataSet></merger>
->>>>>>> origin/rodrigo
