@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "D:\\USB\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
+=======
+        "outputFile": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-port\\values-port.xml",
+>>>>>>> origin/rodrigo
         "map": [
             {
                 "to": {
@@ -11,7 +15,11 @@
                     "endOffset": 106
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-port\\values-port.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-port\\values-port.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

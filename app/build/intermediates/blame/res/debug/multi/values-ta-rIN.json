@@ -385,7 +385,11 @@
         ]
     },
     {
+<<<<<<< HEAD
         "outputFile": "D:\\USB\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+        "outputFile": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
         "map": [
             {
                 "to": {
@@ -396,7 +400,11 @@
                     "endOffset": 164
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -415,7 +423,11 @@
                     "endOffset": 272
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -434,7 +446,11 @@
                     "endOffset": 395
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -453,7 +469,11 @@
                     "endOffset": 500
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -472,7 +492,11 @@
                     "endOffset": 615
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -491,7 +515,11 @@
                     "endOffset": 704
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -510,7 +538,11 @@
                     "endOffset": 811
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -529,7 +561,11 @@
                     "endOffset": 937
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -548,7 +584,11 @@
                     "endOffset": 1018
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -567,7 +607,11 @@
                     "endOffset": 1098
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -586,7 +630,11 @@
                     "endOffset": 1180
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -605,7 +653,11 @@
                     "endOffset": 1282
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -624,7 +676,11 @@
                     "endOffset": 1386
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -643,7 +699,11 @@
                     "endOffset": 1483
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -662,7 +722,11 @@
                     "endOffset": 1593
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -681,7 +745,11 @@
                     "endOffset": 1695
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -700,7 +768,11 @@
                     "endOffset": 1802
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -719,7 +791,11 @@
                     "endOffset": 1921
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -738,7 +814,11 @@
                     "endOffset": 2021
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -757,7 +837,11 @@
                     "endOffset": 2122
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-ta-rIN\\values-ta-rIN.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,

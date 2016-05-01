@@ -352,7 +352,11 @@
         ]
     },
     {
+<<<<<<< HEAD
         "outputFile": "D:\\USB\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-v11\\values-v11.xml",
+=======
+        "outputFile": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
         "map": [
             {
                 "to": {
@@ -364,7 +368,11 @@
                     "endOffset": 469
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -385,7 +393,11 @@
                     "endOffset": 894
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -406,7 +418,11 @@
                     "endOffset": 1322
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -427,7 +443,11 @@
                     "endOffset": 1748
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -448,7 +468,11 @@
                     "endOffset": 2175
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -469,7 +493,11 @@
                     "endOffset": 2600
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -489,7 +517,11 @@
                     "endOffset": 2689
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 38,
                         "startColumn": 4,
@@ -508,7 +540,11 @@
                     "endOffset": 2790
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -528,7 +564,11 @@
                     "endOffset": 3198
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,
@@ -549,7 +589,11 @@
                     "endOffset": 3618
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 45,
                         "startColumn": 4,
@@ -570,7 +614,11 @@
                     "endOffset": 3725
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 50,
                         "startColumn": 4,
@@ -591,7 +639,11 @@
                     "endOffset": 3854
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 52,
                         "startColumn": 4,
@@ -611,7 +663,11 @@
                     "endOffset": 3925
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 54,
                         "startColumn": 4,
@@ -630,7 +686,11 @@
                     "endOffset": 4008
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 55,
                         "startColumn": 4,
@@ -650,7 +710,11 @@
                     "endOffset": 7716
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 56,
                         "startColumn": 4,
@@ -671,7 +735,11 @@
                     "endOffset": 11564
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 107,
                         "startColumn": 4,
@@ -691,7 +759,11 @@
                     "endOffset": 11655
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+=======
+                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/rodrigo
                     "position": {
                         "startLine": 159,
                         "startColumn": 4,
