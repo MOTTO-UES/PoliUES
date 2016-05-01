@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\USB\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\USB\\PoliUES\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
 ]
