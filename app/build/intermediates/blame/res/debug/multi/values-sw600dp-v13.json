@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-        "outputFile": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 119
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 189
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 263
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 339
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 398
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 469
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 537
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 597
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 667
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -222,11 +182,7 @@
                     "endOffset": 738
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -245,11 +201,7 @@
                     "endOffset": 810
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -268,11 +220,7 @@
                     "endOffset": 868
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -291,11 +239,7 @@
                     "endOffset": 926
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -314,11 +258,7 @@
                     "endOffset": 1032
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -337,11 +277,7 @@
                     "endOffset": 1096
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -360,11 +296,7 @@
                     "endOffset": 1151
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -383,11 +315,7 @@
                     "endOffset": 1214
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -407,11 +335,7 @@
                     "endOffset": 1396
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,

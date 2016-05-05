@@ -45,11 +45,48 @@ public class ControlBDPoliUES {
         public void onCreate(SQLiteDatabase db){
 
             try{
+                ////////////////////////////////////////////////////////////////////////////////////
+                ///DROP TBL
+                db.execSQL(
+                        "DROP TABLE Solicitante; " +
+                        "DROP TABLE Administrador; "
+
+
+                );
+                //FIN DROP TBL
+                ////////////////////////////////////////////////////////////////////////////////////
 
                 db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
                 db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
 
+                /////////////////////////////////////////////////////////////////////
+                ////MOTTO TBL
+                db.execSQL(
+                        "CREATE TABLE Administrador " +
+                        "(" +
+                        "   idAdministrador      INTEGER              NOT NULL," +
+                        "   nombreAdmin          VARCHAR2(25)         NOT NULL," +
+                        "   paswordAdmin         VARCHAR2(25)         NOT NULL," +
+                        "   correoAdmin          VARCHAR2(25)         NOT NULL" +
+                        ");"
+                );
+                db.execSQL(
+                        "CREATE TABLE Solicitud " +
+                        "(" +
+                        "   idSolicitante        INTEGER              NOT NULL," +
+                        "   nombre               VARCHAR2(25)         NOT NULL," +
+                        "   password             VARCHAR2(25)         NOT NULL," +
+                        "   correo               VARCHAR2(25)         NOT NULL" +
+                        ");"
+                );
+                //FIN CREACION TBL MOTTO
+                //////////////////////////////////////////////////////////////////
+
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");
+
+
+                /////////////////////////////////////////////////////////////////////////////
+                //TRIGGER == FK
 
                 /*COMPRUEBA QUE EXISTA LA ACTIVIDAD EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
                 db.execSQL("CREATE TRIGGER fk_Solicitud_Actividad" +
@@ -119,7 +156,8 @@ public class ControlBDPoliUES {
                         " END;" +
                         " END;");
 
-
+                //FIN TRIGGER == FK
+                ////////////////////////////////////////////////////////////////////////////////////
             }
             catch (SQLException e){
                 e.printStackTrace();
@@ -145,7 +183,7 @@ public class ControlBDPoliUES {
 
 
     /*CRUD SOLICITUD-RODRIGO*/
-    public String insertar(Solicitud solicitud){
+    public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";
         long contador=0;
         ContentValues sol = new ContentValues();

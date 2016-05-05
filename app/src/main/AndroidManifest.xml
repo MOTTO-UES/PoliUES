@@ -31,7 +31,11 @@
         <activity android:name=".SolicitudActualizarActivity" />
         <activity android:name=".SolicitudEliminarActivity" />
         <activity android:name=".SolicitudConsultarActivity" />
-        <activity android:name=".DetalleSolicitudActualizarActivity"></activity>
+        <activity android:name=".DetalleSolicitudActualizarActivity" />
+        <activity
+            android:name=".AdministradorActivity"
+            android:label="@string/title_activity_administrador"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

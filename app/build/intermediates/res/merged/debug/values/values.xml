@@ -316,6 +316,9 @@
     <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tarifa">Tarifa</string>
+    <string name="title_activity_administrador">AdministradorActivity</string>
+    <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
+    <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_principal">principal</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

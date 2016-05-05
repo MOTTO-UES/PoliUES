@@ -3,9 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/administrador"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Gestionar Administrador" />
+        <item
+            android:id="@+id/solicitante"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Gestionar Solicitante" />
+        <!--
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
@@ -18,8 +23,9 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Tools" />
+            -->
     </group>
-
+    <!--
     <item android:title="Communicate">
         <menu>
             <item
@@ -32,5 +38,6 @@
                 android:title="Send" />
         </menu>
     </item>
+    -->
 
 </menu>

@@ -39,5 +39,8 @@
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="fechaCreacion">fecha de creacion</string>
+    <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
+    <string name="title_activity_administrador">AdministradorActivity</string>
+    <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
 
 </resources>
