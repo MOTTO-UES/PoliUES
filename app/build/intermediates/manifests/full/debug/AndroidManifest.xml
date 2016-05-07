@@ -38,6 +38,10 @@
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.SolicitudEliminarActivity" />
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.SolicitudConsultarActivity" />
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudActualizarActivity" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorActivity"
+            android:label="@string/title_activity_administrador"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

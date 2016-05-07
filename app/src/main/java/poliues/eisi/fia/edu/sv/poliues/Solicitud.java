@@ -10,19 +10,21 @@ public class Solicitud {
     private int administrador;
     private int solicitante;
     private String motivoSolicitud;
+    private String estadoSolicitud;
     private String fechaCreacion;
 
     public Solicitud(){
 
     }
 
-    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, int solicitante, String motivoSolicitud, String fechaCreacion) {
+    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, int solicitante, String motivoSolicitud, String estadoSolicitud, String fechaCreacion) {
         this.idSolicitud = idSolicitud;
         this.actividad = actividad;
         this.tarifa = tarifa;
         this.administrador = administrador;
         this.solicitante = solicitante;
         this.motivoSolicitud = motivoSolicitud;
+        this.estadoSolicitud = estadoSolicitud;
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -84,7 +86,11 @@ public class Solicitud {
         this.fechaCreacion = fechaCreacion;
     }
 
+    public String getEstadoSolicitud() {
+        return estadoSolicitud;
+    }
 
-
-
+    public void setEstadoSolicitud(String estadoSolicitud) {
+        this.estadoSolicitud = estadoSolicitud;
+    }
 }

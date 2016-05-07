@@ -13,7 +13,7 @@ import android.os.Build;
 public class ControlBDPoliUES {
 
     private static final  String[] camposSolicitud = new  String[]
-        {"idSolicitud", "actividad", "tarifa", "administrador", "solicitante" ,"motivoSolicitud", "fechaCreacion"};
+        {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
 
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
@@ -29,6 +29,8 @@ public class ControlBDPoliUES {
     public ControlBDPoliUES(Context ctx) {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
+
+        //DBHelper.onCreate(db);
       }
 
 
@@ -45,17 +47,72 @@ public class ControlBDPoliUES {
         public void onCreate(SQLiteDatabase db){
 
             try{
+                ////////////////////////////////////////////////////////////////////////////////////
+                ///DROP TBL
+               db.execSQL(
+                        "DROP TABLE Solicitante; " +
+                       "DROP TABLE Administrador;" +
+                        "DROP TABLE Solicitud;" +
+                        "DROP TABLE DetalleSolicitud;"
 
-                db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER, solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
-                db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
+                );
+                //FIN DROP TBL
+                ////////////////////////////////////////////////////////////////////////////////////
+
+                db.execSQL("CREATE TABLE Solicitud(" +
+                        "idSolicitud INTEGER NOT NULL PRIMARY KEY, " +
+                        "actividad INTEGER, tarifa INTEGER, " +
+                        "administrador INTEGER," +
+                        "solicitante INTEGER; " +
+                        "motivoSolicitud VARCHAR(100)," +
+                        "estadoSolicitud VARCHAR (20)," +
+                        "fechaCreacion VARCHAR(10));");
+
+
+                db.execSQL("CREATE TABLE DetalleSolicitud(" +
+                        "idDescripcion INTEGER NOT NULL PRIMARY KEY," +
+                        "solicitud INTEGER, " +
+                        "area INTEGER, " +
+                        "fechaInicio VARCHAR(10), " +
+                        "fechaFinal VARCHAR(10), " +
+                        "cobroTotal REAL);");
+
+                /////////////////////////////////////////////////////////////////////
+                ////MOTTO TBL
+                db.execSQL(
+                        "CREATE TABLE Administrador " +
+                        "(" +
+                        "   idAdministrador      INTEGER              NOT NULL," +
+                        "   nombreAdmin          VARCHAR2(25)         NOT NULL," +
+                        "   paswordAdmin         VARCHAR2(25)         NOT NULL," +
+                        "   correoAdmin          VARCHAR2(25)         NOT NULL" +
+                        ");"
+                );
+                db.execSQL(
+                        "CREATE TABLE Solicitud " +
+                        "(" +
+                        "   idSolicitante        INTEGER              NOT NULL," +
+                        "   nombre               VARCHAR2(25)         NOT NULL," +
+                        "   password             VARCHAR2(25)         NOT NULL," +
+                        "   correo               VARCHAR2(25)         NOT NULL" +
+                        ");"
+                );
+                //FIN CREACION TBL MOTTO
+                //////////////////////////////////////////////////////////////////
 
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");
 
-                            }
+
+                /////////////////////////////////////////////////////////////////////////////
+                //TRIGGER == FK
+
+
+
+                //FIN TRIGGER == FK
+                ////////////////////////////////////////////////////////////////////////////////////
+            }
             catch (SQLException e){
                 e.printStackTrace();
-
-               // System.out.println(e.getMessage());
             }
 
         }
@@ -78,7 +135,7 @@ public class ControlBDPoliUES {
 
 
     /*CRUD SOLICITUD-RODRIGO*/
-    public String insertar(Solicitud solicitud){
+    public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";
         long contador=0;
         ContentValues sol = new ContentValues();
@@ -165,6 +222,7 @@ public class ControlBDPoliUES {
         final int[] TSadministrador = {1,1};
         final int[] TSsolicitante = {1,2};
         final String[] TSmotivoSolicitud = {"intramuros","juegos interfacultad"};
+        final String[] TSestadoSolicitud = {"aprobada","negada"};
         final String[] TSfechaCreacion = {"2016-04-29","206-04-30"};
 
 
@@ -178,10 +236,9 @@ public class ControlBDPoliUES {
 
 
         abrir();
-
-        db.execSQL("DELETE FROM Solicitud");
-        db.execSQL("DELETE FROM DetalleSolicitud");
+        //db.execSQL("DELETE FROM Solicitud");
         //db.execSQL("DELETE FROM DetalleSolicitud");
+        //db.execSQL("DELETE FROM nota");
 
 
         Solicitud soli = new Solicitud();
@@ -193,6 +250,7 @@ public class ControlBDPoliUES {
             soli.setAdministrador(TSadministrador[i]);
             soli.setSolicitante(TSsolicitante[i]);
             soli.setMotivoSolicitud(TSmotivoSolicitud[i]);
+            soli.setEstadoSolicitud(TSestadoSolicitud[i]);
             soli.setFechaCreacion(TSfechaCreacion[i]);
            insertar(soli);
         }

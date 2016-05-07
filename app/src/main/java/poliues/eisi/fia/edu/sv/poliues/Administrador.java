@@ -22,8 +22,6 @@ public class Administrador {
 
 
 
-
-
     public int getIdAdministrador() {
         return idAdministrador;
     }
