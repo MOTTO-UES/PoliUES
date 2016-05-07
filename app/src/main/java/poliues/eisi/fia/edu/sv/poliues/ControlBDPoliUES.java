@@ -13,7 +13,7 @@ import android.os.Build;
 public class ControlBDPoliUES {
 
     private static final  String[] camposSolicitud = new  String[]
-        {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud", "fechaCreacion"};
+        {"idSolicitud", "actividad", "tarifa", "administrador", "solicitante" ,"motivoSolicitud", "fechaCreacion"};
 
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
@@ -46,7 +46,7 @@ public class ControlBDPoliUES {
 
             try{
 
-                db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
+                db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER, solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
                 db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
 
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");

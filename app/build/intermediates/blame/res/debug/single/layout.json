@@ -48,12 +48,12 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_screen_content_include.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_solicitud.xml",
