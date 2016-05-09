@@ -1,12 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".DetalleSolicitudInsertarActivity">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="30dip"
+    android:stretchColumns="1" >
 
-</RelativeLayout>
+    <TableRow>
+        <TextView android:text="@string/area"/>
+        <Spinner
+            android:id="@+id/SpinnerArea"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/area"
+            />
+    </TableRow>
+
+    <TextView android:text=""
+        android:layout_marginTop="20dip"/>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/pickDateInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Inicio"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/dateDisplayInicio"
+            android:text=""
+            />
+
+    </TableRow>
+
+    <TextView android:text=""
+        android:layout_marginTop="20dip"/>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/pickDateFin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de finalizacion"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/dateDisplayFin"
+            android:text=""
+            />
+
+    </TableRow>
+
+    <TextView android:text=""
+        android:layout_marginTop="20dip"/>
+
+    <TableRow>
+        <TextView android:text="@string/opciones" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:onClick="insertarDetalleSolicitud"
+            android:text="insertar" />
+        <Button
+            android:onClick="limpiarDetalleSolicitud"
+            android:text="limpiar" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </TableRow>
+
+</TableLayout>
+

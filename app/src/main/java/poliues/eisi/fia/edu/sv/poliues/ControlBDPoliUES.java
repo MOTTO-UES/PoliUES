@@ -30,7 +30,7 @@ public class ControlBDPoliUES {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
 
-        //DBHelper.onCreate(db);
+       //DBHelper.onCreate(db);
       }
 
 
@@ -41,62 +41,37 @@ public class ControlBDPoliUES {
 
         public DatabaseHelper(Context context){
             super(context,BASE_DATOS,null,VERSION);
+
         }
 
         @Override
         public void onCreate(SQLiteDatabase db){
-
+            System.out.println("ENTRO EN EL ONCREATE");
             try{
-                ////////////////////////////////////////////////////////////////////////////////////
-                ///DROP TBL
-               db.execSQL(
-                        "DROP TABLE Solicitante; " +
-                       "DROP TABLE Administrador;" +
-                        "DROP TABLE Solicitud;" +
-                        "DROP TABLE DetalleSolicitud;"
-
-                );
-                //FIN DROP TBL
-                ////////////////////////////////////////////////////////////////////////////////////
+                System.out.println("ENTRO EN LA CREACION");
 
                 db.execSQL("CREATE TABLE Solicitud(" +
-                        "idSolicitud INTEGER NOT NULL PRIMARY KEY, " +
-                        "actividad INTEGER, tarifa INTEGER, " +
+                        "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                        "actividad INTEGER, " +
+                        "tarifa INTEGER, " +
                         "administrador INTEGER," +
-                        "solicitante INTEGER; " +
+                        "solicitante INTEGER, " +
                         "motivoSolicitud VARCHAR(100)," +
                         "estadoSolicitud VARCHAR (20)," +
-                        "fechaCreacion VARCHAR(10));");
+                        "fechaCreacion VARCHAR(25))");
 
 
                 db.execSQL("CREATE TABLE DetalleSolicitud(" +
-                        "idDescripcion INTEGER NOT NULL PRIMARY KEY," +
+                        "idDescripcion INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                         "solicitud INTEGER, " +
                         "area INTEGER, " +
                         "fechaInicio VARCHAR(10), " +
                         "fechaFinal VARCHAR(10), " +
-                        "cobroTotal REAL);");
+                        "cobroTotal REAL)");
 
                 /////////////////////////////////////////////////////////////////////
                 ////MOTTO TBL
-                db.execSQL(
-                        "CREATE TABLE Administrador " +
-                        "(" +
-                        "   idAdministrador      INTEGER              NOT NULL," +
-                        "   nombreAdmin          VARCHAR2(25)         NOT NULL," +
-                        "   paswordAdmin         VARCHAR2(25)         NOT NULL," +
-                        "   correoAdmin          VARCHAR2(25)         NOT NULL" +
-                        ");"
-                );
-                db.execSQL(
-                        "CREATE TABLE Solicitud " +
-                        "(" +
-                        "   idSolicitante        INTEGER              NOT NULL," +
-                        "   nombre               VARCHAR2(25)         NOT NULL," +
-                        "   password             VARCHAR2(25)         NOT NULL," +
-                        "   correo               VARCHAR2(25)         NOT NULL" +
-                        ");"
-                );
+
                 //FIN CREACION TBL MOTTO
                 //////////////////////////////////////////////////////////////////
 
@@ -113,13 +88,17 @@ public class ControlBDPoliUES {
             }
             catch (SQLException e){
                 e.printStackTrace();
+                System.out.println("CRACHEO");
             }
 
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+                db.execSQL("DROP TABLE IF EXIST Solicitud");
+                db.execSQL("DROP TABLE IF EXIST DetalleSolicitud");
 
+                onCreate(db);
         }
     }
 
@@ -127,6 +106,7 @@ public class ControlBDPoliUES {
 
     public void abrir() throws SQLException{
         db = DBHelper.getWritableDatabase();
+        System.out.println("ABRIO");
     }
 
     public void cerrar(){
@@ -146,6 +126,7 @@ public class ControlBDPoliUES {
         sol.put("administrador",solicitud.getAdministrador());
         sol.put("solicitante",solicitud.getSolicitante());
         sol.put("motivoSolicitud",solicitud.getMotivoSolicitud());
+        sol.put("estadoSolicitud",solicitud.getEstadoSolicitud());
         sol.put("fechaCreacion",solicitud.getFechaCreacion());
 
         contador=db.insert("Solicitud", null, sol);
@@ -236,9 +217,8 @@ public class ControlBDPoliUES {
 
 
         abrir();
-        //db.execSQL("DELETE FROM Solicitud");
-        //db.execSQL("DELETE FROM DetalleSolicitud");
-        //db.execSQL("DELETE FROM nota");
+        db.execSQL("DELETE FROM Solicitud");
+        db.execSQL("DELETE FROM DetalleSolicitud");
 
 
         Solicitud soli = new Solicitud();
@@ -265,7 +245,6 @@ public class ControlBDPoliUES {
             DS.setCobroTotal(TDScobroTotal[i]);
             insertar(DS);
         }
-
 
         cerrar();
         return "Guardo Correctamente";
