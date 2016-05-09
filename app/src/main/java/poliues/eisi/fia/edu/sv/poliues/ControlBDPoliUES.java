@@ -18,6 +18,10 @@ public class ControlBDPoliUES {
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
 
+    private static final String[] camposAdministrador = new String[]
+            {"IDADMINISTRADOR","NOMBREADMINISTRADOR","PASSWORDADMINISTRADOR","CORREOADMINISTRADOR"};
+    private static final String[] camposSolicitante = new String[]
+            {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
 
     private final Context context;
@@ -35,7 +39,7 @@ public class ControlBDPoliUES {
     private static class DatabaseHelper extends SQLiteOpenHelper{
 
         private static final String BASE_DATOS = "PoliUES.s3db";
-        private static final int VERSION = 1;
+        private static final int VERSION =1;
 
         public DatabaseHelper(Context context){
             super(context,BASE_DATOS,null,VERSION);
@@ -45,40 +49,31 @@ public class ControlBDPoliUES {
         public void onCreate(SQLiteDatabase db){
 
             try{
-                ////////////////////////////////////////////////////////////////////////////////////
-                ///DROP TBL
-                db.execSQL(
-                        "DROP TABLE Solicitante; " +
-                        "DROP TABLE Administrador; "
 
-
-                );
-                //FIN DROP TBL
                 ////////////////////////////////////////////////////////////////////////////////////
 
-                db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
-                db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
+                //db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
+                //db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
 
                 /////////////////////////////////////////////////////////////////////
                 ////MOTTO TBL
                 db.execSQL(
-                        "CREATE TABLE Administrador " +
-                        "(" +
-                        "   idAdministrador      INTEGER              NOT NULL," +
-                        "   nombreAdmin          VARCHAR2(25)         NOT NULL," +
-                        "   paswordAdmin         VARCHAR2(25)         NOT NULL," +
-                        "   correoAdmin          VARCHAR2(25)         NOT NULL" +
-                        ");"
+                        "CREATE TABLE ADMINISTRADOR (" +
+                                "IDADMINISTRADOR INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                "NOMBREADMINISTRADOR VARCHAR(25)  NOT NULL," +
+                                "PASSWORDADMINISTRADOR VARCHAR(25)  NOT NULL," +
+                                "CORREOADMINISTRADOR VARCHAR(25)  NOT NULL" +
+                                ")"
                 );
                 db.execSQL(
-                        "CREATE TABLE Solicitud " +
-                        "(" +
-                        "   idSolicitante        INTEGER              NOT NULL," +
-                        "   nombre               VARCHAR2(25)         NOT NULL," +
-                        "   password             VARCHAR2(25)         NOT NULL," +
-                        "   correo               VARCHAR2(25)         NOT NULL" +
-                        ");"
+                        "CREATE TABLE SOLICITANTE (" +
+                                "IDSOLICITANTE INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                "NOMBRE VARCHAR(25)  NOT NULL," +
+                                "PASSWORD VARCHAR(25)  NOT NULL," +
+                                "CORREO VARCHAR(25)  NOT NULL" +
+                                ")"
                 );
+
                 //FIN CREACION TBL MOTTO
                 //////////////////////////////////////////////////////////////////
 
@@ -88,73 +83,6 @@ public class ControlBDPoliUES {
                 /////////////////////////////////////////////////////////////////////////////
                 //TRIGGER == FK
 
-                /*COMPRUEBA QUE EXISTA LA ACTIVIDAD EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_Solicitud_Actividad" +
-                        " BEFORE INSERT ON Solicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idActividad from Actividad WHERE idActividad = actividad) IS NULL)" +
-                        "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
-                        "   WHEN((SELECT idSolicitante from Solicitante WHERE idSolicitante = solicitante) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO SIRVE')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA TARIFA EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_Solicitud_Tarifa" +
-                        " BEFORE INSERT ON Solicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idTarifa from Tarifa WHERE idTarifa = tarifa) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE LA TARIFA')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA El SOLICITANTE EN LA CREACION DE SOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_Solicitud_Solicitante" +
-                        " BEFORE INSERT ON Solicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idSolicitante from Solicitante WHERE idSolicitante = solicitante) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE El solicitante')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA SOLICITUD EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Solicitud" +
-                        " BEFORE INSERT ON DetalleSolicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idSolicitud from Solicitud WHERE idSolicitud = solicitud) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE LA SOLICITUD')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA AREA EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Area" +
-                        " BEFORE INSERT ON DetalleSolicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idArea from Area WHERE idArea = area) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE El area')" +
-                        " END;" +
-                        " END;");
-
-                /*COMPRUEBA QUE EXISTA LA AREA EN LA CREACION DE DETALLESOLICITUD-trigger-RODRIGO*/
-                db.execSQL("CREATE TRIGGER fk_DetalleSolicitud_Area" +
-                        " BEFORE INSERT ON DetalleSolicitud" +
-                        " FOR EACH ROW" +
-                        " BEGIN" +
-                        "   SELECT CASE" +
-                        "   WHEN((SELECT idArea from Area WHERE idArea = area) IS NULL)" +
-                        "   THEN RAISE(ABORT, 'NO EXISTE El area')" +
-                        " END;" +
-                        " END;");
 
                 //FIN TRIGGER == FK
                 ////////////////////////////////////////////////////////////////////////////////////
@@ -167,7 +95,13 @@ public class ControlBDPoliUES {
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+                ////////////////////////////////////////////////////////////////////
+                //DROP TBL_MOTTO
+                //db.execSQL("DROP TABLE IF EXIST ADMINISTRADOR");
+                //db.execSQL("DROP TABLE IF EXIST SOLICITANTE");
+                ////////////////////////////////////////////////////////////////////
 
+                onCreate(db);
         }
     }
 
@@ -176,12 +110,46 @@ public class ControlBDPoliUES {
     public void abrir() throws SQLException{
         db = DBHelper.getWritableDatabase();
     }
+    public void  leer() throws SQLException{
+        db = DBHelper.getReadableDatabase();
+    }
 
     public void cerrar(){
         DBHelper.close();
     }
 
 
+    ////////////////////////////////////////////////////////////////////////////////
+    //Insertar Administrador
+    public String insertarAdministrador(Administrador administrador){
+        String regInsertados="Registro Insertado Nº= ";
+        long contador=0;
+
+        ContentValues val = new ContentValues();
+
+        //val.put(camposAdministrador[0],administrador.getIdAdministrador());
+        val.put(camposAdministrador[1],administrador.getNombreAdmin());
+        val.put(camposAdministrador[2],administrador.getPasswordAdmin());
+        val.put(camposAdministrador[3],administrador.getCorreoAdmin());
+
+        contador=db.insert("ADMINISTRADOR", null, val);
+
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el Administrador, Administrador Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+
+        return regInsertados;
+    }
+    //Consultar Administrador
+    public Cursor consultarAdministrador(){
+        Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
+        return c;
+    }
+    /////////////////////////////////////////////////////////////////////////////
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";

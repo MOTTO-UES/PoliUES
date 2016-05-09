@@ -22,6 +22,15 @@
     <string name="action_settings">Settings</string>
 
 
+    <!-- ADMINISTRADOR _ MOTTO -->
+
+    <string name="txtnombreAdministrador">Nombre</string>
+    <string name="txtpassAdministrador">Password</string>
+    <string name="txtcorreoAdministrador">Correo</string>
+    <string name="btnAgregarAdministrador">AGREGAR</string>
+    <string name="btnLimpiarAdministrador">LIMPIAR</string>
+    <string name="action_administrador_agregar">AGREGAR NUEVO</string>
+
     <!--DERALLE SOLICITUD, RODRIGO-->
 
     <string name="idDescripcion">idDescripcion</string>

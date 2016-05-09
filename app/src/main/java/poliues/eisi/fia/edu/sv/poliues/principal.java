@@ -86,7 +86,7 @@ public class principal extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.administrador) {
-            Intent inte = new Intent(this, AdministradorActivity.class);
+            Intent inte = new Intent(principal.this, AdministradorActivity.class);
             startActivity(inte);
         } else if (id == R.id.solicitante) {
             //Intent inte = new Intent(this, SolicitanteActivity.class);

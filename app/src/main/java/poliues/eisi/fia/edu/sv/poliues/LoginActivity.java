@@ -76,11 +76,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         System.out.println("antes de abrir");
         BDhelper.abrir();
         System.out.println("despues de abrir");
-        String tost = BDhelper.llenarBDSR11038();
+        //String tost = BDhelper.llenarBDSR11038();
         System.out.println("despues de llenar");
         BDhelper.cerrar();
         System.out.println("despues de cerrar");
-        Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
 
         //String tost = DB
         //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();sqlerrm

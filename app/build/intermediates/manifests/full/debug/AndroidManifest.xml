@@ -42,6 +42,9 @@
             android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorActivity"
             android:label="@string/title_activity_administrador"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorInsertarActivity"
+            android:label="@string/action_administrador_agregar" />
     </application>
 
 </manifest>

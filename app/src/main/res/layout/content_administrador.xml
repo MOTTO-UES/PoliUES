@@ -10,27 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="poliues.eisi.fia.edu.sv.poliues.administrador"
-    tools:showIn="@layout/app_bar_administrador">
+    tools:showIn="@layout/app_bar_administrador"
+    android:background="@color/fondoLista">
 
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_listaAdmin"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/tablaAdministrador">
-        <TableRow
-            android:id="@+id/fila1">
-
-        </TableRow>
-        <TableRow>
-        <TextView
-            android:id="@+id/question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Joder ...."/>
-
-        </TableRow>
-    </TableLayout>
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

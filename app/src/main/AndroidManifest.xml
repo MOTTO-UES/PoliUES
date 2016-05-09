@@ -36,6 +36,9 @@
             android:name=".AdministradorActivity"
             android:label="@string/title_activity_administrador"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".AdministradorInsertarActivity"
+            android:label="@string/action_administrador_agregar"/>
     </application>
 
 </manifest>
