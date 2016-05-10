@@ -13,11 +13,15 @@ import android.os.Build;
 public class ControlBDPoliUES {
 
     private static final  String[] camposSolicitud = new  String[]
-        {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
+            {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
 
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
 
+    private static final String[] camposAdministrador = new String[]
+            {"IDADMINISTRADOR","NOMBREADMINISTRADOR","PASSWORDADMINISTRADOR","CORREOADMINISTRADOR"};
+    private static final String[] camposSolicitante = new String[]
+            {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
 
     private final Context context;
@@ -29,27 +33,24 @@ public class ControlBDPoliUES {
     public ControlBDPoliUES(Context ctx) {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
-
-       //DBHelper.onCreate(db);
       }
 
 
     private static class DatabaseHelper extends SQLiteOpenHelper{
 
         private static final String BASE_DATOS = "PoliUES.s3db";
-        private static final int VERSION = 1;
+        private static final int VERSION =1;
 
         public DatabaseHelper(Context context){
             super(context,BASE_DATOS,null,VERSION);
-
         }
 
         @Override
         public void onCreate(SQLiteDatabase db){
-            System.out.println("ENTRO EN EL ONCREATE");
-            try{
-                System.out.println("ENTRO EN LA CREACION");
 
+            try{
+
+                ////////////////////////////////////////////////////////////////////////////////////
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                         "actividad INTEGER, " +
@@ -71,6 +72,22 @@ public class ControlBDPoliUES {
 
                 /////////////////////////////////////////////////////////////////////
                 ////MOTTO TBL
+                db.execSQL(
+                        "CREATE TABLE ADMINISTRADOR (" +
+                                "IDADMINISTRADOR INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                "NOMBREADMINISTRADOR VARCHAR(25)  NOT NULL," +
+                                "PASSWORDADMINISTRADOR VARCHAR(25)  NOT NULL," +
+                                "CORREOADMINISTRADOR VARCHAR(25)  NOT NULL" +
+                                ")"
+                );
+                db.execSQL(
+                        "CREATE TABLE SOLICITANTE (" +
+                                "IDSOLICITANTE INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                "NOMBRE VARCHAR(25)  NOT NULL," +
+                                "PASSWORD VARCHAR(25)  NOT NULL," +
+                                "CORREO VARCHAR(25)  NOT NULL" +
+                                ")"
+                );
 
                 //FIN CREACION TBL MOTTO
                 //////////////////////////////////////////////////////////////////
@@ -82,21 +99,22 @@ public class ControlBDPoliUES {
                 //TRIGGER == FK
 
 
-
                 //FIN TRIGGER == FK
                 ////////////////////////////////////////////////////////////////////////////////////
             }
             catch (SQLException e){
                 e.printStackTrace();
-                System.out.println("CRACHEO");
             }
 
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-                db.execSQL("DROP TABLE IF EXIST Solicitud");
-                db.execSQL("DROP TABLE IF EXIST DetalleSolicitud");
+                ////////////////////////////////////////////////////////////////////
+                //DROP TBL_MOTTO
+                //db.execSQL("DROP TABLE IF EXIST ADMINISTRADOR");
+                //db.execSQL("DROP TABLE IF EXIST SOLICITANTE");
+                ////////////////////////////////////////////////////////////////////
 
                 onCreate(db);
         }
@@ -106,7 +124,9 @@ public class ControlBDPoliUES {
 
     public void abrir() throws SQLException{
         db = DBHelper.getWritableDatabase();
-        System.out.println("ABRIO");
+    }
+    public void  leer() throws SQLException{
+        db = DBHelper.getReadableDatabase();
     }
 
     public void cerrar(){
@@ -114,13 +134,44 @@ public class ControlBDPoliUES {
     }
 
 
+    ////////////////////////////////////////////////////////////////////////////////
+    //Insertar Administrador
+    public String insertarAdministrador(Administrador administrador){
+        String regInsertados="Registro Insertado Nº= ";
+        long contador=0;
+
+        ContentValues val = new ContentValues();
+
+        //val.put(camposAdministrador[0],administrador.getIdAdministrador());
+        val.put(camposAdministrador[1],administrador.getNombreAdmin());
+        val.put(camposAdministrador[2],administrador.getPasswordAdmin());
+        val.put(camposAdministrador[3],administrador.getCorreoAdmin());
+
+        contador=db.insert("ADMINISTRADOR", null, val);
+
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el Administrador, Administrador Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+
+        return regInsertados;
+    }
+    //Consultar Administrador
+    public Cursor consultarAdministrador(){
+        Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
+        return c;
+    }
+    /////////////////////////////////////////////////////////////////////////////
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";
         long contador=0;
         ContentValues sol = new ContentValues();
 
-        sol.put("idSolicitud",solicitud.getIdSolicitud());
+        //sol.put("idSolicitud",solicitud.getIdSolicitud());
         sol.put("actividad",solicitud.getActividad());
         sol.put("tarifa",solicitud.getTarifa());
         sol.put("administrador",solicitud.getAdministrador());
@@ -203,7 +254,6 @@ public class ControlBDPoliUES {
         final int[] TSadministrador = {1,1};
         final int[] TSsolicitante = {1,2};
         final String[] TSmotivoSolicitud = {"intramuros","juegos interfacultad"};
-        final String[] TSestadoSolicitud = {"aprobada","negada"};
         final String[] TSfechaCreacion = {"2016-04-29","206-04-30"};
 
 
@@ -217,8 +267,10 @@ public class ControlBDPoliUES {
 
 
         abrir();
+
         db.execSQL("DELETE FROM Solicitud");
         db.execSQL("DELETE FROM DetalleSolicitud");
+        //db.execSQL("DELETE FROM DetalleSolicitud");
 
 
         Solicitud soli = new Solicitud();
@@ -230,7 +282,6 @@ public class ControlBDPoliUES {
             soli.setAdministrador(TSadministrador[i]);
             soli.setSolicitante(TSsolicitante[i]);
             soli.setMotivoSolicitud(TSmotivoSolicitud[i]);
-            soli.setEstadoSolicitud(TSestadoSolicitud[i]);
             soli.setFechaCreacion(TSfechaCreacion[i]);
            insertar(soli);
         }
@@ -245,6 +296,7 @@ public class ControlBDPoliUES {
             DS.setCobroTotal(TDScobroTotal[i]);
             insertar(DS);
         }
+
 
         cerrar();
         return "Guardo Correctamente";

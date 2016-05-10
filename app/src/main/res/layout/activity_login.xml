@@ -80,16 +80,6 @@
                 android:text="@string/entrar_principal"
                 android:textStyle="bold" />
 
-
-            <Button
-                android:id="@+id/entrar_solicitud"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Solicitud"
-                />
-
-            <!--android:onClick="invocarSolicitud"-->
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

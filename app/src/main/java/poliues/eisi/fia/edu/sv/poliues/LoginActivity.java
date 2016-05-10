@@ -77,11 +77,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         BDhelper.abrir();
         System.out.println("despues de abrir");
         //String tost = BDhelper.llenarBDSR11038();
-        //System.out.println("despues de llenar");
+        System.out.println("despues de llenar");
         BDhelper.cerrar();
         System.out.println("despues de cerrar");
-
         //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+
+        //String tost = DB
+        //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();sqlerrm
+        System.out.println("el toast");
 
         //////////////////////////////////////////////////////
 
@@ -303,14 +306,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     ///////////////////////////////////////////////////////////////////////////
     @Override
     public void onClick(View v) {
-        Intent inte;
         switch (v.getId()){
             case R.id.entrar_principal:
-                inte = new Intent(LoginActivity.this, principal.class);
-                startActivity(inte);
-                break;
-            case R.id.entrar_solicitud:
-                inte = new Intent(this, SolicitudInsertarActivity.class);
+                Intent inte = new Intent(LoginActivity.this, principal.class);
                 startActivity(inte);
                 break;
         }
@@ -421,15 +419,5 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
-
-    public void invocarSolicitud (){
-
-            //Class<?> clase=Class.forName("poliues.eisi.fia.edu.sv.poliues.SolicitudInsertarActivity");
-            Intent inte = new Intent(LoginActivity.this, principal.class);
-            startActivity(inte);
-
-        }
-
-    }
-
+}
 

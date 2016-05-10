@@ -16,8 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DetalleSolicitudInsertarActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
@@ -96,6 +98,9 @@ public class DetalleSolicitudInsertarActivity extends Activity implements Adapte
                         .append(mYearInicio).append("")
         );
 
+        this.FechaInicio = mDayInicio+"-"+(mMonthInicio+1)+"-"+mYearInicio;
+        System.out.println(FechaInicio);
+
     }
 
     private DatePickerDialog.OnDateSetListener mDateListenerInicio = new DatePickerDialog.OnDateSetListener(){
@@ -117,6 +122,8 @@ public class DetalleSolicitudInsertarActivity extends Activity implements Adapte
                         .append(mYearFin).append("")
         );
 
+        this.FechaFin = mDayFin+"-"+(mMonthFin+1)+"-"+mYearFin;
+        System.out.println(FechaFin);
     }
 
     private DatePickerDialog.OnDateSetListener mDateListenerFin = new DatePickerDialog.OnDateSetListener(){
@@ -157,7 +164,52 @@ public class DetalleSolicitudInsertarActivity extends Activity implements Adapte
 
 
     public void insertarDetalleSolicitud(View v){
+        String Area = this.AreaSeleccionada;
+        String fechaInicio = this.FechaInicio;
+        String fechaFinal = this.FechaFin;
+        Date inicio=null;
+        Date fin=null;
+        Date Actual=null;
 
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Calendar cal = Calendar.getInstance();
+
+        String fechaActual = String.valueOf(dateFormat.format(cal.getTime()));
+        System.out.println(fechaActual);
+
+        String regInsertados;
+
+
+        DetalleSolicitud Dsolicitud = new DetalleSolicitud();
+        try{
+            inicio = dateFormat.parse(fechaInicio);
+            fin = dateFormat.parse(fechaFinal);
+            Actual = dateFormat.parse(fechaActual);
+
+        }catch (ParseException e){
+                e.printStackTrace();
+        }
+
+        if(inicio.compareTo(Actual)>0){
+            Toast.makeText(this,"la fecha actual es menor, se puede ingresar",Toast.LENGTH_SHORT).show();
+
+            if(fin.compareTo(inicio)>=0){
+                Toast.makeText(this,"la fecha fin es mayor, se puede ingresar",Toast.LENGTH_SHORT).show();
+
+            }else{
+                Toast.makeText(this,"la fecha fin es menor,NO se puede ingresar",Toast.LENGTH_SHORT).show();
+
+            }
+        }else{
+            Toast.makeText(this,"la fecha actual es mayor, NO se puede ingresar",Toast.LENGTH_SHORT).show();
+
+        }
+
+
+        /*helper.abrir();
+        regInsertados = helper.insertar(Dsolicitud);
+        helper.cerrar();
+        Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();*/
 
     }
 
@@ -166,4 +218,3 @@ public class DetalleSolicitudInsertarActivity extends Activity implements Adapte
 
     }
 }
-

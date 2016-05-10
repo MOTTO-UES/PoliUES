@@ -47,7 +47,7 @@ public class SolicitudInsertarActivity extends Activity implements AdapterView.O
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            this.actividadSeleccionada = parent.getItemAtPosition(position).toString();
+        this.actividadSeleccionada = parent.getItemAtPosition(position).toString();
     }
 
     @Override
@@ -68,7 +68,7 @@ public class SolicitudInsertarActivity extends Activity implements AdapterView.O
         System.out.println(fechaCreacion);
         Solicitud solicitud = new Solicitud();
 
-        solicitud.setIdSolicitud(6);
+        //solicitud.setIdSolicitud(6);
         solicitud.setActividad(4);
         solicitud.setMotivoSolicitud(motivo);
         solicitud.setTarifa(1);
@@ -91,3 +91,4 @@ public class SolicitudInsertarActivity extends Activity implements AdapterView.O
         editMotivo.setText("");
     }
 }
+

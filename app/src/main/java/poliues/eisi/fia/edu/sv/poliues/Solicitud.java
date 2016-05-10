@@ -17,14 +17,13 @@ public class Solicitud {
 
     }
 
-    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, int solicitante, String motivoSolicitud, String estadoSolicitud, String fechaCreacion) {
+    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, int solicitante, String motivoSolicitud, String fechaCreacion) {
         this.idSolicitud = idSolicitud;
         this.actividad = actividad;
         this.tarifa = tarifa;
         this.administrador = administrador;
         this.solicitante = solicitante;
         this.motivoSolicitud = motivoSolicitud;
-        this.estadoSolicitud = estadoSolicitud;
         this.fechaCreacion = fechaCreacion;
     }
 

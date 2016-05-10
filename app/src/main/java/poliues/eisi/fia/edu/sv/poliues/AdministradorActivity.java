@@ -2,12 +2,15 @@ package poliues.eisi.fia.edu.sv.poliues;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,16 +21,26 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdministradorActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
+        ListView lista;
+        ControlBDPoliUES db;
+        List<String> item = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,51 +67,15 @@ public class AdministradorActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /////////////////////////////////////////////////////////////////////////////////////
-        /*
-        // Datos para la tabla
-        String cabeceras[] = { "Año", "Ciudad", "Oro", "Plata", "Bronce" };
-        String datos[][] = { { "1900", "París", "1", "", "" },
-                { "1976", "Montreal", "", "2", "" },
-                { "1992", "Barcelona", "13", "7", "2" },
-                { "2012", "Londres", "3", "10", "4" } };
-        // TableLayout (diseño principal de la actividad)
-        TableLayout tabla = new TableLayout(this);
-        tabla.setLayoutParams(new TableLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
-        tabla.setColumnStretchable(1, true);
+        lista = (ListView) findViewById(R.id.listView_listaAdmin);
 
-        // Cabecera de la tabla
-        TableRow cabecera = new TableRow(this);
-        cabecera.setLayoutParams(new TableLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
-        tabla.addView(cabecera);
-
-        // Textos de la cabecera
-        for (int i = 0; i < 5; i++)
-        {
-            TextView columna = new TextView(this);
-            columna.setLayoutParams(new TableRow.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT));
-            columna.setText(cabeceras[i]);
-            columna.setTextColor(Color.parseColor("#005500"));
-            columna.setTextSize(TypedValue.COMPLEX_UNIT_SP, 26);
-            columna.setGravity(Gravity.CENTER_HORIZONTAL);
-            columna.setPadding(5, 5, 5, 5);
-            cabecera.addView(columna);
+        try {
+            showAdministrador();
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(this, "error papu", Toast.LENGTH_SHORT).show();
         }
-        */
-/*
 
-        TableLayout tabla = (TableLayout) findViewById(R.id.tablaAdministrador);
-        TableRow fila = (TableRow) findViewById(R.id.fila1);
-
-
-
-        // Provide this parameter so that the whole text can be seen with no cutoff
-        comment.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT,
-                TableRow.LayoutParams.WRAP_CONTENT,1.0f));
-        fila.addView(comment);
-
-        tabla.addView(fila);
-*/
         /////////////////////////////////////////////////////////////////////////////////////
     }
 
@@ -127,8 +104,9 @@ public class AdministradorActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_administrador_agregar) {
+            Intent intent = new Intent(AdministradorActivity.this,AdministradorInsertarActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -159,4 +137,46 @@ public class AdministradorActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void showAdministrador(){
+        ///test
+        Toast.makeText(this, "antes de", Toast.LENGTH_SHORT).show();
+        //fin test
+        ///////////////////////////////////////////////////////////////////////////////
+        db = new ControlBDPoliUES(this);
+        db.leer();
+        Cursor c = db.consultarAdministrador();
+        item = new ArrayList<String>();
+        ///test
+        //Toast.makeText(this, "bien 1", Toast.LENGTH_SHORT).show();
+        //Log.d("My tag", "Antes de cursor");
+        //fin test
+        //String nombre ="", password="", correo="";
+        if(c.moveToFirst()){
+            //Recorre todos los registros
+            do {
+
+                Administrador administrador = new Administrador();
+                administrador.setIdAdministrador(c.getInt(0));
+                administrador.setNombreAdmin(c.getString(1));
+                administrador.setPasswordAdmin(c.getString(2));
+                administrador.setCorreoAdmin(c.getString(3));
+
+                //nombre = c.getString(1);
+                //password = c.getString(2);
+                //correo = c.getString(3);
+
+                //Agregar Registro a la lista
+                item.add(administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
+                //item.add(nombre+ " "+ password+ " "+ correo );
+
+            }while(c.moveToNext());
+        }
+        //Crear un adaptador
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
+
+        lista.setAdapter(adaptador);
+    }
+
+
 }

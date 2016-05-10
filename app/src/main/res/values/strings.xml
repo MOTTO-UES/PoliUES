@@ -22,6 +22,15 @@
     <string name="action_settings">Settings</string>
 
 
+    <!-- ADMINISTRADOR _ MOTTO -->
+
+    <string name="txtnombreAdministrador">Nombre</string>
+    <string name="txtpassAdministrador">Password</string>
+    <string name="txtcorreoAdministrador">Correo</string>
+    <string name="btnAgregarAdministrador">AGREGAR</string>
+    <string name="btnLimpiarAdministrador">LIMPIAR</string>
+    <string name="action_administrador_agregar">AGREGAR NUEVO</string>
+
     <!--DERALLE SOLICITUD, RODRIGO-->
 
     <string name="idDescripcion">idDescripcion</string>
@@ -38,9 +47,9 @@
     <string name="fechaInicio">fecha Inicio</string>
     <string name="fechaFinal">fecha Final</string>
     <string name="cobroTotal">cobro total</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="insertar">Insertar</string>
     <string name="opciones">opciones</string>
-    <string name="insertar">insertar</string>
-    <string name="limpiar">limpiar</string>
 
 
     <!--SOLICITUD, RODRIGO-->
@@ -62,4 +71,6 @@
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
 
+
 </resources>
+
