@@ -5,11 +5,11 @@
         <item
             android:id="@+id/administrador"
             android:icon="@drawable/ic_menu_send"
-            android:title="Gestionar Administrador" />
+            android:title="@string/GestionarAdministrador" />
         <item
             android:id="@+id/solicitante"
             android:icon="@drawable/ic_menu_send"
-            android:title="Gestionar Solicitante" />
+            android:title="@string/GestionarSolicitante" />
         <!--
         <item
             android:id="@+id/nav_gallery"
@@ -25,19 +25,14 @@
             android:title="Tools" />
             -->
     </group>
-    <!--
-    <item android:title="Communicate">
+
+    <item android:title="@string/otroGrupo">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/salir"
+                android:icon="@android:drawable/ic_lock_idle_lock"
+                android:title="@string/cerrarSesion" />
         </menu>
     </item>
-    -->
 
 </menu>

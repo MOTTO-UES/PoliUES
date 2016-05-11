@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,13 +18,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created by Dario on 08/05/2016.
  */
 public class AdministradorInsertarActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     EditText nombre, pass, correo;
-    Button agregar, limpiar;
     ControlBDPoliUES helper;
 
     @Override
@@ -38,8 +41,22 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent inte = new Intent(AdministradorInsertarActivity.this, AdministradorActivity.class);
+                startActivity(inte);
+            }
+        });
+        FloatingActionButton fabNuevoAdmin = (FloatingActionButton) findViewById(R.id.fabNuevoAdmin);
+        fabNuevoAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                agregarAdministrador(view);
+            }
+        });
+        FloatingActionButton fabLimpiarAdmin = (FloatingActionButton) findViewById(R.id.fabLimpiarAdmin);
+        fabLimpiarAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                limpiar();
             }
         });
 
@@ -53,27 +70,13 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         navigationView.setNavigationItemSelectedListener(this);
 
         helper = new ControlBDPoliUES(this);
-        //Button
-        agregar = (Button) findViewById(R.id.button_agregarA);
-        limpiar = (Button) findViewById(R.id.limpiar_administrador);
+
         //EdiText
         nombre = (EditText) findViewById(R.id.editText_nombreA);
         pass = (EditText) findViewById(R.id.editText_passwordA);
         correo = (EditText) findViewById(R.id.editText_correoA);
 
-        agregar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                agregarAdministrador();
-            }
-        });
 
-        limpiar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                limpiar();
-            }
-        });
 
     }
 
@@ -134,35 +137,66 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         return true;
     }
 
-    private void agregarAdministrador(){
+    private void agregarAdministrador(View view){
         String nombreA, passA, correoA;
         String regIngresados;
+        boolean valido=false;
 
         nombreA = nombre.getText().toString();
         passA = pass.getText().toString();
         correoA = correo.getText().toString();
 
-        Administrador administrador = new Administrador();
-        //Falta id
-        administrador.setNombreAdmin(nombreA);
-        administrador.setPasswordAdmin(passA);
-        administrador.setCorreoAdmin(correoA);
+        if(!(TextUtils.isEmpty(nombreA) || TextUtils.isEmpty(passA) || TextUtils.isEmpty(correoA))){
+            if(isEmailValid(correoA)){
+                valido = true;
+            }else{
+                Snackbar.make(view, "El correo no tiene el formato correcto: xxx_xxx@xxx.xxx", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        }else{
+            Snackbar.make(view, "Debe llenar todos los campos", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
 
-        helper.abrir();
-        regIngresados = helper.insertarAdministrador(administrador);
-        helper.cerrar();
+        if (valido){
+            Administrador administrador = new Administrador();
+            //Falta id
+            administrador.setNombreAdmin(nombreA);
+            administrador.setPasswordAdmin(passA);
+            administrador.setCorreoAdmin(correoA);
 
-        Toast.makeText(this,regIngresados,Toast.LENGTH_SHORT).show();
-        //Ir a otra activity
-        Intent intent = new Intent(AdministradorInsertarActivity.this,AdministradorActivity.class);
-        startActivity(intent);
+            helper.abrir();
+            regIngresados = helper.insertarAdministrador(administrador);
+            helper.cerrar();
 
+            //Toast.makeText(this,regIngresados,Toast.LENGTH_SHORT).show();
+            Snackbar.make(view, "Administrador"+regIngresados+" Ingresado con Exito", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+            //Ir a otra activity
+            Intent intent = new Intent(AdministradorInsertarActivity.this,AdministradorActivity.class);
+            startActivity(intent);
+
+        }
     }
 
     private void limpiar(){
         nombre.setText("");
         pass.setText("");
         correo.setText("");
+    }
+
+    public static boolean isEmailValid(String email) {
+        boolean isValid = false;
+
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
     }
 
 }

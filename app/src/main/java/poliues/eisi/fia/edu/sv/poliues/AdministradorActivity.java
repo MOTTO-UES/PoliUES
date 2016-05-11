@@ -59,8 +59,8 @@ public class AdministradorActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(AdministradorActivity.this,AdministradorInsertarActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -145,21 +145,14 @@ public class AdministradorActivity extends AppCompatActivity
     }
 
     private void showAdministrador(){
-        ///test
-        Toast.makeText(this, "antes de", Toast.LENGTH_SHORT).show();
-        //fin test
-        ///////////////////////////////////////////////////////////////////////////////
+
         db = new ControlBDPoliUES(this);
         db.leer();
         Cursor c = db.consultarAdministrador();
         item = new ArrayList<String>();
 
         objAdministrador = new ArrayList<Administrador>();
-        ///test
-        //Toast.makeText(this, "bien 1", Toast.LENGTH_SHORT).show();
-        //Log.d("My tag", "Antes de cursor");
-        //fin test
-        //String nombre ="", password="", correo="";
+
         if(c.moveToFirst()){
             //Recorre todos los registros
             do {
@@ -172,13 +165,8 @@ public class AdministradorActivity extends AppCompatActivity
 
                 objAdministrador.add(administrador);
 
-                //nombre = c.getString(1);
-                //password = c.getString(2);
-                //correo = c.getString(3);
-
                 //Agregar Registro a la lista
                 item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
-                //item.add(nombre+ " "+ password+ " "+ correo );
 
             }while(c.moveToNext());
         }
@@ -195,6 +183,12 @@ public class AdministradorActivity extends AppCompatActivity
 
                 final Administrador admin;
                 admin = objAdministrador.get(position);
+                final Intent inte = new Intent();
+                //Agregar Extras
+                inte.putExtra("EnvioAdministradorID", admin.getIdAdministrador());
+                inte.putExtra("EnvioAdministradorNOMBRE", admin.getNombreAdmin());
+                inte.putExtra("EnvioAdministradorPASS", admin.getPasswordAdmin());
+                inte.putExtra("EnvioAdministradorCORREO", admin.getCorreoAdmin());
 
                 PopupMenu pop = new PopupMenu(getApplicationContext(),view);
 
@@ -209,11 +203,10 @@ public class AdministradorActivity extends AppCompatActivity
                         int id = item.getItemId();
 
                         if (id == R.id.ConsultarA) {
-                            //Intent inte = new Intent(AdministradorActivity.this, );
-                            //startActivity(inte);
+                            inte.setClass(AdministradorActivity.this, AdministradorConsultarActivity.class);
+                            startActivity(inte);
                         } else if (id == R.id.EditarA) {
-                            Intent inte = new Intent(AdministradorActivity.this, AdministradorEditarActivity.class);
-                            inte.putExtra("EnvioAdministrador", admin.getIdAdministrador());
+                            inte.setClass(AdministradorActivity.this, AdministradorEditarActivity.class);
                             startActivity(inte);
                         } else if (id == R.id.BorrarA) {
 

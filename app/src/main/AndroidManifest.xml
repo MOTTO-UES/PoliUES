@@ -39,7 +39,7 @@
         <activity
             android:name=".AdministradorInsertarActivity"
             android:label="@string/title_activity_administrador_agregar"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SolicitanteActivity"
             android:label="@string/title_activity_solicitante"
@@ -47,10 +47,14 @@
         <activity
             android:name=".SolicitanteInsertarActivity"
             android:label="@string/action_solicitante_agregar"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AdministradorEditarActivity"
             android:label="@string/title_activity_administrador_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdministradorConsultarActivity"
+            android:label="@string/title_activity_administrador_consultar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

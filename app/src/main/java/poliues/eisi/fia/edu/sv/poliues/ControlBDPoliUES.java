@@ -161,6 +161,21 @@ public class ControlBDPoliUES {
 
         return regAfectados;
     }
+    //Actualizar Solicitante
+    public String actualizarAdministrador(Administrador administrador){
+
+        String[] IDADMINISTRADOR = {String.valueOf(administrador.getIdAdministrador())};
+
+        ContentValues cv = new ContentValues();
+
+        cv.put("NOMBREADMINISTRADOR", administrador.getNombreAdmin());
+        cv.put("PASSWORDADMINISTRADOR", administrador.getPasswordAdmin());
+        cv.put("CORREOADMINISTRADOR", administrador.getCorreoAdmin());
+
+        db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
+
+        return "Administrador Actualizado Correctamente";
+    }
     /////////////////////////////////////////////////////////////////////////////
     //Agregar Solicitante
     public String insertarSolicitante(Solicitante solicitante){

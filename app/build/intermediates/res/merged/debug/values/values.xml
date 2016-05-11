@@ -270,6 +270,8 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="Actividad">actividad</string>
     <string name="Administrador">Administrador</string>
+    <string name="GestionarAdministrador">Gestionar Administrador</string>
+    <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -301,8 +303,10 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnAgregarSolicitante">AGREGAR</string>
+    <string name="btnEditarAdministrador">EDITAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
     <string name="btnLimpiarSolicitante">LIMPIAR</string>
+    <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>
     <string name="comsultar">CONSULTAR</string>
@@ -320,6 +324,7 @@
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="otroGrupo">Comunicacion</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -328,6 +333,7 @@
     <string name="tarifa">Tarifa</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
+    <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_principal">principal</string>
     <string name="title_activity_solicitante">SolicitanteActivity</string>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +14,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AdministradorEditarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    EditText nombre, pass, correo;
+    ControlBDPoliUES helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +34,26 @@ public class AdministradorEditarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        final int ExtraID = getIntent().getExtras().getInt("EnvioAdministradorID");
+        String ExtraNOMBRE = getIntent().getExtras().getString("EnvioAdministradorNOMBRE");
+        String ExtraPASS = getIntent().getExtras().getString("EnvioAdministradorPASS");
+        String ExtraCORREO = getIntent().getExtras().getString("EnvioAdministradorCORREO");
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(AdministradorEditarActivity.this, AdministradorActivity.class);
+                startActivity(intent);
+            }
+        });
+        FloatingActionButton fabAceptar = (FloatingActionButton) findViewById(R.id.fabAceptar);
+        fabAceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                actualizarAdministrador(view, ExtraID);
             }
         });
 
@@ -43,14 +66,17 @@ public class AdministradorEditarActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        try{
-            int Extra = getIntent().getExtras().getInt("EnvioAdministrador");
-            String extra= Extra+ " Numero";
-            Toast.makeText(this, extra,Toast.LENGTH_SHORT).show();
-        }catch (Exception exception){
-            exception.printStackTrace();
-        }
 
+
+
+        helper = new ControlBDPoliUES(this);
+        //EdiText
+        nombre = (EditText) findViewById(R.id.editText_nombreEditA);
+        pass = (EditText) findViewById(R.id.editText_passwordEditA);
+        correo = (EditText) findViewById(R.id.editText_correoEditA);
+
+        //Metodo que recibe EXTRAS y llena campos de content
+        llenarCampos(ExtraNOMBRE, ExtraPASS, ExtraCORREO);
 
     }
 
@@ -66,8 +92,7 @@ public class AdministradorEditarActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.administrador_editar, menu);
+
         return true;
     }
 
@@ -78,10 +103,7 @@ public class AdministradorEditarActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -93,7 +115,8 @@ public class AdministradorEditarActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.administrador) {
-            // Handle the camera action
+            Intent inte = new Intent(this, AdministradorActivity.class);
+            startActivity(inte);
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
@@ -103,6 +126,79 @@ public class AdministradorEditarActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    public void actualizarAdministrador(View view, int ExtraID){
+        String nombreA, passA, correoA;
+        String estado;
+        boolean valido=false;
+
+        nombreA = nombre.getText().toString();
+        passA = pass.getText().toString();
+        correoA = correo.getText().toString();
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Validacion de Campos
+
+        if(!(TextUtils.isEmpty(nombreA) || TextUtils.isEmpty(passA) || TextUtils.isEmpty(correoA))){
+            if(isEmailValid(correoA)){
+                valido = true;
+            }else{
+                Snackbar.make(view, "El correo no tiene el formato correcto: xxx_xxx@xxx.xxx", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        }else{
+            Snackbar.make(view, "Debe llenar todos los campos", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (valido){
+            Administrador administrador = new Administrador();
+            //Falta id
+            administrador.setIdAdministrador(ExtraID);
+            administrador.setNombreAdmin(nombreA);
+            administrador.setPasswordAdmin(passA);
+            administrador.setCorreoAdmin(correoA);
+
+            helper.abrir();
+            estado = helper.actualizarAdministrador(administrador);
+            helper.cerrar();
+
+            Snackbar.make(view, estado, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+            //Ir a otra activity
+
+            Intent intent = new Intent(AdministradorEditarActivity.this,AdministradorActivity.class);
+            startActivity(intent);
+
+        }
+    }
+
+        public static boolean isEmailValid(String email) {
+            boolean isValid = false;
+
+            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+            CharSequence inputStr = email;
+
+            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(inputStr);
+            if (matcher.matches()) {
+                isValid = true;
+            }
+            return isValid;
+        }
+
+    public void llenarCampos(String ExtraNOMBRE, String ExtraPASS, String ExtraCORREO){
+
+        nombre.setText(ExtraNOMBRE);
+        pass.setText(ExtraPASS);
+        correo.setText(ExtraCORREO);
+
+    }
+
+
+
 
 
 }

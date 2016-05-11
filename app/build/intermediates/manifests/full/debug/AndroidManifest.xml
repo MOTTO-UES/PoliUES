@@ -58,6 +58,10 @@
             android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorEditarActivity"
             android:label="@string/title_activity_administrador_editar"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorConsultarActivity"
+            android:label="@string/title_activity_administrador_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
