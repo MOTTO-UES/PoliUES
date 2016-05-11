@@ -59,7 +59,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         alertDialogE.setTitle("Seguro que quiere eliminar");
         alertDialogE.setButton("SI", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-
+                    eliminarSolicitud();
             }
         });
         alertDialogE.setButton2("NO", new DialogInterface.OnClickListener() {
@@ -111,6 +111,14 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         Intent o = new Intent(this, verSolicitudActivity.class);
         o.putExtra("motivo",datoAbuscar);
         startActivity(o);
+    }
+
+    public void eliminarSolicitud(){
+        helper = new ControlBDPoliUES(this);
+        helper.leer();
+        cursor = helper.consultarSolicitud();
+
+
     }
 
 

@@ -231,6 +231,33 @@ public class ControlBDPoliUES {
         }
     }
 
+    public Solicitud buscarSolicitud(Cursor C, String motivo){
+        Solicitud solicitud=null;
+
+        if(C.moveToFirst()){
+
+            do {
+
+                solicitud = new Solicitud();
+
+                solicitud.setIdSolicitud(C.getInt(0));
+                solicitud.setActividad(C.getInt(1));
+                solicitud.setTarifa(C.getInt(2));
+                solicitud.setAdministrador(C.getInt(3));
+                solicitud.setSolicitante(C.getInt(4));
+                solicitud.setMotivoSolicitud(C.getString(5));
+                solicitud.setEstadoSolicitud(C.getString(6));
+                solicitud.setFechaCreacion(C.getString(7));
+
+                if (solicitud.getMotivoSolicitud().equals(motivo)){
+                    break;
+                }
+            }while(C.moveToNext());
+        }
+
+        return solicitud;
+    }
+
 
     /*CRUD DETALLESOLICITUD-RODRIGO*/
     public String insertarDS(DetalleSolicitud detalleSolicitud){
@@ -270,6 +297,31 @@ public class ControlBDPoliUES {
         return c;
     }
 
+    public DetalleSolicitud buscarDetalleSolicitud(Cursor C, int sol){
+        DetalleSolicitud DS=null;
+
+        if(C.moveToFirst()){
+
+            do {
+
+                DS = new DetalleSolicitud();
+
+                DS.setIdDescripcion(C.getInt(0));
+                DS.setSolicitud(C.getInt(1));
+                DS.setArea(C.getInt(2));
+                DS.setFechaInicio(C.getString(3));
+                DS.setFechaFinal(C.getString(4));
+                DS.setCobroTotal(C.getDouble(5));
+
+                if (DS.getSolicitud() == sol){
+                    break;
+                }
+
+            }while(C.moveToNext());
+        }
+
+        return DS;
+    }
 
 
     public String llenarBDSR11038(){

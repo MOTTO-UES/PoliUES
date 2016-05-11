@@ -73,50 +73,14 @@ public class verSolicitudActivity extends AppCompatActivity {
         Solicitud solicitud = null;
         DetalleSolicitud DS = null;
 
-        if(cursor.moveToFirst()){
+        solicitud = helper.buscarSolicitud(cursor,motivo);
 
-            do {
-
-                solicitud = new Solicitud();
-
-                solicitud.setIdSolicitud(cursor.getInt(0));
-                solicitud.setActividad(cursor.getInt(1));
-                solicitud.setTarifa(cursor.getInt(2));
-                solicitud.setAdministrador(cursor.getInt(3));
-                solicitud.setSolicitante(cursor.getInt(4));
-                solicitud.setMotivoSolicitud(cursor.getString(5));
-                solicitud.setEstadoSolicitud(cursor.getString(6));
-                solicitud.setFechaCreacion(cursor.getString(7));
-
-                if (solicitud.getMotivoSolicitud().equals(motivo)){
-                    break;
-                }
-            }while(cursor.moveToNext());
-        }
+        DS = helper.buscarDetalleSolicitud(cursor2,solicitud.getIdSolicitud());
 
 
-        if(cursor2.moveToFirst()){
-
-            do {
-
-                DS = new DetalleSolicitud();
-
-                DS.setIdDescripcion(cursor2.getInt(0));
-                DS.setSolicitud(cursor2.getInt(1));
-                DS.setArea(cursor2.getInt(2));
-                DS.setFechaInicio(cursor2.getString(3));
-                DS.setFechaFinal(cursor2.getString(4));
-                DS.setCobroTotal(cursor2.getDouble(5));
-
-                if (DS.getSolicitud() == solicitud.getIdSolicitud()){
-                    break;
-                }
-
-            }while(cursor.moveToNext());
-        }
-
-        if(solicitud == null)
+        if(solicitud == null && DS == null){
             Toast.makeText(this,"no encontrado", Toast.LENGTH_LONG).show();
+        }
         else{
             actividadET.setText(String.valueOf(solicitud.getActividad()));
             motivoET.setText(solicitud.getMotivoSolicitud());
