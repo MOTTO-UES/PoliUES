@@ -22,6 +22,11 @@
     <string name="action_settings">Settings</string>
 
 
+    <!-- MENUS CRUD POPUP-->
+    <string name="comsultar">CONSULTAR</string>
+    <string name="editar">EDITAR</string>
+    <string name="borrar">BORRAR</string>
+
     <!-- ADMINISTRADOR _ MOTTO -->
 
     <string name="txtnombreAdministrador">Nombre</string>
@@ -30,6 +35,15 @@
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
     <string name="action_administrador_agregar">AGREGAR NUEVO</string>
+
+    <!-- SOLICITANTE _ MOTTO -->
+
+    <string name="txtnombreSolicitante">Nombre</string>
+    <string name="txtpassSolicitante">Password</string>
+    <string name="txtcorreoSolicitante">Correo</string>
+    <string name="btnAgregarSolicitante">AGREGAR</string>
+    <string name="btnLimpiarSolicitante">LIMPIAR</string>
+    <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
 
     <!--DERALLE SOLICITUD, RODRIGO-->
 
@@ -51,5 +65,6 @@
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
+    <string name="title_activity_solicitante">SolicitanteActivity</string>
 
 </resources>

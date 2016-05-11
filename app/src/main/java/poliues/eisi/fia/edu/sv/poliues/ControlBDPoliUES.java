@@ -20,6 +20,7 @@ public class ControlBDPoliUES {
 
     private static final String[] camposAdministrador = new String[]
             {"IDADMINISTRADOR","NOMBREADMINISTRADOR","PASSWORDADMINISTRADOR","CORREOADMINISTRADOR"};
+
     private static final String[] camposSolicitante = new String[]
             {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
@@ -149,7 +150,49 @@ public class ControlBDPoliUES {
         Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
         return c;
     }
+    //Eliminar Administrador
+    public String eliminarAdministrador(Administrador administrador){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("ADMINISTRADOR", "IDADMINISTRADOR='"+administrador.getIdAdministrador()+"'", null);
+        regAfectados+=contador;
+
+        return regAfectados;
+    }
     /////////////////////////////////////////////////////////////////////////////
+    //Agregar Solicitante
+    public String insertarSolicitante(Solicitante solicitante){
+        String regInsertados="Registro Insertado Nº= ";
+        long contador=0;
+
+        ContentValues val = new ContentValues();
+
+        ///val.put(camposAdministrador[0],administrador.getIdAdministrador());
+        val.put(camposSolicitante[1],solicitante.getNombre());
+        val.put(camposSolicitante[2],solicitante.getPassword());
+        val.put(camposSolicitante[3], solicitante.getCorreo());
+
+
+        contador = db.insert("SOLICITANTE", null, val);
+
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el Solicitante, Soicitante Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+
+        return regInsertados;
+    }
+    //Consultar Solicitante
+    public Cursor consultarSolicitante(){
+        Cursor c = db.query("SOLICITANTE", camposSolicitante,null,null,null,null,null,null);
+        return c;
+    }
+
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";

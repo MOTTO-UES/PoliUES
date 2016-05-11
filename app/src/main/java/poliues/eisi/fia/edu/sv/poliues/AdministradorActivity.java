@@ -1,6 +1,8 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -21,26 +23,30 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdministradorActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
         ListView lista;
         ControlBDPoliUES db;
         List<String> item = null;
+        List<Administrador> objAdministrador = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,8 +127,8 @@ public class AdministradorActivity extends AppCompatActivity
         if (id == R.id.administrador) {
             // Handle the camera action
         } else if (id == R.id.solicitante) {
-            //Intent inte = new Intent(this, SolicitanteActivity.class);
-            //startActivity(inte);
+            Intent inte = new Intent(this, SolicitanteActivity.class);
+            startActivity(inte);
         }/* else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -147,6 +153,8 @@ public class AdministradorActivity extends AppCompatActivity
         db.leer();
         Cursor c = db.consultarAdministrador();
         item = new ArrayList<String>();
+
+        objAdministrador = new ArrayList<Administrador>();
         ///test
         //Toast.makeText(this, "bien 1", Toast.LENGTH_SHORT).show();
         //Log.d("My tag", "Antes de cursor");
@@ -162,12 +170,14 @@ public class AdministradorActivity extends AppCompatActivity
                 administrador.setPasswordAdmin(c.getString(2));
                 administrador.setCorreoAdmin(c.getString(3));
 
+                objAdministrador.add(administrador);
+
                 //nombre = c.getString(1);
                 //password = c.getString(2);
                 //correo = c.getString(3);
 
                 //Agregar Registro a la lista
-                item.add(administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
+                item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
                 //item.add(nombre+ " "+ password+ " "+ correo );
 
             }while(c.moveToNext());
@@ -176,6 +186,54 @@ public class AdministradorActivity extends AppCompatActivity
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
 
         lista.setAdapter(adaptador);
+
+        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                ////////////////////////////////////////////////////////////////
+                //PopUp
+
+                final Administrador admin;
+                admin = objAdministrador.get(position);
+
+                PopupMenu pop = new PopupMenu(getApplicationContext(),view);
+
+                pop.inflate(R.menu.menu_popup);
+
+                pop.show();
+
+                pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+
+                        int id = item.getItemId();
+
+                        if (id == R.id.ConsultarA) {
+                            //Intent inte = new Intent(AdministradorActivity.this, );
+                            //startActivity(inte);
+                        } else if (id == R.id.EditarA) {
+                            Intent inte = new Intent(AdministradorActivity.this, AdministradorEditarActivity.class);
+                            inte.putExtra("EnvioAdministrador", admin.getIdAdministrador());
+                            startActivity(inte);
+                        } else if (id == R.id.BorrarA) {
+
+                            String regEliminadas;
+                            db.abrir();
+                            regEliminadas=db.eliminarAdministrador(admin);
+                            db.cerrar();
+                            showAdministrador();
+                            Toast.makeText(AdministradorActivity.this, regEliminadas, Toast.LENGTH_SHORT).show();
+
+                        }
+
+                        return false;
+                    }
+                });
+
+                return false;
+                ////////////////////////////////////////////////////////////////
+            }
+        });
     }
 
 
