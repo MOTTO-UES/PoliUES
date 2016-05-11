@@ -13,7 +13,7 @@ import android.os.Build;
 public class ControlBDPoliUES {
 
     private static final  String[] camposSolicitud = new  String[]
-            {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
+            {"idSolicitud", "actividad", "tarifa", "administrador","solicitante", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
 
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
@@ -196,22 +196,41 @@ public class ControlBDPoliUES {
         return null;
     }
 
-    public String eliminar(Solicitud solicitud){
+    public String eliminar(Solicitud solicitud) {
         return null;
     }
 
-    public String consultarSolicitud(Solicitud solicitud){
-        return null;
+    public Solicitud consultarSolicitudUltima(){
+
+
+        Cursor cursor = db.query("Solicitud", camposSolicitud,null ,null, null, null, null,null);
+
+        if(cursor.moveToLast()){
+            Solicitud solicitud = new Solicitud();
+
+            solicitud.setIdSolicitud(cursor.getInt(0));
+            solicitud.setActividad(cursor.getInt(1));
+            solicitud.setTarifa(cursor.getInt(2));
+            solicitud.setAdministrador(cursor.getInt(3));
+            solicitud.setSolicitante(cursor.getInt(4));
+            solicitud.setMotivoSolicitud(cursor.getString(5));
+            solicitud.setEstadoSolicitud(cursor.getString(6));
+            solicitud.setFechaCreacion(cursor.getString(7));
+
+            System.out.println(solicitud.getIdSolicitud());
+            return solicitud;
+        }else{
+            return null;
+        }
     }
 
 
     /*CRUD DETALLESOLICITUD-RODRIGO*/
-    public String insertar(DetalleSolicitud detalleSolicitud){
+    public String insertarDS(DetalleSolicitud detalleSolicitud){
         String regInsertados="Registro Insertado Nº= ";
         long contador=0;
         ContentValues detSol = new ContentValues();
 
-        detSol.put("idDescripcion",detalleSolicitud.getIdDescripcion());
         detSol.put("solicitud",detalleSolicitud.getSolicitud());
         detSol.put("area",detalleSolicitud.getArea());
         detSol.put("fechaInicio",detalleSolicitud.getFechaInicio());
@@ -294,7 +313,7 @@ public class ControlBDPoliUES {
             DS.setFechaInicio(TDSfechaInicio[i]);
             DS.setFechaFinal(TDSfechaFinal[i]);
             DS.setCobroTotal(TDScobroTotal[i]);
-            insertar(DS);
+            insertarDS(DS);
         }
 
 
@@ -302,5 +321,6 @@ public class ControlBDPoliUES {
         return "Guardo Correctamente";
     }
 }
+
 
 

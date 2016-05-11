@@ -386,6 +386,7 @@
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_principal">principal</string>
+    <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
     <string name="txtcorreoAdministrador">Correo</string>
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtpassAdministrador">Password</string>

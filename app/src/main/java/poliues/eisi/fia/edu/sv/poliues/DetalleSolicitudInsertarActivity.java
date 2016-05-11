@@ -3,6 +3,7 @@ package poliues.eisi.fia.edu.sv.poliues;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DetalleSolicitudInsertarActivity extends Activity implements AdapterView.OnItemSelectedListener {
+public class DetalleSolicitudInsertarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ControlBDPoliUES helper;
     Spinner spinnerAreas;
@@ -191,25 +192,36 @@ public class DetalleSolicitudInsertarActivity extends Activity implements Adapte
         }
 
         if(inicio.compareTo(Actual)>0){
-            Toast.makeText(this,"la fecha actual es menor, se puede ingresar",Toast.LENGTH_SHORT).show();
+
 
             if(fin.compareTo(inicio)>=0){
-                Toast.makeText(this,"la fecha fin es mayor, se puede ingresar",Toast.LENGTH_SHORT).show();
+                helper = new ControlBDPoliUES(this);
+                helper.leer();
+                Solicitud Soli;
+                Soli = helper.consultarSolicitudUltima();
+                helper.cerrar();
+
+                System.out.println(Soli.getIdSolicitud());
+
+                Dsolicitud.setSolicitud(Soli.getIdSolicitud());
+                Dsolicitud.setArea(1);
+                Dsolicitud.setFechaInicio(fechaInicio);
+                Dsolicitud.setFechaFinal(fechaFinal);
+                Dsolicitud.setCobroTotal(60);
+
+                helper.abrir();
+                regInsertados = helper.insertarDS(Dsolicitud);
+                helper.cerrar();
+                Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
 
             }else{
-                Toast.makeText(this,"la fecha fin es menor,NO se puede ingresar",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"la fecha de fin es menor,NO se puede ingresar",Toast.LENGTH_SHORT).show();
 
             }
         }else{
-            Toast.makeText(this,"la fecha actual es mayor, NO se puede ingresar",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"la fecha de Inicio es incorrecta, NO se puede ingresar",Toast.LENGTH_SHORT).show();
 
         }
-
-
-        /*helper.abrir();
-        regInsertados = helper.insertar(Dsolicitud);
-        helper.cerrar();
-        Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();*/
 
     }
 

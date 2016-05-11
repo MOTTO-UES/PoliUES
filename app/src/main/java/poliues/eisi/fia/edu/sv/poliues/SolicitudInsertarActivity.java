@@ -4,6 +4,9 @@ import android.app.Activity;
 //import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
-public class SolicitudInsertarActivity extends Activity implements AdapterView.OnItemSelectedListener{
+public class SolicitudInsertarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     ControlBDPoliUES helper;
     EditText editMotivo;
@@ -43,6 +46,26 @@ public class SolicitudInsertarActivity extends Activity implements AdapterView.O
         spinnerActividad.setOnItemSelectedListener(this);
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+
+        return  true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.opcionesMenu) {
+            Intent intent = new Intent(this,SolicitudConsultarActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

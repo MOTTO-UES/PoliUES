@@ -70,7 +70,9 @@
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
+    <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
 
+    <!--MENU RODRIGO-->
 
 </resources>
 
