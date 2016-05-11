@@ -164,6 +164,9 @@ public class ControlBDPoliUES {
         Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
         return c;
     }
+
+
+
     /////////////////////////////////////////////////////////////////////////////
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
@@ -192,6 +195,11 @@ public class ControlBDPoliUES {
         return regInsertados;
     }
 
+    public Cursor consultarSolicitud(){
+        Cursor c = db.query("Solicitud",camposSolicitud,null,null,null,null,null,null);
+        return c;
+    }
+
     public String actualizar(Solicitud solicitud){
         return null;
     }
@@ -201,7 +209,6 @@ public class ControlBDPoliUES {
     }
 
     public Solicitud consultarSolicitudUltima(){
-
 
         Cursor cursor = db.query("Solicitud", camposSolicitud,null ,null, null, null, null,null);
 
@@ -258,8 +265,9 @@ public class ControlBDPoliUES {
         return null;
     }
 
-    public String consultarSolicitud(DetalleSolicitud detalleSolicitud){
-        return null;
+    public Cursor consultarDetalleSolicitud(){
+        Cursor c = db.query("DetalleSolicitud",camposDetalleSolicitud,null,null,null,null,null,null);
+        return c;
     }
 
 
