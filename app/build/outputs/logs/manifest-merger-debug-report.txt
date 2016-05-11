@@ -1,32 +1,32 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:3:5-46
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:11-52
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:3:11-69
 	android:versionCode
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:6:5-71
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:6:5-70
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:7:5-71
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:7:5-70
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:8:5-72
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:8:5-71
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:8:22-69
 application
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:10:5-31:19
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:10:5-42:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
@@ -43,6 +43,9 @@ MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\USB\PoliUES\
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:13:9-41
@@ -63,15 +66,15 @@ ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:16:9-24:20
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:20:17-68
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:22:17-76
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:22:27-74
 activity#poliues.eisi.fia.edu.sv.poliues.principal
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:25:9-28:59
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:25:9-28:58
 	android:label
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:27:13-61
 	android:theme
@@ -79,13 +82,32 @@ ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:25:9-28:59
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:26:13-38
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:29:9-55
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:29:9-54
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:29:19-52
 activity#poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:30:9-71
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:30:9-61
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:30:19-59
+activity#poliues.eisi.fia.edu.sv.poliues.ReservaInsertarActivity
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:31:9-32:20
+	android:name
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:31:19-58
+activity#poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:33:9-34:20
+	android:name
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:33:19-56
+activity#poliues.eisi.fia.edu.sv.poliues.ReservaConsultarActivity
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:35:9-36:20
+	android:name
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:35:19-59
+meta-data#com.google.android.gms.version
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:39:9-41:68
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:41:13-66
+	android:name
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:40:13-58
 uses-sdk
 INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78
@@ -105,6 +127,9 @@ MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\int
 MERGED from [com.android.support:support-vector-drawable:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:23:9-75

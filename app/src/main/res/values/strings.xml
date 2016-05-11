@@ -22,10 +22,9 @@
     <string name="action_settings">Settings</string>
 
 
-
     <!--DERALLE SOLICITUD, RODRIGO-->
 
-   <string name="idDescripcion">idDescripcion</string>
+    <string name="idDescripcion">idDescripcion</string>
     <string name="solicitud">solicitud</string>
     <string name="area">area</string>
     <string name="fechaInicio">fecha Inicio</string>
@@ -40,5 +39,22 @@
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="fechaCreacion">fecha de creacion</string>
+    <!--RESERVA ALEX-->
+
+    <string name="facultad">Facultad:</string>
+    <string name="numeropersonas">N° de Personas:</string>
+    <string name="motivo">Motivo:</string>
+    <string name="descripcionreserva">Descripcion:</string>
+    <string name="fechareserva">Fecha Reserva:</string>
+    <string name="horarioinicioreserva">Hora Inicio:</string>
+    <string name="horariofinreserva">Hora Fin:</string>
+    <string name="opciones">Opciones:</string>
+    <string name="insertar">Guardar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="selectfecha">Seleccione la Fecha</string>
+    <string name="selecthora">Seleccione de hora</string>
+    <string name="consultar">Consultar</string>
+    <string name="nuevareserva">Nueva</string>
+
 
 </resources>

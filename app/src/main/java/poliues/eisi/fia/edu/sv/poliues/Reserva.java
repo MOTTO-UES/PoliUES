@@ -3,13 +3,12 @@ package poliues.eisi.fia.edu.sv.poliues;
 import java.util.Date;
 
 /**
- * Created by jonathan on 1/5/2016.
+ * Created by jonathan on 2/5/2016.
  */
 public class Reserva {
     private int idreserva;
-    private int idhorario;
-    private String facultad;
-    private Date fechaingreso;
+    private int idfacultad;
+    private String fechaingreso;
     private int numeropersonas;
     private String motivo;
     private String descripcionreserva;
@@ -17,10 +16,9 @@ public class Reserva {
     public Reserva() {
     }
 
-    public Reserva(int idreserva, int idhorario, String facultad, Date fechaingreso, int numeropersonas, String motivo, String descripcionreserva) {
+    public Reserva(int idreserva, int idfacultad, String fechaingreso, int numeropersonas, String motivo, String descripcionreserva) {
         this.idreserva = idreserva;
-        this.idhorario = idhorario;
-        this.facultad = facultad;
+        this.idfacultad = idfacultad;
         this.fechaingreso = fechaingreso;
         this.numeropersonas = numeropersonas;
         this.motivo = motivo;
@@ -35,27 +33,19 @@ public class Reserva {
         this.idreserva = idreserva;
     }
 
-    public int getIdhorario() {
-        return idhorario;
+    public int getIdfacultad() {
+        return idfacultad;
     }
 
-    public void setIdhorario(int idhorario) {
-        this.idhorario = idhorario;
+    public void setIdfacultad(int idfacultad) {
+        this.idfacultad = idfacultad;
     }
 
-    public String getFacultad() {
-        return facultad;
-    }
-
-    public void setFacultad(String facultad) {
-        this.facultad = facultad;
-    }
-
-    public Date getFechaingreso() {
+    public String getFechaingreso() {
         return fechaingreso;
     }
 
-    public void setFechaingreso(Date fechaingreso) {
+    public void setFechaingreso(String fechaingreso) {
         this.fechaingreso = fechaingreso;
     }
 
