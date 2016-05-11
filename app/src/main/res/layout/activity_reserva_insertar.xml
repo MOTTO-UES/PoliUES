@@ -32,9 +32,10 @@
 
         <Spinner
             android:id="@+id/spfacultades"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="30"/>
+            android:maxLength="30"
+            android:focusable="true"/>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -47,10 +48,11 @@
                 android:id="@+id/textViewnumeropersonas"/>
             <EditText
                 android:id="@+id/editnumeropersonas"
-                android:inputType="text"
+                android:inputType="number"
                 android:ems="20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"/>
         </LinearLayout>
 
 
@@ -69,8 +71,9 @@
                     android:id="@+id/editmotivo"
                     android:inputType="text"
                     android:ems="20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"/>
         </LinearLayout>
 
         <TextView
@@ -79,22 +82,25 @@
             android:text="@string/descripcionreserva"
             android:id="@+id/textViewdescripcionreserva"/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="20"
-            android:id="@+id/editdescripcionreserva"/>
+            android:id="@+id/editdescripcionreserva"
+            android:focusable="true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/area"
-            android:id="@+id/textViewarea"/>
+            android:id="@+id/textViewarea"
+            />
         <Spinner
             android:id="@+id/spareas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="30"/>
+            android:maxLength="30"
+            android:focusable="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,12 +123,13 @@
                 android:cropToPadding="true"
                 android:src="@drawable/calendar_icon" />
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="20"
                 android:id="@+id/editfechareserva"
-                android:editable="false"/>
+                android:editable="true"
+                android:focusable="true"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -144,12 +151,13 @@
                 android:cropToPadding="true"
                 android:src="@drawable/clock_icon" />
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
                 android:ems="20"
                 android:id="@+id/edithorarioinicio"
-                android:editable="false"/>
+                android:editable="true"
+                android:focusable="true"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -171,7 +179,7 @@
                 android:cropToPadding="true"
                 android:src="@drawable/clock_icon" />
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
                 android:ems="20"
@@ -185,20 +193,14 @@
             android:layout_height="match_parent">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/insertar"
                 android:id="@+id/buttonguardar"
                 android:layout_marginTop="30dp"
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/limpiar"
-                android:id="@+id/buttonlimpiar"
-                android:layout_marginTop="30dp"
-                android:padding="10dp"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

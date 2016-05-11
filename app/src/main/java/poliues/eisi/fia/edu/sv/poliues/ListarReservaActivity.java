@@ -1,10 +1,12 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.design.widget.NavigationView;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 public class ListarReservaActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
 
     //global variables
+    private static int realIdD =0;
 
     private static ControlBDPoliUES dbhelper;
 
@@ -66,12 +69,15 @@ public class ListarReservaActivity extends Activity implements NavigationView.On
 
 
                 //obtain an Id to selected
-                int realId = obtainSelectedId(pos);
-                dbhelper.abrir();
+                realIdD = obtainSelectedId(pos);
+                creardialogo();
+
+                /*dbhelper.abrir();
 
                 //Creamos un Objeto reserva
                 Reserva reserva = new Reserva();
                 reserva.setIdreserva(realId);
+
 
                 //delete the item selected
                 String toastinfo = dbhelper.eliminar(reserva);
@@ -80,7 +86,7 @@ public class ListarReservaActivity extends Activity implements NavigationView.On
 
 
                 //refresh the listview
-                refreshListView();
+                refreshListView();*/
                 return true;
 
             }
@@ -208,4 +214,39 @@ public class ListarReservaActivity extends Activity implements NavigationView.On
         Intent intent = new Intent(this,ReservaConsultarActivity.class);
         startActivity(intent);
     }
+
+    public void creardialogo(){
+        AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
+        dialogo1.setTitle("Importante");
+        dialogo1.setMessage("¿Seguro que Quiere Eliminar esta Reserva ?");
+        dialogo1.setCancelable(false);
+        dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+                //aceptar();
+                dbhelper.abrir();
+
+                //Creamos un Objeto reserva
+                Reserva reserva = new Reserva();
+                reserva.setIdreserva(realIdD);
+
+
+                //delete the item selected
+                String toastinfo = dbhelper.eliminar(reserva);
+                dbhelper.cerrar();
+                mensajes(toastinfo);
+
+
+                //refresh the listview
+                refreshListView();
+            }
+        });
+        dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogo1, int id) {
+                //cancelar();
+                refreshListView();
+            }
+        });
+        dialogo1.show();
+    }
 }
+

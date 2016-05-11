@@ -237,7 +237,7 @@ public class ControlBDPoliUES {
             cv.put("motivo", reserva.getMotivo());
             cv.put("descripcionreserva ", reserva.getDescripcionreserva());
             db.update("reserva", cv, "idreserva = ?", id);
-            return "Registro Actualizado Correctamente";
+            return "Registro de reserva Actualizado Correctamente";
         }else{
             return "Registro con codigo " + reserva.getIdreserva() + " no existe";
         }
@@ -250,7 +250,7 @@ public class ControlBDPoliUES {
             cv.put("idarea", detallereserva.getIdarea());
             cv.put("idreserva", detallereserva.getIdreserva());
             db.update("detallereserva", cv, "iddetallereserva = ?", id);
-            return "Registro Actualizado Correctamente";
+            return "Registro de detalle reserva Actualizado Correctamente";
         }else{
             return "Registro con codigo " + detallereserva.getIddetallereserva() + " no existe";
         }
@@ -264,8 +264,8 @@ public class ControlBDPoliUES {
             cv.put("fechareserva", horario.getFechareserva());
             cv.put("horarioinicio", horario.getHorarioinicio());
             cv.put("horariofin", horario.getHorariofin());
-            db.update("detallereserva", cv, "idreserva = ?", id);
-            return "Registro Actualizado Correctamente";
+            db.update("horario", cv, "idreserva = ?", id);
+            return "Registro de Horario Actualizado Correctamente";
         }else{
             return "Registro con codigo de reserva " + horario.getIdreserva()+ " no existe";
         }

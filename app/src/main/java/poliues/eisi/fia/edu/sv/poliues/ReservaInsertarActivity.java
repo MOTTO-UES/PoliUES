@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,9 +22,12 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 public class ReservaInsertarActivity extends Activity implements View.OnClickListener {
 
@@ -109,8 +114,47 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     private void setUIComponents(){
         spfacultades = (Spinner) findViewById(R.id.spfacultades);
         editnumeropersonas = (EditText) findViewById(R.id.editnumeropersonas);
+        editnumeropersonas.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+            @Override
+            public void onFocusChange(View v,boolean hasFocus){
+                if(TextUtils.isEmpty(editnumeropersonas.getText().toString())){
+                    editnumeropersonas.setError("El campo esta Vacio");
+
+                }else {
+                    int num =Integer.parseInt(editnumeropersonas.getText().toString());
+                    if(num<=0){
+                        editnumeropersonas.setError("Debe de ingresar un numero entero positivo");
+
+                    }
+                }
+
+
+            }
+        });
+
+
         editmotivo = (EditText) findViewById(R.id.editmotivo);
+        editmotivo.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+            @Override
+            public void onFocusChange(View v,boolean hasFocus){
+                if(TextUtils.isEmpty(editmotivo.getText().toString())){
+                    editmotivo.setError("El campo motivo esta Vacio");
+
+                }
+            }
+        });
+
         editdescripcionreserva = (EditText) findViewById(R.id.editdescripcionreserva);
+        editdescripcionreserva.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+            @Override
+            public void onFocusChange(View v,boolean hasFocus){
+                if(TextUtils.isEmpty(editdescripcionreserva.getText().toString())){
+                    editdescripcionreserva.setError("El campo descripcion esta Vacio");
+
+                }
+            }
+        });
+
         spareas = (Spinner) findViewById(R.id.spareas);
         //Fecha Reserva
         ib1 = (ImageButton) findViewById(R.id.imagefecha);
@@ -120,6 +164,33 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
         year = cal1.get(Calendar.YEAR);
         editfechareserva = (EditText) findViewById(R.id.editfechareserva);
         ib1.setOnClickListener(this);
+        editfechareserva.setCursorVisible(true);
+        editfechareserva.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (TextUtils.isEmpty(editfechareserva.getText().toString())) {
+                    editfechareserva.setError("El campo fecha esta Vacio");
+                }else{
+                    Date fechadehoy=null;
+                    Date fechar=null;
+                    DateFormat fechasFormatos= new SimpleDateFormat("dd-MM-yyyy");
+                    try{
+                        fechadehoy=fechasFormatos.parse(fechaActual());
+                        mensajes("fecha de hoy: "+fechadehoy.toString());
+                        fechar=fechasFormatos.parse(editfechareserva.getText().toString());
+                        mensajes("fecha de Reserva:  "+fechar.toString());
+                    }catch (ParseException e){
+                        e.printStackTrace();
+                    }
+                    if (fechar.compareTo(fechadehoy)<=0){
+                        editfechareserva.setError("La Fecha de la reserva no es valida es menor que la actual");
+
+                    }
+
+
+                }
+            }
+        });
         //Hora Reserva
         //Hora Inicio
         ib2 = (ImageButton) findViewById(R.id.imagehorainicio);
@@ -143,10 +214,6 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                             public void onClick(View v) {
                                                 //if is create
                                                 if (!isUpdate) {
-                                                    if ((realFacultadId == 0) && ( Integer.parseInt(editnumeropersonas.getText().toString())== 0)&& (editmotivo.getText().toString()==" ")&&(editdescripcionreserva.getText().toString()==" ")&&(realAreaId==0)&&(editfechareserva.getText().toString()==" ")&&(edithorainicio.getText().toString()==" ")&&(edithorafin.getText().toString()==" ")){
-                                                        String error ="Hay Datos Vacios";
-                                                        mensajes(error);
-                                                    }else{
                                                         dbhelper.abrir();
                                                         Reserva reservaguardar = new Reserva();
                                                         reservaguardar.setIdfacultad(realFacultadId);
@@ -173,14 +240,11 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                         horarioguardar.setHorariofin(edithorafin.getText().toString());
                                                         dbhelper.insertar(horarioguardar);
                                                         dbhelper.cerrar();
-                                                    }
+
                                                 }//if is update
                                                 else {
                                                     // realId
-                                                    if ((realFacultadId == 0) && ( Integer.parseInt(editnumeropersonas.getText().toString())== 0)&& (editmotivo.getText().toString()==" ")&&(editdescripcionreserva.getText().toString()==" ")&&(realAreaId==0)&&(editfechareserva.getText().toString()==" ")&&(edithorainicio.getText().toString()==" ")&&(edithorafin.getText().toString()==" ")){
-                                                        String error ="Hay Datos Vacios";
-                                                        mensajes(error);
-                                                    }else{
+
                                                     dbhelper.abrir();
                                                     Reserva reservaactualizar = new Reserva();
                                                     reservaactualizar.setIdreserva(realId);
@@ -202,7 +266,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                     String m = dbhelper.actualizar(horarioactualizar);
                                                     mensajes(m);
                                                     dbhelper.cerrar();
-                                                    }
+
                                                 }
 
                                                 //go to the list activity
@@ -374,7 +438,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
-            editfechareserva.setText(selectedDay + " / " + (selectedMonth + 1) + " / " + selectedYear);
+            editfechareserva.setText(selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear);
         }
     };
 
