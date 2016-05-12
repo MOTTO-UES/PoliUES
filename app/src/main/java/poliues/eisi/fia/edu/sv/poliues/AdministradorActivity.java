@@ -3,6 +3,7 @@ package poliues.eisi.fia.edu.sv.poliues;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -149,84 +150,119 @@ public class AdministradorActivity extends AppCompatActivity
         db = new ControlBDPoliUES(this);
         db.leer();
         Cursor c = db.consultarAdministrador();
-        item = new ArrayList<String>();
 
-        objAdministrador = new ArrayList<Administrador>();
 
-        if(c.moveToFirst()){
-            //Recorre todos los registros
-            do {
+        if(!(c == null)){ //Si esta vacio
+            item = new ArrayList<String>();
+            objAdministrador = new ArrayList<Administrador>();
 
-                Administrador administrador = new Administrador();
-                administrador.setIdAdministrador(c.getInt(0));
-                administrador.setNombreAdmin(c.getString(1));
-                administrador.setPasswordAdmin(c.getString(2));
-                administrador.setCorreoAdmin(c.getString(3));
 
-                objAdministrador.add(administrador);
+            if(c.moveToFirst()){
+                //Recorre todos los registros
+                do {
 
-                //Agregar Registro a la lista
-                item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
+                    Administrador administrador = new Administrador();
+                    administrador.setIdAdministrador(c.getInt(0));
+                    administrador.setNombreAdmin(c.getString(1));
+                    administrador.setPasswordAdmin(c.getString(2));
+                    administrador.setCorreoAdmin(c.getString(3));
 
-            }while(c.moveToNext());
-        }
-        //Crear un adaptador
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
+                    objAdministrador.add(administrador);
 
-        lista.setAdapter(adaptador);
+                    //Agregar Registro a la lista
+                    item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
 
-        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                ////////////////////////////////////////////////////////////////
-                //PopUp
-
-                final Administrador admin;
-                admin = objAdministrador.get(position);
-                final Intent inte = new Intent();
-                //Agregar Extras
-                inte.putExtra("EnvioAdministradorID", admin.getIdAdministrador());
-                inte.putExtra("EnvioAdministradorNOMBRE", admin.getNombreAdmin());
-                inte.putExtra("EnvioAdministradorPASS", admin.getPasswordAdmin());
-                inte.putExtra("EnvioAdministradorCORREO", admin.getCorreoAdmin());
-
-                PopupMenu pop = new PopupMenu(getApplicationContext(),view);
-
-                pop.inflate(R.menu.menu_popup);
-
-                pop.show();
-
-                pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-
-                        int id = item.getItemId();
-
-                        if (id == R.id.ConsultarA) {
-                            inte.setClass(AdministradorActivity.this, AdministradorConsultarActivity.class);
-                            startActivity(inte);
-                        } else if (id == R.id.EditarA) {
-                            inte.setClass(AdministradorActivity.this, AdministradorEditarActivity.class);
-                            startActivity(inte);
-                        } else if (id == R.id.BorrarA) {
-
-                            String regEliminadas;
-                            db.abrir();
-                            regEliminadas=db.eliminarAdministrador(admin);
-                            db.cerrar();
-                            showAdministrador();
-                            Toast.makeText(AdministradorActivity.this, regEliminadas, Toast.LENGTH_SHORT).show();
-
-                        }
-
-                        return false;
-                    }
-                });
-
-                return false;
-                ////////////////////////////////////////////////////////////////
+                }while(c.moveToNext());
             }
-        });
+            //Crear un adaptador
+            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
+
+            lista.setAdapter(adaptador);
+
+            lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                    ////////////////////////////////////////////////////////////////
+                    //PopUp
+
+                    final Administrador admin;
+                    admin = objAdministrador.get(position);
+                    final Intent inte = new Intent();
+                    //Agregar Extras
+                    inte.putExtra("EnvioAdministradorID", admin.getIdAdministrador());
+                    inte.putExtra("EnvioAdministradorNOMBRE", admin.getNombreAdmin());
+                    inte.putExtra("EnvioAdministradorPASS", admin.getPasswordAdmin());
+                    inte.putExtra("EnvioAdministradorCORREO", admin.getCorreoAdmin());
+
+                    PopupMenu pop = new PopupMenu(getApplicationContext(), view);
+
+                    pop.inflate(R.menu.menu_popup);
+
+                    pop.show();
+
+                    pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+
+                            int id = item.getItemId();
+
+                            if (id == R.id.ConsultarA) {
+                                inte.setClass(AdministradorActivity.this, AdministradorConsultarActivity.class);
+                                startActivity(inte);
+                            } else if (id == R.id.EditarA) {
+                                inte.setClass(AdministradorActivity.this, AdministradorEditarActivity.class);
+                                startActivity(inte);
+                            } else if (id == R.id.BorrarA) {
+
+
+                                ///////////////////////////////////
+                                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(AdministradorActivity.this);
+                                dialogo1.setTitle("BORRAR");
+                                dialogo1.setMessage("¿ Desea Eliminar este Administrador ?");
+                                dialogo1.setCancelable(false);
+                                dialogo1.setPositiveButton("BORRAR", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogo1, int id) {
+                                        String regEliminadas;
+
+                                        db.abrir();
+                                        regEliminadas = db.eliminarAdministrador(admin);
+                                        db.cerrar();
+
+                                        showAdministrador();
+                                        Toast.makeText(AdministradorActivity.this, regEliminadas, Toast.LENGTH_SHORT).show();
+
+                                    }
+                                });
+                                dialogo1.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogo1, int id) {
+                                        dialogo1.cancel();
+                                    }
+                                });
+                                dialogo1.show();
+                                ///////////////////////////////////
+
+
+                            }
+
+                            return false;
+                        }
+                    });
+
+                    return false;
+                    ////////////////////////////////////////////////////////////////
+                }
+            });
+        }
+
+
+
+
+
+    }
+
+
+    public void cancelar() {
+        finish();
     }
 
 

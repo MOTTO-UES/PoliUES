@@ -301,11 +301,6 @@
     <string name="area">area</string>
     <string name="borrar">BORRAR</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="btnAgregarAdministrador">AGREGAR</string>
-    <string name="btnAgregarSolicitante">AGREGAR</string>
-    <string name="btnEditarAdministrador">EDITAR</string>
-    <string name="btnLimpiarAdministrador">LIMPIAR</string>
-    <string name="btnLimpiarSolicitante">LIMPIAR</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>
@@ -337,6 +332,9 @@
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_principal">principal</string>
     <string name="title_activity_solicitante">SolicitanteActivity</string>
+    <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
+    <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
+    <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
     <string name="txtcorreoAdministrador">Correo</string>
     <string name="txtcorreoSolicitante">Correo</string>
     <string name="txtnombreAdministrador">Nombre</string>

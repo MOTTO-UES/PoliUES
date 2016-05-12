@@ -1,5 +1,7 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -14,8 +16,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -27,6 +31,7 @@ public class SolicitanteActivity extends AppCompatActivity
     ListView lista;
     ControlBDPoliUES db;
     List<String> item = null;
+    List<Solicitante> objSolicitante = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +44,8 @@ public class SolicitanteActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(SolicitanteActivity.this,SolicitanteInsertarActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -60,7 +65,7 @@ public class SolicitanteActivity extends AppCompatActivity
             showSolicitante();
         }catch (Exception e){
             e.printStackTrace();
-            Toast.makeText(this, "error papu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No existen Solicitantes", Toast.LENGTH_SHORT).show();
         }
         //////////////////////////////////////////////////////////////////////////////
     }
@@ -127,6 +132,7 @@ public class SolicitanteActivity extends AppCompatActivity
         if(!(c == null)){ //Si esta vacio
 
             item = new ArrayList<String>();
+            objSolicitante = new ArrayList<Solicitante>();
 
             if(c.moveToFirst()){
                 //Recorre todos los registros
@@ -138,6 +144,8 @@ public class SolicitanteActivity extends AppCompatActivity
                     solicitante.setPassword(c.getString(2));
                     solicitante.setCorreo(c.getString(3));
 
+                    objSolicitante.add(solicitante);
+
                     //Agregar Registro a la lista
                     item.add(solicitante.getNombre().toString() + "       "+ solicitante.getPassword().toString()+ "      "+solicitante.getCorreo().toString());
 
@@ -148,6 +156,80 @@ public class SolicitanteActivity extends AppCompatActivity
             ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
 
             lista.setAdapter(adaptador);
+
+            lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                    ////////////////////////////////////////////////////////////////
+                    //PopUp
+
+                    final Solicitante solicitante;
+                    solicitante = objSolicitante.get(position);
+                    final Intent inte = new Intent();
+                    //Agregar Extras
+                    inte.putExtra("EnvioSolicitanteID", solicitante.getIdSolicitante());
+                    inte.putExtra("EnvioSolicitanteNOMBRE", solicitante.getNombre());
+                    inte.putExtra("EnvioSolicitantePASS", solicitante.getPassword());
+                    inte.putExtra("EnvioSolicitanteCORREO", solicitante.getCorreo());
+
+                    PopupMenu pop = new PopupMenu(getApplicationContext(), view);
+
+                    pop.inflate(R.menu.menu_popup);
+
+                    pop.show();
+
+                    pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+
+                            int id = item.getItemId();
+
+                            if (id == R.id.ConsultarA) {
+                                inte.setClass(SolicitanteActivity.this, SolicitanteConsultarActivity.class);
+                                startActivity(inte);
+                            } else if (id == R.id.EditarA) {
+                                inte.setClass(SolicitanteActivity.this, SolicitanteEditarActivity.class);
+                                startActivity(inte);
+                            } else if (id == R.id.BorrarA) {
+
+
+                                ///////////////////////////////////
+                                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(SolicitanteActivity.this);
+                                dialogo1.setTitle("BORRAR");
+                                dialogo1.setMessage("¿ Desea Eliminar este Administrador ?");
+                                dialogo1.setCancelable(false);
+                                dialogo1.setPositiveButton("BORRAR", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogo1, int id) {
+                                        String regEliminadas;
+
+                                        db.abrir();
+                                        regEliminadas = db.eliminarSolicitante(solicitante);
+                                        db.cerrar();
+
+                                        showSolicitante();
+                                        Toast.makeText(SolicitanteActivity.this, regEliminadas, Toast.LENGTH_SHORT).show();
+
+                                    }
+                                });
+                                dialogo1.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogo1, int id) {
+                                        dialogo1.cancel();
+                                    }
+                                });
+                                dialogo1.show();
+                                ///////////////////////////////////
+
+
+                            }
+
+                            return false;
+                        }
+                    });
+
+                    return false;
+                    ////////////////////////////////////////////////////////////////
+                }
+            });
 
         }
 

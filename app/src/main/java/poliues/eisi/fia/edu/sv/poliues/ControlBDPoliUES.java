@@ -207,7 +207,32 @@ public class ControlBDPoliUES {
         Cursor c = db.query("SOLICITANTE", camposSolicitante,null,null,null,null,null,null);
         return c;
     }
+    //Eliminar Solicitante
+    public String eliminarSolicitante(Solicitante solicitante){
 
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("SOLICITANTE", "IDSOLICITANTE='"+solicitante.getIdSolicitante()+"'", null);
+        regAfectados+=contador;
+
+        return regAfectados;
+    }
+    //Actualizar Solicitante
+    public String actualizarSolicitante(Solicitante solicitante){
+
+        String[] IDSOLICITANTE = {String.valueOf(solicitante.getIdSolicitante())};
+
+        ContentValues cv = new ContentValues();
+
+        cv.put("NOMBRE", solicitante.getNombre());
+        cv.put("PASSWORD", solicitante.getPassword());
+        cv.put("CORREO", solicitante.getCorreo());
+
+        db.update("SOLICITANTE", cv, "IDSOLICITANTE = ?", IDSOLICITANTE);
+
+        return "Solicitante Actualizado Correctamente";
+    }
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";

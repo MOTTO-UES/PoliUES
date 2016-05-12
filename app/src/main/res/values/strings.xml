@@ -37,9 +37,6 @@
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtpassAdministrador">Password</string>
     <string name="txtcorreoAdministrador">Correo</string>
-    <string name="btnAgregarAdministrador">AGREGAR</string>
-    <string name="btnEditarAdministrador">EDITAR</string>
-    <string name="btnLimpiarAdministrador">LIMPIAR</string>
     <string name="action_administrador_agregar">AGREGAR NUEVO</string>
 
     <!-- SOLICITANTE _ MOTTO -->
@@ -47,8 +44,6 @@
     <string name="txtnombreSolicitante">Nombre</string>
     <string name="txtpassSolicitante">Password</string>
     <string name="txtcorreoSolicitante">Correo</string>
-    <string name="btnAgregarSolicitante">AGREGAR</string>
-    <string name="btnLimpiarSolicitante">LIMPIAR</string>
     <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
 
     <!--DERALLE SOLICITUD, RODRIGO-->
@@ -73,5 +68,8 @@
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
+    <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
+    <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
+    <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
 
 </resources>
