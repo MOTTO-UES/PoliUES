@@ -121,8 +121,6 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
         return super.onOptionsItemSelected(item);
     }
 
-
-
     private void updateDisplayInicio(){
         mDateDisplayInicio.setText(
                 new StringBuilder()

@@ -38,7 +38,34 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AdministradorInsertarActivity"
-            android:label="@string/action_administrador_agregar" />
+
+            android:label="@string/title_activity_administrador_agregar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SolicitanteActivity"
+            android:label="@string/title_activity_solicitante"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdministradorEditarActivity"
+            android:label="@string/title_activity_administrador_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdministradorConsultarActivity"
+            android:label="@string/title_activity_administrador_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SolicitanteEditarActivity"
+            android:label="@string/title_activity_solicitante_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SolicitanteConsultarActivity"
+            android:label="@string/title_activity_solicitante_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SolicitanteInsertarActivity"
+            android:label="@string/title_activity_solicitante_insertar"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -48,6 +75,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".verSolicitudActivity"></activity>
+
     </application>
 
 </manifest>

@@ -124,8 +124,6 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         }
 
 
-
-
         return super.onOptionsItemSelected(item);
     }
 

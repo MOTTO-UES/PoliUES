@@ -71,6 +71,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         BDhelper = new ControlBDPoliUES(this);
 
         System.out.println("antes de abrir");

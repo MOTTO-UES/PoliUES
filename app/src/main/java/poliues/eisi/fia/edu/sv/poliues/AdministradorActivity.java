@@ -1,6 +1,9 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -21,26 +24,35 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import android.widget.PopupMenu;
+
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class AdministradorActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
         ListView lista;
         ControlBDPoliUES db;
         List<String> item = null;
+        List<Administrador> objAdministrador = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +65,8 @@ public class AdministradorActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(AdministradorActivity.this,AdministradorInsertarActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -121,8 +133,11 @@ public class AdministradorActivity extends AppCompatActivity
         if (id == R.id.administrador) {
             // Handle the camera action
         } else if (id == R.id.solicitante) {
-            //Intent inte = new Intent(this, SolicitanteActivity.class);
-            //startActivity(inte);
+            Intent inte = new Intent(this, SolicitanteActivity.class);
+            startActivity(inte);
+        }else if (id == R.id.solicitud) {
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            startActivity(inte);
         }/* else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -139,43 +154,123 @@ public class AdministradorActivity extends AppCompatActivity
     }
 
     private void showAdministrador(){
-        ///test
-        Toast.makeText(this, "antes de", Toast.LENGTH_SHORT).show();
-        //fin test
-        ///////////////////////////////////////////////////////////////////////////////
+
         db = new ControlBDPoliUES(this);
         db.leer();
         Cursor c = db.consultarAdministrador();
-        item = new ArrayList<String>();
-        ///test
-        //Toast.makeText(this, "bien 1", Toast.LENGTH_SHORT).show();
-        //Log.d("My tag", "Antes de cursor");
-        //fin test
-        //String nombre ="", password="", correo="";
-        if(c.moveToFirst()){
-            //Recorre todos los registros
-            do {
 
-                Administrador administrador = new Administrador();
-                administrador.setIdAdministrador(c.getInt(0));
-                administrador.setNombreAdmin(c.getString(1));
-                administrador.setPasswordAdmin(c.getString(2));
-                administrador.setCorreoAdmin(c.getString(3));
 
-                //nombre = c.getString(1);
-                //password = c.getString(2);
-                //correo = c.getString(3);
+        if(!(c == null)){ //Si esta vacio
+            item = new ArrayList<String>();
+            objAdministrador = new ArrayList<Administrador>();
 
-                //Agregar Registro a la lista
-                item.add(administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
-                //item.add(nombre+ " "+ password+ " "+ correo );
 
-            }while(c.moveToNext());
+            if(c.moveToFirst()){
+                //Recorre todos los registros
+                do {
+
+                    Administrador administrador = new Administrador();
+                    administrador.setIdAdministrador(c.getInt(0));
+                    administrador.setNombreAdmin(c.getString(1));
+                    administrador.setPasswordAdmin(c.getString(2));
+                    administrador.setCorreoAdmin(c.getString(3));
+
+                    objAdministrador.add(administrador);
+
+                    //Agregar Registro a la lista
+                    item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
+
+                }while(c.moveToNext());
+            }
+            //Crear un adaptador
+            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
+
+            lista.setAdapter(adaptador);
+
+            lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                    ////////////////////////////////////////////////////////////////
+                    //PopUp
+
+                    final Administrador admin;
+                    admin = objAdministrador.get(position);
+                    final Intent inte = new Intent();
+                    //Agregar Extras
+                    inte.putExtra("EnvioAdministradorID", admin.getIdAdministrador());
+                    inte.putExtra("EnvioAdministradorNOMBRE", admin.getNombreAdmin());
+                    inte.putExtra("EnvioAdministradorPASS", admin.getPasswordAdmin());
+                    inte.putExtra("EnvioAdministradorCORREO", admin.getCorreoAdmin());
+
+                    PopupMenu pop = new PopupMenu(getApplicationContext(), view);
+
+                    pop.inflate(R.menu.menu_popup);
+
+                    pop.show();
+
+                    pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+
+                            int id = item.getItemId();
+
+                            if (id == R.id.ConsultarA) {
+                                inte.setClass(AdministradorActivity.this, AdministradorConsultarActivity.class);
+                                startActivity(inte);
+                            } else if (id == R.id.EditarA) {
+                                inte.setClass(AdministradorActivity.this, AdministradorEditarActivity.class);
+                                startActivity(inte);
+                            } else if (id == R.id.BorrarA) {
+
+
+                                ///////////////////////////////////
+                                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(AdministradorActivity.this);
+                                dialogo1.setTitle("BORRAR");
+                                dialogo1.setMessage("¿ Desea Eliminar este Administrador ?");
+                                dialogo1.setCancelable(false);
+                                dialogo1.setPositiveButton("BORRAR", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogo1, int id) {
+                                        String regEliminadas;
+
+                                        db.abrir();
+                                        regEliminadas = db.eliminarAdministrador(admin);
+                                        db.cerrar();
+
+                                        showAdministrador();
+                                        Toast.makeText(AdministradorActivity.this, regEliminadas, Toast.LENGTH_SHORT).show();
+
+                                    }
+                                });
+                                dialogo1.setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogo1, int id) {
+                                        dialogo1.cancel();
+                                    }
+                                });
+                                dialogo1.show();
+                                ///////////////////////////////////
+
+
+                            }
+
+                            return false;
+                        }
+                    });
+
+                    return false;
+                    ////////////////////////////////////////////////////////////////
+                }
+            });
         }
-        //Crear un adaptador
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
 
-        lista.setAdapter(adaptador);
+
+
+
+
+    }
+
+
+    public void cancelar() {
+        finish();
     }
 
 

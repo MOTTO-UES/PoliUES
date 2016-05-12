@@ -68,9 +68,6 @@
         <Button
             android:onClick="insertarDetalleSolicitud"
             android:text="insertar" />
-        <Button
-            android:onClick="limpiarDetalleSolicitud"
-            android:text="limpiar" />
     </TableRow>
 
     <TableRow

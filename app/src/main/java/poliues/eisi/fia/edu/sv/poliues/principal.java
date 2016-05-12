@@ -89,11 +89,12 @@ public class principal extends AppCompatActivity
             Intent inte = new Intent(principal.this, AdministradorActivity.class);
             startActivity(inte);
         } else if (id == R.id.solicitante) {
-            //Intent inte = new Intent(this, SolicitanteActivity.class);
-            //startActivity(inte);
-        } /*else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+            Intent inte = new Intent(this, SolicitanteActivity.class);
+            startActivity(inte);
+        } else if (id == R.id.solicitud) {
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            startActivity(inte);
+        } /*else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 

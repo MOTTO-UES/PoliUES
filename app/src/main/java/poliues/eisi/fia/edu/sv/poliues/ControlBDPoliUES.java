@@ -20,6 +20,7 @@ public class ControlBDPoliUES {
 
     private static final String[] camposAdministrador = new String[]
             {"IDADMINISTRADOR","NOMBREADMINISTRADOR","PASSWORDADMINISTRADOR","CORREOADMINISTRADOR"};
+
     private static final String[] camposSolicitante = new String[]
             {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
@@ -51,6 +52,7 @@ public class ControlBDPoliUES {
             try{
 
                 ////////////////////////////////////////////////////////////////////////////////////
+
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                         "actividad INTEGER, " +
@@ -69,6 +71,7 @@ public class ControlBDPoliUES {
                         "fechaInicio VARCHAR(10), " +
                         "fechaFinal VARCHAR(10), " +
                         "cobroTotal REAL)");
+
 
                 /////////////////////////////////////////////////////////////////////
                 ////MOTTO TBL
@@ -164,10 +167,92 @@ public class ControlBDPoliUES {
         Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
         return c;
     }
+    //Eliminar Administrador
+    public String eliminarAdministrador(Administrador administrador){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("ADMINISTRADOR", "IDADMINISTRADOR='"+administrador.getIdAdministrador()+"'", null);
+        regAfectados+=contador;
+
+        return regAfectados;
+    }
+    //Actualizar Solicitante
+    public String actualizarAdministrador(Administrador administrador){
+
+        String[] IDADMINISTRADOR = {String.valueOf(administrador.getIdAdministrador())};
+
+        ContentValues cv = new ContentValues();
+
+        cv.put("NOMBREADMINISTRADOR", administrador.getNombreAdmin());
+        cv.put("PASSWORDADMINISTRADOR", administrador.getPasswordAdmin());
+        cv.put("CORREOADMINISTRADOR", administrador.getCorreoAdmin());
+
+        db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
+
+        return "Administrador Actualizado Correctamente";
+    }
+    /////////////////////////////////////////////////////////////////////////////
+    //Agregar Solicitante
+    public String insertarSolicitante(Solicitante solicitante){
+        String regInsertados="Registro Insertado Nº= ";
+        long contador=0;
+
+        ContentValues val = new ContentValues();
+
+        ///val.put(camposAdministrador[0],administrador.getIdAdministrador());
+        val.put(camposSolicitante[1],solicitante.getNombre());
+        val.put(camposSolicitante[2],solicitante.getPassword());
+        val.put(camposSolicitante[3], solicitante.getCorreo());
 
 
+        contador = db.insert("SOLICITANTE", null, val);
+
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el Solicitante, Soicitante Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+
+        return regInsertados;
+    }
+    //Consultar Solicitante
+    public Cursor consultarSolicitante(){
+        Cursor c = db.query("SOLICITANTE", camposSolicitante,null,null,null,null,null,null);
+        return c;
+    }
+    //Eliminar Solicitante
+    public String eliminarSolicitante(Solicitante solicitante){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("SOLICITANTE", "IDSOLICITANTE='"+solicitante.getIdSolicitante()+"'", null);
+        regAfectados+=contador;
+
+        return regAfectados;
+    }
+    //Actualizar Solicitante
+    public String actualizarSolicitante(Solicitante solicitante){
+
+        String[] IDSOLICITANTE = {String.valueOf(solicitante.getIdSolicitante())};
+
+        ContentValues cv = new ContentValues();
+
+        cv.put("NOMBRE", solicitante.getNombre());
+        cv.put("PASSWORD", solicitante.getPassword());
+        cv.put("CORREO", solicitante.getCorreo());
+
+        db.update("SOLICITANTE", cv, "IDSOLICITANTE = ?", IDSOLICITANTE);
+
+        return "Solicitante Actualizado Correctamente";
+    }
 
     /////////////////////////////////////////////////////////////////////////////
+
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";
@@ -204,15 +289,8 @@ public class ControlBDPoliUES {
         return null;
     }
 
-    public String eliminar(DetalleSolicitud solicitud) {
-        String regAfectados="filas afectadas= ";
-        int contador=0;
-
-        contador+=db.delete("DetalleSolicitud", "solicitud='"+solicitud.getSolicitud()+"'", null);
-        contador+=db.delete("Solicitud", "idSolicitud='"+solicitud.getSolicitud()+"'", null);
-
-
-        return regAfectados;
+    public String eliminar(Solicitud solicitud) {
+        return null;
     }
 
     public Solicitud consultarSolicitudUltima(){
@@ -292,10 +370,19 @@ public class ControlBDPoliUES {
     }
 
     public String actualizar(DetalleSolicitud detalleSolicitud){
-
         return null;
     }
 
+    public String eliminar(DetalleSolicitud solicitud){
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("DetalleSolicitud", "solicitud='"+solicitud.getSolicitud()+"'", null);
+        contador+=db.delete("Solicitud", "idSolicitud='"+solicitud.getSolicitud()+"'", null);
+
+
+        return regAfectados;
+    }
 
     public Cursor consultarDetalleSolicitud(){
         Cursor c = db.query("DetalleSolicitud",camposDetalleSolicitud,null,null,null,null,null,null);
@@ -356,9 +443,7 @@ public class ControlBDPoliUES {
         db.execSQL("DELETE FROM DetalleSolicitud");
         //db.execSQL("DELETE FROM DetalleSolicitud");
 
-
         Solicitud soli = new Solicitud();
-
         for(int i=0;i<2;i++) {
             soli.setIdSolicitud(TSidSolicitud[i]);
             soli.setActividad(TSactividad[i]);
@@ -369,7 +454,6 @@ public class ControlBDPoliUES {
             soli.setFechaCreacion(TSfechaCreacion[i]);
            insertar(soli);
         }
-
         DetalleSolicitud DS = new DetalleSolicitud();
         for(int i=0;i<2;i++){
             DS.setIdDescripcion(TDSidDescripcion[i]);
@@ -380,8 +464,6 @@ public class ControlBDPoliUES {
             DS.setCobroTotal(TDScobroTotal[i]);
             insertarDS(DS);
         }
-
-
         cerrar();
         return "Guardo Correctamente";
     }

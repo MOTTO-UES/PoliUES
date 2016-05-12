@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="14"
         android:targetSdkVersion="23" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
@@ -44,7 +44,33 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorInsertarActivity"
-            android:label="@string/action_administrador_agregar" />
+            android:label="@string/title_activity_administrador_agregar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.SolicitanteActivity"
+            android:label="@string/title_activity_solicitante"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorEditarActivity"
+            android:label="@string/title_activity_administrador_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.AdministradorConsultarActivity"
+            android:label="@string/title_activity_administrador_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.SolicitanteEditarActivity"
+            android:label="@string/title_activity_solicitante_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.SolicitanteConsultarActivity"
+            android:label="@string/title_activity_solicitante_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.SolicitanteInsertarActivity"
+            android:label="@string/title_activity_solicitante_insertar"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
