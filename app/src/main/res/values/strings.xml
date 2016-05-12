@@ -3,6 +3,7 @@
     <!-- MENU PRINCIPAL -->
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
+    <string name="GestionarSolicitud">Gestionar Solicitud</string>
     <string name="otroGrupo">Comunicacion</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
@@ -27,21 +28,18 @@
     <string name="action_settings">Settings</string>
 
 
-<<<<<<< HEAD
+
     <!-- MENUS CRUD POPUP-->
     <string name="comsultar">CONSULTAR</string>
     <string name="editar">EDITAR</string>
     <string name="borrar">BORRAR</string>
 
-=======
->>>>>>> remotes/origin/rodrigo
     <!-- ADMINISTRADOR _ MOTTO -->
 
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtpassAdministrador">Password</string>
     <string name="txtcorreoAdministrador">Correo</string>
-<<<<<<< HEAD
-    <string name="action_administrador_agregar">AGREGAR NUEVO</string>
+
 
     <!-- SOLICITANTE _ MOTTO -->
 
@@ -49,13 +47,10 @@
     <string name="txtpassSolicitante">Password</string>
     <string name="txtcorreoSolicitante">Correo</string>
     <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
-
-=======
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
     <string name="action_administrador_agregar">AGREGAR NUEVO</string>
 
->>>>>>> remotes/origin/rodrigo
     <!--DERALLE SOLICITUD, RODRIGO-->
 
     <string name="idDescripcion">idDescripcion</string>
@@ -95,17 +90,15 @@
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
-<<<<<<< HEAD
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
     <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
-=======
     <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
 
     <!--MENU RODRIGO-->
->>>>>>> remotes/origin/rodrigo
+
 
 </resources>
 

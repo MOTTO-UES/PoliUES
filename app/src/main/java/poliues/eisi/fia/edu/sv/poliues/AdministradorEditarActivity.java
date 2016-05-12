@@ -120,6 +120,9 @@ public class AdministradorEditarActivity extends AppCompatActivity
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
+        }else if (id == R.id.solicitud) {
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            startActivity(inte);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

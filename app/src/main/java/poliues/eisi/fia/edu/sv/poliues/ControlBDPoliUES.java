@@ -20,10 +20,7 @@ public class ControlBDPoliUES {
 
     private static final String[] camposAdministrador = new String[]
             {"IDADMINISTRADOR","NOMBREADMINISTRADOR","PASSWORDADMINISTRADOR","CORREOADMINISTRADOR"};
-<<<<<<< HEAD
 
-=======
->>>>>>> remotes/origin/rodrigo
     private static final String[] camposSolicitante = new String[]
             {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
@@ -55,11 +52,7 @@ public class ControlBDPoliUES {
             try{
 
                 ////////////////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
 
-                //db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
-                //db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
-=======
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                         "actividad INTEGER, " +
@@ -78,7 +71,7 @@ public class ControlBDPoliUES {
                         "fechaInicio VARCHAR(10), " +
                         "fechaFinal VARCHAR(10), " +
                         "cobroTotal REAL)");
->>>>>>> remotes/origin/rodrigo
+
 
                 /////////////////////////////////////////////////////////////////////
                 ////MOTTO TBL
@@ -174,7 +167,6 @@ public class ControlBDPoliUES {
         Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
         return c;
     }
-<<<<<<< HEAD
     //Eliminar Administrador
     public String eliminarAdministrador(Administrador administrador){
 
@@ -258,12 +250,9 @@ public class ControlBDPoliUES {
 
         return "Solicitante Actualizado Correctamente";
     }
-=======
-
-
 
     /////////////////////////////////////////////////////////////////////////////
->>>>>>> remotes/origin/rodrigo
+
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";

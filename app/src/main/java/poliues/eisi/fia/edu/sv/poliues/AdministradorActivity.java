@@ -24,36 +24,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
-<<<<<<< HEAD
 import android.widget.AdapterView;
-=======
->>>>>>> remotes/origin/rodrigo
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-<<<<<<< HEAD
+
 import android.widget.PopupMenu;
-=======
->>>>>>> remotes/origin/rodrigo
+
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
-<<<<<<< HEAD
-=======
 
-import java.util.ArrayList;
-import java.util.List;
->>>>>>> remotes/origin/rodrigo
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-<<<<<<< HEAD
+
 public class AdministradorActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -61,11 +52,7 @@ public class AdministradorActivity extends AppCompatActivity
         ControlBDPoliUES db;
         List<String> item = null;
         List<Administrador> objAdministrador = null;
-=======
-        ListView lista;
-        ControlBDPoliUES db;
-        List<String> item = null;
->>>>>>> remotes/origin/rodrigo
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +135,9 @@ public class AdministradorActivity extends AppCompatActivity
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
+        }else if (id == R.id.solicitud) {
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            startActivity(inte);
         }/* else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -164,7 +154,6 @@ public class AdministradorActivity extends AppCompatActivity
     }
 
     private void showAdministrador(){
-<<<<<<< HEAD
 
         db = new ControlBDPoliUES(this);
         db.leer();
@@ -282,45 +271,6 @@ public class AdministradorActivity extends AppCompatActivity
 
     public void cancelar() {
         finish();
-=======
-        ///test
-        Toast.makeText(this, "antes de", Toast.LENGTH_SHORT).show();
-        //fin test
-        ///////////////////////////////////////////////////////////////////////////////
-        db = new ControlBDPoliUES(this);
-        db.leer();
-        Cursor c = db.consultarAdministrador();
-        item = new ArrayList<String>();
-        ///test
-        //Toast.makeText(this, "bien 1", Toast.LENGTH_SHORT).show();
-        //Log.d("My tag", "Antes de cursor");
-        //fin test
-        //String nombre ="", password="", correo="";
-        if(c.moveToFirst()){
-            //Recorre todos los registros
-            do {
-
-                Administrador administrador = new Administrador();
-                administrador.setIdAdministrador(c.getInt(0));
-                administrador.setNombreAdmin(c.getString(1));
-                administrador.setPasswordAdmin(c.getString(2));
-                administrador.setCorreoAdmin(c.getString(3));
-
-                //nombre = c.getString(1);
-                //password = c.getString(2);
-                //correo = c.getString(3);
-
-                //Agregar Registro a la lista
-                item.add(administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
-                //item.add(nombre+ " "+ password+ " "+ correo );
-
-            }while(c.moveToNext());
-        }
-        //Crear un adaptador
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
-
-        lista.setAdapter(adaptador);
->>>>>>> remotes/origin/rodrigo
     }
 
 

@@ -299,6 +299,7 @@
     <string name="Administrador">Administrador</string>
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
+    <string name="GestionarSolicitud">Gestionar Solicitud</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -326,20 +327,13 @@
     <string name="app_name">PoliUES</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="area">area</string>
-<<<<<<< HEAD
-    <string name="borrar">BORRAR</string>
-    <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
-    <string name="cerrarSesion">Cerrar Sesion</string>
-    <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="cobroTotal">cobro total</string>
-    <string name="comsultar">CONSULTAR</string>
-    <string name="editar">EDITAR</string>
-=======
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
+    <string name="borrar">BORRAR</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
+    <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
@@ -372,7 +366,8 @@
     <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
     <string name="common_google_play_services_updating_title">Google Play services are updating</string>
     <string name="common_open_on_phone">Open on phone</string>
->>>>>>> remotes/origin/rodrigo
+    <string name="comsultar">CONSULTAR</string>
+    <string name="editar">EDITAR</string>
     <string name="entrar_principal">Puerta Tracera</string>
     <string name="error_field_required">Campo requerido</string>
     <string name="error_incorrect_password">Contraseña incorecta</string>
@@ -388,11 +383,8 @@
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-<<<<<<< HEAD
-    <string name="otroGrupo">Comunicacion</string>
-=======
     <string name="opciones">opciones</string>
->>>>>>> remotes/origin/rodrigo
+    <string name="otroGrupo">Comunicacion</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -404,23 +396,17 @@
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_principal">principal</string>
-<<<<<<< HEAD
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
+    <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
     <string name="txtcorreoAdministrador">Correo</string>
     <string name="txtcorreoSolicitante">Correo</string>
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtnombreSolicitante">Nombre</string>
     <string name="txtpassAdministrador">Password</string>
     <string name="txtpassSolicitante">Password</string>
-=======
-    <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
-    <string name="txtcorreoAdministrador">Correo</string>
-    <string name="txtnombreAdministrador">Nombre</string>
-    <string name="txtpassAdministrador">Password</string>
->>>>>>> remotes/origin/rodrigo
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
