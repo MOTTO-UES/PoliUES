@@ -20,6 +20,7 @@ public class verSolicitudActivity extends AppCompatActivity {
     EditText FI;
     EditText FF;
     EditText CT;
+    EditText estado;
 
 
 
@@ -38,6 +39,7 @@ public class verSolicitudActivity extends AppCompatActivity {
         FI= (EditText) findViewById(R.id.editFechaInicio);
         FF= (EditText) findViewById(R.id.editFechaFin);
         CT= (EditText) findViewById(R.id.editCobro);
+        estado = (EditText) findViewById(R.id.editEstado);
 
         verDatos(bundle.getString("motivo"));
     }
@@ -88,6 +90,7 @@ public class verSolicitudActivity extends AppCompatActivity {
             FI.setText(DS.getFechaInicio());
             FF.setText(DS.getFechaFinal());
             CT.setText(String.valueOf(DS.getCobroTotal()));
+            estado.setText(solicitud.getEstadoSolicitud());
         }
     }
 }

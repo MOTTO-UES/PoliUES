@@ -182,6 +182,7 @@ public class ControlBDPoliUES {
     public String actualizarAdministrador(Administrador administrador){
 
         String[] IDADMINISTRADOR = {String.valueOf(administrador.getIdAdministrador())};
+<<<<<<< HEAD
 
         ContentValues cv = new ContentValues();
 
@@ -191,6 +192,17 @@ public class ControlBDPoliUES {
 
         db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
 
+=======
+
+        ContentValues cv = new ContentValues();
+
+        cv.put("NOMBREADMINISTRADOR", administrador.getNombreAdmin());
+        cv.put("PASSWORDADMINISTRADOR", administrador.getPasswordAdmin());
+        cv.put("CORREOADMINISTRADOR", administrador.getCorreoAdmin());
+
+        db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
+
+>>>>>>> remotes/origin/rodrigo
         return "Administrador Actualizado Correctamente";
     }
     /////////////////////////////////////////////////////////////////////////////
@@ -286,12 +298,20 @@ public class ControlBDPoliUES {
     }
 
     public String actualizar(Solicitud solicitud){
-        return null;
+        String[] IDSolicitud = {String.valueOf(solicitud.getIdSolicitud())};
+
+        ContentValues Con = new ContentValues();
+
+        Con.put("actividad",solicitud.getActividad());
+        Con.put("tarifa",solicitud.getTarifa());
+        Con.put("motivoSolicitud",solicitud.getMotivoSolicitud());
+
+        db.update("Solicitud", Con,"idSolicitud = ?", IDSolicitud);
+
+        return "Solicitud ";
     }
 
-    public String eliminar(Solicitud solicitud) {
-        return null;
-    }
+
 
     public Solicitud consultarSolicitudUltima(){
 
@@ -370,11 +390,30 @@ public class ControlBDPoliUES {
     }
 
     public String actualizar(DetalleSolicitud detalleSolicitud){
-        return null;
+        String[] IDSolicitud = {String.valueOf(detalleSolicitud.getSolicitud())};
+
+        ContentValues Con = new ContentValues();
+
+        Con.put("area",detalleSolicitud.getArea());
+        Con.put("fechaInicio",detalleSolicitud.getFechaInicio());
+        Con.put("fechaFinal",detalleSolicitud.getFechaFinal());
+        Con.put("cobroTotal",detalleSolicitud.getCobroTotal());
+
+        db.update("DetalleSolicitud", Con,"solicitud = ?", IDSolicitud);
+
+        return "y Detalle Solicitud actualizada";
+
     }
 
-    public String eliminar(DetalleSolicitud detalleSolicitud){
-        return null;
+    public String eliminar(DetalleSolicitud solicitud){
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("DetalleSolicitud", "solicitud='"+solicitud.getSolicitud()+"'", null);
+        contador+=db.delete("Solicitud", "idSolicitud='"+solicitud.getSolicitud()+"'", null);
+
+
+        return regAfectados;
     }
 
     public Cursor consultarDetalleSolicitud(){

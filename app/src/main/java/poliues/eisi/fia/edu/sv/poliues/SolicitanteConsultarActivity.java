@@ -13,10 +13,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
+=======
+import android.widget.EditText;
+>>>>>>> remotes/origin/rodrigo
 
 public class SolicitanteConsultarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+<<<<<<< HEAD
+=======
+    EditText nombre, pass, correo;
+
+>>>>>>> remotes/origin/rodrigo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +33,25 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+<<<<<<< HEAD
+=======
+        final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
+        String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
+        String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
+        String ExtraCORREO = getIntent().getExtras().getString("EnvioSolicitanteCORREO");
+
+>>>>>>> remotes/origin/rodrigo
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+=======
+                Intent intent = new Intent(SolicitanteConsultarActivity.this, SolicitanteActivity.class);
+                startActivity(intent);
+>>>>>>> remotes/origin/rodrigo
             }
         });
 
@@ -41,6 +63,17 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD
+=======
+
+        //EdiText
+        nombre = (EditText) findViewById(R.id.editText_nombreConS);
+        pass = (EditText) findViewById(R.id.editText_passwordConS);
+        correo = (EditText) findViewById(R.id.editText_correoConS);
+
+        //Metodo que recibe EXTRAS y llena campos de content
+        llenarCampos(ExtraNOMBRE, ExtraPASS, ExtraCORREO);
+>>>>>>> remotes/origin/rodrigo
     }
 
     @Override
@@ -83,6 +116,12 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
+<<<<<<< HEAD
+=======
+        }else if (id == R.id.solicitud) {
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            startActivity(inte);
+>>>>>>> remotes/origin/rodrigo
         }
 
 
@@ -90,4 +129,15 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+<<<<<<< HEAD
+=======
+
+    public void llenarCampos(String ExtraNOMBRE, String ExtraPASS, String ExtraCORREO){
+
+        nombre.setText(ExtraNOMBRE);
+        pass.setText(ExtraPASS);
+        correo.setText(ExtraCORREO);
+
+    }
+>>>>>>> remotes/origin/rodrigo
 }

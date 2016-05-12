@@ -2330,6 +2330,7 @@ containing a value of this type.
         public static final int side_nav_bar=0x7f020055;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int BorrarA=0x7f0d00bc;
         public static final int ConsultarA=0x7f0d00ba;
         public static final int EditarA=0x7f0d00bb;
@@ -2337,6 +2338,16 @@ containing a value of this type.
         public static final int SpinnerArea=0x7f0d006d;
         public static final int action0=0x7f0d00a8;
         public static final int action_administrador_agregar=0x7f0d00b9;
+=======
+        public static final int BorrarA=0x7f0d00c3;
+        public static final int ConsultarA=0x7f0d00c1;
+        public static final int EditarA=0x7f0d00c2;
+        public static final int SpinnerActividad=0x7f0d006b;
+        public static final int SpinnerArea=0x7f0d006d;
+        public static final int actInsertar=0x7f0d00c5;
+        public static final int action0=0x7f0d00af;
+        public static final int action_administrador_agregar=0x7f0d00c0;
+>>>>>>> remotes/origin/rodrigo
         public static final int action_bar=0x7f0d005c;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d005b;
@@ -2345,30 +2356,53 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0d003d;
         public static final int action_bar_title=0x7f0d003c;
         public static final int action_context_bar=0x7f0d005d;
+<<<<<<< HEAD
         public static final int action_divider=0x7f0d00ac;
+=======
+        public static final int action_divider=0x7f0d00b3;
+>>>>>>> remotes/origin/rodrigo
         public static final int action_menu_divider=0x7f0d0002;
         public static final int action_menu_presenter=0x7f0d0003;
         public static final int action_mode_bar=0x7f0d0059;
         public static final int action_mode_bar_stub=0x7f0d0058;
         public static final int action_mode_close_button=0x7f0d003e;
+<<<<<<< HEAD
         public static final int action_settings=0x7f0d00be;
         public static final int action_solicitante_agregar=0x7f0d00bf;
         public static final int activity_chooser_view_content=0x7f0d003f;
         public static final int adjust_height=0x7f0d0033;
         public static final int adjust_width=0x7f0d0034;
         public static final int administrador=0x7f0d00b5;
+=======
+        public static final int action_settings=0x7f0d00c6;
+        public static final int action_solicitante_agregar=0x7f0d00c7;
+        public static final int activity_chooser_view_content=0x7f0d003f;
+        public static final int adjust_height=0x7f0d0033;
+        public static final int adjust_width=0x7f0d0034;
+        public static final int administrador=0x7f0d00bc;
+>>>>>>> remotes/origin/rodrigo
         public static final int alertTitle=0x7f0d004b;
         public static final int always=0x7f0d0035;
         public static final int beginning=0x7f0d0031;
         public static final int bottom=0x7f0d001d;
+<<<<<<< HEAD
         public static final int button=0x7f0d0098;
         public static final int buttonPanel=0x7f0d0046;
         public static final int cancel_action=0x7f0d00a9;
+=======
+        public static final int button=0x7f0d0099;
+        public static final int buttonPanel=0x7f0d0046;
+        public static final int cancel_action=0x7f0d00b0;
+>>>>>>> remotes/origin/rodrigo
         public static final int center=0x7f0d001e;
         public static final int center_horizontal=0x7f0d001f;
         public static final int center_vertical=0x7f0d0020;
         public static final int checkbox=0x7f0d0054;
+<<<<<<< HEAD
         public static final int chronometer=0x7f0d00af;
+=======
+        public static final int chronometer=0x7f0d00b6;
+>>>>>>> remotes/origin/rodrigo
         public static final int clip_horizontal=0x7f0d002c;
         public static final int clip_vertical=0x7f0d002d;
         public static final int collapseActionView=0x7f0d0036;
@@ -2379,6 +2413,7 @@ containing a value of this type.
         public static final int dateDisplayInicio=0x7f0d006f;
         public static final int decor_content_parent=0x7f0d005a;
         public static final int default_activity_button=0x7f0d0042;
+<<<<<<< HEAD
         public static final int design_bottom_sheet=0x7f0d009e;
         public static final int design_menu_item_action_area=0x7f0d00a5;
         public static final int design_menu_item_action_area_stub=0x7f0d00a4;
@@ -2424,6 +2459,60 @@ containing a value of this type.
         public static final int fabLimpiarSolicitante=0x7f0d008a;
         public static final int fabNuevoAdmin=0x7f0d0087;
         public static final int fabNuevoSolicitante=0x7f0d0089;
+=======
+        public static final int design_bottom_sheet=0x7f0d00a5;
+        public static final int design_menu_item_action_area=0x7f0d00ac;
+        public static final int design_menu_item_action_area_stub=0x7f0d00ab;
+        public static final int design_menu_item_text=0x7f0d00aa;
+        public static final int design_navigation_view=0x7f0d00a9;
+        public static final int disableHome=0x7f0d000e;
+        public static final int drawer_layout=0x7f0d0072;
+        public static final int editActividad=0x7f0d007d;
+        public static final int editArea=0x7f0d007e;
+        public static final int editCobro=0x7f0d0082;
+        public static final int editEstado=0x7f0d0083;
+        public static final int editFechaFin=0x7f0d0081;
+        public static final int editFechaInicio=0x7f0d0080;
+        public static final int editMotivo=0x7f0d007f;
+        public static final int editMotivoSolicitud=0x7f0d006c;
+        public static final int editText_correoA=0x7f0d0098;
+        public static final int editText_correoConA=0x7f0d0092;
+        public static final int editText_correoConS=0x7f0d009d;
+        public static final int editText_correoEditA=0x7f0d0095;
+        public static final int editText_correoEditS=0x7f0d00a0;
+        public static final int editText_correoS=0x7f0d00a3;
+        public static final int editText_nombreA=0x7f0d0096;
+        public static final int editText_nombreConA=0x7f0d008e;
+        public static final int editText_nombreConS=0x7f0d009b;
+        public static final int editText_nombreEditA=0x7f0d0093;
+        public static final int editText_nombreEditS=0x7f0d009e;
+        public static final int editText_nombreS=0x7f0d00a1;
+        public static final int editText_passwordA=0x7f0d0097;
+        public static final int editText_passwordConA=0x7f0d0090;
+        public static final int editText_passwordConS=0x7f0d009c;
+        public static final int editText_passwordEditA=0x7f0d0094;
+        public static final int editText_passwordEditS=0x7f0d009f;
+        public static final int editText_passwordS=0x7f0d00a2;
+        public static final int edit_query=0x7f0d005e;
+        public static final int email=0x7f0d0077;
+        public static final int email_login_form=0x7f0d0076;
+        public static final int email_sign_in_button=0x7f0d007a;
+        public static final int end=0x7f0d0021;
+        public static final int end_padder=0x7f0d00bb;
+        public static final int enterAlways=0x7f0d0015;
+        public static final int enterAlwaysCollapsed=0x7f0d0016;
+        public static final int entrar_principal=0x7f0d007b;
+        public static final int exitUntilCollapsed=0x7f0d0017;
+        public static final int expand_activities_button=0x7f0d0040;
+        public static final int expanded_menu=0x7f0d0053;
+        public static final int fab=0x7f0d0085;
+        public static final int fabAceptar=0x7f0d0087;
+        public static final int fabConsultarAdmin=0x7f0d0086;
+        public static final int fabLimpiarAdmin=0x7f0d0089;
+        public static final int fabLimpiarSolicitante=0x7f0d008b;
+        public static final int fabNuevoAdmin=0x7f0d0088;
+        public static final int fabNuevoSolicitante=0x7f0d008a;
+>>>>>>> remotes/origin/rodrigo
         public static final int fill=0x7f0d002e;
         public static final int fill_horizontal=0x7f0d002f;
         public static final int fill_vertical=0x7f0d0022;
@@ -2433,6 +2522,7 @@ containing a value of this type.
         public static final int icon=0x7f0d0044;
         public static final int ifRoom=0x7f0d0037;
         public static final int image=0x7f0d0041;
+<<<<<<< HEAD
         public static final int imageView=0x7f0d00a6;
         public static final int info=0x7f0d00b3;
         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
@@ -2460,6 +2550,35 @@ containing a value of this type.
         public static final int parallax=0x7f0d001b;
         public static final int parentPanel=0x7f0d0048;
         public static final int password=0x7f0d0076;
+=======
+        public static final int imageView=0x7f0d00ad;
+        public static final int info=0x7f0d00ba;
+        public static final int item_touch_helper_previous_elevation=0x7f0d0005;
+        public static final int left=0x7f0d0023;
+        public static final int line1=0x7f0d00b4;
+        public static final int line3=0x7f0d00b8;
+        public static final int listMode=0x7f0d000b;
+        public static final int listView_listaAdmin=0x7f0d008c;
+        public static final int listView_listaSolicitante=0x7f0d009a;
+        public static final int list_item=0x7f0d0043;
+        public static final int listado=0x7f0d007c;
+        public static final int login=0x7f0d0079;
+        public static final int login_form=0x7f0d0075;
+        public static final int login_progress=0x7f0d0074;
+        public static final int media_actions=0x7f0d00b2;
+        public static final int middle=0x7f0d0032;
+        public static final int mini=0x7f0d0030;
+        public static final int multiply=0x7f0d0027;
+        public static final int nav_view=0x7f0d0073;
+        public static final int navigation_header_container=0x7f0d00a8;
+        public static final int never=0x7f0d0038;
+        public static final int none=0x7f0d0010;
+        public static final int normal=0x7f0d000c;
+        public static final int opcionesMenu=0x7f0d00c4;
+        public static final int parallax=0x7f0d001b;
+        public static final int parentPanel=0x7f0d0048;
+        public static final int password=0x7f0d0078;
+>>>>>>> remotes/origin/rodrigo
         public static final int pickDateFin=0x7f0d0070;
         public static final int pickDateInicio=0x7f0d006e;
         public static final int pin=0x7f0d001c;
@@ -2467,7 +2586,11 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0d0007;
         public static final int radio=0x7f0d0056;
         public static final int right=0x7f0d0024;
+<<<<<<< HEAD
         public static final int salir=0x7f0d00b8;
+=======
+        public static final int salir=0x7f0d00bf;
+>>>>>>> remotes/origin/rodrigo
         public static final int screen=0x7f0d0028;
         public static final int scroll=0x7f0d0018;
         public static final int scrollIndicatorDown=0x7f0d0050;
@@ -2489,17 +2612,26 @@ containing a value of this type.
         public static final int showCustom=0x7f0d0011;
         public static final int showHome=0x7f0d0012;
         public static final int showTitle=0x7f0d0013;
+<<<<<<< HEAD
         public static final int snackbar_action=0x7f0d00a0;
         public static final int snackbar_text=0x7f0d009f;
         public static final int snap=0x7f0d0019;
         public static final int solicitante=0x7f0d00b6;
         public static final int solicitud=0x7f0d00b7;
+=======
+        public static final int snackbar_action=0x7f0d00a7;
+        public static final int snackbar_text=0x7f0d00a6;
+        public static final int snap=0x7f0d0019;
+        public static final int solicitante=0x7f0d00bd;
+        public static final int solicitud=0x7f0d00be;
+>>>>>>> remotes/origin/rodrigo
         public static final int spacer=0x7f0d0047;
         public static final int split_action_bar=0x7f0d0008;
         public static final int src_atop=0x7f0d0029;
         public static final int src_in=0x7f0d002a;
         public static final int src_over=0x7f0d002b;
         public static final int start=0x7f0d0025;
+<<<<<<< HEAD
         public static final int status_bar_latest_event_content=0x7f0d00aa;
         public static final int submit_area=0x7f0d0067;
         public static final int tabMode=0x7f0d000d;
@@ -2517,6 +2649,25 @@ containing a value of this type.
         public static final int top=0x7f0d0026;
         public static final int topPanel=0x7f0d0049;
         public static final int touch_outside=0x7f0d009d;
+=======
+        public static final int status_bar_latest_event_content=0x7f0d00b1;
+        public static final int submit_area=0x7f0d0067;
+        public static final int tabMode=0x7f0d000d;
+        public static final int text=0x7f0d00b9;
+        public static final int text2=0x7f0d00b7;
+        public static final int textSpacerNoButtons=0x7f0d004f;
+        public static final int textView=0x7f0d00ae;
+        public static final int textView2=0x7f0d008d;
+        public static final int textView3=0x7f0d008f;
+        public static final int textView4=0x7f0d0091;
+        public static final int time=0x7f0d00b5;
+        public static final int title=0x7f0d0045;
+        public static final int title_template=0x7f0d004a;
+        public static final int toolbar=0x7f0d0084;
+        public static final int top=0x7f0d0026;
+        public static final int topPanel=0x7f0d0049;
+        public static final int touch_outside=0x7f0d00a4;
+>>>>>>> remotes/origin/rodrigo
         public static final int up=0x7f0d0009;
         public static final int useLogo=0x7f0d0014;
         public static final int view_offset_helper=0x7f0d000a;
@@ -2636,9 +2787,16 @@ containing a value of this type.
     public static final class string {
         public static final int Actividad=0x7f060032;
         public static final int Administrador=0x7f060033;
+<<<<<<< HEAD
         public static final int GestionarAdministrador=0x7f060034;
         public static final int GestionarSolicitante=0x7f060035;
         public static final int GestionarSolicitud=0x7f060036;
+=======
+        public static final int Estado=0x7f060034;
+        public static final int GestionarAdministrador=0x7f060035;
+        public static final int GestionarSolicitante=0x7f060036;
+        public static final int GestionarSolicitud=0x7f060037;
+>>>>>>> remotes/origin/rodrigo
         public static final int abc_action_bar_home_description=0x7f060000;
         public static final int abc_action_bar_home_description_format=0x7f060001;
         public static final int abc_action_bar_home_subtitle_description_format=0x7f060002;
@@ -2658,6 +2816,7 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f060010;
         public static final int abc_shareactionprovider_share_with_application=0x7f060011;
         public static final int abc_toolbar_collapse_description=0x7f060012;
+<<<<<<< HEAD
         public static final int action_administrador_agregar=0x7f060037;
         public static final int action_settings=0x7f060038;
         public static final int action_sign_in=0x7f060039;
@@ -2675,6 +2834,26 @@ containing a value of this type.
         public static final int cerrarSesion=0x7f060045;
         public static final int character_counter_pattern=0x7f060046;
         public static final int cobroTotal=0x7f060047;
+=======
+        public static final int action_administrador_agregar=0x7f060038;
+        public static final int action_settings=0x7f060039;
+        public static final int action_sign_in=0x7f06003a;
+        public static final int action_sign_in_short=0x7f06003b;
+        public static final int action_solicitante_agregar=0x7f06003c;
+        public static final int actualizar=0x7f06003d;
+        public static final int app_name=0x7f06003e;
+        public static final int appbar_scrolling_view_behavior=0x7f06003f;
+        public static final int area=0x7f060040;
+        public static final int auth_google_play_services_client_facebook_display_name=0x7f060041;
+        public static final int auth_google_play_services_client_google_display_name=0x7f060042;
+        public static final int borrar=0x7f060043;
+        public static final int bottom_sheet_behavior=0x7f060044;
+        public static final int btnAgregarAdministrador=0x7f060045;
+        public static final int btnLimpiarAdministrador=0x7f060046;
+        public static final int cerrarSesion=0x7f060047;
+        public static final int character_counter_pattern=0x7f060048;
+        public static final int cobroTotal=0x7f060049;
+>>>>>>> remotes/origin/rodrigo
         public static final int common_android_wear_notification_needs_update_text=0x7f060013;
         public static final int common_android_wear_update_text=0x7f060014;
         public static final int common_android_wear_update_title=0x7f060015;
@@ -2705,6 +2884,7 @@ containing a value of this type.
         public static final int common_google_play_services_updating_text=0x7f06002e;
         public static final int common_google_play_services_updating_title=0x7f06002f;
         public static final int common_open_on_phone=0x7f060030;
+<<<<<<< HEAD
         public static final int comsultar=0x7f060048;
         public static final int editar=0x7f060049;
         public static final int entrar_principal=0x7f06004a;
@@ -2746,6 +2926,49 @@ containing a value of this type.
         public static final int txtnombreSolicitante=0x7f06006d;
         public static final int txtpassAdministrador=0x7f06006e;
         public static final int txtpassSolicitante=0x7f06006f;
+=======
+        public static final int comsultar=0x7f06004a;
+        public static final int editar=0x7f06004b;
+        public static final int entrar_principal=0x7f06004c;
+        public static final int error_field_required=0x7f06004d;
+        public static final int error_incorrect_password=0x7f06004e;
+        public static final int error_invalid_email=0x7f06004f;
+        public static final int error_invalid_password=0x7f060050;
+        public static final int fechaCreacion=0x7f060051;
+        public static final int fechaFinal=0x7f060052;
+        public static final int fechaInicio=0x7f060053;
+        public static final int idDescripcion=0x7f060054;
+        public static final int idSolicitud=0x7f060055;
+        public static final int insertar=0x7f060056;
+        public static final int limpiar=0x7f060057;
+        public static final int motivoSolicitud=0x7f060058;
+        public static final int navigation_drawer_close=0x7f060059;
+        public static final int navigation_drawer_open=0x7f06005a;
+        public static final int opciones=0x7f06005b;
+        public static final int otroGrupo=0x7f06005c;
+        public static final int permission_rationale=0x7f06005d;
+        public static final int prompt_email=0x7f06005e;
+        public static final int prompt_password=0x7f06005f;
+        public static final int solicitud=0x7f060060;
+        public static final int status_bar_notification_info_overflow=0x7f060031;
+        public static final int tarifa=0x7f060061;
+        public static final int title_activity_administrador=0x7f060062;
+        public static final int title_activity_administrador_agregar=0x7f060063;
+        public static final int title_activity_administrador_consultar=0x7f060064;
+        public static final int title_activity_administrador_editar=0x7f060065;
+        public static final int title_activity_principal=0x7f060066;
+        public static final int title_activity_solicitante=0x7f060067;
+        public static final int title_activity_solicitante_consultar=0x7f060068;
+        public static final int title_activity_solicitante_editar=0x7f060069;
+        public static final int title_activity_solicitante_insertar=0x7f06006a;
+        public static final int title_activity_ver_solicitud=0x7f06006b;
+        public static final int txtcorreoAdministrador=0x7f06006c;
+        public static final int txtcorreoSolicitante=0x7f06006d;
+        public static final int txtnombreAdministrador=0x7f06006e;
+        public static final int txtnombreSolicitante=0x7f06006f;
+        public static final int txtpassAdministrador=0x7f060070;
+        public static final int txtpassSolicitante=0x7f060071;
+>>>>>>> remotes/origin/rodrigo
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f090088;

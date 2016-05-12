@@ -4,7 +4,13 @@
 
     <item
         android:id="@+id/opcionesMenu"
-        android:title="principal"
+        android:title="Consultar solicitud"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actInsertar"
+        android:title="Crear solicitud"
         android:orderInCategory="100"
         app:showAsAction="never" />
 </menu>
