@@ -15,13 +15,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+<<<<<<< HEAD
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+=======
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+>>>>>>> origin/master
 
 public class SolicitanteEditarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     EditText nombre, pass, correo;
     ControlBDPoliUES helper;
 
@@ -32,11 +42,19 @@ public class SolicitanteEditarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
         final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
         String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
         String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
         String ExtraCORREO = getIntent().getExtras().getString("EnvioSolicitanteCORREO");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,4 +207,8 @@ public class SolicitanteEditarActivity extends AppCompatActivity
         correo.setText(ExtraCORREO);
 
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }

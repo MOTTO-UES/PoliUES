@@ -59,11 +59,19 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
+        Intent intent;
 
-        if (id == R.id.opcionesMenu) {
-            Intent intent = new Intent(this,SolicitudConsultarActivity.class);
-            startActivity(intent);
+        switch (id){
+            case R.id.opcionesMenu:
+                intent = new Intent(this,SolicitudConsultarActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.actInsertar:
+                intent = new Intent(this,SolicitudInsertarActivity.class);
+                startActivity(intent);
+                break;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -91,7 +99,6 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         System.out.println(fechaCreacion);
         Solicitud solicitud = new Solicitud();
 
-        //solicitud.setIdSolicitud(6);
         solicitud.setActividad(4);
         solicitud.setMotivoSolicitud(motivo);
         solicitud.setTarifa(1);

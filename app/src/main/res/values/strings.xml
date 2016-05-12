@@ -7,6 +7,10 @@
     <string name="otroGrupo">Comunicacion</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
+    <!-- MENU PRINCIPAL USUARIO -->
+    <string name="CrearSolicitudUsuario">Crear Solicitud</string>
+    <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -19,14 +23,14 @@
     <string name="error_field_required">Campo requerido</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
 
-    <string name="entrar_principal">Puerta Tracera</string>
+    <string name="entrar_principal">Puerta Trasera</string>
+    <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
 
     <!-- Principal -->
     <string name="title_activity_principal">principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-
 
 
     <!-- MENUS CRUD POPUP-->
@@ -70,6 +74,7 @@
     <string name="limpiar">Limpiar</string>
     <string name="insertar">Insertar</string>
     <string name="opciones">opciones</string>
+    <string name="actualizar">Actualizar</string>
 
 
     <!--SOLICITUD, RODRIGO-->
@@ -87,6 +92,8 @@
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="fechaCreacion">fecha de creacion</string>
+    <string name="Estado">Estado Solicitud</string>
+
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
@@ -96,6 +103,7 @@
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
     <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
+    <string name="title_activity_principal_usuario">PrincipalUsuario</string>
 
     <!--MENU RODRIGO-->
 

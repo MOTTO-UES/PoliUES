@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+>>>>>>> origin/master
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -61,3 +67,7 @@
     </LinearLayout>
 
 </ScrollView>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master

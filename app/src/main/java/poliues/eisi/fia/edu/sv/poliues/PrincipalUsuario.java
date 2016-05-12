@@ -1,6 +1,5 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,47 +12,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
-
-public class SolicitanteConsultarActivity extends AppCompatActivity
+public class PrincipalUsuario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
-    EditText nombre, pass, correo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_solicitante_consultar);
+        setContentView(R.layout.activity_principal_usuario);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
-        final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
-        String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
-        String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
-        String ExtraCORREO = getIntent().getExtras().getString("EnvioSolicitanteCORREO");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SolicitanteConsultarActivity.this, SolicitanteActivity.class);
-                startActivity(intent);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
@@ -65,18 +40,6 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        //EdiText
-        nombre = (EditText) findViewById(R.id.editText_nombreConS);
-        pass = (EditText) findViewById(R.id.editText_passwordConS);
-        correo = (EditText) findViewById(R.id.editText_correoConS);
-
-        //Metodo que recibe EXTRAS y llena campos de content
-        llenarCampos(ExtraNOMBRE, ExtraPASS, ExtraCORREO);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     }
 
     @Override
@@ -92,7 +55,7 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-
+        getMenuInflater().inflate(R.menu.principal_usuario, menu);
         return true;
     }
 
@@ -103,6 +66,10 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -112,29 +79,17 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.administrador) {
-            Intent inte = new Intent(this, AdministradorActivity.class);
-            startActivity(inte);
-        } else if (id == R.id.solicitante) {
-            Intent inte = new Intent(this, SolicitanteActivity.class);
-            startActivity(inte);
-        }else if (id == R.id.solicitud) {
-            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
-            startActivity(inte);
+    ////////////////////////////////////////////////////////////////////////
+        if (id == R.id.solicitudUsuarioCrear) {
+            // Codigo INTENT crear Solicitud Usuario
+        } else if (id == R.id.solicitudUsuarioVer) {
+            //COdigo INTENT para redirigir a ver solicitudes
+        } else if (id == R.id.cerrarSesionUsuario) {
+                //Codigo para cerrar sesion y redirigir al login
         }
-
-
+    //////////////////////////////////////////////////////////////////////////
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public void llenarCampos(String ExtraNOMBRE, String ExtraPASS, String ExtraCORREO){
-
-        nombre.setText(ExtraNOMBRE);
-        pass.setText(ExtraPASS);
-        correo.setText(ExtraCORREO);
-
     }
 }

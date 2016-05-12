@@ -80,6 +80,10 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.verSolicitudActivity" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario"
+            android:label="@string/title_activity_principal_usuario"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
