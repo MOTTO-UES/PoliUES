@@ -132,16 +132,16 @@
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_administrador_editar.xml",
-        "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\layout\\content_administrador_editar.xml"
-    },
-    {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_administrador_editar.xml",
+        "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\layout\\content_administrador_editar.xml"
     },
     {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_principal.xml",
@@ -248,12 +248,12 @@
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\layout\\content_solicitante.xml"
     },
     {
-        "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_solicitante_consultar.xml",
-        "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\layout\\app_bar_solicitante_consultar.xml"
-    },
-    {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_solicitante_consultar.xml",
+        "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\layout\\app_bar_solicitante_consultar.xml"
     },
     {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_administrador_consultar.xml",

@@ -13,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class SolicitanteConsultarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    EditText nombre, pass, correo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +27,17 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
+        String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
+        String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
+        String ExtraCORREO = getIntent().getExtras().getString("EnvioSolicitanteCORREO");
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(SolicitanteConsultarActivity.this, SolicitanteActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -41,6 +49,14 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //EdiText
+        nombre = (EditText) findViewById(R.id.editText_nombreConS);
+        pass = (EditText) findViewById(R.id.editText_passwordConS);
+        correo = (EditText) findViewById(R.id.editText_correoConS);
+
+        //Metodo que recibe EXTRAS y llena campos de content
+        llenarCampos(ExtraNOMBRE, ExtraPASS, ExtraCORREO);
     }
 
     @Override
@@ -83,11 +99,22 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
+        }else if (id == R.id.solicitud) {
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            startActivity(inte);
         }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void llenarCampos(String ExtraNOMBRE, String ExtraPASS, String ExtraCORREO){
+
+        nombre.setText(ExtraNOMBRE);
+        pass.setText(ExtraPASS);
+        correo.setText(ExtraCORREO);
+
     }
 }
