@@ -290,6 +290,24 @@ public class ControlBDPoliUES {
         }
     }
 
+    public Reserva consultarReserva(String idfacultab,String motivo){
+        String[] id = {idfacultab,motivo};
+        Cursor cursor = db.query("reserva", camposreserva, "idfacultad = ? AND motivo = ?", id,
+                null, null, null);
+        if(cursor.moveToFirst()){
+            Reserva reserva = new Reserva();
+            reserva.setIdreserva(Integer.parseInt(cursor.getString(0)));
+            reserva.setIdfacultad(Integer.parseInt(cursor.getString(1)));
+
+            reserva.setFechaingreso(cursor.getString(2));
+            reserva.setNumeropersonas(Integer.parseInt(cursor.getString(3)));
+            reserva.setMotivo(cursor.getString(4));
+            reserva.setDescripcionreserva(cursor.getString(5));
+            return reserva;
+        }else{
+            return null;
+        }
+    }
 
     public Facultad consultarFacultad(String idfacultad){
         String[] id = {idfacultad};

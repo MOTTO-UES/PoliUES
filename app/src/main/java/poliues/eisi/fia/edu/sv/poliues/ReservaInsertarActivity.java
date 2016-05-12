@@ -6,7 +6,6 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -164,33 +163,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
         year = cal1.get(Calendar.YEAR);
         editfechareserva = (EditText) findViewById(R.id.editfechareserva);
         ib1.setOnClickListener(this);
-        editfechareserva.setCursorVisible(true);
-        editfechareserva.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (TextUtils.isEmpty(editfechareserva.getText().toString())) {
-                    editfechareserva.setError("El campo fecha esta Vacio");
-                }else{
-                    Date fechadehoy=null;
-                    Date fechar=null;
-                    DateFormat fechasFormatos= new SimpleDateFormat("dd-MM-yyyy");
-                    try{
-                        fechadehoy=fechasFormatos.parse(fechaActual());
-                        mensajes("fecha de hoy: "+fechadehoy.toString());
-                        fechar=fechasFormatos.parse(editfechareserva.getText().toString());
-                        mensajes("fecha de Reserva:  "+fechar.toString());
-                    }catch (ParseException e){
-                        e.printStackTrace();
-                    }
-                    if (fechar.compareTo(fechadehoy)<=0){
-                        editfechareserva.setError("La Fecha de la reserva no es valida es menor que la actual");
 
-                    }
-
-
-                }
-            }
-        });
         //Hora Reserva
         //Hora Inicio
         ib2 = (ImageButton) findViewById(R.id.imagehorainicio);
@@ -438,7 +411,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
-            editfechareserva.setText(selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear);
+            editfechareserva.setText(selectedDay + "-" + (selectedMonth + 1) + "-" + selectedYear);
         }
     };
 
@@ -455,7 +428,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                 hour = hourOfDay;
                 am_pm = "AM";
             }
-            edithorainicio.setText(hour + " : " + minute + " " + am_pm);
+            edithorainicio.setText(hour + ":" + minute + " " + am_pm);
         }
     };
 
@@ -476,7 +449,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     };
 
     public String fechaActual(){
-        return new SimpleDateFormat( "dd/MM/yyyy HH:mm:ss", java.util.Locale.getDefault()).format(Calendar.getInstance().getTime());
+        return new SimpleDateFormat( "dd-MM-yyyy HH:mm:ss", java.util.Locale.getDefault()).format(Calendar.getInstance().getTime());
     }
 
     public void mensajes(String mensaje) {

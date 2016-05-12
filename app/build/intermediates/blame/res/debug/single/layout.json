@@ -4,10 +4,6 @@
         "source": "D:\\USB\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "D:\\USB\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_lista_reserva_item.xml",
-        "source": "D:\\USB\\PoliUES\\app\\src\\main\\res\\layout\\activity_lista_reserva_item.xml"
-    },
-    {
         "merged": "D:\\USB\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_principal.xml",
         "source": "D:\\USB\\PoliUES\\app\\src\\main\\res\\layout\\nav_header_principal.xml"
     },

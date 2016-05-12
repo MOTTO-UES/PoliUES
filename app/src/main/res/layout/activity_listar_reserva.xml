@@ -10,33 +10,32 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity"
-    tools:showIn="@layout/app_bar_principal">
+    tools:context="poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_height="wrap_content">
+        <TextView android:text="@string/opciones"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView android:text="@string/opciones"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"/>
+
 
             <Button
                 android:onClick="consultarReserva"
                 android:text="@string/consultar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"/>
             <Button
                 android:onClick="insertarReserva"
                 android:text="@string/nuevareserva"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
         <LinearLayout
@@ -58,7 +57,6 @@
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

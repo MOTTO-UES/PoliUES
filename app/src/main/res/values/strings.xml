@@ -55,6 +55,8 @@
     <string name="selecthora">Seleccione de hora</string>
     <string name="consultar">Consultar</string>
     <string name="nuevareserva">Nueva</string>
+    <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
+    <string name="fechacreada">Fecha Creada</string>
 
 
 </resources>

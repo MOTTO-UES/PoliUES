@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:1-47:12
 	package
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:2:11-52
 		INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:8:5-71
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:8:22-69
 application
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:10:5-42:19
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:10:5-45:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
@@ -82,32 +82,36 @@ ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:25:9-28:58
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:26:13-38
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:29:9-54
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:29:9-30:15
 	android:name
 		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:29:19-52
 activity#poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:30:9-61
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:31:9-61
 	android:name
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:30:19-59
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:31:19-59
 activity#poliues.eisi.fia.edu.sv.poliues.ReservaInsertarActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:31:9-32:20
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:32:9-33:20
 	android:name
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:31:19-58
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:32:19-58
 activity#poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:33:9-34:20
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:34:9-37:20
+	android:label
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:35:19-51
+	android:theme
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:36:19-62
 	android:name
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:33:19-56
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:34:19-56
 activity#poliues.eisi.fia.edu.sv.poliues.ReservaConsultarActivity
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:35:9-36:20
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:38:9-39:20
 	android:name
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:35:19-59
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:38:19-59
 meta-data#com.google.android.gms.version
-ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:39:9-41:68
+ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:42:9-44:68
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:41:13-66
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:44:13-66
 	android:name
-		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:40:13-58
+		ADDED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml:43:13-58
 uses-sdk
 INJECTED from D:\USB\PoliUES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.1] D:\USB\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78

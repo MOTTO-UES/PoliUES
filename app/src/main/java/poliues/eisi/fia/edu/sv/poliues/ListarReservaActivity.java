@@ -1,14 +1,21 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+import android.app.ActionBar;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.design.widget.NavigationView;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,7 +28,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ListarReservaActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
+public class ListarReservaActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //global variables
     private static int realIdD =0;
@@ -35,6 +42,12 @@ public class ListarReservaActivity extends Activity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_reserva);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
 
         //instance variables
         reservaList = (ListView) findViewById(R.id.reservaList);
@@ -189,8 +202,10 @@ public class ListarReservaActivity extends Activity implements NavigationView.On
     }
 
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         return false;
     }
 

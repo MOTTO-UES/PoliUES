@@ -26,11 +26,14 @@
             android:name=".principal"
             android:label="@string/title_activity_principal"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".SolicitudActivity"/>
+        <activity android:name=".SolicitudActivity"
+            />
         <activity android:name=".DetalleSolicitudActivity"/>
         <activity android:name=".ReservaInsertarActivity">
         </activity>
-        <activity android:name=".ListarReservaActivity">
+        <activity android:name=".ListarReservaActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".ReservaConsultarActivity">
         </activity>
