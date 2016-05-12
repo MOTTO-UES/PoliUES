@@ -14,21 +14,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 78,
-                        "startColumn": 4,
-                        "startOffset": 3208,
-                        "endLine": 84,
-                        "endColumn": 19,
-                        "endOffset": 3443
-=======
                         "startLine": 83,
                         "startColumn": 4,
                         "startOffset": 3513,
                         "endLine": 89,
                         "endColumn": 19,
                         "endOffset": 3748
->>>>>>> origin/master
                     }
                 }
             },
@@ -44,21 +35,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 58,
-                        "startColumn": 4,
-                        "startOffset": 2494,
-                        "endLine": 65,
-                        "endColumn": 19,
-                        "endOffset": 2765
-=======
                         "startLine": 62,
                         "startColumn": 4,
                         "startOffset": 2748,
                         "endLine": 69,
                         "endColumn": 19,
                         "endOffset": 3019
->>>>>>> origin/master
                     }
                 }
             },
@@ -4481,19 +4463,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 77,
-                        "startColumn": 4,
-                        "startOffset": 3159,
-                        "endColumn": 47,
-                        "endOffset": 3202
-=======
                         "startLine": 82,
                         "startColumn": 4,
                         "startOffset": 3464,
                         "endColumn": 47,
                         "endOffset": 3507
->>>>>>> origin/master
                     }
                 }
             },
@@ -4508,19 +4482,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 86,
-                        "startColumn": 4,
-                        "startOffset": 3492,
-                        "endColumn": 55,
-                        "endOffset": 3543
-=======
                         "startLine": 91,
                         "startColumn": 4,
                         "startOffset": 3797,
                         "endColumn": 55,
                         "endOffset": 3848
->>>>>>> origin/master
                     }
                 }
             },
@@ -4535,19 +4501,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 92,
-                        "endColumn": 74,
-                        "endOffset": 162
-=======
                         "startLine": 10,
                         "startColumn": 4,
                         "startOffset": 455,
                         "endColumn": 65,
                         "endOffset": 516
->>>>>>> origin/master
                     }
                 }
             },
@@ -4562,19 +4520,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 168,
-                        "endColumn": 70,
-                        "endOffset": 234
-=======
                         "startLine": 94,
                         "startColumn": 4,
                         "startOffset": 3977,
                         "endColumn": 51,
                         "endOffset": 4024
->>>>>>> origin/master
                     }
                 }
             },
@@ -4606,15 +4556,6 @@
                     "endOffset": 40358
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 191,
-                        "startColumn": 4,
-                        "startOffset": 27253,
-                        "endColumn": 73,
-                        "endOffset": 27322
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
@@ -4622,7 +4563,6 @@
                         "startOffset": 168,
                         "endColumn": 70,
                         "endOffset": 234
->>>>>>> origin/master
                     }
                 }
             },
@@ -4635,15 +4575,6 @@
                     "endOffset": 40425
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 192,
-                        "startColumn": 4,
-                        "startOffset": 27327,
-                        "endColumn": 77,
-                        "endOffset": 27400
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
@@ -4651,7 +4582,6 @@
                         "startOffset": 240,
                         "endColumn": 66,
                         "endOffset": 302
->>>>>>> origin/master
                     }
                 }
             },
@@ -4664,15 +4594,6 @@
                     "endOffset": 40497
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 193,
-                        "startColumn": 4,
-                        "startOffset": 27405,
-                        "endColumn": 92,
-                        "endOffset": 27493
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 11,
@@ -4680,7 +4601,6 @@
                         "startOffset": 522,
                         "endColumn": 71,
                         "endOffset": 589
->>>>>>> origin/master
                     }
                 }
             },
@@ -4695,19 +4615,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 194,
-                        "startColumn": 4,
-                        "startOffset": 27498,
-                        "endColumn": 69,
-                        "endOffset": 27563
-=======
                         "startLine": 191,
                         "startColumn": 4,
                         "startOffset": 27253,
                         "endColumn": 73,
                         "endOffset": 27322
->>>>>>> origin/master
                     }
                 }
             },
@@ -4722,19 +4634,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 195,
-                        "startColumn": 4,
-                        "startOffset": 27568,
-                        "endColumn": 77,
-                        "endOffset": 27641
-=======
                         "startLine": 192,
                         "startColumn": 4,
                         "startOffset": 27327,
                         "endColumn": 77,
                         "endOffset": 27400
->>>>>>> origin/master
                     }
                 }
             },
@@ -4749,19 +4653,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 196,
-                        "startColumn": 4,
-                        "startOffset": 27646,
-                        "endColumn": 53,
-                        "endOffset": 27695
-=======
                         "startLine": 193,
                         "startColumn": 4,
                         "startOffset": 27405,
                         "endColumn": 92,
                         "endOffset": 27493
->>>>>>> origin/master
                     }
                 }
             },
@@ -4776,19 +4672,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 197,
-                        "startColumn": 4,
-                        "startOffset": 27700,
-                        "endColumn": 69,
-                        "endOffset": 27765
-=======
                         "startLine": 194,
                         "startColumn": 4,
                         "startOffset": 27498,
                         "endColumn": 69,
                         "endOffset": 27563
->>>>>>> origin/master
                     }
                 }
             },
@@ -4803,19 +4691,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 198,
-                        "startColumn": 4,
-                        "startOffset": 27770,
-                        "endColumn": 84,
-                        "endOffset": 27850
-=======
                         "startLine": 195,
                         "startColumn": 4,
                         "startOffset": 27568,
                         "endColumn": 77,
                         "endOffset": 27641
->>>>>>> origin/master
                     }
                 }
             },
@@ -4830,19 +4710,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 199,
-                        "startColumn": 4,
-                        "startOffset": 27855,
-                        "endColumn": 47,
-                        "endOffset": 27898
-=======
                         "startLine": 196,
                         "startColumn": 4,
                         "startOffset": 27646,
                         "endColumn": 53,
                         "endOffset": 27695
->>>>>>> origin/master
                     }
                 }
             },
@@ -4857,19 +4729,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 200,
-                        "startColumn": 4,
-                        "startOffset": 27903,
-                        "endColumn": 45,
-                        "endOffset": 27944
-=======
                         "startLine": 197,
                         "startColumn": 4,
                         "startOffset": 27700,
                         "endColumn": 69,
                         "endOffset": 27765
->>>>>>> origin/master
                     }
                 }
             },
@@ -4884,19 +4748,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 201,
-                        "startColumn": 4,
-                        "startOffset": 27949,
-                        "endColumn": 51,
-                        "endOffset": 27996
-=======
                         "startLine": 198,
                         "startColumn": 4,
                         "startOffset": 27770,
                         "endColumn": 84,
                         "endOffset": 27850
->>>>>>> origin/master
                     }
                 }
             },
@@ -4911,19 +4767,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 202,
-                        "startColumn": 4,
-                        "startOffset": 28001,
-                        "endColumn": 72,
-                        "endOffset": 28069
-=======
                         "startLine": 199,
                         "startColumn": 4,
                         "startOffset": 27855,
                         "endColumn": 47,
                         "endOffset": 27898
->>>>>>> origin/master
                     }
                 }
             },
@@ -4938,19 +4786,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 203,
-                        "startColumn": 4,
-                        "startOffset": 28074,
-                        "endColumn": 73,
-                        "endOffset": 28143
-=======
                         "startLine": 200,
                         "startColumn": 4,
                         "startOffset": 27903,
                         "endColumn": 45,
                         "endOffset": 27944
->>>>>>> origin/master
                     }
                 }
             },
@@ -4965,19 +4805,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 204,
-                        "startColumn": 4,
-                        "startOffset": 28148,
-                        "endColumn": 68,
-                        "endOffset": 28212
-=======
                         "startLine": 201,
                         "startColumn": 4,
                         "startOffset": 27949,
                         "endColumn": 51,
                         "endOffset": 27996
->>>>>>> origin/master
                     }
                 }
             },
@@ -4992,19 +4824,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 205,
-                        "startColumn": 4,
-                        "startOffset": 28217,
-                        "endColumn": 74,
-                        "endOffset": 28287
-=======
                         "startLine": 202,
                         "startColumn": 4,
                         "startOffset": 28001,
                         "endColumn": 72,
                         "endOffset": 28069
->>>>>>> origin/master
                     }
                 }
             },
@@ -5019,19 +4843,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 206,
-                        "startColumn": 4,
-                        "startOffset": 28292,
-                        "endColumn": 73,
-                        "endOffset": 28361
-=======
                         "startLine": 203,
                         "startColumn": 4,
                         "startOffset": 28074,
                         "endColumn": 73,
                         "endOffset": 28143
->>>>>>> origin/master
                     }
                 }
             },
@@ -5046,19 +4862,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 207,
-                        "startColumn": 4,
-                        "startOffset": 28366,
-                        "endColumn": 73,
-                        "endOffset": 28435
-=======
                         "startLine": 204,
                         "startColumn": 4,
                         "startOffset": 28148,
                         "endColumn": 68,
                         "endOffset": 28212
->>>>>>> origin/master
                     }
                 }
             },
@@ -5073,19 +4881,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 208,
-                        "startColumn": 4,
-                        "startOffset": 28440,
-                        "endColumn": 88,
-                        "endOffset": 28524
-=======
                         "startLine": 205,
                         "startColumn": 4,
                         "startOffset": 28217,
                         "endColumn": 74,
                         "endOffset": 28287
->>>>>>> origin/master
                     }
                 }
             },
@@ -5100,19 +4900,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 209,
-                        "startColumn": 4,
-                        "startOffset": 28529,
-                        "endColumn": 69,
-                        "endOffset": 28594
-=======
                         "startLine": 206,
                         "startColumn": 4,
                         "startOffset": 28292,
                         "endColumn": 73,
                         "endOffset": 28361
->>>>>>> origin/master
                     }
                 }
             },
@@ -5125,15 +4917,6 @@
                     "endOffset": 41684
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 51,
-                        "startColumn": 4,
-                        "startOffset": 2234,
-                        "endColumn": 70,
-                        "endOffset": 2300
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 207,
@@ -5141,7 +4924,6 @@
                         "startOffset": 28366,
                         "endColumn": 73,
                         "endOffset": 28435
->>>>>>> origin/master
                     }
                 }
             },
@@ -5154,15 +4936,6 @@
                     "endOffset": 41773
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 1383,
-                        "endColumn": 52,
-                        "endOffset": 1431
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 208,
@@ -5170,7 +4943,6 @@
                         "startOffset": 28440,
                         "endColumn": 88,
                         "endOffset": 28524
->>>>>>> origin/master
                     }
                 }
             },
@@ -5183,15 +4955,6 @@
                     "endOffset": 41843
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 559,
-                        "endColumn": 49,
-                        "endOffset": 604
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 209,
@@ -5199,7 +4962,6 @@
                         "startOffset": 28529,
                         "endColumn": 69,
                         "endOffset": 28594
->>>>>>> origin/master
                     }
                 }
             },
@@ -5214,19 +4976,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 612,
-                        "endColumn": 56,
-                        "endOffset": 664
-=======
                         "startLine": 55,
                         "startColumn": 4,
                         "startOffset": 2488,
                         "endColumn": 70,
                         "endOffset": 2554
->>>>>>> origin/master
                     }
                 }
             },
@@ -5241,19 +4995,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 48,
-                        "startColumn": 4,
-                        "startOffset": 2036,
-                        "endColumn": 74,
-                        "endOffset": 2106
-=======
                         "startLine": 32,
                         "startColumn": 4,
                         "startOffset": 1639,
                         "endColumn": 52,
                         "endOffset": 1687
->>>>>>> origin/master
                     }
                 }
             },
@@ -5268,19 +5014,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1,
-                        "startColumn": 4,
-                        "startOffset": 17,
-                        "endColumn": 44,
-                        "endOffset": 57
-=======
                         "startLine": 16,
                         "startColumn": 4,
                         "startOffset": 738,
                         "endColumn": 49,
                         "endOffset": 783
->>>>>>> origin/master
                     }
                 }
             },
@@ -5293,15 +5031,6 @@
                     "endOffset": 42074
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 61,
-                        "startColumn": 4,
-                        "startOffset": 9555,
-                        "endColumn": 144,
-                        "endOffset": 9695
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 18,
@@ -5309,7 +5038,6 @@
                         "startOffset": 791,
                         "endColumn": 56,
                         "endOffset": 843
->>>>>>> origin/master
                     }
                 }
             },
@@ -5324,19 +5052,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 57,
-                        "startColumn": 4,
-                        "startOffset": 2455,
-                        "endColumn": 37,
-                        "endOffset": 2488
-=======
                         "startLine": 52,
                         "startColumn": 4,
                         "startOffset": 2290,
                         "endColumn": 74,
                         "endOffset": 2360
->>>>>>> origin/master
                     }
                 }
             },
@@ -5349,15 +5069,6 @@
                     "endOffset": 42199
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 253,
-                        "endColumn": 91,
-                        "endOffset": 340
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 76,
@@ -5365,7 +5076,6 @@
                         "startOffset": 3322,
                         "endColumn": 49,
                         "endOffset": 3367
->>>>>>> origin/master
                     }
                 }
             },
@@ -5378,15 +5088,6 @@
                     "endOffset": 42244
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 109,
-                        "endColumn": 87,
-                        "endOffset": 192
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 1,
@@ -5394,7 +5095,6 @@
                         "startOffset": 17,
                         "endColumn": 44,
                         "endOffset": 57
->>>>>>> origin/master
                     }
                 }
             },
@@ -5407,15 +5107,6 @@
                     "endOffset": 42389
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 4,
-                        "startOffset": 1565,
-                        "endColumn": 41,
-                        "endOffset": 1602
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 61,
@@ -5423,7 +5114,6 @@
                         "startOffset": 9555,
                         "endColumn": 144,
                         "endOffset": 9695
->>>>>>> origin/master
                     }
                 }
             },
@@ -5436,15 +5126,6 @@
                     "endOffset": 42427
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 62,
-                        "startColumn": 4,
-                        "startOffset": 9700,
-                        "endColumn": 120,
-                        "endOffset": 9816
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 61,
@@ -5452,7 +5133,6 @@
                         "startOffset": 2709,
                         "endColumn": 37,
                         "endOffset": 2742
->>>>>>> origin/master
                     }
                 }
             },
@@ -5465,15 +5145,6 @@
                     "endOffset": 42519
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 49,
-                        "startColumn": 4,
-                        "startOffset": 2112,
-                        "endColumn": 59,
-                        "endOffset": 2167
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
                     "position": {
                         "startLine": 5,
@@ -5481,7 +5152,6 @@
                         "startOffset": 253,
                         "endColumn": 91,
                         "endOffset": 340
->>>>>>> origin/master
                     }
                 }
             },
@@ -5494,15 +5164,6 @@
                     "endOffset": 42607
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 50,
-                        "startColumn": 4,
-                        "startOffset": 2173,
-                        "endColumn": 59,
-                        "endOffset": 2228
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
                     "position": {
                         "startLine": 3,
@@ -5510,7 +5171,6 @@
                         "startOffset": 109,
                         "endColumn": 87,
                         "endOffset": 192
->>>>>>> origin/master
                     }
                 }
             },
@@ -5525,19 +5185,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 360,
-                        "endColumn": 54,
-                        "endOffset": 410
-=======
                         "startLine": 38,
                         "startColumn": 4,
                         "startOffset": 1819,
                         "endColumn": 41,
                         "endOffset": 1856
->>>>>>> origin/master
                     }
                 }
             },
@@ -5552,19 +5204,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 63,
-                        "startColumn": 4,
-                        "startOffset": 9821,
-                        "endColumn": 86,
-                        "endOffset": 9903
-=======
                         "startLine": 62,
                         "startColumn": 4,
                         "startOffset": 9700,
                         "endColumn": 120,
                         "endOffset": 9816
->>>>>>> origin/master
                     }
                 }
             },
@@ -5579,19 +5223,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 68,
-                        "startColumn": 4,
-                        "startOffset": 2877,
-                        "endColumn": 50,
-                        "endOffset": 2923
-=======
                         "startLine": 53,
                         "startColumn": 4,
                         "startOffset": 2366,
                         "endColumn": 59,
                         "endOffset": 2421
->>>>>>> origin/master
                     }
                 }
             },
@@ -5604,15 +5240,6 @@
                     "endOffset": 42890
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 733,
-                        "endColumn": 160,
-                        "endOffset": 889
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 54,
@@ -5620,7 +5247,6 @@
                         "startOffset": 2427,
                         "endColumn": 59,
                         "endOffset": 2482
->>>>>>> origin/master
                     }
                 }
             },
@@ -5633,15 +5259,6 @@
                     "endOffset": 42945
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
-                    "position": {
-                        "startLine": 60,
-                        "startColumn": 4,
-                        "startOffset": 4602,
-                        "endColumn": 148,
-                        "endOffset": 4746
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
@@ -5649,7 +5266,6 @@
                         "startOffset": 360,
                         "endColumn": 54,
                         "endOffset": 410
->>>>>>> origin/master
                     }
                 }
             },
@@ -5662,15 +5278,6 @@
                     "endOffset": 43032
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
-                    "position": {
-                        "startLine": 52,
-                        "startColumn": 4,
-                        "startOffset": 4026,
-                        "endColumn": 108,
-                        "endOffset": 4130
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 63,
@@ -5678,7 +5285,6 @@
                         "startOffset": 9821,
                         "endColumn": 86,
                         "endOffset": 9903
->>>>>>> origin/master
                     }
                 }
             },
@@ -5691,15 +5297,6 @@
                     "endOffset": 43083
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
-                    "position": {
-                        "startLine": 99,
-                        "startColumn": 4,
-                        "startOffset": 7585,
-                        "endColumn": 235,
-                        "endOffset": 7816
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 72,
@@ -5707,7 +5304,6 @@
                         "startOffset": 3131,
                         "endColumn": 50,
                         "endOffset": 3177
->>>>>>> origin/master
                     }
                 }
             },
@@ -5722,19 +5318,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 44,
-                        "startColumn": 4,
-                        "startOffset": 3483,
-                        "endColumn": 125,
-                        "endOffset": 3604
-=======
                         "startLine": 10,
                         "startColumn": 4,
                         "startOffset": 733,
                         "endColumn": 160,
                         "endOffset": 889
->>>>>>> origin/master
                     }
                 }
             },
@@ -5749,19 +5337,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 3087,
-                        "endColumn": 184,
-                        "endOffset": 3267
-=======
                         "startLine": 60,
                         "startColumn": 4,
                         "startOffset": 4602,
                         "endColumn": 148,
                         "endOffset": 4746
->>>>>>> origin/master
                     }
                 }
             },
@@ -5776,19 +5356,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 35,
-                        "startColumn": 4,
-                        "startOffset": 2811,
-                        "endColumn": 124,
-                        "endOffset": 2931
-=======
                         "startLine": 52,
                         "startColumn": 4,
                         "startOffset": 4026,
                         "endColumn": 108,
                         "endOffset": 4130
->>>>>>> origin/master
                     }
                 }
             },
@@ -5803,19 +5375,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1266,
-                        "endColumn": 142,
-                        "endOffset": 1404
-=======
                         "startLine": 99,
                         "startColumn": 4,
                         "startOffset": 7585,
                         "endColumn": 235,
                         "endOffset": 7816
->>>>>>> origin/master
                     }
                 }
             },
@@ -5830,19 +5394,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 31,
-                        "startColumn": 4,
-                        "startOffset": 2540,
-                        "endColumn": 123,
-                        "endOffset": 2659
-=======
                         "startLine": 44,
                         "startColumn": 4,
                         "startOffset": 3483,
                         "endColumn": 125,
                         "endOffset": 3604
->>>>>>> origin/master
                     }
                 }
             },
@@ -5857,19 +5413,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 1843,
-                        "endColumn": 216,
-                        "endOffset": 2055
-=======
                         "startLine": 39,
                         "startColumn": 4,
                         "startOffset": 3087,
                         "endColumn": 184,
                         "endOffset": 3267
->>>>>>> origin/master
                     }
                 }
             },
@@ -5884,19 +5432,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 2225,
-                        "endColumn": 218,
-                        "endOffset": 2439
-=======
                         "startLine": 35,
                         "startColumn": 4,
                         "startOffset": 2811,
                         "endColumn": 124,
                         "endOffset": 2931
->>>>>>> origin/master
                     }
                 }
             },
@@ -5911,19 +5451,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1556,
-                        "endColumn": 122,
-                        "endOffset": 1674
-=======
                         "startLine": 16,
                         "startColumn": 4,
                         "startOffset": 1266,
                         "endColumn": 142,
                         "endOffset": 1404
->>>>>>> origin/master
                     }
                 }
             },
@@ -5938,19 +5470,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 80,
-                        "startColumn": 4,
-                        "startOffset": 6084,
-                        "endColumn": 164,
-                        "endOffset": 6244
-=======
                         "startLine": 31,
                         "startColumn": 4,
                         "startOffset": 2540,
                         "endColumn": 123,
                         "endOffset": 2659
->>>>>>> origin/master
                     }
                 }
             },
@@ -5965,19 +5489,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 77,
-                        "startColumn": 4,
-                        "startOffset": 5869,
-                        "endColumn": 93,
-                        "endOffset": 5958
-=======
                         "startLine": 24,
                         "startColumn": 4,
                         "startOffset": 1843,
                         "endColumn": 216,
                         "endOffset": 2055
->>>>>>> origin/master
                     }
                 }
             },
@@ -5992,19 +5508,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1033,
-                        "endColumn": 136,
-                        "endOffset": 1165
-=======
                         "startLine": 28,
                         "startColumn": 4,
                         "startOffset": 2225,
                         "endColumn": 218,
                         "endOffset": 2439
->>>>>>> origin/master
                     }
                 }
             },
@@ -6019,19 +5527,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 74,
-                        "startColumn": 4,
-                        "startOffset": 5611,
-                        "endColumn": 140,
-                        "endOffset": 5747
-=======
                         "startLine": 20,
                         "startColumn": 4,
                         "startOffset": 1556,
                         "endColumn": 122,
                         "endOffset": 1674
->>>>>>> origin/master
                     }
                 }
             },
@@ -6046,19 +5546,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 71,
-                        "startColumn": 4,
-                        "startOffset": 5408,
-                        "endColumn": 89,
-                        "endOffset": 5493
-=======
                         "startLine": 80,
                         "startColumn": 4,
                         "startOffset": 6084,
                         "endColumn": 164,
                         "endOffset": 6244
->>>>>>> origin/master
                     }
                 }
             },
@@ -6073,19 +5565,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 449,
-                        "endColumn": 147,
-                        "endOffset": 592
-=======
                         "startLine": 77,
                         "startColumn": 4,
                         "startOffset": 5869,
                         "endColumn": 93,
                         "endOffset": 5958
->>>>>>> origin/master
                     }
                 }
             },
@@ -6100,19 +5584,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 206,
-                        "endColumn": 102,
-                        "endOffset": 304
-=======
                         "startLine": 13,
                         "startColumn": 4,
                         "startOffset": 1033,
                         "endColumn": 136,
                         "endOffset": 1165
->>>>>>> origin/master
                     }
                 }
             },
@@ -6127,19 +5603,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 105,
-                        "startColumn": 4,
-                        "startOffset": 8155,
-                        "endColumn": 150,
-                        "endOffset": 8301
-=======
                         "startLine": 74,
                         "startColumn": 4,
                         "startOffset": 5611,
                         "endColumn": 140,
                         "endOffset": 5747
->>>>>>> origin/master
                     }
                 }
             },
@@ -6154,19 +5622,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 102,
-                        "startColumn": 4,
-                        "startOffset": 7940,
-                        "endColumn": 91,
-                        "endOffset": 8027
-=======
                         "startLine": 71,
                         "startColumn": 4,
                         "startOffset": 5408,
                         "endColumn": 89,
                         "endOffset": 5493
->>>>>>> origin/master
                     }
                 }
             },
@@ -6181,19 +5641,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 84,
-                        "startColumn": 4,
-                        "startOffset": 6385,
-                        "endColumn": 110,
-                        "endOffset": 6491
-=======
                         "startLine": 8,
                         "startColumn": 4,
                         "startOffset": 449,
                         "endColumn": 147,
                         "endOffset": 592
->>>>>>> origin/master
                     }
                 }
             },
@@ -6208,19 +5660,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 90,
-                        "startColumn": 4,
-                        "startOffset": 6861,
-                        "endColumn": 222,
-                        "endOffset": 7079
-=======
                         "startLine": 4,
                         "startColumn": 4,
                         "startOffset": 206,
                         "endColumn": 102,
                         "endOffset": 304
->>>>>>> origin/master
                     }
                 }
             },
@@ -6235,19 +5679,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 87,
-                        "startColumn": 4,
-                        "startOffset": 6629,
-                        "endColumn": 94,
-                        "endOffset": 6719
-=======
                         "startLine": 105,
                         "startColumn": 4,
                         "startOffset": 8155,
                         "endColumn": 150,
                         "endOffset": 8301
->>>>>>> origin/master
                     }
                 }
             },
@@ -6262,19 +5698,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 93,
-                        "startColumn": 4,
-                        "startOffset": 7178,
-                        "endColumn": 104,
-                        "endOffset": 7278
-=======
                         "startLine": 102,
                         "startColumn": 4,
                         "startOffset": 7940,
                         "endColumn": 91,
                         "endOffset": 8027
->>>>>>> origin/master
                     }
                 }
             },
@@ -6289,19 +5717,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 56,
-                        "startColumn": 4,
-                        "startOffset": 4285,
-                        "endColumn": 184,
-                        "endOffset": 4465
-=======
                         "startLine": 84,
                         "startColumn": 4,
                         "startOffset": 6385,
                         "endColumn": 110,
                         "endOffset": 6491
->>>>>>> origin/master
                     }
                 }
             },
@@ -6316,19 +5736,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 48,
-                        "startColumn": 4,
-                        "startOffset": 3755,
-                        "endColumn": 124,
-                        "endOffset": 3875
-=======
                         "startLine": 90,
                         "startColumn": 4,
                         "startOffset": 6861,
                         "endColumn": 222,
                         "endOffset": 7079
->>>>>>> origin/master
                     }
                 }
             },
@@ -6343,19 +5755,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 68,
-                        "startColumn": 4,
-                        "startOffset": 5120,
-                        "endColumn": 178,
-                        "endOffset": 5294
-=======
                         "startLine": 87,
                         "startColumn": 4,
                         "startOffset": 6629,
                         "endColumn": 94,
                         "endOffset": 6719
->>>>>>> origin/master
                     }
                 }
             },
@@ -6370,19 +5774,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 64,
-                        "startColumn": 4,
-                        "startOffset": 4881,
-                        "endColumn": 104,
-                        "endOffset": 4981
-=======
                         "startLine": 93,
                         "startColumn": 4,
                         "startOffset": 7178,
                         "endColumn": 104,
                         "endOffset": 7278
->>>>>>> origin/master
                     }
                 }
             },
@@ -6397,19 +5793,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 96,
-                        "startColumn": 4,
-                        "startOffset": 7378,
-                        "endColumn": 62,
-                        "endOffset": 7436
-=======
                         "startLine": 56,
                         "startColumn": 4,
                         "startOffset": 4285,
                         "endColumn": 184,
                         "endOffset": 4465
->>>>>>> origin/master
                     }
                 }
             },
@@ -6422,15 +5810,6 @@
                     "endOffset": 46929
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 4,
-                        "startOffset": 1473,
-                        "endColumn": 47,
-                        "endOffset": 1516
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 48,
@@ -6438,7 +5817,6 @@
                         "startOffset": 3755,
                         "endColumn": 124,
                         "endOffset": 3875
->>>>>>> origin/master
                     }
                 }
             },
@@ -6451,15 +5829,6 @@
                     "endOffset": 47104
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 4,
-                        "startOffset": 1522,
-                        "endColumn": 41,
-                        "endOffset": 1559
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 68,
@@ -6467,7 +5836,6 @@
                         "startOffset": 5120,
                         "endColumn": 178,
                         "endOffset": 5294
->>>>>>> origin/master
                     }
                 }
             },
@@ -6480,15 +5848,6 @@
                     "endOffset": 47209
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1080,
-                        "endColumn": 59,
-                        "endOffset": 1135
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 64,
@@ -6496,7 +5855,6 @@
                         "startOffset": 4881,
                         "endColumn": 104,
                         "endOffset": 4981
->>>>>>> origin/master
                     }
                 }
             },
@@ -6509,15 +5867,6 @@
                     "endOffset": 47272
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 895,
-                        "endColumn": 64,
-                        "endOffset": 955
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
                     "position": {
                         "startLine": 96,
@@ -6525,7 +5874,6 @@
                         "startOffset": 7378,
                         "endColumn": 62,
                         "endOffset": 7436
->>>>>>> origin/master
                     }
                 }
             },
@@ -6540,19 +5888,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 820,
-                        "endColumn": 73,
-                        "endOffset": 889
-=======
                         "startLine": 36,
                         "startColumn": 4,
                         "startOffset": 1727,
                         "endColumn": 47,
                         "endOffset": 1770
->>>>>>> origin/master
                     }
                 }
             },
@@ -6567,19 +5907,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 670,
-                        "endColumn": 75,
-                        "endOffset": 741
-=======
                         "startLine": 37,
                         "startColumn": 4,
                         "startOffset": 1776,
                         "endColumn": 41,
                         "endOffset": 1813
->>>>>>> origin/master
                     }
                 }
             },
@@ -6594,19 +5926,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 747,
-                        "endColumn": 71,
-                        "endOffset": 814
-=======
                         "startLine": 25,
                         "startColumn": 4,
                         "startOffset": 1259,
                         "endColumn": 59,
                         "endOffset": 1314
->>>>>>> origin/master
                     }
                 }
             },
@@ -6621,19 +5945,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 88,
-                        "startColumn": 4,
-                        "startOffset": 3611,
-                        "endColumn": 59,
-                        "endOffset": 3666
-=======
                         "startLine": 26,
                         "startColumn": 4,
                         "startOffset": 1320,
                         "endColumn": 75,
                         "endOffset": 1391
->>>>>>> origin/master
                     }
                 }
             },
@@ -6648,19 +5964,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 67,
-                        "startColumn": 4,
-                        "startOffset": 2825,
-                        "endColumn": 50,
-                        "endOffset": 2871
-=======
                         "startLine": 22,
                         "startColumn": 4,
                         "startOffset": 1074,
                         "endColumn": 64,
                         "endOffset": 1134
->>>>>>> origin/master
                     }
                 }
             },
@@ -6675,19 +5983,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 66,
-                        "startColumn": 4,
-                        "startOffset": 2771,
-                        "endColumn": 52,
-                        "endOffset": 2819
-=======
                         "startLine": 21,
                         "startColumn": 4,
                         "startOffset": 999,
                         "endColumn": 73,
                         "endOffset": 1068
->>>>>>> origin/master
                     }
                 }
             },
@@ -6702,19 +6002,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 55,
-                        "startColumn": 4,
-                        "startOffset": 2349,
-                        "endColumn": 55,
-                        "endOffset": 2400
-=======
                         "startLine": 19,
                         "startColumn": 4,
                         "startOffset": 849,
                         "endColumn": 75,
                         "endOffset": 920
->>>>>>> origin/master
                     }
                 }
             },
@@ -6729,19 +6021,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 76,
-                        "startColumn": 4,
-                        "startOffset": 3105,
-                        "endColumn": 52,
-                        "endOffset": 3153
-=======
                         "startLine": 20,
                         "startColumn": 4,
                         "startOffset": 926,
                         "endColumn": 71,
                         "endOffset": 993
->>>>>>> origin/master
                     }
                 }
             },
@@ -6756,19 +6040,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 70,
-                        "startColumn": 4,
-                        "startOffset": 2974,
-                        "endColumn": 45,
-                        "endOffset": 3015
-=======
                         "startLine": 93,
                         "startColumn": 4,
                         "startOffset": 3916,
                         "endColumn": 59,
                         "endOffset": 3971
->>>>>>> origin/master
                     }
                 }
             },
@@ -6783,19 +6059,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 69,
-                        "startColumn": 4,
-                        "startOffset": 2929,
-                        "endColumn": 43,
-                        "endOffset": 2968
-=======
                         "startLine": 71,
                         "startColumn": 4,
                         "startOffset": 3079,
                         "endColumn": 50,
                         "endOffset": 3125
->>>>>>> origin/master
                     }
                 }
             },
@@ -6810,19 +6078,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 87,
-                        "startColumn": 4,
-                        "startOffset": 3549,
-                        "endColumn": 60,
-                        "endOffset": 3605
-=======
                         "startLine": 70,
                         "startColumn": 4,
                         "startOffset": 3025,
                         "endColumn": 52,
                         "endOffset": 3073
->>>>>>> origin/master
                     }
                 }
             },
@@ -6932,19 +6192,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 26,
-                        "startColumn": 4,
-                        "startOffset": 1306,
-                        "endColumn": 75,
-                        "endOffset": 1377
-=======
                         "startLine": 31,
                         "startColumn": 4,
                         "startOffset": 1562,
                         "endColumn": 75,
                         "endOffset": 1633
->>>>>>> origin/master
                     }
                 }
             },
@@ -6959,19 +6211,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 1231,
-                        "endColumn": 73,
-                        "endOffset": 1300
-=======
                         "startLine": 30,
                         "startColumn": 4,
                         "startOffset": 1487,
                         "endColumn": 73,
                         "endOffset": 1556
->>>>>>> origin/master
                     }
                 }
             },
@@ -6986,19 +6230,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 71,
-                        "startColumn": 4,
-                        "startOffset": 3021,
-                        "endColumn": 45,
-                        "endOffset": 3062
-=======
                         "startLine": 75,
                         "startColumn": 4,
                         "startOffset": 3275,
                         "endColumn": 45,
                         "endOffset": 3316
->>>>>>> origin/master
                     }
                 }
             },
@@ -7032,19 +6268,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 961,
-                        "endColumn": 115,
-                        "endOffset": 1072
-=======
                         "startLine": 23,
                         "startColumn": 4,
                         "startOffset": 1140,
                         "endColumn": 115,
                         "endOffset": 1251
->>>>>>> origin/master
                     }
                 }
             },
@@ -7059,19 +6287,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 457,
-                        "endColumn": 46,
-                        "endOffset": 499
-=======
                         "startLine": 14,
                         "startColumn": 4,
                         "startOffset": 636,
                         "endColumn": 46,
                         "endOffset": 678
->>>>>>> origin/master
                     }
                 }
             },
@@ -7086,19 +6306,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 505,
-                        "endColumn": 52,
-                        "endOffset": 553
-=======
                         "startLine": 15,
                         "startColumn": 4,
                         "startOffset": 684,
                         "endColumn": 52,
                         "endOffset": 732
->>>>>>> origin/master
                     }
                 }
             },
@@ -7113,19 +6325,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 56,
-                        "startColumn": 4,
-                        "startOffset": 2406,
-                        "endColumn": 47,
-                        "endOffset": 2449
-=======
                         "startLine": 60,
                         "startColumn": 4,
                         "startOffset": 2660,
                         "endColumn": 47,
                         "endOffset": 2703
->>>>>>> origin/master
                     }
                 }
             },
@@ -7159,19 +6363,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 85,
-                        "startColumn": 4,
-                        "startOffset": 3449,
-                        "endColumn": 41,
-                        "endOffset": 3486
-=======
                         "startLine": 90,
                         "startColumn": 4,
                         "startOffset": 3754,
                         "endColumn": 41,
                         "endOffset": 3791
->>>>>>> origin/master
                     }
                 }
             },
@@ -7186,19 +6382,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 90,
-                        "startColumn": 4,
-                        "startOffset": 3765,
-                        "endColumn": 78,
-                        "endOffset": 3839
-=======
                         "startLine": 97,
                         "startColumn": 4,
                         "startOffset": 4125,
                         "endColumn": 78,
                         "endOffset": 4199
->>>>>>> origin/master
                     }
                 }
             },
@@ -7213,19 +6401,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 91,
-                        "startColumn": 4,
-                        "startOffset": 3845,
-                        "endColumn": 93,
-                        "endOffset": 3934
-=======
                         "startLine": 98,
                         "startColumn": 4,
                         "startOffset": 4205,
                         "endColumn": 93,
                         "endOffset": 4294
->>>>>>> origin/master
                     }
                 }
             },
@@ -7240,19 +6420,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 93,
-                        "startColumn": 4,
-                        "startOffset": 4016,
-                        "endColumn": 97,
-                        "endOffset": 4109
-=======
                         "startLine": 100,
                         "startColumn": 4,
                         "startOffset": 4376,
                         "endColumn": 97,
                         "endOffset": 4469
->>>>>>> origin/master
                     }
                 }
             },
@@ -7267,19 +6439,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 89,
-                        "startColumn": 4,
-                        "startOffset": 3672,
-                        "endColumn": 91,
-                        "endOffset": 3759
-=======
                         "startLine": 96,
                         "startColumn": 4,
                         "startOffset": 4032,
                         "endColumn": 91,
                         "endOffset": 4119
->>>>>>> origin/master
                     }
                 }
             },
@@ -7294,19 +6458,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 1167,
-                        "endColumn": 62,
-                        "endOffset": 1225
-=======
                         "startLine": 29,
                         "startColumn": 4,
                         "startOffset": 1423,
                         "endColumn": 62,
                         "endOffset": 1481
->>>>>>> origin/master
                     }
                 }
             },
@@ -7340,19 +6496,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 92,
-                        "startColumn": 4,
-                        "startOffset": 3940,
-                        "endColumn": 74,
-                        "endOffset": 4010
-=======
                         "startLine": 99,
                         "startColumn": 4,
                         "startOffset": 4300,
                         "endColumn": 74,
                         "endOffset": 4370
->>>>>>> origin/master
                     }
                 }
             },
@@ -7367,19 +6515,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 95,
-                        "startColumn": 4,
-                        "startOffset": 4204,
-                        "endColumn": 93,
-                        "endOffset": 4293
-=======
                         "startLine": 102,
                         "startColumn": 4,
                         "startOffset": 4564,
                         "endColumn": 93,
                         "endOffset": 4653
->>>>>>> origin/master
                     }
                 }
             },
@@ -7394,19 +6534,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 94,
-                        "startColumn": 4,
-                        "startOffset": 4115,
-                        "endColumn": 87,
-                        "endOffset": 4198
-=======
                         "startLine": 101,
                         "startColumn": 4,
                         "startOffset": 4475,
                         "endColumn": 87,
                         "endOffset": 4558
->>>>>>> origin/master
                     }
                 }
             },
@@ -7421,19 +6553,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 96,
-                        "startColumn": 4,
-                        "startOffset": 4299,
-                        "endColumn": 91,
-                        "endOffset": 4386
-=======
                         "startLine": 103,
                         "startColumn": 4,
                         "startOffset": 4659,
                         "endColumn": 91,
                         "endOffset": 4746
->>>>>>> origin/master
                     }
                 }
             },
@@ -7448,19 +6572,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 97,
-                        "startColumn": 4,
-                        "startOffset": 4392,
-                        "endColumn": 77,
-                        "endOffset": 4465
-=======
                         "startLine": 104,
                         "startColumn": 4,
                         "startOffset": 4752,
                         "endColumn": 77,
                         "endOffset": 4825
->>>>>>> origin/master
                     }
                 }
             },
@@ -7475,19 +6591,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 1766,
-                        "endColumn": 57,
-                        "endOffset": 1819
-=======
                         "startLine": 44,
                         "startColumn": 4,
                         "startOffset": 2020,
                         "endColumn": 57,
                         "endOffset": 2073
->>>>>>> origin/master
                     }
                 }
             },
@@ -7502,19 +6610,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 47,
-                        "startColumn": 4,
-                        "startOffset": 1979,
-                        "endColumn": 55,
-                        "endOffset": 2030
-=======
                         "startLine": 51,
                         "startColumn": 4,
                         "startOffset": 2233,
                         "endColumn": 55,
                         "endOffset": 2284
->>>>>>> origin/master
                     }
                 }
             },
@@ -7529,19 +6629,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 38,
-                        "startColumn": 4,
-                        "startOffset": 1648,
-                        "endColumn": 57,
-                        "endOffset": 1701
-=======
                         "startLine": 42,
                         "startColumn": 4,
                         "startOffset": 1902,
                         "endColumn": 57,
                         "endOffset": 1955
->>>>>>> origin/master
                     }
                 }
             },
@@ -7556,19 +6648,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 45,
-                        "startColumn": 4,
-                        "startOffset": 1865,
-                        "endColumn": 55,
-                        "endOffset": 1916
-=======
                         "startLine": 49,
                         "startColumn": 4,
                         "startOffset": 2119,
                         "endColumn": 55,
                         "endOffset": 2170
->>>>>>> origin/master
                     }
                 }
             },
@@ -7583,19 +6667,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1707,
-                        "endColumn": 57,
-                        "endOffset": 1760
-=======
                         "startLine": 43,
                         "startColumn": 4,
                         "startOffset": 1961,
                         "endColumn": 57,
                         "endOffset": 2014
->>>>>>> origin/master
                     }
                 }
             },
@@ -7610,19 +6686,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 46,
-                        "startColumn": 4,
-                        "startOffset": 1922,
-                        "endColumn": 55,
-                        "endOffset": 1973
-=======
                         "startLine": 50,
                         "startColumn": 4,
                         "startOffset": 2176,
                         "endColumn": 55,
                         "endOffset": 2227
->>>>>>> origin/master
                     }
                 }
             },
@@ -9133,70 +8201,16 @@
                     "startColumn": 4,
                     "startOffset": 66002,
                     "endColumn": 88,
-<<<<<<< HEAD
-                    "endOffset": 65692
-                },
-                "from": {
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 444,
-                        "startColumn": 4,
-                        "startOffset": 43635,
-                        "endColumn": 88,
-                        "endOffset": 43719
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 659,
-                    "startColumn": 4,
-                    "startOffset": 65697,
-                    "endLine": 662,
-                    "endColumn": 12,
-                    "endOffset": 65929
-                },
-                "from": {
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 445,
-                        "startColumn": 4,
-                        "startOffset": 43724,
-                        "endLine": 448,
-                        "endColumn": 12,
-                        "endOffset": 43956
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 663,
-                    "startColumn": 4,
-                    "startOffset": 65934,
-                    "endLine": 688,
-                    "endColumn": 12,
-                    "endOffset": 67880
-=======
                     "endOffset": 66086
->>>>>>> origin/master
                 },
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 449,
-                        "startColumn": 4,
-                        "startOffset": 43961,
-                        "endLine": 474,
-                        "endColumn": 12,
-                        "endOffset": 45907
-=======
                         "startLine": 444,
                         "startColumn": 4,
                         "startOffset": 43635,
                         "endColumn": 88,
                         "endOffset": 43719
->>>>>>> origin/master
                     }
                 }
             },
@@ -9212,21 +8226,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 475,
-                        "startColumn": 4,
-                        "startOffset": 45912,
-                        "endLine": 478,
-                        "endColumn": 12,
-                        "endOffset": 46149
-=======
                         "startLine": 445,
                         "startColumn": 4,
                         "startOffset": 43724,
                         "endLine": 448,
                         "endColumn": 12,
                         "endOffset": 43956
->>>>>>> origin/master
                     }
                 }
             },
@@ -9242,21 +8247,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 479,
-                        "startColumn": 4,
-                        "startOffset": 46154,
-                        "endLine": 505,
-                        "endColumn": 12,
-                        "endOffset": 48231
-=======
                         "startLine": 449,
                         "startColumn": 4,
                         "startOffset": 43961,
                         "endLine": 474,
                         "endColumn": 12,
                         "endOffset": 45907
->>>>>>> origin/master
                     }
                 }
             },
@@ -9272,21 +8268,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 506,
-                        "startColumn": 4,
-                        "startOffset": 48236,
-                        "endLine": 660,
-                        "endColumn": 12,
-                        "endOffset": 58097
-=======
                         "startLine": 475,
                         "startColumn": 4,
                         "startOffset": 45912,
                         "endLine": 478,
                         "endColumn": 12,
                         "endOffset": 46149
->>>>>>> origin/master
                     }
                 }
             },
@@ -9302,21 +8289,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 661,
-                        "startColumn": 4,
-                        "startOffset": 58102,
-                        "endLine": 682,
-                        "endColumn": 12,
-                        "endOffset": 59364
-=======
                         "startLine": 479,
                         "startColumn": 4,
                         "startOffset": 46154,
                         "endLine": 505,
                         "endColumn": 12,
                         "endOffset": 48231
->>>>>>> origin/master
                     }
                 }
             },
@@ -9332,21 +8310,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 683,
-                        "startColumn": 4,
-                        "startOffset": 59369,
-                        "endLine": 837,
-                        "endColumn": 12,
-                        "endOffset": 69340
-=======
                         "startLine": 506,
                         "startColumn": 4,
                         "startOffset": 48236,
                         "endLine": 660,
                         "endColumn": 12,
                         "endOffset": 58097
->>>>>>> origin/master
                     }
                 }
             },
@@ -9362,21 +8331,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 838,
-                        "startColumn": 4,
-                        "startOffset": 69345,
-                        "endLine": 859,
-                        "endColumn": 12,
-                        "endOffset": 70621
-=======
                         "startLine": 661,
                         "startColumn": 4,
                         "startOffset": 58102,
                         "endLine": 682,
                         "endColumn": 12,
                         "endOffset": 59364
->>>>>>> origin/master
                     }
                 }
             },
@@ -9392,21 +8352,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 860,
-                        "startColumn": 4,
-                        "startOffset": 70626,
-                        "endLine": 866,
-                        "endColumn": 12,
-                        "endOffset": 71157
-=======
                         "startLine": 683,
                         "startColumn": 4,
                         "startOffset": 59369,
                         "endLine": 837,
                         "endColumn": 12,
                         "endOffset": 69340
->>>>>>> origin/master
                     }
                 }
             },
@@ -9422,21 +8373,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 867,
-                        "startColumn": 4,
-                        "startOffset": 71162,
-                        "endLine": 871,
-                        "endColumn": 12,
-                        "endOffset": 71487
-=======
                         "startLine": 838,
                         "startColumn": 4,
                         "startOffset": 69345,
                         "endLine": 859,
                         "endColumn": 12,
                         "endOffset": 70621
->>>>>>> origin/master
                     }
                 }
             },
@@ -9452,21 +8394,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 872,
-                        "startColumn": 4,
-                        "startOffset": 71492,
-                        "endLine": 892,
-                        "endColumn": 12,
-                        "endOffset": 72610
-=======
                         "startLine": 860,
                         "startColumn": 4,
                         "startOffset": 70626,
                         "endLine": 866,
                         "endColumn": 12,
                         "endOffset": 71157
->>>>>>> origin/master
                     }
                 }
             },
@@ -9482,21 +8415,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 893,
-                        "startColumn": 4,
-                        "startOffset": 72615,
-                        "endLine": 897,
-                        "endColumn": 12,
-                        "endOffset": 72866
-=======
                         "startLine": 867,
                         "startColumn": 4,
                         "startOffset": 71162,
                         "endLine": 871,
                         "endColumn": 12,
                         "endOffset": 71487
->>>>>>> origin/master
                     }
                 }
             },
@@ -9512,21 +8436,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 898,
-                        "startColumn": 4,
-                        "startOffset": 72871,
-                        "endLine": 902,
-                        "endColumn": 12,
-                        "endOffset": 73102
-=======
                         "startLine": 872,
                         "startColumn": 4,
                         "startOffset": 71492,
                         "endLine": 892,
                         "endColumn": 12,
                         "endOffset": 72610
->>>>>>> origin/master
                     }
                 }
             },
@@ -9542,21 +8457,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 903,
-                        "startColumn": 4,
-                        "startOffset": 73107,
-                        "endLine": 912,
-                        "endColumn": 12,
-                        "endOffset": 73649
-=======
                         "startLine": 893,
                         "startColumn": 4,
                         "startOffset": 72615,
                         "endLine": 897,
                         "endColumn": 12,
                         "endOffset": 72866
->>>>>>> origin/master
                     }
                 }
             },
@@ -9572,21 +8478,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 913,
-                        "startColumn": 4,
-                        "startOffset": 73654,
-                        "endLine": 921,
-                        "endColumn": 12,
-                        "endOffset": 74143
-=======
                         "startLine": 898,
                         "startColumn": 4,
                         "startOffset": 72871,
                         "endLine": 902,
                         "endColumn": 12,
                         "endOffset": 73102
->>>>>>> origin/master
                     }
                 }
             },
@@ -9602,21 +8499,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 922,
-                        "startColumn": 4,
-                        "startOffset": 74148,
-                        "endLine": 930,
-                        "endColumn": 12,
-                        "endOffset": 74748
-=======
                         "startLine": 903,
                         "startColumn": 4,
                         "startOffset": 73107,
                         "endLine": 912,
                         "endColumn": 12,
                         "endOffset": 73649
->>>>>>> origin/master
                     }
                 }
             },
@@ -9632,21 +8520,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 931,
-                        "startColumn": 4,
-                        "startOffset": 74753,
-                        "endLine": 933,
-                        "endColumn": 12,
-                        "endOffset": 74896
-=======
                         "startLine": 913,
                         "startColumn": 4,
                         "startOffset": 73654,
                         "endLine": 921,
                         "endColumn": 12,
                         "endOffset": 74143
->>>>>>> origin/master
                     }
                 }
             },
@@ -9662,21 +8541,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 934,
-                        "startColumn": 4,
-                        "startOffset": 74901,
-                        "endLine": 940,
-                        "endColumn": 12,
-                        "endOffset": 75484
-=======
                         "startLine": 922,
                         "startColumn": 4,
                         "startOffset": 74148,
                         "endLine": 930,
                         "endColumn": 12,
                         "endOffset": 74748
->>>>>>> origin/master
                     }
                 }
             },
@@ -9692,21 +8562,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 941,
-                        "startColumn": 4,
-                        "startOffset": 75489,
-                        "endLine": 948,
-                        "endColumn": 12,
-                        "endOffset": 76048
-=======
                         "startLine": 931,
                         "startColumn": 4,
                         "startOffset": 74753,
                         "endLine": 933,
                         "endColumn": 12,
                         "endOffset": 74896
->>>>>>> origin/master
                     }
                 }
             },
@@ -9722,21 +8583,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 949,
-                        "startColumn": 4,
-                        "startOffset": 76053,
-                        "endLine": 955,
-                        "endColumn": 12,
-                        "endOffset": 76423
-=======
                         "startLine": 934,
                         "startColumn": 4,
                         "startOffset": 74901,
                         "endLine": 940,
                         "endColumn": 12,
                         "endOffset": 75484
->>>>>>> origin/master
                     }
                 }
             },
@@ -9752,20 +8604,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 956,
-                        "startColumn": 4,
-                        "startOffset": 76428,
-                        "endColumn": 117,
-                        "endOffset": 76541
-=======
                         "startLine": 941,
                         "startColumn": 4,
                         "startOffset": 75489,
                         "endLine": 948,
                         "endColumn": 12,
                         "endOffset": 76048
->>>>>>> origin/master
                     }
                 }
             },
@@ -9781,21 +8625,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 957,
-                        "startColumn": 4,
-                        "startOffset": 76546,
-                        "endLine": 965,
-                        "endColumn": 12,
-                        "endOffset": 77079
-=======
                         "startLine": 949,
                         "startColumn": 4,
                         "startOffset": 76053,
                         "endLine": 955,
                         "endColumn": 12,
                         "endOffset": 76423
->>>>>>> origin/master
                     }
                 }
             },
@@ -9810,20 +8645,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 966,
-                        "startColumn": 4,
-                        "startOffset": 77084,
-                        "endLine": 968,
-                        "endColumn": 12,
-                        "endOffset": 77236
-=======
                         "startLine": 956,
                         "startColumn": 4,
                         "startOffset": 76428,
                         "endColumn": 117,
                         "endOffset": 76541
->>>>>>> origin/master
                     }
                 }
             },
@@ -9839,21 +8665,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 969,
-                        "startColumn": 4,
-                        "startOffset": 77241,
-                        "endLine": 971,
-                        "endColumn": 12,
-                        "endOffset": 77380
-=======
                         "startLine": 957,
                         "startColumn": 4,
                         "startOffset": 76546,
                         "endLine": 965,
                         "endColumn": 12,
                         "endOffset": 77079
->>>>>>> origin/master
                     }
                 }
             },
@@ -9869,21 +8686,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 972,
-                        "startColumn": 4,
-                        "startOffset": 77385,
-                        "endLine": 976,
-                        "endColumn": 12,
-                        "endOffset": 77700
-=======
                         "startLine": 966,
                         "startColumn": 4,
                         "startOffset": 77084,
                         "endLine": 968,
                         "endColumn": 12,
                         "endOffset": 77236
->>>>>>> origin/master
                     }
                 }
             },
@@ -9899,21 +8707,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 977,
-                        "startColumn": 4,
-                        "startOffset": 77705,
-                        "endLine": 980,
-                        "endColumn": 12,
-                        "endOffset": 77956
-=======
                         "startLine": 969,
                         "startColumn": 4,
                         "startOffset": 77241,
                         "endLine": 971,
                         "endColumn": 12,
                         "endOffset": 77380
->>>>>>> origin/master
                     }
                 }
             },
@@ -9929,21 +8728,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 981,
-                        "startColumn": 4,
-                        "startOffset": 77961,
-                        "endLine": 984,
-                        "endColumn": 12,
-                        "endOffset": 78126
-=======
                         "startLine": 972,
                         "startColumn": 4,
                         "startOffset": 77385,
                         "endLine": 976,
                         "endColumn": 12,
                         "endOffset": 77700
->>>>>>> origin/master
                     }
                 }
             },
@@ -9959,21 +8749,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 985,
-                        "startColumn": 4,
-                        "startOffset": 78131,
-                        "endLine": 987,
-                        "endColumn": 12,
-                        "endOffset": 78267
-=======
                         "startLine": 977,
                         "startColumn": 4,
                         "startOffset": 77705,
                         "endLine": 980,
                         "endColumn": 12,
                         "endOffset": 77956
->>>>>>> origin/master
                     }
                 }
             },
@@ -9989,20 +8770,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 988,
-                        "startColumn": 4,
-                        "startOffset": 78272,
-                        "endColumn": 63,
-                        "endOffset": 78331
-=======
                         "startLine": 981,
                         "startColumn": 4,
                         "startOffset": 77961,
                         "endLine": 984,
                         "endColumn": 12,
                         "endOffset": 78126
->>>>>>> origin/master
                     }
                 }
             },
@@ -10018,21 +8791,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 989,
-                        "startColumn": 4,
-                        "startOffset": 78336,
-                        "endLine": 992,
-                        "endColumn": 12,
-                        "endOffset": 78613
-=======
                         "startLine": 985,
                         "startColumn": 4,
                         "startOffset": 78131,
                         "endLine": 987,
                         "endColumn": 12,
                         "endOffset": 78267
->>>>>>> origin/master
                     }
                 }
             },
@@ -10047,20 +8811,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 993,
-                        "startColumn": 4,
-                        "startOffset": 78618,
-                        "endLine": 996,
-                        "endColumn": 12,
-                        "endOffset": 78899
-=======
                         "startLine": 988,
                         "startColumn": 4,
                         "startOffset": 78272,
                         "endColumn": 63,
                         "endOffset": 78331
->>>>>>> origin/master
                     }
                 }
             },
@@ -10076,21 +8831,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 997,
-                        "startColumn": 4,
-                        "startOffset": 78904,
-                        "endLine": 1006,
-                        "endColumn": 12,
-                        "endOffset": 79575
-=======
                         "startLine": 989,
                         "startColumn": 4,
                         "startOffset": 78336,
                         "endLine": 992,
                         "endColumn": 12,
                         "endOffset": 78613
->>>>>>> origin/master
                     }
                 }
             },
@@ -10106,21 +8852,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1007,
-                        "startColumn": 4,
-                        "startOffset": 79580,
-                        "endLine": 1011,
-                        "endColumn": 12,
-                        "endOffset": 79839
-=======
                         "startLine": 993,
                         "startColumn": 4,
                         "startOffset": 78618,
                         "endLine": 996,
                         "endColumn": 12,
                         "endOffset": 78899
->>>>>>> origin/master
                     }
                 }
             },
@@ -10136,21 +8873,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1012,
-                        "startColumn": 4,
-                        "startOffset": 79844,
-                        "endLine": 1018,
-                        "endColumn": 12,
-                        "endOffset": 80177
-=======
                         "startLine": 997,
                         "startColumn": 4,
                         "startOffset": 78904,
                         "endLine": 1006,
                         "endColumn": 12,
                         "endOffset": 79575
->>>>>>> origin/master
                     }
                 }
             },
@@ -10166,21 +8894,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1019,
-                        "startColumn": 4,
-                        "startOffset": 80182,
-                        "endLine": 1024,
-                        "endColumn": 12,
-                        "endOffset": 80530
-=======
                         "startLine": 1007,
                         "startColumn": 4,
                         "startOffset": 79580,
                         "endLine": 1011,
                         "endColumn": 12,
                         "endOffset": 79839
->>>>>>> origin/master
                     }
                 }
             },
@@ -10196,20 +8915,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1025,
-                        "startColumn": 4,
-                        "startOffset": 80535,
-                        "endColumn": 93,
-                        "endOffset": 80624
-=======
                         "startLine": 1012,
                         "startColumn": 4,
                         "startOffset": 79844,
                         "endLine": 1018,
                         "endColumn": 12,
                         "endOffset": 80177
->>>>>>> origin/master
                     }
                 }
             },
@@ -10225,21 +8936,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1026,
-                        "startColumn": 4,
-                        "startOffset": 80629,
-                        "endLine": 1028,
-                        "endColumn": 12,
-                        "endOffset": 80810
-=======
                         "startLine": 1019,
                         "startColumn": 4,
                         "startOffset": 80182,
                         "endLine": 1024,
                         "endColumn": 12,
                         "endOffset": 80530
->>>>>>> origin/master
                     }
                 }
             },
@@ -10254,20 +8956,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1029,
-                        "startColumn": 4,
-                        "startOffset": 80815,
-                        "endLine": 1032,
-                        "endColumn": 12,
-                        "endOffset": 81116
-=======
                         "startLine": 1025,
                         "startColumn": 4,
                         "startOffset": 80535,
                         "endColumn": 93,
                         "endOffset": 80624
->>>>>>> origin/master
                     }
                 }
             },
@@ -10283,21 +8976,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1033,
-                        "startColumn": 4,
-                        "startOffset": 81121,
-                        "endLine": 1037,
-                        "endColumn": 12,
-                        "endOffset": 81378
-=======
                         "startLine": 1026,
                         "startColumn": 4,
                         "startOffset": 80629,
                         "endLine": 1028,
                         "endColumn": 12,
                         "endOffset": 80810
->>>>>>> origin/master
                     }
                 }
             },
@@ -10313,21 +8997,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1038,
-                        "startColumn": 4,
-                        "startOffset": 81383,
-                        "endLine": 1039,
-                        "endColumn": 12,
-                        "endOffset": 81503
-=======
                         "startLine": 1029,
                         "startColumn": 4,
                         "startOffset": 80815,
                         "endLine": 1032,
                         "endColumn": 12,
                         "endOffset": 81116
->>>>>>> origin/master
                     }
                 }
             },
@@ -10343,21 +9018,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1040,
-                        "startColumn": 4,
-                        "startOffset": 81508,
-                        "endLine": 1041,
-                        "endColumn": 12,
-                        "endOffset": 81630
-=======
                         "startLine": 1033,
                         "startColumn": 4,
                         "startOffset": 81121,
                         "endLine": 1037,
                         "endColumn": 12,
                         "endOffset": 81378
->>>>>>> origin/master
                     }
                 }
             },
@@ -10373,21 +9039,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1042,
-                        "startColumn": 4,
-                        "startOffset": 81635,
-                        "endLine": 1044,
-                        "endColumn": 12,
-                        "endOffset": 81869
-=======
                         "startLine": 1038,
                         "startColumn": 4,
                         "startOffset": 81383,
                         "endLine": 1039,
                         "endColumn": 12,
                         "endOffset": 81503
->>>>>>> origin/master
                     }
                 }
             },
@@ -10403,21 +9060,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1045,
-                        "startColumn": 4,
-                        "startOffset": 81874,
-                        "endLine": 1047,
-                        "endColumn": 12,
-                        "endOffset": 82080
-=======
                         "startLine": 1040,
                         "startColumn": 4,
                         "startOffset": 81508,
                         "endLine": 1041,
                         "endColumn": 12,
                         "endOffset": 81630
->>>>>>> origin/master
                     }
                 }
             },
@@ -10433,21 +9081,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1048,
-                        "startColumn": 4,
-                        "startOffset": 82085,
-                        "endLine": 1049,
-                        "endColumn": 12,
-                        "endOffset": 82199
-=======
                         "startLine": 1042,
                         "startColumn": 4,
                         "startOffset": 81635,
                         "endLine": 1044,
                         "endColumn": 12,
                         "endOffset": 81869
->>>>>>> origin/master
                     }
                 }
             },
@@ -10463,21 +9102,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1050,
-                        "startColumn": 4,
-                        "startOffset": 82204,
-                        "endLine": 1053,
-                        "endColumn": 12,
-                        "endOffset": 82392
-=======
                         "startLine": 1045,
                         "startColumn": 4,
                         "startOffset": 81874,
                         "endLine": 1047,
                         "endColumn": 12,
                         "endOffset": 82080
->>>>>>> origin/master
                     }
                 }
             },
@@ -10493,21 +9123,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1054,
-                        "startColumn": 4,
-                        "startOffset": 82397,
-                        "endLine": 1060,
-                        "endColumn": 12,
-                        "endOffset": 82847
-=======
                         "startLine": 1048,
                         "startColumn": 4,
                         "startOffset": 82085,
                         "endLine": 1049,
                         "endColumn": 12,
                         "endOffset": 82199
->>>>>>> origin/master
                     }
                 }
             },
@@ -10523,21 +9144,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1061,
-                        "startColumn": 4,
-                        "startOffset": 82852,
-                        "endLine": 1063,
-                        "endColumn": 12,
-                        "endOffset": 83028
-=======
                         "startLine": 1050,
                         "startColumn": 4,
                         "startOffset": 82204,
                         "endLine": 1053,
                         "endColumn": 12,
                         "endOffset": 82392
->>>>>>> origin/master
                     }
                 }
             },
@@ -10553,21 +9165,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1064,
-                        "startColumn": 4,
-                        "startOffset": 83033,
-                        "endLine": 1066,
-                        "endColumn": 12,
-                        "endOffset": 83150
-=======
                         "startLine": 1054,
                         "startColumn": 4,
                         "startOffset": 82397,
                         "endLine": 1060,
                         "endColumn": 12,
                         "endOffset": 82847
->>>>>>> origin/master
                     }
                 }
             },
@@ -10583,21 +9186,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1067,
-                        "startColumn": 4,
-                        "startOffset": 83155,
-                        "endLine": 1070,
-                        "endColumn": 12,
-                        "endOffset": 83409
-=======
                         "startLine": 1061,
                         "startColumn": 4,
                         "startOffset": 82852,
                         "endLine": 1063,
                         "endColumn": 12,
                         "endOffset": 83028
->>>>>>> origin/master
                     }
                 }
             },
@@ -10613,21 +9207,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1071,
-                        "startColumn": 4,
-                        "startOffset": 83414,
-                        "endLine": 1072,
-                        "endColumn": 12,
-                        "endOffset": 83522
-=======
                         "startLine": 1064,
                         "startColumn": 4,
                         "startOffset": 83033,
                         "endLine": 1066,
                         "endColumn": 12,
                         "endOffset": 83150
->>>>>>> origin/master
                     }
                 }
             },
@@ -10643,21 +9228,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1073,
-                        "startColumn": 4,
-                        "startOffset": 83527,
-                        "endLine": 1076,
-                        "endColumn": 12,
-                        "endOffset": 83709
-=======
                         "startLine": 1067,
                         "startColumn": 4,
                         "startOffset": 83155,
                         "endLine": 1070,
                         "endColumn": 12,
                         "endOffset": 83409
->>>>>>> origin/master
                     }
                 }
             },
@@ -10673,21 +9249,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1077,
-                        "startColumn": 4,
-                        "startOffset": 83714,
-                        "endLine": 1078,
-                        "endColumn": 12,
-                        "endOffset": 83811
-=======
                         "startLine": 1071,
                         "startColumn": 4,
                         "startOffset": 83414,
                         "endLine": 1072,
                         "endColumn": 12,
                         "endOffset": 83522
->>>>>>> origin/master
                     }
                 }
             },
@@ -10703,21 +9270,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1079,
-                        "startColumn": 4,
-                        "startOffset": 83816,
-                        "endLine": 1084,
-                        "endColumn": 12,
-                        "endOffset": 84255
-=======
                         "startLine": 1073,
                         "startColumn": 4,
                         "startOffset": 83527,
                         "endLine": 1076,
                         "endColumn": 12,
                         "endOffset": 83709
->>>>>>> origin/master
                     }
                 }
             },
@@ -10733,21 +9291,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1085,
-                        "startColumn": 4,
-                        "startOffset": 84260,
-                        "endLine": 1086,
-                        "endColumn": 12,
-                        "endOffset": 84379
-=======
                         "startLine": 1077,
                         "startColumn": 4,
                         "startOffset": 83714,
                         "endLine": 1078,
                         "endColumn": 12,
                         "endOffset": 83811
->>>>>>> origin/master
                     }
                 }
             },
@@ -10763,21 +9312,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1087,
-                        "startColumn": 4,
-                        "startOffset": 84384,
-                        "endLine": 1090,
-                        "endColumn": 12,
-                        "endOffset": 84664
-=======
                         "startLine": 1079,
                         "startColumn": 4,
                         "startOffset": 83816,
                         "endLine": 1084,
                         "endColumn": 12,
                         "endOffset": 84255
->>>>>>> origin/master
                     }
                 }
             },
@@ -10793,21 +9333,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1091,
-                        "startColumn": 4,
-                        "startOffset": 84669,
-                        "endLine": 1098,
-                        "endColumn": 12,
-                        "endOffset": 85172
-=======
                         "startLine": 1085,
                         "startColumn": 4,
                         "startOffset": 84260,
                         "endLine": 1086,
                         "endColumn": 12,
                         "endOffset": 84379
->>>>>>> origin/master
                     }
                 }
             },
@@ -10823,21 +9354,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1099,
-                        "startColumn": 4,
-                        "startOffset": 85177,
-                        "endLine": 1106,
-                        "endColumn": 12,
-                        "endOffset": 85668
-=======
                         "startLine": 1087,
                         "startColumn": 4,
                         "startOffset": 84384,
                         "endLine": 1090,
                         "endColumn": 12,
                         "endOffset": 84664
->>>>>>> origin/master
                     }
                 }
             },
@@ -10853,21 +9375,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1107,
-                        "startColumn": 4,
-                        "startOffset": 85673,
-                        "endLine": 1118,
-                        "endColumn": 12,
-                        "endOffset": 86555
-=======
                         "startLine": 1091,
                         "startColumn": 4,
                         "startOffset": 84669,
                         "endLine": 1098,
                         "endColumn": 12,
                         "endOffset": 85172
->>>>>>> origin/master
                     }
                 }
             },
@@ -10883,21 +9396,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1119,
-                        "startColumn": 4,
-                        "startOffset": 86560,
-                        "endLine": 1124,
-                        "endColumn": 12,
-                        "endOffset": 86849
-=======
                         "startLine": 1099,
                         "startColumn": 4,
                         "startOffset": 85177,
                         "endLine": 1106,
                         "endColumn": 12,
                         "endOffset": 85668
->>>>>>> origin/master
                     }
                 }
             },
@@ -10913,21 +9417,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1125,
-                        "startColumn": 4,
-                        "startOffset": 86854,
-                        "endLine": 1133,
-                        "endColumn": 12,
-                        "endOffset": 87419
-=======
                         "startLine": 1107,
                         "startColumn": 4,
                         "startOffset": 85673,
                         "endLine": 1118,
                         "endColumn": 12,
                         "endOffset": 86555
->>>>>>> origin/master
                     }
                 }
             },
@@ -10943,21 +9438,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1134,
-                        "startColumn": 4,
-                        "startOffset": 87424,
-                        "endLine": 1144,
-                        "endColumn": 12,
-                        "endOffset": 88151
-=======
                         "startLine": 1119,
                         "startColumn": 4,
                         "startOffset": 86560,
                         "endLine": 1124,
                         "endColumn": 12,
                         "endOffset": 86849
->>>>>>> origin/master
                     }
                 }
             },
@@ -10973,21 +9459,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1145,
-                        "startColumn": 4,
-                        "startOffset": 88156,
-                        "endLine": 1147,
-                        "endColumn": 12,
-                        "endOffset": 88323
-=======
                         "startLine": 1125,
                         "startColumn": 4,
                         "startOffset": 86854,
                         "endLine": 1133,
                         "endColumn": 12,
                         "endOffset": 87419
->>>>>>> origin/master
                     }
                 }
             },
@@ -11003,21 +9480,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1148,
-                        "startColumn": 4,
-                        "startOffset": 88328,
-                        "endLine": 1152,
-                        "endColumn": 12,
-                        "endOffset": 88659
-=======
                         "startLine": 1134,
                         "startColumn": 4,
                         "startOffset": 87424,
                         "endLine": 1144,
                         "endColumn": 12,
                         "endOffset": 88151
->>>>>>> origin/master
                     }
                 }
             },
@@ -11033,21 +9501,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1153,
-                        "startColumn": 4,
-                        "startOffset": 88664,
-                        "endLine": 1164,
-                        "endColumn": 12,
-                        "endOffset": 89567
-=======
                         "startLine": 1145,
                         "startColumn": 4,
                         "startOffset": 88156,
                         "endLine": 1147,
                         "endColumn": 12,
                         "endOffset": 88323
->>>>>>> origin/master
                     }
                 }
             },
@@ -11063,21 +9522,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1165,
-                        "startColumn": 4,
-                        "startOffset": 89572,
-                        "endLine": 1169,
-                        "endColumn": 12,
-                        "endOffset": 89845
-=======
                         "startLine": 1148,
                         "startColumn": 4,
                         "startOffset": 88328,
                         "endLine": 1152,
                         "endColumn": 12,
                         "endOffset": 88659
->>>>>>> origin/master
                     }
                 }
             },
@@ -11091,16 +9541,6 @@
                     "endOffset": 111934
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 68,
-                        "startColumn": 4,
-                        "startOffset": 10195,
-                        "endLine": 77,
-                        "endColumn": 12,
-                        "endOffset": 10781
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 1153,
@@ -11109,7 +9549,6 @@
                         "endLine": 1164,
                         "endColumn": 12,
                         "endOffset": 89567
->>>>>>> origin/master
                     }
                 }
             },
@@ -11125,21 +9564,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1170,
-                        "startColumn": 4,
-                        "startOffset": 89850,
-                        "endLine": 1207,
-                        "endColumn": 12,
-                        "endOffset": 92707
-=======
                         "startLine": 1165,
                         "startColumn": 4,
                         "startOffset": 89572,
                         "endLine": 1169,
                         "endColumn": 12,
                         "endOffset": 89845
->>>>>>> origin/master
                     }
                 }
             },
@@ -11153,16 +9583,6 @@
                     "endOffset": 112803
                 },
                 "from": {
-<<<<<<< HEAD
-                    "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 1208,
-                        "startColumn": 4,
-                        "startOffset": 92712,
-                        "endLine": 1246,
-                        "endColumn": 12,
-                        "endOffset": 95709
-=======
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\values\\values.xml",
                     "position": {
                         "startLine": 68,
@@ -11171,7 +9591,6 @@
                         "endLine": 77,
                         "endColumn": 12,
                         "endOffset": 10781
->>>>>>> origin/master
                     }
                 }
             },
@@ -11187,20 +9606,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1247,
-                        "startColumn": 4,
-                        "startOffset": 95714,
-                        "endColumn": 61,
-                        "endOffset": 95771
-=======
                         "startLine": 1170,
                         "startColumn": 4,
                         "startOffset": 89850,
                         "endLine": 1207,
                         "endColumn": 12,
                         "endOffset": 92707
->>>>>>> origin/master
                     }
                 }
             },
@@ -11216,21 +9627,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1248,
-                        "startColumn": 4,
-                        "startOffset": 95776,
-                        "endLine": 1257,
-                        "endColumn": 12,
-                        "endOffset": 96401
-=======
                         "startLine": 1208,
                         "startColumn": 4,
                         "startOffset": 92712,
                         "endLine": 1246,
                         "endColumn": 12,
                         "endOffset": 95709
->>>>>>> origin/master
                     }
                 }
             },
@@ -11245,20 +9647,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1258,
-                        "startColumn": 4,
-                        "startOffset": 96406,
-                        "endLine": 1266,
-                        "endColumn": 12,
-                        "endOffset": 97015
-=======
                         "startLine": 1247,
                         "startColumn": 4,
                         "startOffset": 95714,
                         "endColumn": 61,
                         "endOffset": 95771
->>>>>>> origin/master
                     }
                 }
             },
@@ -11274,20 +9667,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1267,
-                        "startColumn": 4,
-                        "startOffset": 97020,
-                        "endColumn": 85,
-                        "endOffset": 97101
-=======
                         "startLine": 1248,
                         "startColumn": 4,
                         "startOffset": 95776,
                         "endLine": 1257,
                         "endColumn": 12,
                         "endOffset": 96401
->>>>>>> origin/master
                     }
                 }
             },
@@ -11303,21 +9688,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1268,
-                        "startColumn": 4,
-                        "startOffset": 97106,
-                        "endLine": 1269,
-                        "endColumn": 12,
-                        "endOffset": 97214
-=======
                         "startLine": 1258,
                         "startColumn": 4,
                         "startOffset": 96406,
                         "endLine": 1266,
                         "endColumn": 12,
                         "endOffset": 97015
->>>>>>> origin/master
                     }
                 }
             },
@@ -11332,20 +9708,11 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1270,
-                        "startColumn": 4,
-                        "startOffset": 97219,
-                        "endLine": 1273,
-                        "endColumn": 12,
-                        "endOffset": 97443
-=======
                         "startLine": 1267,
                         "startColumn": 4,
                         "startOffset": 97020,
                         "endColumn": 85,
                         "endOffset": 97101
->>>>>>> origin/master
                     }
                 }
             },
@@ -11361,21 +9728,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1274,
-                        "startColumn": 4,
-                        "startOffset": 97448,
-                        "endLine": 1276,
-                        "endColumn": 12,
-                        "endOffset": 97603
-=======
                         "startLine": 1268,
                         "startColumn": 4,
                         "startOffset": 97106,
                         "endLine": 1269,
                         "endColumn": 12,
                         "endOffset": 97214
->>>>>>> origin/master
                     }
                 }
             },
@@ -11391,21 +9749,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1277,
-                        "startColumn": 4,
-                        "startOffset": 97608,
-                        "endLine": 1279,
-                        "endColumn": 12,
-                        "endOffset": 97755
-=======
                         "startLine": 1270,
                         "startColumn": 4,
                         "startOffset": 97219,
                         "endLine": 1273,
                         "endColumn": 12,
                         "endOffset": 97443
->>>>>>> origin/master
                     }
                 }
             },
@@ -11421,21 +9770,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1280,
-                        "startColumn": 4,
-                        "startOffset": 97760,
-                        "endLine": 1282,
-                        "endColumn": 12,
-                        "endOffset": 97926
-=======
                         "startLine": 1274,
                         "startColumn": 4,
                         "startOffset": 97448,
                         "endLine": 1276,
                         "endColumn": 12,
                         "endOffset": 97603
->>>>>>> origin/master
                     }
                 }
             },
@@ -11451,21 +9791,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1283,
-                        "startColumn": 4,
-                        "startOffset": 97931,
-                        "endLine": 1285,
-                        "endColumn": 12,
-                        "endOffset": 98093
-=======
                         "startLine": 1277,
                         "startColumn": 4,
                         "startOffset": 97608,
                         "endLine": 1279,
                         "endColumn": 12,
                         "endOffset": 97755
->>>>>>> origin/master
                     }
                 }
             },
@@ -11481,21 +9812,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1286,
-                        "startColumn": 4,
-                        "startOffset": 98098,
-                        "endLine": 1289,
-                        "endColumn": 12,
-                        "endOffset": 98336
-=======
                         "startLine": 1280,
                         "startColumn": 4,
                         "startOffset": 97760,
                         "endLine": 1282,
                         "endColumn": 12,
                         "endOffset": 97926
->>>>>>> origin/master
                     }
                 }
             },
@@ -11511,21 +9833,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1290,
-                        "startColumn": 4,
-                        "startOffset": 98341,
-                        "endLine": 1292,
-                        "endColumn": 12,
-                        "endOffset": 98506
-=======
                         "startLine": 1283,
                         "startColumn": 4,
                         "startOffset": 97931,
                         "endLine": 1285,
                         "endColumn": 12,
                         "endOffset": 98093
->>>>>>> origin/master
                     }
                 }
             },
@@ -11541,21 +9854,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1293,
-                        "startColumn": 4,
-                        "startOffset": 98511,
-                        "endLine": 1295,
-                        "endColumn": 12,
-                        "endOffset": 98679
-=======
                         "startLine": 1286,
                         "startColumn": 4,
                         "startOffset": 98098,
                         "endLine": 1289,
                         "endColumn": 12,
                         "endOffset": 98336
->>>>>>> origin/master
                     }
                 }
             },
@@ -11571,21 +9875,12 @@
                 "from": {
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values\\values.xml",
                     "position": {
-<<<<<<< HEAD
-                        "startLine": 1296,
-                        "startColumn": 4,
-                        "startOffset": 98684,
-                        "endLine": 1298,
-                        "endColumn": 12,
-                        "endOffset": 98850
-=======
                         "startLine": 1290,
                         "startColumn": 4,
                         "startOffset": 98341,
                         "endLine": 1292,
                         "endColumn": 12,
                         "endOffset": 98506
->>>>>>> origin/master
                     }
                 }
             },
