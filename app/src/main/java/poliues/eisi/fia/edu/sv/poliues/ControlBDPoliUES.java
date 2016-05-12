@@ -436,9 +436,7 @@ public class ControlBDPoliUES {
         db.execSQL("DELETE FROM DetalleSolicitud");
         //db.execSQL("DELETE FROM DetalleSolicitud");
 
-
         Solicitud soli = new Solicitud();
-
         for(int i=0;i<2;i++) {
             soli.setIdSolicitud(TSidSolicitud[i]);
             soli.setActividad(TSactividad[i]);
@@ -449,7 +447,6 @@ public class ControlBDPoliUES {
             soli.setFechaCreacion(TSfechaCreacion[i]);
            insertar(soli);
         }
-
         DetalleSolicitud DS = new DetalleSolicitud();
         for(int i=0;i<2;i++){
             DS.setIdDescripcion(TDSidDescripcion[i]);
@@ -460,8 +457,6 @@ public class ControlBDPoliUES {
             DS.setCobroTotal(TDScobroTotal[i]);
             insertarDS(DS);
         }
-
-
         cerrar();
         return "Guardo Correctamente";
     }
