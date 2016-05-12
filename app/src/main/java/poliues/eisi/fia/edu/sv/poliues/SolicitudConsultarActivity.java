@@ -130,6 +130,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llamarActualizar(){
         Intent o = new Intent(this,SolicitudActualizarActivity.class);
+        o.putExtra("motivo",datoAbuscar);
         startActivity(o);
     }
 

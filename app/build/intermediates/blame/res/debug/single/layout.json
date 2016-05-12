@@ -28,12 +28,12 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_solicitante.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_solicitante.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_administrador_editar.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_administrador_consultar.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\src\\main\\res\\layout\\activity_administrador_consultar.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_administrador_consultar.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\src\\main\\res\\layout\\activity_administrador_consultar.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
@@ -108,12 +108,12 @@
         "source": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\src\\main\\res\\layout\\activity_principal.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_principal.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\src\\main\\res\\layout\\nav_header_principal.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_principal.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\src\\main\\res\\layout\\nav_header_principal.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\PoliUES-MOTTO\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_solicitante_insertar.xml",
@@ -180,12 +180,12 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_detalle_solicitud.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_detalle_solicitud.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",

@@ -99,7 +99,6 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         System.out.println(fechaCreacion);
         Solicitud solicitud = new Solicitud();
 
-        //solicitud.setIdSolicitud(6);
         solicitud.setActividad(4);
         solicitud.setMotivoSolicitud(motivo);
         solicitud.setTarifa(1);
