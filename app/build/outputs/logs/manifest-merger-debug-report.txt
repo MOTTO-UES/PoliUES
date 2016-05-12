@@ -1,12 +1,8 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:2:1-81:12
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:2:1-83:12
 	xmlns:android
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:2:11-69
-=======
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:2:1-81:12
->>>>>>> remotes/origin/rodrigo
 	package
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml
@@ -30,8 +26,7 @@ ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:8:22-69
 application
-<<<<<<< HEAD
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:10:5-79:19
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:10:5-81:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
@@ -52,31 +47,6 @@ MERGED from [com.android.support:support-v4:23.2.1] C:\Users\Dario\Documents\Git
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-=======
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:10:5-79:19
-MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:13:9-41
->>>>>>> remotes/origin/rodrigo
 	android:supportsRtl
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
@@ -144,141 +114,80 @@ ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:36:13-50
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorInsertarActivity
-<<<<<<< HEAD
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:39:9-43:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:39:9-42:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:42:13-73
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:41:13-73
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:43:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:42:13-56
 	android:name
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:40:13-58
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:44:9-47:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:43:9-46:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:46:13-63
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:45:13-63
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:47:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:46:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:45:13-48
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:44:13-48
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorEditarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:48:9-51:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:47:9-50:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:50:13-72
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:49:13-72
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:51:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:50:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:49:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:48:13-56
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorConsultarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:52:9-55:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:51:9-54:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:54:13-75
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:53:13-75
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:55:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:54:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:53:13-59
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:52:13-59
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteEditarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:56:9-59:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:55:9-58:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:58:13-70
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:57:13-70
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:58:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:57:13-54
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:56:13-54
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteConsultarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:60:9-63:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:59:9-62:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:62:13-73
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:61:13-73
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:63:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:62:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:61:13-57
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:60:13-57
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteInsertarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:64:9-67:68
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:63:9-66:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:66:13-72
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:65:13-72
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:67:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:66:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:65:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:64:13-56
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:73:9-75:69
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:72:9-74:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:74:13-58
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:73:13-58
 	android:value
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:75:13-66
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:74:13-66
 activity#poliues.eisi.fia.edu.sv.poliues.verSolicitudActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:77:9-67
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:76:9-58
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:77:19-55
-=======
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:39:9-43:59
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:76:19-55
+activity#poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:77:9-80:68
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:42:13-73
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:79:13-69
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:43:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:80:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:40:13-58
-activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:44:9-47:59
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:46:13-63
-	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:47:13-56
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:45:13-48
-activity#poliues.eisi.fia.edu.sv.poliues.AdministradorEditarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:48:9-51:59
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:50:13-72
-	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:51:13-56
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:49:13-56
-activity#poliues.eisi.fia.edu.sv.poliues.AdministradorConsultarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:52:9-55:59
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:54:13-75
-	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:55:13-56
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:53:13-59
-activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteEditarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:56:9-59:59
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:58:13-70
-	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:59:13-56
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:57:13-54
-activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteConsultarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:60:9-63:59
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:62:13-73
-	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:63:13-56
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:61:13-57
-activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteInsertarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:64:9-67:68
-	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:66:13-72
-	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:67:13-56
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:65:13-56
-meta-data#com.google.android.gms.version
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:73:9-75:69
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:75:13-66
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:74:13-58
-activity#poliues.eisi.fia.edu.sv.poliues.verSolicitudActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:77:9-67
-	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:77:19-55
->>>>>>> remotes/origin/rodrigo
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:78:13-45
 uses-sdk
 INJECTED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78

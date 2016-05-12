@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> remotes/origin/rodrigo
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,9 +14,6 @@
     tools:context="poliues.eisi.fia.edu.sv.poliues.SolicitanteEditarActivity"
     tools:showIn="@layout/app_bar_solicitante_editar">
 
-<<<<<<< HEAD
-</RelativeLayout>
-=======
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,4 +63,4 @@
     </LinearLayout>
 
 </ScrollView>
->>>>>>> remotes/origin/rodrigo
+

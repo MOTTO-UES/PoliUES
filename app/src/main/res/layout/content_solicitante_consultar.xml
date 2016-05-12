@@ -14,11 +14,6 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-<<<<<<< HEAD
-        android:layout_height="match_parent">
-
-
-=======
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -66,7 +61,6 @@
             android:enabled="false"
             android:id="@+id/editText_correoConS"
             />
->>>>>>> remotes/origin/rodrigo
 
     </LinearLayout>
 

@@ -89,9 +89,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         //////////////////////////////////////////////////////
 
-        Button boton;
+        Button boton, botonUsuario;
         boton = (Button) findViewById(R.id.entrar_principal);
         boton.setOnClickListener(this);
+        botonUsuario = (Button) findViewById(R.id.entrar_principal_usuario);
+        botonUsuario.setOnClickListener(this);
 
 
         //////////////////////////////////////////////////////
@@ -311,6 +313,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             case R.id.entrar_principal:
                 Intent inte = new Intent(LoginActivity.this, principal.class);
                 startActivity(inte);
+                break;
+            case R.id.entrar_principal_usuario:
+                Intent intent = new Intent(LoginActivity.this, PrincipalUsuario.class);
+                startActivity(intent);
                 break;
         }
     }

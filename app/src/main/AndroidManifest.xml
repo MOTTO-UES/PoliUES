@@ -38,7 +38,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AdministradorInsertarActivity"
-
             android:label="@string/title_activity_administrador_agregar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -64,7 +63,7 @@
         <activity
             android:name=".SolicitanteInsertarActivity"
             android:label="@string/title_activity_solicitante_insertar"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -74,8 +73,11 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".verSolicitudActivity"></activity>
-
+        <activity android:name=".verSolicitudActivity" />
+        <activity
+            android:name=".PrincipalUsuario"
+            android:label="@string/title_activity_principal_usuario"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

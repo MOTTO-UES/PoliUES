@@ -182,8 +182,6 @@ public class ControlBDPoliUES {
     public String actualizarAdministrador(Administrador administrador){
 
         String[] IDADMINISTRADOR = {String.valueOf(administrador.getIdAdministrador())};
-<<<<<<< HEAD
-
         ContentValues cv = new ContentValues();
 
         cv.put("NOMBREADMINISTRADOR", administrador.getNombreAdmin());
@@ -192,17 +190,6 @@ public class ControlBDPoliUES {
 
         db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
 
-=======
-
-        ContentValues cv = new ContentValues();
-
-        cv.put("NOMBREADMINISTRADOR", administrador.getNombreAdmin());
-        cv.put("PASSWORDADMINISTRADOR", administrador.getPasswordAdmin());
-        cv.put("CORREOADMINISTRADOR", administrador.getCorreoAdmin());
-
-        db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
-
->>>>>>> remotes/origin/rodrigo
         return "Administrador Actualizado Correctamente";
     }
     /////////////////////////////////////////////////////////////////////////////
