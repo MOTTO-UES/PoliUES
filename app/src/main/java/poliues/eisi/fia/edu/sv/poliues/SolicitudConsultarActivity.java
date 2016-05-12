@@ -9,6 +9,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,6 +28,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
     AlertDialog alertDialogE;
     ControlBDPoliUES helper;
     Cursor cursor;
+    Cursor cursor2;
     List<String> item = null;
     String datoAbuscar;
 ;
@@ -96,6 +99,36 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+
+        return  true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        Intent intent;
+
+        switch (id){
+            case R.id.opcionesMenu:
+                intent = new Intent(this,SolicitudConsultarActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.actInsertar:
+                intent = new Intent(this,SolicitudInsertarActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     public void llamarActualizar(){
         Intent o = new Intent(this,SolicitudActualizarActivity.class);
@@ -117,6 +150,27 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         helper = new ControlBDPoliUES(this);
         helper.leer();
         cursor = helper.consultarSolicitud();
+        cursor2 = helper.consultarDetalleSolicitud();
+
+        Solicitud s = new Solicitud();
+        DetalleSolicitud d = new DetalleSolicitud();
+        System.out.println(this.datoAbuscar);
+
+        s = helper.buscarSolicitud(cursor,this.datoAbuscar);
+
+        d = helper.buscarDetalleSolicitud(cursor2,s.getIdSolicitud());
+
+        if (s ==null || d == null || !(s.getMotivoSolicitud().equals(this.datoAbuscar)) ){
+            Toast.makeText(getApplicationContext(), "No se puede eliminar la solicitud ", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            System.out.println(s.getMotivoSolicitud());
+            helper.eliminar(d);
+            Toast.makeText(getApplicationContext(), "Se elimino correctamente ", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this,SolicitudConsultarActivity.class);
+            startActivity(intent);
+        }
 
 
     }

@@ -606,6 +606,7 @@ int drawable notification_template_icon_bg 0x7f020056
 int drawable side_nav_bar 0x7f020055
 int id SpinnerActividad 0x7f0d0083
 int id SpinnerArea 0x7f0d0076
+int id actInsertar 0x7f0d00ac
 int id action0 0x7f0d009b
 int id action_administrador_agregar 0x7f0d00aa
 int id action_bar 0x7f0d005c
@@ -622,7 +623,7 @@ int id action_menu_presenter 0x7f0d0003
 int id action_mode_bar 0x7f0d0059
 int id action_mode_bar_stub 0x7f0d0058
 int id action_mode_close_button 0x7f0d003e
-int id action_settings 0x7f0d00ac
+int id action_settings 0x7f0d00ad
 int id activity_chooser_view_content 0x7f0d003f
 int id adjust_height 0x7f0d0033
 int id adjust_width 0x7f0d0034

@@ -3,9 +3,12 @@ package poliues.eisi.fia.edu.sv.poliues;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -89,6 +92,36 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+
+        return  true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        Intent intent;
+
+        switch (id){
+            case R.id.opcionesMenu:
+                intent = new Intent(this,SolicitudConsultarActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.actInsertar:
+                intent = new Intent(this,SolicitudInsertarActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
     private void updateDisplayInicio(){
         mDateDisplayInicio.setText(
@@ -213,6 +246,9 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
                 regInsertados = helper.insertarDS(Dsolicitud);
                 helper.cerrar();
                 Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(this,SolicitudInsertarActivity.class);
+                startActivity(intent);
 
             }else{
                 Toast.makeText(this,"la fecha de fin es menor,NO se puede ingresar",Toast.LENGTH_SHORT).show();

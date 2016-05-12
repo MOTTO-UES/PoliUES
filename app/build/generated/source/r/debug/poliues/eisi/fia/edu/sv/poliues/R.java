@@ -2332,6 +2332,7 @@ containing a value of this type.
     public static final class id {
         public static final int SpinnerActividad=0x7f0d0083;
         public static final int SpinnerArea=0x7f0d0076;
+        public static final int actInsertar=0x7f0d00ac;
         public static final int action0=0x7f0d009b;
         public static final int action_administrador_agregar=0x7f0d00aa;
         public static final int action_bar=0x7f0d005c;
@@ -2348,7 +2349,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d0059;
         public static final int action_mode_bar_stub=0x7f0d0058;
         public static final int action_mode_close_button=0x7f0d003e;
-        public static final int action_settings=0x7f0d00ac;
+        public static final int action_settings=0x7f0d00ad;
         public static final int activity_chooser_view_content=0x7f0d003f;
         public static final int adjust_height=0x7f0d0033;
         public static final int adjust_width=0x7f0d0034;

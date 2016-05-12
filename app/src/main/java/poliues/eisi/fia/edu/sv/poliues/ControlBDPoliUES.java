@@ -204,8 +204,15 @@ public class ControlBDPoliUES {
         return null;
     }
 
-    public String eliminar(Solicitud solicitud) {
-        return null;
+    public String eliminar(DetalleSolicitud solicitud) {
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("DetalleSolicitud", "solicitud='"+solicitud.getSolicitud()+"'", null);
+        contador+=db.delete("Solicitud", "idSolicitud='"+solicitud.getSolicitud()+"'", null);
+
+
+        return regAfectados;
     }
 
     public Solicitud consultarSolicitudUltima(){
@@ -285,12 +292,10 @@ public class ControlBDPoliUES {
     }
 
     public String actualizar(DetalleSolicitud detalleSolicitud){
+
         return null;
     }
 
-    public String eliminar(DetalleSolicitud detalleSolicitud){
-        return null;
-    }
 
     public Cursor consultarDetalleSolicitud(){
         Cursor c = db.query("DetalleSolicitud",camposDetalleSolicitud,null,null,null,null,null,null);
