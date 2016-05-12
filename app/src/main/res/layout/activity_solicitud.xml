@@ -1,13 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SolicitudInsertarActivity">
+    android:layout_height="wrap_content"
+    android:paddingTop="30dip"
+    android:stretchColumns="1"
+    >
 
 
-</RelativeLayout>
+    <TableRow>
+        <TextView android:text="@string/Actividad" />
+        <Spinner
+            android:id="@+id/SpinnerActividad"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/Actividad"
+            />
+    </TableRow>
+
+    <TextView android:text=""
+        android:layout_marginTop="20dip"/>
+
+    <TableRow>
+        <TextView android:text="@string/motivoSolicitud" />
+        <EditText
+            android:id="@+id/editMotivoSolicitud"
+            android:inputType="text"
+            android:maxLength="50"
+            />
+    </TableRow>
+
+    <TextView android:text=""
+        android:layout_marginTop="20dip"/>
+
+    <TableRow>
+        <TextView android:text="@string/opciones" />
+    </TableRow>
+
+    <TableRow></TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:onClick="limpiarSolicitud"
+            android:text="@string/limpiar"
+            android:layout_column="0" />
+
+        <Button
+            android:onClick="InsertarSolicitud"
+            android:text="@string/insertar"
+            android:layout_column="1" />
+    </TableRow>
+
+</TableLayout>

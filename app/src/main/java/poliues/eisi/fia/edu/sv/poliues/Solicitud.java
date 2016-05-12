@@ -10,6 +10,7 @@ public class Solicitud {
     private int administrador;
     private int solicitante;
     private String motivoSolicitud;
+    private String estadoSolicitud;
     private String fechaCreacion;
 
     public Solicitud(){
@@ -84,7 +85,11 @@ public class Solicitud {
         this.fechaCreacion = fechaCreacion;
     }
 
+    public String getEstadoSolicitud() {
+        return estadoSolicitud;
+    }
 
-
-
+    public void setEstadoSolicitud(String estadoSolicitud) {
+        this.estadoSolicitud = estadoSolicitud;
+    }
 }

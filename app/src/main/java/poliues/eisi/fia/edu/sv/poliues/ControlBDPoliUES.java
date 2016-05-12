@@ -13,14 +13,17 @@ import android.os.Build;
 public class ControlBDPoliUES {
 
     private static final  String[] camposSolicitud = new  String[]
-        {"idSolicitud", "actividad", "tarifa", "administrador", "motivoSolicitud", "fechaCreacion"};
+            {"idSolicitud", "actividad", "tarifa", "administrador","solicitante", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
 
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
 
     private static final String[] camposAdministrador = new String[]
             {"IDADMINISTRADOR","NOMBREADMINISTRADOR","PASSWORDADMINISTRADOR","CORREOADMINISTRADOR"};
+<<<<<<< HEAD
 
+=======
+>>>>>>> remotes/origin/rodrigo
     private static final String[] camposSolicitante = new String[]
             {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
@@ -52,9 +55,30 @@ public class ControlBDPoliUES {
             try{
 
                 ////////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 
                 //db.execSQL("CREATE TABLE Solicitud(idSolicitud INTEGER NOT NULL PRIMARY KEY, actividad INTEGER, tarifa INTEGER, administrador INTEGER,solicitante INTEGER; motivoSolicitud VARCHAR(100), fechaCreacion VARCHAR(10));");
                 //db.execSQL("CREATE TABLE DetalleSolicitud(idDescripcion INTEGER NOT NULL PRIMARY KEY, solicitud INTEGER, area INTEGER, fechaInicio VARCHAR(10), fechaFinal VARCHAR(10), cobroTotal REAL);");
+=======
+                db.execSQL("CREATE TABLE Solicitud(" +
+                        "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                        "actividad INTEGER, " +
+                        "tarifa INTEGER, " +
+                        "administrador INTEGER," +
+                        "solicitante INTEGER, " +
+                        "motivoSolicitud VARCHAR(100)," +
+                        "estadoSolicitud VARCHAR (20)," +
+                        "fechaCreacion VARCHAR(25))");
+
+
+                db.execSQL("CREATE TABLE DetalleSolicitud(" +
+                        "idDescripcion INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                        "solicitud INTEGER, " +
+                        "area INTEGER, " +
+                        "fechaInicio VARCHAR(10), " +
+                        "fechaFinal VARCHAR(10), " +
+                        "cobroTotal REAL)");
+>>>>>>> remotes/origin/rodrigo
 
                 /////////////////////////////////////////////////////////////////////
                 ////MOTTO TBL
@@ -150,6 +174,7 @@ public class ControlBDPoliUES {
         Cursor c = db.query("ADMINISTRADOR",camposAdministrador,null,null,null,null,null,null);
         return c;
     }
+<<<<<<< HEAD
     //Eliminar Administrador
     public String eliminarAdministrador(Administrador administrador){
 
@@ -233,18 +258,25 @@ public class ControlBDPoliUES {
 
         return "Solicitante Actualizado Correctamente";
     }
+=======
+
+
+
+    /////////////////////////////////////////////////////////////////////////////
+>>>>>>> remotes/origin/rodrigo
     /*CRUD SOLICITUD-RODRIGO*/
     public String insertar(Solicitud solicitud) {
         String regInsertados="Registro Insertado Nº= ";
         long contador=0;
         ContentValues sol = new ContentValues();
 
-        sol.put("idSolicitud",solicitud.getIdSolicitud());
+        //sol.put("idSolicitud",solicitud.getIdSolicitud());
         sol.put("actividad",solicitud.getActividad());
         sol.put("tarifa",solicitud.getTarifa());
         sol.put("administrador",solicitud.getAdministrador());
         sol.put("solicitante",solicitud.getSolicitante());
         sol.put("motivoSolicitud",solicitud.getMotivoSolicitud());
+        sol.put("estadoSolicitud",solicitud.getEstadoSolicitud());
         sol.put("fechaCreacion",solicitud.getFechaCreacion());
 
         contador=db.insert("Solicitud", null, sol);
@@ -259,26 +291,76 @@ public class ControlBDPoliUES {
         return regInsertados;
     }
 
+    public Cursor consultarSolicitud(){
+        Cursor c = db.query("Solicitud",camposSolicitud,null,null,null,null,null,null);
+        return c;
+    }
+
     public String actualizar(Solicitud solicitud){
         return null;
     }
 
-    public String eliminar(Solicitud solicitud){
+    public String eliminar(Solicitud solicitud) {
         return null;
     }
 
-    public String consultarSolicitud(Solicitud solicitud){
-        return null;
+    public Solicitud consultarSolicitudUltima(){
+
+        Cursor cursor = db.query("Solicitud", camposSolicitud,null ,null, null, null, null,null);
+
+        if(cursor.moveToLast()){
+            Solicitud solicitud = new Solicitud();
+
+            solicitud.setIdSolicitud(cursor.getInt(0));
+            solicitud.setActividad(cursor.getInt(1));
+            solicitud.setTarifa(cursor.getInt(2));
+            solicitud.setAdministrador(cursor.getInt(3));
+            solicitud.setSolicitante(cursor.getInt(4));
+            solicitud.setMotivoSolicitud(cursor.getString(5));
+            solicitud.setEstadoSolicitud(cursor.getString(6));
+            solicitud.setFechaCreacion(cursor.getString(7));
+
+            System.out.println(solicitud.getIdSolicitud());
+            return solicitud;
+        }else{
+            return null;
+        }
+    }
+
+    public Solicitud buscarSolicitud(Cursor C, String motivo){
+        Solicitud solicitud=null;
+
+        if(C.moveToFirst()){
+
+            do {
+
+                solicitud = new Solicitud();
+
+                solicitud.setIdSolicitud(C.getInt(0));
+                solicitud.setActividad(C.getInt(1));
+                solicitud.setTarifa(C.getInt(2));
+                solicitud.setAdministrador(C.getInt(3));
+                solicitud.setSolicitante(C.getInt(4));
+                solicitud.setMotivoSolicitud(C.getString(5));
+                solicitud.setEstadoSolicitud(C.getString(6));
+                solicitud.setFechaCreacion(C.getString(7));
+
+                if (solicitud.getMotivoSolicitud().equals(motivo)){
+                    break;
+                }
+            }while(C.moveToNext());
+        }
+
+        return solicitud;
     }
 
 
     /*CRUD DETALLESOLICITUD-RODRIGO*/
-    public String insertar(DetalleSolicitud detalleSolicitud){
+    public String insertarDS(DetalleSolicitud detalleSolicitud){
         String regInsertados="Registro Insertado Nº= ";
         long contador=0;
         ContentValues detSol = new ContentValues();
 
-        detSol.put("idDescripcion",detalleSolicitud.getIdDescripcion());
         detSol.put("solicitud",detalleSolicitud.getSolicitud());
         detSol.put("area",detalleSolicitud.getArea());
         detSol.put("fechaInicio",detalleSolicitud.getFechaInicio());
@@ -306,10 +388,36 @@ public class ControlBDPoliUES {
         return null;
     }
 
-    public String consultarSolicitud(DetalleSolicitud detalleSolicitud){
-        return null;
+    public Cursor consultarDetalleSolicitud(){
+        Cursor c = db.query("DetalleSolicitud",camposDetalleSolicitud,null,null,null,null,null,null);
+        return c;
     }
 
+    public DetalleSolicitud buscarDetalleSolicitud(Cursor C, int sol){
+        DetalleSolicitud DS=null;
+
+        if(C.moveToFirst()){
+
+            do {
+
+                DS = new DetalleSolicitud();
+
+                DS.setIdDescripcion(C.getInt(0));
+                DS.setSolicitud(C.getInt(1));
+                DS.setArea(C.getInt(2));
+                DS.setFechaInicio(C.getString(3));
+                DS.setFechaFinal(C.getString(4));
+                DS.setCobroTotal(C.getDouble(5));
+
+                if (DS.getSolicitud() == sol){
+                    break;
+                }
+
+            }while(C.moveToNext());
+        }
+
+        return DS;
+    }
 
 
     public String llenarBDSR11038(){
@@ -361,7 +469,7 @@ public class ControlBDPoliUES {
             DS.setFechaInicio(TDSfechaInicio[i]);
             DS.setFechaFinal(TDSfechaFinal[i]);
             DS.setCobroTotal(TDScobroTotal[i]);
-            insertar(DS);
+            insertarDS(DS);
         }
 
 
@@ -369,5 +477,6 @@ public class ControlBDPoliUES {
         return "Guardo Correctamente";
     }
 }
+
 
 

@@ -2,6 +2,7 @@ package poliues.eisi.fia.edu.sv.poliues;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -13,11 +14,15 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+=======
+import android.support.v7.app.AppCompatActivity;
+>>>>>>> remotes/origin/rodrigo
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,6 +32,15 @@ import java.util.regex.Pattern;
 public class AdministradorInsertarActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     EditText nombre, pass, correo;
+=======
+/**
+ * Created by Dario on 08/05/2016.
+ */
+public class AdministradorInsertarActivity extends AppCompatActivity{
+
+    EditText nombre, pass, correo;
+    Button agregar;
+>>>>>>> remotes/origin/rodrigo
     ControlBDPoliUES helper;
 
     @Override
@@ -34,6 +48,7 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_administrador_insertar);
 
+<<<<<<< HEAD
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -72,10 +87,16 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         helper = new ControlBDPoliUES(this);
 
         //EdiText
+=======
+        helper = new ControlBDPoliUES(this);
+
+        agregar = (Button) findViewById(R.id.button_agregarA);
+>>>>>>> remotes/origin/rodrigo
         nombre = (EditText) findViewById(R.id.editText_nombreA);
         pass = (EditText) findViewById(R.id.editText_passwordA);
         correo = (EditText) findViewById(R.id.editText_correoA);
 
+<<<<<<< HEAD
 
 
     }
@@ -141,11 +162,28 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         String nombreA, passA, correoA;
         String regIngresados;
         boolean valido=false;
+=======
+        agregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarAdministrador();
+            }
+        });
+
+    }
+
+
+
+    private void agregarAdministrador(){
+        String nombreA, passA, correoA;
+        String regIngresados;
+>>>>>>> remotes/origin/rodrigo
 
         nombreA = nombre.getText().toString();
         passA = pass.getText().toString();
         correoA = correo.getText().toString();
 
+<<<<<<< HEAD
         if(!(TextUtils.isEmpty(nombreA) || TextUtils.isEmpty(passA) || TextUtils.isEmpty(correoA))){
             if(isEmailValid(correoA)){
                 valido = true;
@@ -177,6 +215,23 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
             startActivity(intent);
 
         }
+=======
+        Administrador administrador = new Administrador();
+        //Falta id
+        administrador.setNombreAdmin(nombreA);
+        administrador.setPasswordAdmin(passA);
+        administrador.setCorreoAdmin(correoA);
+
+        helper.abrir();
+        regIngresados = helper.insertarAdministrador(administrador);
+        //helper.cerrar();
+
+        Toast.makeText(this,regIngresados,Toast.LENGTH_SHORT).show();
+        //Ir a otra activity
+        Intent intent = new Intent(AdministradorInsertarActivity.this,AdministradorActivity.class);
+        startActivity(intent);
+
+>>>>>>> remotes/origin/rodrigo
     }
 
     private void limpiar(){
@@ -184,6 +239,7 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         pass.setText("");
         correo.setText("");
     }
+<<<<<<< HEAD
 
     public static boolean isEmailValid(String email) {
         boolean isValid = false;
@@ -199,4 +255,6 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
         return isValid;
     }
 
+=======
+>>>>>>> remotes/origin/rodrigo
 }

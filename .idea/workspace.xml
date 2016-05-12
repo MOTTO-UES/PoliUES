@@ -1722,7 +1722,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_principal.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_administrador.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/insertar_administrador.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_solicitante.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/principal.java" />
@@ -1763,6 +1762,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_solicitante_insertar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/SolicitanteInsertarActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/LoginActivity.java" />
       </list>
     </option>
   </component>

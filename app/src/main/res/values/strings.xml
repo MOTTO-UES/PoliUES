@@ -27,16 +27,20 @@
     <string name="action_settings">Settings</string>
 
 
+<<<<<<< HEAD
     <!-- MENUS CRUD POPUP-->
     <string name="comsultar">CONSULTAR</string>
     <string name="editar">EDITAR</string>
     <string name="borrar">BORRAR</string>
 
+=======
+>>>>>>> remotes/origin/rodrigo
     <!-- ADMINISTRADOR _ MOTTO -->
 
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtpassAdministrador">Password</string>
     <string name="txtcorreoAdministrador">Correo</string>
+<<<<<<< HEAD
     <string name="action_administrador_agregar">AGREGAR NUEVO</string>
 
     <!-- SOLICITANTE _ MOTTO -->
@@ -46,19 +50,44 @@
     <string name="txtcorreoSolicitante">Correo</string>
     <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
 
+=======
+    <string name="btnAgregarAdministrador">AGREGAR</string>
+    <string name="btnLimpiarAdministrador">LIMPIAR</string>
+    <string name="action_administrador_agregar">AGREGAR NUEVO</string>
+
+>>>>>>> remotes/origin/rodrigo
     <!--DERALLE SOLICITUD, RODRIGO-->
 
     <string name="idDescripcion">idDescripcion</string>
     <string name="solicitud">solicitud</string>
     <string name="area">area</string>
+    <string-array name="Areas">
+        <item>Boleybolo</item>
+        <item>Papi futbol</item>
+        <item>Cancha de arena</item>
+        <item>cancha grama pequeña aaaaaaaaaaa</item>
+        <item>basquetball</item>
+        <item>Estadio</item>
+    </string-array>
     <string name="fechaInicio">fecha Inicio</string>
     <string name="fechaFinal">fecha Final</string>
     <string name="cobroTotal">cobro total</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="insertar">Insertar</string>
+    <string name="opciones">opciones</string>
+
 
     <!--SOLICITUD, RODRIGO-->
 
     <string name="idSolicitud">id solicitud</string>
     <string name="Actividad">actividad</string>
+    <string-array name="Actividades">
+        <item>Academica</item>
+        <item>Cultural</item>
+        <item>Deportiva</item>
+        <item>Politica</item>
+        <item>cancha grama pequeña aaaaaaaaaaa</item>
+    </string-array>
     <string name="tarifa">Tarifa</string>
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
@@ -66,10 +95,17 @@
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
+<<<<<<< HEAD
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
     <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
+=======
+    <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
+
+    <!--MENU RODRIGO-->
+>>>>>>> remotes/origin/rodrigo
 
 </resources>
+
