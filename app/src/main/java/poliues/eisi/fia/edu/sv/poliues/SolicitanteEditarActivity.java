@@ -15,12 +15,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class SolicitanteEditarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     EditText nombre, pass, correo;
     ControlBDPoliUES helper;
@@ -32,10 +33,12 @@ public class SolicitanteEditarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
         String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
         String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
         String ExtraCORREO = getIntent().getExtras().getString("EnvioSolicitanteCORREO");
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -189,4 +192,5 @@ public class SolicitanteEditarActivity extends AppCompatActivity
         correo.setText(ExtraCORREO);
 
     }
+
 }

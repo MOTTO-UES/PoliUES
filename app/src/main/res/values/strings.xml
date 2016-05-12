@@ -7,6 +7,10 @@
     <string name="otroGrupo">Comunicacion</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
+    <!-- MENU PRINCIPAL USUARIO -->
+    <string name="CrearSolicitudUsuario">Crear Solicitud</string>
+    <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -19,14 +23,14 @@
     <string name="error_field_required">Campo requerido</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
 
-    <string name="entrar_principal">Puerta Tracera</string>
+    <string name="entrar_principal">Puerta Trasera</string>
+    <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
 
     <!-- Principal -->
     <string name="title_activity_principal">principal</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-
 
 
     <!-- MENUS CRUD POPUP-->
@@ -99,8 +103,20 @@
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
     <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
+    <string name="title_activity_principal_usuario">PrincipalUsuario</string>
 
     <!--MENU RODRIGO-->
+    
+    <!--PRINCIPAL RODRIGO pantalla usuario-->
+    <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
+en el menu lateral o en el superior</string>
+    <string name="texto2">Dispone de las opciones:</string>
+    <string name="texto3"></string>
+    <string name="texto4">1) Crear solicitud.</string>
+    <string name="texto5">2) Consultar Solicitud.</string>
+    <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
+    <string name="texto7">\u00092.2) Editar solicitud.</string>
+    <string name="texto8">\u00092.3) Eliminar solicitud</string>
 
 
 </resources>

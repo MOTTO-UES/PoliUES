@@ -182,7 +182,6 @@ public class ControlBDPoliUES {
     public String actualizarAdministrador(Administrador administrador){
 
         String[] IDADMINISTRADOR = {String.valueOf(administrador.getIdAdministrador())};
-
         ContentValues cv = new ContentValues();
 
         cv.put("NOMBREADMINISTRADOR", administrador.getNombreAdmin());

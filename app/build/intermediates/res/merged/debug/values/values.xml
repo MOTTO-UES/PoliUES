@@ -297,10 +297,12 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="Actividad">actividad</string>
     <string name="Administrador">Administrador</string>
+    <string name="CrearSolicitudUsuario">Crear Solicitud</string>
     <string name="Estado">Estado Solicitud</string>
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
+    <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -370,7 +372,8 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="comsultar">CONSULTAR</string>
     <string name="editar">EDITAR</string>
-    <string name="entrar_principal">Puerta Tracera</string>
+    <string name="entrar_principal">Puerta Trasera</string>
+    <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
     <string name="error_field_required">Campo requerido</string>
     <string name="error_incorrect_password">Contraseña incorecta</string>
     <string name="error_invalid_email">Direccion de correo erronea</string>
@@ -393,11 +396,21 @@
     <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tarifa">Tarifa</string>
+    <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
+en el menu lateral o en el superior</string>
+    <string name="texto2">Dispone de las opciones:</string>
+    <string name="texto3"/>
+    <string name="texto4">1) Crear solicitud.</string>
+    <string name="texto5">2) Consultar Solicitud.</string>
+    <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
+    <string name="texto7">\u00092.2) Editar solicitud.</string>
+    <string name="texto8">\u00092.3) Eliminar solicitud</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_principal">principal</string>
+    <string name="title_activity_principal_usuario">PrincipalUsuario</string>
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
