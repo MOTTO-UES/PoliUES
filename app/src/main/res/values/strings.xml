@@ -106,6 +106,17 @@
     <string name="title_activity_principal_usuario">PrincipalUsuario</string>
 
     <!--MENU RODRIGO-->
+    
+    <!--PRINCIPAL RODRIGO pantalla usuario-->
+    <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
+en el menu lateral o en el superior</string>
+    <string name="texto2">Dispone de las opciones:</string>
+    <string name="texto3"></string>
+    <string name="texto4">1) Crear solicitud.</string>
+    <string name="texto5">2) Consultar Solicitud.</string>
+    <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
+    <string name="texto7">\u00092.2) Editar solicitud.</string>
+    <string name="texto8">\u00092.3) Eliminar solicitud</string>
 
 
 </resources>

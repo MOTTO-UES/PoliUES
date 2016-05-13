@@ -396,6 +396,15 @@
     <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tarifa">Tarifa</string>
+    <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
+en el menu lateral o en el superior</string>
+    <string name="texto2">Dispone de las opciones:</string>
+    <string name="texto3"/>
+    <string name="texto4">1) Crear solicitud.</string>
+    <string name="texto5">2) Consultar Solicitud.</string>
+    <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
+    <string name="texto7">\u00092.2) Editar solicitud.</string>
+    <string name="texto8">\u00092.3) Eliminar solicitud</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
