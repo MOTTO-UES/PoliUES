@@ -14,18 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 
 public class SolicitanteConsultarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     EditText nombre, pass, correo;
 
     @Override
@@ -35,10 +28,6 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
         String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
         String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
@@ -50,10 +39,6 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent intent = new Intent(SolicitanteConsultarActivity.this, SolicitanteActivity.class);
                 startActivity(intent);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
             }
         });
 
@@ -73,10 +58,6 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
 
         //Metodo que recibe EXTRAS y llena campos de content
         llenarCampos(ExtraNOMBRE, ExtraPASS, ExtraCORREO);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     }
 
     @Override
