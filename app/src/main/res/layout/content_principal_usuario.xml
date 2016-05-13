@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> remotes/origin/rodrigo
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,17 +8,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-<<<<<<< HEAD
-=======
-    android:orientation="vertical"
->>>>>>> remotes/origin/rodrigo
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario"
     tools:showIn="@layout/app_bar_principal_usuario">
 
-<<<<<<< HEAD
-</RelativeLayout>
-=======
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -130,4 +119,3 @@
 
 </ScrollView>
 
->>>>>>> remotes/origin/rodrigo

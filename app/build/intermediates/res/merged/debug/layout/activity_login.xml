@@ -72,6 +72,7 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold"/>
 
+            <!--
             <Button
                 android:id="@+id/entrar_principal"
                 android:layout_width="match_parent"
@@ -86,6 +87,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/entrar_principal_usuario"
                 android:textStyle="bold" />
+            -->
 
         </LinearLayout>
     </ScrollView>

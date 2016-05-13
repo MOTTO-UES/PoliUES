@@ -15,19 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
-<<<<<<< HEAD
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-=======
->>>>>>> remotes/origin/rodrigo
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> remotes/origin/rodrigo
 public class SolicitanteEditarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

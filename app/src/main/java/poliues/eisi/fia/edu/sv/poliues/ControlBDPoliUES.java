@@ -178,7 +178,7 @@ public class ControlBDPoliUES {
 
         return regAfectados;
     }
-    //Actualizar Solicitante
+    //Actualizar Administrador
     public String actualizarAdministrador(Administrador administrador){
 
         String[] IDADMINISTRADOR = {String.valueOf(administrador.getIdAdministrador())};
@@ -191,6 +191,25 @@ public class ControlBDPoliUES {
         db.update("ADMINISTRADOR", cv, "IDADMINISTRADOR = ?", IDADMINISTRADOR);
 
         return "Administrador Actualizado Correctamente";
+    }
+    //Obtener Administrador por Correo
+    public Administrador obtenerAdministradorPorCorreo(String correo){
+
+        String[] Correo = {String.valueOf(correo)};
+        Administrador administrador = new Administrador();
+
+        Cursor c = db.query("ADMINISTRADOR",camposAdministrador,"CORREOADMINISTRADOR=?",Correo,null,null,null,null);
+
+        if(c.moveToFirst()){
+            do {
+                administrador.setIdAdministrador(c.getInt(0));
+                administrador.setNombreAdmin(c.getString(1));
+                administrador.setPasswordAdmin(c.getString(2));
+                administrador.setCorreoAdmin(c.getString(3));
+            }while(c.moveToNext());
+
+        }
+        return administrador;
     }
     /////////////////////////////////////////////////////////////////////////////
     //Agregar Solicitante
@@ -248,6 +267,25 @@ public class ControlBDPoliUES {
         db.update("SOLICITANTE", cv, "IDSOLICITANTE = ?", IDSOLICITANTE);
 
         return "Solicitante Actualizado Correctamente";
+    }
+    //Obtener Solicitante por Correo
+    public Solicitante obtenerSolicitantePorCorreo(String correo){
+
+        String[] Correo = {String.valueOf(correo)};
+        Solicitante solicitante = new Solicitante();
+
+        Cursor c = db.query("SOLICITANTE",camposSolicitante,"CORREO=?",Correo,null,null,null,null);
+
+        if(c.moveToFirst()){
+            do {
+                solicitante.setIdSolicitante(c.getInt(0));
+                solicitante.setNombre(c.getString(1));
+                solicitante.setPassword(c.getString(2));
+                solicitante.setCorreo(c.getString(3));
+            }while(c.moveToNext());
+
+        }
+        return solicitante;
     }
 
     /////////////////////////////////////////////////////////////////////////////
