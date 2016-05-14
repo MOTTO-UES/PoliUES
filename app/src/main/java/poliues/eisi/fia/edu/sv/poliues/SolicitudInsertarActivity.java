@@ -25,12 +25,19 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     EditText editMotivo;
     Spinner spinnerActividad;
     String actividadSeleccionada;
+    Solicitante soli=null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solicitud);
+
+        soli = new Solicitante();
+
+        soli.setIdSolicitante(getIntent().getExtras().getInt("IDUSUARIO"));
+
+        System.out.println("usuario: "+soli.getIdSolicitante());
 
 
         helper = new ControlBDPoliUES(this);
@@ -64,14 +71,17 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         switch (id){
             case R.id.opcionesMenu:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -106,7 +116,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         solicitud.setActividad(4);
         solicitud.setMotivoSolicitud(motivo);
         solicitud.setTarifa(1);
-        solicitud.setSolicitante(1);
+        solicitud.setSolicitante(soli.getIdSolicitante());
         solicitud.setEstadoSolicitud("pendiente");
         solicitud.setFechaCreacion(fechaCreacion);
 
@@ -117,6 +127,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
 
         Intent i = new Intent(this, DetalleSolicitudInsertarActivity.class);
+        i.putExtra("IDUSUARIO",soli.getIdSolicitante());
         startActivity(i);
     }
 

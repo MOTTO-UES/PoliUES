@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 public class PrincipalUsuario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        Solicitante soli = null;
 
 
     @Override
@@ -28,7 +29,7 @@ public class PrincipalUsuario extends AppCompatActivity
 
         //////////////////////////////////////////////
         ////// soli  contiene Solicitante Logueado
-        final Solicitante soli = solicitanteLogueado();
+        soli = solicitanteLogueado();
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -78,14 +79,19 @@ public class PrincipalUsuario extends AppCompatActivity
         switch (id){
             case R.id.opcionesMenu:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                System.out.println(soli.getIdSolicitante());
+                System.out.println(soli.getNombre());
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -102,9 +108,11 @@ public class PrincipalUsuario extends AppCompatActivity
         Intent intent;
         if (id == R.id.solicitudUsuarioCrear) {
             intent = new Intent(this,SolicitudInsertarActivity.class);
+            intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
             startActivity(intent);
         } else if (id == R.id.solicitudUsuarioVer) {
             intent = new Intent(this,SolicitudConsultarActivity.class);
+            intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
             startActivity(intent);
         } else if (id == R.id.cerrarSesionUsuario) {
             finish();
@@ -130,6 +138,9 @@ public class PrincipalUsuario extends AppCompatActivity
         solicitante.setNombre(ExtraNOMBRE);
         solicitante.setPassword(ExtraPASS);
         solicitante.setCorreo(ExtraCORREO);
+
+        System.out.println("PRINCIPAL ID: "+solicitante.getIdSolicitante());
+        System.out.println("PRINCIPAL NOMBRE: "+solicitante.getNombre());
 
         return solicitante;
     }

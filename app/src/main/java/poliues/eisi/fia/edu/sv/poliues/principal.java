@@ -33,7 +33,7 @@ public class principal extends AppCompatActivity
 
         //////////////////////////////////////////////
         ////// admin  contiene Administrador Logueado
-        final Administrador admin = administradorLogueado();
+        final Administrador admin= administradorLogueado();
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

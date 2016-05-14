@@ -31,12 +31,23 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
     Cursor cursor2;
     List<String> item = null;
     String datoAbuscar;
-;
+    Solicitante soli=null;
+    int creador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solicitud_consultar);
+
+        Bundle usuario = getIntent().getExtras();
+
+        creador = usuario.getInt("IDUSUARIO");
+        soli = new Solicitante();
+        soli.setIdSolicitante(creador);
+
+        System.out.println(usuario.getInt("IDUSUARIO"));
+        System.out.println("variable int: " +creador);
+        System.out.println("OBJETO SOLICITUD " +soli.getIdSolicitante());
 
 
         alertDialog = new AlertDialog.Builder(this).create();
@@ -115,14 +126,17 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         switch (id){
             case R.id.opcionesMenu:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -134,6 +148,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llamarActualizar(){
         Intent o = new Intent(this,SolicitudActualizarActivity.class);
+        o.putExtra("IDUSUARIO",soli.getIdSolicitante());
         o.putExtra("motivo",datoAbuscar);
         startActivity(o);
     }
@@ -145,6 +160,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llamarConsultar(){
         Intent o = new Intent(this, verSolicitudActivity.class);
+        o.putExtra("IDUSUARIO",soli.getIdSolicitante());
         o.putExtra("motivo",datoAbuscar);
         startActivity(o);
     }
@@ -172,6 +188,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Se elimino correctamente ", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this,SolicitudConsultarActivity.class);
+            intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
             startActivity(intent);
         }
 
@@ -193,11 +210,18 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
                 Solicitud solicitud = new Solicitud();
 
+
                 solicitud.setIdSolicitud(cursor.getInt(0));
+
+                solicitud.setSolicitante(cursor.getInt(4));
 
                 solicitud.setMotivoSolicitud(cursor.getString(5));
 
-                item.add(solicitud.getMotivoSolicitud());
+                if (soli.getIdSolicitante() == solicitud.getSolicitante()){
+                    item.add(solicitud.getMotivoSolicitud());
+                }
+
+
 
 
             }while(cursor.moveToNext());

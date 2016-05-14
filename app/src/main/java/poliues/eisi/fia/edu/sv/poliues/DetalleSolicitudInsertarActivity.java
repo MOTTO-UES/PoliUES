@@ -44,11 +44,19 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
     private int mDayInicio;
     static final int DATE_DIALOG_ID_Inicio = 0;
     static final int DATE_DIALOG_ID_Fin = 1;
+    Solicitante soli=null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_solicitud);
+
+        soli = new Solicitante();
+
+        soli.setIdSolicitante(getIntent().getExtras().getInt("IDUSUARIO"));
+
+        System.out.println("usuario: "+soli.getIdSolicitante());
 
         spinnerAreas = (Spinner) findViewById(R.id.SpinnerArea);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Areas, android.R.layout.simple_spinner_item);
@@ -109,14 +117,17 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
         switch (id){
             case R.id.opcionesMenu:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -241,7 +252,7 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
                 helper.cerrar();
 
                 System.out.println(Soli.getIdSolicitud());
-                System.out.println("hora "+((fn-ini)/(24*60*60*1000)));
+                System.out.println("dia "+((fn-ini)/(24*60*60*1000)));
 
 
                 Dsolicitud.setSolicitud(Soli.getIdSolicitud());
@@ -256,6 +267,7 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
                 Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
 
             }else{

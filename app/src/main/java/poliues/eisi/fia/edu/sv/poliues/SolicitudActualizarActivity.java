@@ -51,12 +51,20 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
     static final int DATE_DIALOG_ID_Inicio = 0;
     static final int DATE_DIALOG_ID_Fin = 1;
 
+    Solicitante soli=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_solicitud);
 
         Bundle bundle = getIntent().getExtras();
+
+        soli = new Solicitante();
+
+        soli.setIdSolicitante(getIntent().getExtras().getInt("IDUSUARIO"));
+
+        System.out.println("usuario: "+soli.getIdSolicitante());
 
         helper = new ControlBDPoliUES(this);
 
@@ -133,14 +141,17 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         switch (id){
             case R.id.opcionesMenu:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -241,6 +252,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
             if (solicitud.getEstadoSolicitud().equals("aprobado")){
                 Toast.makeText(this,"YA FUE APROBADO NO SE PUEDE MODIFICAR", Toast.LENGTH_LONG).show();
                 Intent o = new Intent(this, verSolicitudActivity.class);
+                o.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 o.putExtra("motivo",motivo);
                 startActivity(o);
             }
@@ -280,6 +292,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         Toast.makeText(this, estado + estado2, Toast.LENGTH_SHORT).show();
 
         Intent o = new Intent(this, verSolicitudActivity.class);
+        o.putExtra("IDUSUARIO",soli.getIdSolicitante());
         o.putExtra("motivo",motivo);
         startActivity(o);
 

@@ -21,6 +21,7 @@ public class verSolicitudActivity extends AppCompatActivity {
     EditText FF;
     EditText CT;
     EditText estado;
+    Solicitante soli=null;
 
 
 
@@ -30,6 +31,12 @@ public class verSolicitudActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ver_solicitud);
 
         Bundle bundle = getIntent().getExtras();
+
+        soli = new Solicitante();
+
+        soli.setIdSolicitante(getIntent().getExtras().getInt("IDUSUARIO"));
+
+        System.out.println("usuario: "+soli.getIdSolicitante());
 
         helper = new ControlBDPoliUES(this);
 
@@ -60,14 +67,17 @@ public class verSolicitudActivity extends AppCompatActivity {
         switch (id){
             case R.id.opcionesMenu:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
