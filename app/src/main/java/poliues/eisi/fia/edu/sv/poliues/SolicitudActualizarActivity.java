@@ -139,7 +139,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
                 intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);

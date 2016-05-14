@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/opcionesMenu"
+        android:id="@+id/consultarSolicitud"
         android:title="Consultar solicitud"
         android:orderInCategory="100"
         app:showAsAction="never" />

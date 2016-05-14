@@ -1,12 +1,10 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -44,7 +42,11 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         usuario = getIntent().getExtras();
 
         creador = usuario.getInt("IDUSUARIO");
-        esAdmin = usuario.getString("identificador");
+        esAdmin = usuario.getString("EnvioAdministradorIDENTIFICADOR");
+        if(esAdmin==null){
+            esAdmin="noEsAdmin";
+        }
+
         soli = new Solicitante();
         soli.setIdSolicitante(creador);
 
@@ -60,16 +62,21 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
                 llamarConsultar();
             }
         });
-        alertDialog.setButton2("Actualizar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                llamarActualizar();
-                            }
-        });
-        alertDialog.setButton3("Eliminar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                llamarEliminar();
-            }
-        });
+
+        if (!(esAdmin.equals("admin"))){
+            alertDialog.setButton2("Actualizar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    llamarActualizar();
+                }
+            });
+            alertDialog.setButton3("Eliminar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    llamarEliminar();
+                }
+            });
+
+        }
+
 
 
         alertDialogE = new AlertDialog.Builder(this).create();
@@ -115,9 +122,10 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
         if (esAdmin.equals("admin"))
             getMenuInflater().inflate(R.menu.principal,menu);
+        else
+            getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
 
         return  true;
     }
@@ -129,9 +137,19 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
-                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                if (esAdmin.equals("admin")){
+                    intent.putExtra("IDUSUARIO",usuario.getInt("EnvioAdministradorID"));
+                }
+                else {
+                    intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                }
+                intent.putExtra("EnvioAdministradorID",usuario.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",usuario.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",usuario.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",usuario.getString("EnvioAdministradorIDENTIFICADOR"));
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
@@ -147,6 +165,12 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
             case R.id.action_settings:
                 intent = new Intent(this,principal.class);
                 Administrador administrador = new Administrador();
+                if (esAdmin.equals("admin")){
+                    intent.putExtra("IDUSUARIO",usuario.getInt("EnvioAdministradorID"));
+                }
+                else {
+                    intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                }
 
                 intent.putExtra("EnvioAdministradorID",usuario.getInt("EnvioAdministradorID"));
                 intent.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
@@ -176,8 +200,19 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llamarConsultar(){
         Intent o = new Intent(this, verSolicitudActivity.class);
-        o.putExtra("IDUSUARIO",soli.getIdSolicitante());
+        if (esAdmin.equals("admin")){
+            o.putExtra("IDUSUARIO", usuario.getInt("EnvioAdministradorID"));
+        }
+        else {
+            o.putExtra("IDUSUARIO", soli.getIdSolicitante());
+        }
         o.putExtra("motivo",datoAbuscar);
+
+        o.putExtra("EnvioAdministradorID", usuario.getInt("EnvioAdministradorID"));
+        o.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
+        o.putExtra("EnvioAdministradorPASS",usuario.getString("EnvioAdministradorPASS"));
+        o.putExtra("EnvioAdministradorCORREO",usuario.getString("EnvioAdministradorCORREO"));
+        o.putExtra("EnvioAdministradorIDENTIFICADOR",usuario.getString("EnvioAdministradorIDENTIFICADOR"));
         startActivity(o);
     }
 

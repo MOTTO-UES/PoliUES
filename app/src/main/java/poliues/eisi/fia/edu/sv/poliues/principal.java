@@ -13,17 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TableLayout;
-import android.widget.TextView;
-
-import java.security.Principal;
 
 public class principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
         String identificador=null;
-        int idAdmin=0;
         Administrador admin = null;
 
 
@@ -37,7 +30,6 @@ public class principal extends AppCompatActivity
         //////////////////////////////////////////////
         ////// admin  contiene Administrador Logueado
         admin= administradorLogueado();
-        idAdmin = admin.getIdAdministrador();
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -88,6 +80,19 @@ public class principal extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        else{
+            if(id == R.id.consultarSolicitud){
+                Intent inte = new Intent(this,SolicitudConsultarActivity.class);
+                inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
+                inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+                inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+                inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+                inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+                inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+                startActivity(inte);
+                return true;
+            }
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -106,8 +111,7 @@ public class principal extends AppCompatActivity
             startActivity(inte);
         } else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
-            inte.putExtra("IDUSUARIO",idAdmin);
-            inte.putExtra("identificador",identificador);
+            inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
             inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
             inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
             inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());

@@ -6,11 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class verSolicitudActivity extends AppCompatActivity {
     ControlBDPoliUES helper;
@@ -22,6 +19,8 @@ public class verSolicitudActivity extends AppCompatActivity {
     EditText CT;
     EditText estado;
     Solicitante soli=null;
+    String esAdmin=null;
+    Bundle bundle;
 
 
 
@@ -30,7 +29,11 @@ public class verSolicitudActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_solicitud);
 
-        Bundle bundle = getIntent().getExtras();
+        bundle = getIntent().getExtras();
+        esAdmin = bundle.getString("EnvioAdministradorIDENTIFICADOR");
+        if(esAdmin==null){
+            esAdmin="noEsAdmin";
+        }
 
         soli = new Solicitante();
 
@@ -53,7 +56,10 @@ public class verSolicitudActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+        if (esAdmin.equals("admin"))
+            getMenuInflater().inflate(R.menu.principal,menu);
+        else
+            getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
 
         return  true;
     }
@@ -65,9 +71,21 @@ public class verSolicitudActivity extends AppCompatActivity {
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                if (esAdmin.equals("admin")){
+                    intent.putExtra("IDUSUARIO",bundle.getInt("EnvioAdministradorID"));
+                }
+                else {
                 intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                }
+
+                intent.putExtra("EnvioAdministradorID", bundle.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",bundle.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",bundle.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",bundle.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",bundle.getString("EnvioAdministradorIDENTIFICADOR"));
+
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
@@ -79,6 +97,23 @@ public class verSolicitudActivity extends AppCompatActivity {
                 intent = new Intent(this,PrincipalUsuario.class);
                 intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
+                break;
+            case R.id.action_settings:
+                Intent inte = new Intent(this, principal.class);
+                if (esAdmin.equals("admin")){
+                    inte.putExtra("IDUSUARIO",bundle.getInt("EnvioAdministradorID"));
+                }
+                else {
+                    inte.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                }
+                inte.putExtra("EnvioAdministradorID", bundle.getInt("EnvioAdministradorID"));
+                inte.putExtra("EnvioAdministradorNOMBRE",bundle.getString("EnvioAdministradorNOMBRE"));
+                inte.putExtra("EnvioAdministradorPASS",bundle.getString("EnvioAdministradorPASS"));
+                inte.putExtra("EnvioAdministradorCORREO",bundle.getString("EnvioAdministradorCORREO"));
+                inte.putExtra("EnvioAdministradorIDENTIFICADOR",bundle.getString("EnvioAdministradorIDENTIFICADOR"));
+
+
+                startActivity(inte);
                 break;
         }
 

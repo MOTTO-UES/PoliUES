@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class PrincipalUsuario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -77,7 +76,7 @@ public class PrincipalUsuario extends AppCompatActivity
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
                 System.out.println(soli.getIdSolicitante());
                 System.out.println(soli.getNombre());

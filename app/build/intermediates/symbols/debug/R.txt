@@ -652,6 +652,7 @@ int id chronometer 0x7f0d00b8
 int id clip_horizontal 0x7f0d002c
 int id clip_vertical 0x7f0d002d
 int id collapseActionView 0x7f0d0036
+int id consultarSolicitud 0x7f0d00c9
 int id contentPanel 0x7f0d004c
 int id custom 0x7f0d0052
 int id customPanel 0x7f0d0051
@@ -743,7 +744,6 @@ int id navigation_header_container 0x7f0d00a9
 int id never 0x7f0d0038
 int id none 0x7f0d0010
 int id normal 0x7f0d000c
-int id opcionesMenu 0x7f0d00c9
 int id parallax 0x7f0d001b
 int id parentPanel 0x7f0d0048
 int id password 0x7f0d0078

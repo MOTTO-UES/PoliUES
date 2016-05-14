@@ -1,6 +1,5 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
-import android.app.Activity;
 //import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ import android.widget.Toast;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.StringTokenizer;
 
 public class SolicitudInsertarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -69,7 +67,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
                 intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);

@@ -2378,6 +2378,7 @@ containing a value of this type.
         public static final int clip_horizontal=0x7f0d002c;
         public static final int clip_vertical=0x7f0d002d;
         public static final int collapseActionView=0x7f0d0036;
+        public static final int consultarSolicitud=0x7f0d00c9;
         public static final int contentPanel=0x7f0d004c;
         public static final int custom=0x7f0d0052;
         public static final int customPanel=0x7f0d0051;
@@ -2469,7 +2470,6 @@ containing a value of this type.
         public static final int never=0x7f0d0038;
         public static final int none=0x7f0d0010;
         public static final int normal=0x7f0d000c;
-        public static final int opcionesMenu=0x7f0d00c9;
         public static final int parallax=0x7f0d001b;
         public static final int parentPanel=0x7f0d0048;
         public static final int password=0x7f0d0078;
