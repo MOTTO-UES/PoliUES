@@ -230,6 +230,10 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
 
 
             if(fin.compareTo(inicio)>=0){
+
+                long ini = inicio.getTime();
+                long fn = fin.getTime();
+
                 helper = new ControlBDPoliUES(this);
                 helper.leer();
                 Solicitud Soli;
@@ -237,6 +241,8 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
                 helper.cerrar();
 
                 System.out.println(Soli.getIdSolicitud());
+                System.out.println("hora "+((fn-ini)/(24*60*60*1000)));
+
 
                 Dsolicitud.setSolicitud(Soli.getIdSolicitud());
                 Dsolicitud.setArea(1);
