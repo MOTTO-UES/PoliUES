@@ -33,7 +33,7 @@
     <item android:title="@string/otroGrupo">
         <menu>
             <item
-                android:id="@+id/salir"
+                android:id="@+id/cerrarSesionAdmin"
                 android:icon="@android:drawable/ic_lock_idle_lock"
                 android:title="@string/cerrarSesion" />
         </menu>

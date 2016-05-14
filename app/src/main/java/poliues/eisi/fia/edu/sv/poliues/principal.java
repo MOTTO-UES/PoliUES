@@ -14,12 +14,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import java.security.Principal;
 
 public class principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,16 @@ public class principal extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //////////////////////////////////////////////
+        ////// admin  contiene Administrador Logueado
+        final Administrador admin = administradorLogueado();
+        //////////////////////////////////////////////
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "BIENVENIDO "+String.valueOf(admin.getNombreAdmin()), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -45,6 +53,7 @@ public class principal extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -94,9 +103,11 @@ public class principal extends AppCompatActivity
         } else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
             startActivity(inte);
-        } /*else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.cerrarSesionAdmin) {
+            finish();
+            Intent inte = new Intent(this, LoginActivity.class);
+            startActivity(inte);
+        } /*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
@@ -107,4 +118,20 @@ public class principal extends AppCompatActivity
         return true;
     }
 
+    public Administrador administradorLogueado(){
+
+        Administrador administrador = new Administrador();
+
+        int ExtraID = getIntent().getExtras().getInt("EnvioAdministradorID");
+        String ExtraNOMBRE = getIntent().getExtras().getString("EnvioAdministradorNOMBRE");
+        String ExtraPASS = getIntent().getExtras().getString("EnvioAdministradorPASS");
+        String ExtraCORREO = getIntent().getExtras().getString("EnvioAdministradorCORREO");
+
+        administrador.setIdAdministrador(ExtraID);
+        administrador.setNombreAdmin(ExtraNOMBRE);
+        administrador.setPasswordAdmin(ExtraPASS);
+        administrador.setCorreoAdmin(ExtraCORREO);
+
+        return administrador;
+    }
 }

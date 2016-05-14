@@ -13,9 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class PrincipalUsuario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +26,16 @@ public class PrincipalUsuario extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //////////////////////////////////////////////
+        ////// soli  contiene Solicitante Logueado
+        final Solicitante soli = solicitanteLogueado();
+        //////////////////////////////////////////////
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "BIENVENIDO "+String.valueOf(soli.getNombre()), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -41,6 +48,8 @@ public class PrincipalUsuario extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -62,6 +71,7 @@ public class PrincipalUsuario extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         int id = item.getItemId();
         Intent intent;
 
@@ -80,7 +90,6 @@ public class PrincipalUsuario extends AppCompatActivity
                 break;
         }
 
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -98,11 +107,30 @@ public class PrincipalUsuario extends AppCompatActivity
             intent = new Intent(this,SolicitudConsultarActivity.class);
             startActivity(intent);
         } else if (id == R.id.cerrarSesionUsuario) {
-                //Codigo para cerrar sesion y redirigir al login
+            finish();
+            intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
         }
     //////////////////////////////////////////////////////////////////////////
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public Solicitante solicitanteLogueado(){
+
+        Solicitante solicitante = new Solicitante();
+
+        int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
+        String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
+        String ExtraPASS = getIntent().getExtras().getString("EnvioSolicitantePASS");
+        String ExtraCORREO = getIntent().getExtras().getString("EnvioSolicitanteCORREO");
+
+        solicitante.setIdSolicitante(ExtraID);
+        solicitante.setNombre(ExtraNOMBRE);
+        solicitante.setPassword(ExtraPASS);
+        solicitante.setCorreo(ExtraCORREO);
+
+        return solicitante;
     }
 }
