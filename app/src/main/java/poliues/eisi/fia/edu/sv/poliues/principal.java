@@ -22,6 +22,9 @@ import java.security.Principal;
 
 public class principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        String identificador=null;
+        int idAdmin=0;
+        Administrador admin = null;
 
 
     @Override
@@ -33,7 +36,8 @@ public class principal extends AppCompatActivity
 
         //////////////////////////////////////////////
         ////// admin  contiene Administrador Logueado
-        final Administrador admin= administradorLogueado();
+        admin= administradorLogueado();
+        idAdmin = admin.getIdAdministrador();
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -102,6 +106,13 @@ public class principal extends AppCompatActivity
             startActivity(inte);
         } else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            inte.putExtra("IDUSUARIO",idAdmin);
+            inte.putExtra("identificador",identificador);
+            inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+            inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+            inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
             startActivity(inte);
         } else if (id == R.id.cerrarSesionAdmin) {
             finish();
@@ -126,6 +137,7 @@ public class principal extends AppCompatActivity
         String ExtraNOMBRE = getIntent().getExtras().getString("EnvioAdministradorNOMBRE");
         String ExtraPASS = getIntent().getExtras().getString("EnvioAdministradorPASS");
         String ExtraCORREO = getIntent().getExtras().getString("EnvioAdministradorCORREO");
+        identificador = getIntent().getExtras().getString("EnvioAdministradorIDENTIFICADOR");
 
         administrador.setIdAdministrador(ExtraID);
         administrador.setNombreAdmin(ExtraNOMBRE);

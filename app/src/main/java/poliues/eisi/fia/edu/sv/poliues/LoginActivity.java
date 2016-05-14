@@ -451,6 +451,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     inte.putExtra("EnvioAdministradorNOMBRE", administrador.getNombreAdmin());
                     inte.putExtra("EnvioAdministradorPASS", administrador.getPasswordAdmin());
                     inte.putExtra("EnvioAdministradorCORREO", administrador.getCorreoAdmin());
+                    inte.putExtra("EnvioAdministradorIDENTIFICADOR","admin");
 
                     startActivity(inte);
                 }else {

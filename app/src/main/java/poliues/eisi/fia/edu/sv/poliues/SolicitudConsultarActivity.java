@@ -33,15 +33,18 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
     String datoAbuscar;
     Solicitante soli=null;
     int creador;
+    String esAdmin=null;
+    Bundle usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solicitud_consultar);
 
-        Bundle usuario = getIntent().getExtras();
+        usuario = getIntent().getExtras();
 
         creador = usuario.getInt("IDUSUARIO");
+        esAdmin = usuario.getString("identificador");
         soli = new Solicitante();
         soli.setIdSolicitante(creador);
 
@@ -113,6 +116,8 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+        if (esAdmin.equals("admin"))
+            getMenuInflater().inflate(R.menu.principal,menu);
 
         return  true;
     }
@@ -137,6 +142,17 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
                 intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
+                startActivity(intent);
+                break;
+            case R.id.action_settings:
+                intent = new Intent(this,principal.class);
+                Administrador administrador = new Administrador();
+
+                intent.putExtra("EnvioAdministradorID",usuario.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",usuario.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",usuario.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",usuario.getString("EnvioAdministradorIDENTIFICADOR"));
                 startActivity(intent);
                 break;
         }
@@ -217,7 +233,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
                 solicitud.setMotivoSolicitud(cursor.getString(5));
 
-                if (soli.getIdSolicitante() == solicitud.getSolicitante()){
+                if (soli.getIdSolicitante() == solicitud.getSolicitante() || esAdmin.equals("admin")){
                     item.add(solicitud.getMotivoSolicitud());
                 }
 
