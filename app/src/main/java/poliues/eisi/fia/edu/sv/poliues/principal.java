@@ -105,9 +105,21 @@ public class principal extends AppCompatActivity
 
         if (id == R.id.administrador) {
             Intent inte = new Intent(principal.this, AdministradorActivity.class);
+            inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+            inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+            inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
             startActivity(inte);
+
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
+            //inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+            inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+            inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
             startActivity(inte);
         } else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);

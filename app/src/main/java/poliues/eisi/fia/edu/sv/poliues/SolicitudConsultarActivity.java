@@ -30,7 +30,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
     List<String> item = null;
     String datoAbuscar;
     Solicitante soli=null;
-    int creador;
+    int creador=0;
     String esAdmin=null;
     Bundle usuario;
 
@@ -41,16 +41,19 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
         usuario = getIntent().getExtras();
 
-        creador = usuario.getInt("IDUSUARIO");
+
         esAdmin = usuario.getString("EnvioAdministradorIDENTIFICADOR");
         if(esAdmin==null){
             esAdmin="noEsAdmin";
+        }
+        else {
+            creador = usuario.getInt("IDUSUARIO");
         }
 
         soli = new Solicitante();
         soli.setIdSolicitante(creador);
 
-        System.out.println(usuario.getInt("IDUSUARIO"));
+
         System.out.println("variable int: " +creador);
         System.out.println("OBJETO SOLICITUD " +soli.getIdSolicitante());
 

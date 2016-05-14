@@ -53,6 +53,7 @@ public class AdministradorActivity extends AppCompatActivity
         ControlBDPoliUES db;
         List<String> item = null;
         List<Administrador> objAdministrador = null;
+        Bundle admi;
 
 
     @Override
@@ -62,11 +63,19 @@ public class AdministradorActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //RECIVE TODOS LOS PARAMETROS
+        admi = getIntent().getExtras();
+        ////////////////////////////////
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdministradorActivity.this,AdministradorInsertarActivity.class);
+                intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
                 startActivity(intent);
             }
         });
@@ -119,6 +128,11 @@ public class AdministradorActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_administrador_agregar) {
             Intent intent = new Intent(AdministradorActivity.this,AdministradorInsertarActivity.class);
+            intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(intent);
         }
 
@@ -135,9 +149,20 @@ public class AdministradorActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
         }else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
             startActivity(inte);
         }/* else if (id == R.id.nav_slideshow) {
 
@@ -202,6 +227,7 @@ public class AdministradorActivity extends AppCompatActivity
                     inte.putExtra("EnvioAdministradorNOMBRE", admin.getNombreAdmin());
                     inte.putExtra("EnvioAdministradorPASS", admin.getPasswordAdmin());
                     inte.putExtra("EnvioAdministradorCORREO", admin.getCorreoAdmin());
+                    inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
 
                     PopupMenu pop = new PopupMenu(getApplicationContext(), view);
 
@@ -217,9 +243,20 @@ public class AdministradorActivity extends AppCompatActivity
 
                             if (id == R.id.ConsultarA) {
                                 inte.setClass(AdministradorActivity.this, AdministradorConsultarActivity.class);
+                                inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                                inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                                inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                                inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                                inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
                                 startActivity(inte);
                             } else if (id == R.id.EditarA) {
                                 inte.setClass(AdministradorActivity.this, AdministradorEditarActivity.class);
+                                inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                                inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                                inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                                inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                                inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
                                 startActivity(inte);
                             } else if (id == R.id.BorrarA) {
 

@@ -27,6 +27,7 @@ public class SolicitanteEditarActivity extends AppCompatActivity
 
     EditText nombre, pass, correo;
     ControlBDPoliUES helper;
+    Bundle admi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class SolicitanteEditarActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        admi = getIntent().getExtras();
 
         final int ExtraID = getIntent().getExtras().getInt("EnvioSolicitanteID");
         String ExtraNOMBRE = getIntent().getExtras().getString("EnvioSolicitanteNOMBRE");
@@ -47,6 +49,11 @@ public class SolicitanteEditarActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SolicitanteEditarActivity.this, SolicitanteActivity.class);
+                intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
                 startActivity(intent);
             }
         });
@@ -112,12 +119,27 @@ public class SolicitanteEditarActivity extends AppCompatActivity
 
         if (id == R.id.administrador) {
             Intent inte = new Intent(this, AdministradorActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
         }else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
         }
 
@@ -168,6 +190,11 @@ public class SolicitanteEditarActivity extends AppCompatActivity
             //Ir a otra activity
 
             Intent intent = new Intent(SolicitanteEditarActivity.this,SolicitanteActivity.class);
+            intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(intent);
 
         }
