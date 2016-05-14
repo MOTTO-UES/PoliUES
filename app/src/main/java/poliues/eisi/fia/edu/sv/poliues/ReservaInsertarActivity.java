@@ -120,16 +120,15 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                 if(TextUtils.isEmpty(editnumeropersonas.getText().toString())){
                     editnumeropersonas.setError("El campo esta Vacio");
 
-                }else {
-                    int num =Integer.parseInt(editnumeropersonas.getText().toString());
-                    if(num<=0){
+                }else if(Integer.parseInt(editnumeropersonas.getText().toString())<=0){
                         editnumeropersonas.setError("Debe de ingresar un numero entero positivo");
-
-                    }
+                    }else{
+                    editnumeropersonas.setError(null);
                 }
-
-
             }
+
+
+
         });
 
 
@@ -140,9 +139,12 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                 if(TextUtils.isEmpty(editmotivo.getText().toString())){
                     editmotivo.setError("El campo motivo esta Vacio");
 
+                }else{
+                    editmotivo.setError(null);
                 }
             }
         });
+
 
         editdescripcionreserva = (EditText) findViewById(R.id.editdescripcionreserva);
         editdescripcionreserva.setOnFocusChangeListener(new View.OnFocusChangeListener(){
@@ -151,6 +153,8 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                 if(TextUtils.isEmpty(editdescripcionreserva.getText().toString())){
                     editdescripcionreserva.setError("El campo descripcion esta Vacio");
 
+                }else{
+                    editdescripcionreserva.setError(null);
                 }
             }
         });
@@ -189,86 +193,158 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                 //if is create
                                                 if (!isUpdate) {
                                                     if(!(TextUtils.isEmpty(editmotivo.getText().toString()) || TextUtils.isEmpty(editnumeropersonas.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editfechareserva.getText().toString()) || TextUtils.isEmpty(edithorainicio.getText().toString()) || TextUtils.isEmpty(edithorafin.getText().toString()))){
-                                                        String me;
+                                                        Date fechahoy = null;
+                                                        Date fechainput = null;
+                                                        String fecha = editfechareserva.getText().toString();
+                                                        DateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
+                                                        String fechaactual = fechaActual();
+                                                        try{
+                                                            fechahoy=dateformat.parse(fechaactual);
+                                                            fechainput=dateformat.parse(fecha);
 
-                                                        dbhelper.abrir();
-                                                        Reserva reservaguardar = new Reserva();
-                                                        reservaguardar.setIdfacultad(realFacultadId);
-                                                        reservaguardar.setNumeropersonas(Integer.parseInt(editnumeropersonas.getText().toString()));
-                                                        reservaguardar.setMotivo(editmotivo.getText().toString());
-                                                        reservaguardar.setDescripcionreserva(editdescripcionreserva.getText().toString());
-                                                        reservaguardar.setFechaingreso(fechaActual());
-                                                        me = dbhelper.insertar(reservaguardar);
-                                                        mensajes(me );
-                                                        me=" ";
-                                                        Cursor getReservas = dbhelper.todaslasreservas();
-
-                                                        if(getReservas!=null)
-                                                        {
-                                                            getReservas.moveToLast();
-                                                            idReserva = getReservas.getInt(getReservas.getColumnIndex("idreserva"));
+                                                        }catch (ParseException e){
+                                                            e.printStackTrace();
                                                         }
-                                                        DetalleReserva detallereservaguardar = new DetalleReserva();
-                                                        detallereservaguardar.setIdarea(realAreaId);
-                                                        detallereservaguardar.setIdreserva(idReserva);
-                                                        me = dbhelper.insertar(detallereservaguardar);
-                                                        mensajes(me );
-                                                        me=" ";
-                                                        Horario horarioguardar = new Horario();
-                                                        horarioguardar.setIdreserva(idReserva);
-                                                        horarioguardar.setFechareserva(editfechareserva.getText().toString());
-                                                        horarioguardar.setHorarioinicio(edithorainicio.getText().toString());
-                                                        horarioguardar.setHorariofin(edithorafin.getText().toString());
-                                                        me = dbhelper.insertar(horarioguardar);
-                                                        mensajes(me );
-                                                        me=" ";
-                                                        dbhelper.cerrar();
 
+                                                        if (fechainput.compareTo(fechahoy)<=0)
+                                                        {
+                                                            mensajes("Error No se guardo porque la fecha ingresada es menor o igual a la actual");
+                                                        }else{
+                                                            Date horainit = null;
+                                                            Date horaend = null;
 
+                                                            DateFormat dateformath = new SimpleDateFormat("HH:mm");
+                                                            String horacapturada = edithorafin.getText().toString();
+                                                            try{
+                                                                horainit=dateformath.parse(edithorainicio.getText().toString());
+                                                                horaend=dateformath.parse(horacapturada);
+
+                                                            }catch (ParseException e){
+                                                                e.printStackTrace();
+                                                            }
+
+                                                            if (horaend.compareTo(horainit)<=0)
+                                                            {
+                                                                mensajes("Error no se realizo la accion porque La hora fin debe ser mayor que la de inicio");
+                                                            }else{
+                                                                String me;
+
+                                                                dbhelper.abrir();
+                                                                Reserva reservaguardar = new Reserva();
+                                                                reservaguardar.setIdfacultad(realFacultadId);
+                                                                reservaguardar.setNumeropersonas(Integer.parseInt(editnumeropersonas.getText().toString()));
+                                                                reservaguardar.setMotivo(editmotivo.getText().toString());
+                                                                reservaguardar.setDescripcionreserva(editdescripcionreserva.getText().toString());
+                                                                reservaguardar.setFechaingreso(fechaActual());
+                                                                me = dbhelper.insertar(reservaguardar);
+                                                                mensajes(me );
+                                                                me=" ";
+                                                                Cursor getReservas = dbhelper.todaslasreservas();
+
+                                                                if(getReservas!=null)
+                                                                {
+                                                                    getReservas.moveToLast();
+                                                                    idReserva = getReservas.getInt(getReservas.getColumnIndex("idreserva"));
+                                                                }
+                                                                DetalleReserva detallereservaguardar = new DetalleReserva();
+                                                                detallereservaguardar.setIdarea(realAreaId);
+                                                                detallereservaguardar.setIdreserva(idReserva);
+                                                                me = dbhelper.insertar(detallereservaguardar);
+                                                                mensajes(me );
+                                                                me=" ";
+                                                                Horario horarioguardar = new Horario();
+                                                                horarioguardar.setIdreserva(idReserva);
+                                                                horarioguardar.setFechareserva(editfechareserva.getText().toString());
+                                                                horarioguardar.setHorarioinicio(edithorainicio.getText().toString());
+                                                                horarioguardar.setHorariofin(edithorafin.getText().toString());
+                                                                me = dbhelper.insertar(horarioguardar);
+                                                                mensajes(me );
+                                                                me=" ";
+                                                                dbhelper.cerrar();
+                                                                //go to the list activity
+                                                                Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
+                                                                startActivity(i);
+                                                            }
+
+                                                        }
                                                     }else{
                                                         mensajes("No se pudo realizar la accion por que Tiene campos vacios");
                                                     }
                                                 }//if is update
                                                 else {
                                                     if(!(TextUtils.isEmpty(editmotivo.getText().toString()) || TextUtils.isEmpty(editnumeropersonas.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editfechareserva.getText().toString()) || TextUtils.isEmpty(edithorainicio.getText().toString()) || TextUtils.isEmpty(edithorafin.getText().toString()))){
+                                                        Date fechahoy = null;
+                                                        Date fechainput = null;
+                                                        String fecha = editfechareserva.getText().toString();
+                                                        DateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
+                                                        String fechaactual = fechaActual();
+                                                        try{
+                                                            fechahoy=dateformat.parse(fechaactual);
+                                                            fechainput=dateformat.parse(fecha);
 
-                                                        String m;
-                                                        // realId
+                                                        }catch (ParseException e){
+                                                            e.printStackTrace();
+                                                        }
 
-                                                    dbhelper.abrir();
-                                                    Reserva reservaactualizar = new Reserva();
-                                                    reservaactualizar.setIdreserva(realId);
-                                                    reservaactualizar.setIdfacultad(realFacultadId);
-                                                    reservaactualizar.setNumeropersonas(Integer.parseInt(editnumeropersonas.getText().toString()));
-                                                    reservaactualizar.setMotivo(editmotivo.getText().toString());
-                                                    reservaactualizar.setDescripcionreserva(editdescripcionreserva.getText().toString());
-                                                    reservaactualizar.setFechaingreso(fechaActual());
-                                                    m = dbhelper.actualizar(reservaactualizar);
-                                                        mensajes(m);
-                                                        m=" ";
-                                                    DetalleReserva detallereservaactualizar = new DetalleReserva();
-                                                    detallereservaactualizar.setIdarea(realAreaId);
-                                                    detallereservaactualizar.setIdreserva(realId);
-                                                    m= dbhelper.actualizar(detallereservaactualizar);
-                                                        mensajes(m);
-                                                        m=" ";
-                                                    Horario horarioactualizar = new Horario();
-                                                    horarioactualizar.setIdreserva(realId);
-                                                    horarioactualizar.setFechareserva(editfechareserva.getText().toString());
-                                                    horarioactualizar.setHorarioinicio(edithorainicio.getText().toString());
-                                                    horarioactualizar.setHorariofin(edithorafin.getText().toString());
-                                                    m = dbhelper.actualizar(horarioactualizar);
-                                                    mensajes(m);
-                                                    dbhelper.cerrar();
+                                                        if (fechainput.compareTo(fechahoy)<=0)
+                                                        {
+                                                            mensajes("Error No se Actualizo porque la fecha ingresada es menor o igual a la actual");
+                                                        }else{
+                                                            Date horainit = null;
+                                                            Date horaend = null;
+
+                                                            DateFormat dateformath = new SimpleDateFormat("HH:mm");
+                                                            String horacapturada = edithorafin.getText().toString();
+                                                            try{
+                                                                horainit=dateformath.parse(edithorainicio.getText().toString());
+                                                                horaend=dateformath.parse(horacapturada);
+
+                                                            }catch (ParseException e){
+                                                                e.printStackTrace();
+                                                            }
+
+                                                            if (horaend.compareTo(horainit)<=0)
+                                                            {
+                                                                mensajes("Error No se Actualizo porque La hora fin debe ser mayor que la de inicio");
+                                                            }else{
+                                                                String m;
+                                                                // realId
+
+                                                                dbhelper.abrir();
+                                                                Reserva reservaactualizar = new Reserva();
+                                                                reservaactualizar.setIdreserva(realId);
+                                                                reservaactualizar.setIdfacultad(realFacultadId);
+                                                                reservaactualizar.setNumeropersonas(Integer.parseInt(editnumeropersonas.getText().toString()));
+                                                                reservaactualizar.setMotivo(editmotivo.getText().toString());
+                                                                reservaactualizar.setDescripcionreserva(editdescripcionreserva.getText().toString());
+                                                                reservaactualizar.setFechaingreso(fechaActual());
+                                                                m = dbhelper.actualizar(reservaactualizar);
+                                                                    mensajes(m);
+                                                                    m=" ";
+                                                                DetalleReserva detallereservaactualizar = new DetalleReserva();
+                                                                detallereservaactualizar.setIdarea(realAreaId);
+                                                                detallereservaactualizar.setIdreserva(realId);
+                                                                m= dbhelper.actualizar(detallereservaactualizar);
+                                                                    mensajes(m);
+                                                                    m=" ";
+                                                                Horario horarioactualizar = new Horario();
+                                                                horarioactualizar.setIdreserva(realId);
+                                                                horarioactualizar.setFechareserva(editfechareserva.getText().toString());
+                                                                horarioactualizar.setHorarioinicio(edithorainicio.getText().toString());
+                                                                horarioactualizar.setHorariofin(edithorafin.getText().toString());
+                                                                m = dbhelper.actualizar(horarioactualizar);
+                                                                mensajes(m);
+                                                                dbhelper.cerrar();
+                                                                //go to the list activity
+                                                                Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
+                                                                startActivity(i);
+                                                            }
+                                                        }
                                                     }else{
                                                         mensajes("No se pudo realizar la accion por que Tiene campos vacios");
                                                     }
 
                                                 }
-
-                                                //go to the list activity
-                                                Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
-                                                startActivity(i);
                                             }
                                         }
         );

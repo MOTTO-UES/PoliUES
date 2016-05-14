@@ -20,7 +20,7 @@ import java.util.List;
 public class ControlBDPoliUES {
     private static final  String[] camposreserva = new  String[] {"idreserva","idfacultad","fechaingreso","numeropersonas","motivo","descripcionreserva"};
     private static final  String[] camposdetallereserva = new String[] { "iddetallereserva","idarea","idreserva"};
-    private static final  String[] camposarea = new String[] {"idarea","maximopersonas","foto","nombrearea","descripcionarea"};
+    private static final  String[] camposarea = new String[] {"idarea","maximopersonas","nombrearea","descripcionarea"};
     private static final  String[] camposhorario = new String[] {"idhorario","idreserva","fechareserva"," horarioinicio"," horariofin"};
     private static final  String[] camposfacultad = new String[] {"idfacultad","nombrefacultad"};
 
@@ -51,7 +51,7 @@ public class ControlBDPoliUES {
                 db.execSQL("create table reserva (idreserva  INTEGER PRIMARY KEY AUTOINCREMENT,idfacultad INTEGER NOT NULL,fechaingreso VARCHAR(50) NOT NULL,numeropersonas INTEGER NOT NULL, motivo VARCHAR(25) NOT NULL,descripcionreserva   VARCHAR(50) NOT NULL);");
                 db.execSQL("create table detallereserva ( iddetallereserva INTEGER PRIMARY KEY AUTOINCREMENT,idarea INTEGER NOT NULL, idreserva INTEGER NOT NULL);");
                 db.execSQL("create table horario ( idhorario INTEGER PRIMARY KEY AUTOINCREMENT,idreserva INTEGER,fechareserva VARCHAR(50) NOT NULL, horarioinicio VARCHAR(50) NOT NULL, horariofin VARCHAR(50)  NOT NULL);");
-                db.execSQL("create table area (idarea INTEGER PRIMARY KEY AUTOINCREMENT,maximopersonas INTEGER NOT NULL,foto  VARCHAR(50) NOT NULL,nombrearea  VARCHAR(30) NOT NULL,descripcionarea VARCHAR(50) NOT NULL);");
+                db.execSQL("create table area (idarea INTEGER PRIMARY KEY AUTOINCREMENT,maximopersonas INTEGER NOT NULL,nombrearea  VARCHAR(30) NOT NULL,descripcionarea VARCHAR(50) NOT NULL);");
                 db.execSQL("create table facultad(idfacultad INTEGER PRIMARY KEY AUTOINCREMENT ,nombrefacultad VARCHAR(40));");
                 /*Creamos nuestros triggers*/
 
@@ -212,7 +212,6 @@ public class ControlBDPoliUES {
         ContentValues area1 = new ContentValues();
         //area1.put("idarea", area.getIdarea());
         area1.put("maximopersonas", area.getMaximopersona());
-        area1.put("foto", area.getFoto());
         area1.put("nombrearea", area.getNombrearea());
         area1.put("descripcionarea", area.getDescripcionarea());
                 contador = db.insert("area", null, area1);
@@ -348,9 +347,8 @@ public class ControlBDPoliUES {
             Area area = new Area();
             area.setIdarea(Integer.parseInt(cursor.getString(0)));
             area.setMaximopersona(Integer.parseInt(cursor.getString(1)));
-            area.setFoto(cursor.getString(2));
-            area.setNombrearea(cursor.getString(3));
-            area.setDescripcionarea(cursor.getString(4));
+            area.setNombrearea(cursor.getString(2));
+            area.setDescripcionarea(cursor.getString(3));
 
             return area;
         }else{
@@ -519,7 +517,6 @@ public class ControlBDPoliUES {
 
         final String[] VAidarea = {"1","2","3"};
         final String[] VAmaximopersona = {"30","40","50"};
-        final String[] VAfoto = {"vfdvfd","4vfdvdf","4vfvfdvdf"};
         final String[] VAnombrearea = {"Cancha Engramada","Cancha Duela","Cancha de Cemento"};
         final String[] VAdescripcionarea = {"La mejor Cancha","Multi Usos","Multi Uso 2"};
 
@@ -561,7 +558,6 @@ public class ControlBDPoliUES {
         for(int i=0;i<3;i++){
             area.setIdarea(Integer.parseInt(VAidarea[i]));
             area.setMaximopersona(Integer.parseInt(VAmaximopersona[i]));
-            area.setFoto(VAfoto[i]);
             area.setNombrearea(VAnombrearea[i]);
             area.setDescripcionarea(VAdescripcionarea[i]);
             insertar(area);

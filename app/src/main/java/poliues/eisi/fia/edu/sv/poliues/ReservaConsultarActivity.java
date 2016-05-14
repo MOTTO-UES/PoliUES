@@ -50,6 +50,8 @@ public class ReservaConsultarActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(editmotivo.getText().toString())){
                     editmotivo.setError("El campo motivo esta Vacio");
 
+                }else{
+                    editmotivo.setError(null);
                 }
             }
         });
@@ -122,36 +124,40 @@ public class ReservaConsultarActivity extends AppCompatActivity {
     }
 
     public void consultarReserva(View v) {
-
-        dbhelper.abrir();
-        Reserva getReserva = dbhelper.consultarReserva(String.valueOf(realFacultadId), editmotivo.getText().toString());
-
-
-        dbhelper.cerrar();
-
-        if (getReserva != null ) {
-            dbhelper.abrir();
-
-
-
-            DetalleReserva getDReserva = dbhelper.consultarDetalleReserva(String.valueOf(getReserva.getIdreserva()));
-            Area getArea = dbhelper.consultarArea(String.valueOf(getDReserva.getIdarea()));
-            Horario getHorario = dbhelper.consultarHorario(String.valueOf(getReserva.getIdreserva()));
-            dbhelper.cerrar();
-            //TODO spinner to update
-            spfacultades.setSelection(getReserva.getIdfacultad()-1);
-            editfechacreacion.setText(getReserva.getFechaingreso());
-            editnumeropersonas.setText(String.valueOf(getReserva.getNumeropersonas()));
-            editmotivo.setText(getReserva.getMotivo());
-            editdescripcionreserva.setText(getReserva.getDescripcionreserva());
-            editspareas.setText(String.valueOf(getArea.getNombrearea()));
-            editfechareserva.setText(getHorario.getFechareserva());
-            edithorainicio.setText(getHorario.getHorarioinicio());
-            edithorafin.setText(getHorario.getHorariofin());
-
+        if (TextUtils.isEmpty(editmotivo.getText().toString())){
+            mensajes("El campo motivo esta vacio");
         }else{
-            mensajes("No se encontro Registro con esas Expecificaciones");
+            dbhelper.abrir();
+            Reserva getReserva = dbhelper.consultarReserva(String.valueOf(realFacultadId), editmotivo.getText().toString());
+
+            dbhelper.cerrar();
+
+            if (getReserva != null ) {
+                dbhelper.abrir();
+
+
+
+                DetalleReserva getDReserva = dbhelper.consultarDetalleReserva(String.valueOf(getReserva.getIdreserva()));
+                Area getArea = dbhelper.consultarArea(String.valueOf(getDReserva.getIdarea()));
+                Horario getHorario = dbhelper.consultarHorario(String.valueOf(getReserva.getIdreserva()));
+                dbhelper.cerrar();
+                //TODO spinner to update
+                spfacultades.setSelection(getReserva.getIdfacultad()-1);
+                editfechacreacion.setText(getReserva.getFechaingreso());
+                editnumeropersonas.setText(String.valueOf(getReserva.getNumeropersonas()));
+                editmotivo.setText(getReserva.getMotivo());
+                editdescripcionreserva.setText(getReserva.getDescripcionreserva());
+                editspareas.setText(String.valueOf(getArea.getNombrearea()));
+                editfechareserva.setText(getHorario.getFechareserva());
+                edithorainicio.setText(getHorario.getHorarioinicio());
+                edithorafin.setText(getHorario.getHorariofin());
+
+            }else{
+                mensajes("No se encontro Registro con esas Expecificaciones");
+            }
         }
+
+
 
     }
 
