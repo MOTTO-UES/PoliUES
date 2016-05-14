@@ -27,6 +27,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class ReservaInsertarActivity extends Activity implements View.OnClickListener {
 
@@ -187,6 +188,9 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                             public void onClick(View v) {
                                                 //if is create
                                                 if (!isUpdate) {
+                                                    if(!(TextUtils.isEmpty(editmotivo.getText().toString()) || TextUtils.isEmpty(editnumeropersonas.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editfechareserva.getText().toString()) || TextUtils.isEmpty(edithorainicio.getText().toString()) || TextUtils.isEmpty(edithorafin.getText().toString()))){
+                                                        String me;
+
                                                         dbhelper.abrir();
                                                         Reserva reservaguardar = new Reserva();
                                                         reservaguardar.setIdfacultad(realFacultadId);
@@ -194,7 +198,9 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                         reservaguardar.setMotivo(editmotivo.getText().toString());
                                                         reservaguardar.setDescripcionreserva(editdescripcionreserva.getText().toString());
                                                         reservaguardar.setFechaingreso(fechaActual());
-                                                        dbhelper.insertar(reservaguardar);
+                                                        me = dbhelper.insertar(reservaguardar);
+                                                        mensajes(me );
+                                                        me=" ";
                                                         Cursor getReservas = dbhelper.todaslasreservas();
 
                                                         if(getReservas!=null)
@@ -205,18 +211,29 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                         DetalleReserva detallereservaguardar = new DetalleReserva();
                                                         detallereservaguardar.setIdarea(realAreaId);
                                                         detallereservaguardar.setIdreserva(idReserva);
-                                                        dbhelper.insertar(detallereservaguardar);
+                                                        me = dbhelper.insertar(detallereservaguardar);
+                                                        mensajes(me );
+                                                        me=" ";
                                                         Horario horarioguardar = new Horario();
                                                         horarioguardar.setIdreserva(idReserva);
                                                         horarioguardar.setFechareserva(editfechareserva.getText().toString());
                                                         horarioguardar.setHorarioinicio(edithorainicio.getText().toString());
                                                         horarioguardar.setHorariofin(edithorafin.getText().toString());
-                                                        dbhelper.insertar(horarioguardar);
+                                                        me = dbhelper.insertar(horarioguardar);
+                                                        mensajes(me );
+                                                        me=" ";
                                                         dbhelper.cerrar();
 
+
+                                                    }else{
+                                                        mensajes("No se pudo realizar la accion por que Tiene campos vacios");
+                                                    }
                                                 }//if is update
                                                 else {
-                                                    // realId
+                                                    if(!(TextUtils.isEmpty(editmotivo.getText().toString()) || TextUtils.isEmpty(editnumeropersonas.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editfechareserva.getText().toString()) || TextUtils.isEmpty(edithorainicio.getText().toString()) || TextUtils.isEmpty(edithorafin.getText().toString()))){
+
+                                                        String m;
+                                                        // realId
 
                                                     dbhelper.abrir();
                                                     Reserva reservaactualizar = new Reserva();
@@ -226,19 +243,26 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                     reservaactualizar.setMotivo(editmotivo.getText().toString());
                                                     reservaactualizar.setDescripcionreserva(editdescripcionreserva.getText().toString());
                                                     reservaactualizar.setFechaingreso(fechaActual());
-                                                    dbhelper.actualizar(reservaactualizar);
+                                                    m = dbhelper.actualizar(reservaactualizar);
+                                                        mensajes(m);
+                                                        m=" ";
                                                     DetalleReserva detallereservaactualizar = new DetalleReserva();
                                                     detallereservaactualizar.setIdarea(realAreaId);
                                                     detallereservaactualizar.setIdreserva(realId);
-                                                    dbhelper.actualizar(detallereservaactualizar);
+                                                    m= dbhelper.actualizar(detallereservaactualizar);
+                                                        mensajes(m);
+                                                        m=" ";
                                                     Horario horarioactualizar = new Horario();
                                                     horarioactualizar.setIdreserva(realId);
                                                     horarioactualizar.setFechareserva(editfechareserva.getText().toString());
                                                     horarioactualizar.setHorarioinicio(edithorainicio.getText().toString());
                                                     horarioactualizar.setHorariofin(edithorafin.getText().toString());
-                                                    String m = dbhelper.actualizar(horarioactualizar);
+                                                    m = dbhelper.actualizar(horarioactualizar);
                                                     mensajes(m);
                                                     dbhelper.cerrar();
+                                                    }else{
+                                                        mensajes("No se pudo realizar la accion por que Tiene campos vacios");
+                                                    }
 
                                                 }
 
@@ -398,11 +422,11 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
             case TIME1_DIALOG_ID: {
                 //Hora Inicio
 
-                return new TimePickerDialog(this, timePickerListener1, hour, min, false);
+                return new TimePickerDialog(this, timePickerListener1, hour, min, true);
             }
             case TIME2_DIALOG_ID: {
                 //Hora Fin
-                return new TimePickerDialog(this, timePickerListener2, hour, min, false);
+                return new TimePickerDialog(this, timePickerListener2, hour, min,true);
             }
         }
         return null;
@@ -411,7 +435,26 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
         public void onDateSet(DatePicker view, int selectedYear,
                               int selectedMonth, int selectedDay) {
-            editfechareserva.setText(selectedDay + "-" + (selectedMonth + 1) + "-" + selectedYear);
+            Date fechaactual = null;
+            Date fechaingresada = null;
+            String fecha = selectedDay + "-" + (selectedMonth + 1) + "-" + selectedYear;
+            DateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
+            String fechadehoy = fechaActual();
+            try{
+                fechaactual=dateformat.parse(fechadehoy);
+                fechaingresada=dateformat.parse(fecha);
+
+            }catch (ParseException e){
+                e.printStackTrace();
+            }
+
+            if (fechaingresada.compareTo(fechaactual)<=0)
+            {
+                editfechareserva.setText(selectedDay + "-" + (selectedMonth + 1) + "-" + selectedYear);
+                editfechareserva.setError("Error la fecha ingresada es menor o igual que la actual");
+            }else{
+                editfechareserva.setError(null);
+            editfechareserva.setText(selectedDay + "-" + (selectedMonth + 1) + "-" + selectedYear);}
         }
     };
 
@@ -419,7 +462,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     private TimePickerDialog.OnTimeSetListener timePickerListener1 = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            int hour;
+            /*int hour;
             String am_pm;
             if (hourOfDay > 12) {
                 hour = hourOfDay - 12;
@@ -427,15 +470,15 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
             } else {
                 hour = hourOfDay;
                 am_pm = "AM";
-            }
-            edithorainicio.setText(hour + ":" + minute + " " + am_pm);
+            }*/
+            edithorainicio.setText(hourOfDay + ":" + minute);
         }
     };
 
      private TimePickerDialog.OnTimeSetListener timePickerListener2 = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            int hour;
+            /*int hour;
             String am_pm;
             if (hourOfDay > 12) {
                 hour = hourOfDay - 12;
@@ -443,13 +486,36 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
             } else {
                 hour = hourOfDay;
                 am_pm = "AM";
+            }*/
+
+            Date horainicio = null;
+            Date horafin = null;
+
+            DateFormat dateformat = new SimpleDateFormat("HH:mm");
+            String horacapturada = hourOfDay + ":" + minute;
+            try{
+                horainicio=dateformat.parse(edithorainicio.getText().toString());
+                horafin=dateformat.parse(horacapturada);
+
+            }catch (ParseException e){
+                e.printStackTrace();
             }
-            edithorafin.setText(hour + " : " + minute + " " + am_pm);
+
+            if (horafin.compareTo(horainicio)<=0)
+            {
+                edithorafin.setText(hourOfDay + ":" + minute);
+                edithorafin.setError("La hora fin debe ser mayor que la de inicio");
+            }else{
+                edithorafin.setText(hourOfDay + ":" + minute);
+                edithorafin.setError(null);
+            }
         }
     };
 
+
+
     public String fechaActual(){
-        return new SimpleDateFormat( "dd-MM-yyyy HH:mm:ss", java.util.Locale.getDefault()).format(Calendar.getInstance().getTime());
+        return new SimpleDateFormat( "dd-MM-yyyy", java.util.Locale.getDefault()).format(Calendar.getInstance().getTime());
     }
 
     public void mensajes(String mensaje) {
