@@ -1,10 +1,13 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.security.Principal;
 import java.util.ArrayList;
 
 
@@ -28,6 +33,7 @@ public class ReservaConsultarActivity extends AppCompatActivity {
     EditText edithorafin;
     Button btnConsultar;
     private static int realFacultadId=0;
+    Bundle admi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +43,49 @@ public class ReservaConsultarActivity extends AppCompatActivity {
         dbhelper.abrir();
         setUIComponents();
         addItemsOnSpinnerFacultades();
+        admi = getIntent().getExtras();
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.principal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent inte = new Intent(this, principal.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+            return true;
+        }
+        else{
+            if(id == R.id.consultarSolicitud){
+                Intent inte = new Intent(this,SolicitudConsultarActivity.class);
+                inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+                startActivity(inte);
+                return true;
+            }
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private void setUIComponents(){
@@ -124,6 +172,7 @@ public class ReservaConsultarActivity extends AppCompatActivity {
     }
 
     public void consultarReserva(View v) {
+
         if (TextUtils.isEmpty(editmotivo.getText().toString())){
             mensajes("El campo motivo esta vacio");
         }else{

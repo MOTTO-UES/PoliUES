@@ -20,7 +20,7 @@ public class principal extends AppCompatActivity
 
         String identificador=null;
         Administrador admin = null;
-    ControlBDPoliUES dbhelper;
+        ControlBDPoliUES dbhelper;
 
 
     @Override
@@ -147,6 +147,12 @@ public class principal extends AppCompatActivity
                 try{
                     Class<?> clase=Class.forName("poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity");
                     Intent inte = new Intent(this,clase);
+                    inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
+                    inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+                    inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+                    inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+                    inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+                    inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
                     this.startActivity(inte);
                 }catch(ClassNotFoundException e){
                     e.printStackTrace();

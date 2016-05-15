@@ -20,6 +20,7 @@ import android.os.Build.VERSION;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.BidiFormatter;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -81,15 +82,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         BDhelper = new ControlBDPoliUES(this);
 
-        Administrador ad = new Administrador();
+        /*Administrador ad = new Administrador();
         ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
         ad.setNombreAdmin("Rodrigo Romero");
-        ad.setPasswordAdmin("12345");
+        ad.setPasswordAdmin("12345");*/
 
 
         BDhelper.abrir();
-        BDhelper.insertarAdministrador(ad);
-
+        //BDhelper.insertarAdministrador(ad);
+        BDhelper.llenarBDPoli();
         BDhelper.cerrar();
 
 

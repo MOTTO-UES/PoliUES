@@ -36,17 +36,19 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
     private static ControlBDPoliUES dbhelper;
 
     private static ListView reservaList;
+    Bundle admi;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_reserva);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
+        admi = getIntent().getExtras();
 
 
         //instance variables
@@ -69,6 +71,11 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
                         Intent i = new Intent(ListarReservaActivity.this, ReservaInsertarActivity.class);
                         i.putExtra("isEdit", true);
                         i.putExtra("realId", realId);
+                        i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                        i.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                        i.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                        i.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                        i.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
                         startActivity(i);
                     }
                 }
@@ -190,10 +197,20 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
 
         if (id == R.id.gotocreatereserva) {
             Intent intent = new Intent(this, ReservaInsertarActivity.class);
+            intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(intent);
             return true;
         } else if (id == R.id.gotoqueryreserva) {
             Intent intent = new Intent(this, ReservaConsultarActivity.class);
+            intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(intent);
             return true;
         }
@@ -223,10 +240,20 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
     }
     public void insertarReserva(View v){
         Intent intent = new Intent(this,ReservaInsertarActivity.class);
+        intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+        intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+        intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+        intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+        intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
         startActivity(intent);
     }
     public void consultarReserva(View v){
         Intent intent = new Intent(this,ReservaConsultarActivity.class);
+        intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+        intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+        intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+        intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+        intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
         startActivity(intent);
     }
 

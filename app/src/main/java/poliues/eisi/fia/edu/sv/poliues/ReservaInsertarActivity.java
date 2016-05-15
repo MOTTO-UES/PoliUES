@@ -7,6 +7,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
@@ -29,7 +30,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class ReservaInsertarActivity extends Activity implements View.OnClickListener {
+public class ReservaInsertarActivity extends AppCompatActivity implements View.OnClickListener {
 
     ControlBDPoliUES dbhelper;
     Spinner spfacultades;
@@ -63,6 +64,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
     private static int realAreaId=0;
 
     int idReserva=0;
+    Bundle admi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +74,7 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
         //obtain the param of Intent of last activity
         isUpdate = getIntent().getBooleanExtra("isEdit", false);
         realId = getIntent().getIntExtra("realId", 0);
-        
+        admi = getIntent().getExtras();
 
         dbhelper = new ControlBDPoliUES(this);
         dbhelper.abrir();
@@ -263,6 +265,11 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                                 dbhelper.cerrar();
                                                                 //go to the list activity
                                                                 Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
+                                                                i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                                                                i.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                                                                i.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                                                                i.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                                                                i.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
                                                                 startActivity(i);
                                                             }
 
@@ -337,6 +344,12 @@ public class ReservaInsertarActivity extends Activity implements View.OnClickLis
                                                                 dbhelper.cerrar();
                                                                 //go to the list activity
                                                                 Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
+                                                                i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                                                                i.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                                                                i.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                                                                i.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                                                                i.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
                                                                 startActivity(i);
                                                             }
                                                         }

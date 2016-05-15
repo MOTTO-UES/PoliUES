@@ -45,9 +45,12 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         esAdmin = usuario.getString("EnvioAdministradorIDENTIFICADOR");
         if(esAdmin==null){
             esAdmin="noEsAdmin";
+            creador = usuario.getInt("IDUSUARIO");
+            System.out.println(esAdmin);
         }
         else {
-            creador = usuario.getInt("IDUSUARIO");
+           // creador = usuario.getInt("EnvioAdministradorID");
+            System.out.println(esAdmin);
         }
 
         soli = new Solicitante();
