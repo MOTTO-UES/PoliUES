@@ -2,6 +2,7 @@ package poliues.eisi.fia.edu.sv.poliues;
 
 //import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -15,7 +16,9 @@ import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class SolicitudInsertarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -24,6 +27,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     Spinner spinnerActividad;
     String actividadSeleccionada;
     Solicitante soli=null;
+    List<String> actividades = null;
 
 
     @Override
@@ -42,8 +46,11 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         editMotivo = (EditText) findViewById(R.id.editMotivoSolicitud);
         spinnerActividad = (Spinner) findViewById(R.id.SpinnerActividad);
 
+        actividades = actividades();
 
-        ArrayAdapter<CharSequence> adapterAct = ArrayAdapter.createFromResource(this, R.array.Actividades, android.R.layout.simple_spinner_item);
+
+        //ArrayAdapter<CharSequence> adapterAct = ArrayAdapter.createFromResource(this, R.array.Actividades, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapterAct= new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item, actividades);
 
 
         adapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -103,22 +110,48 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         String motivo = editMotivo.getText().toString();
         String regInsertados;
         String fechaCreacion;
+        Solicitud solicitud = new Solicitud();
+        Actividad activi =null;
 
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         Calendar cal = Calendar.getInstance();
 
         fechaCreacion = String.valueOf(dateFormat.format(cal.getTime()));
         System.out.println(fechaCreacion);
-        Solicitud solicitud = new Solicitud();
+        helper.abrir();
 
-        solicitud.setActividad(actividad);
+        Cursor acti = helper.consultarActividad();
+
+        if (acti.moveToFirst()){
+
+            do {
+                Actividad actividadC= new Actividad();
+
+                actividadC.setIdActividad(acti.getInt(0));
+                actividadC.setNombreActividad(acti.getString(1));
+                actividadC.setDescripcionActividad(acti.getString(2));
+
+                if (actividadC.getNombreActividad().equals(actividadSeleccionada)){
+                    activi = actividadC;
+                    break;
+                }
+
+
+            }while (acti.moveToNext());
+
+        }
+
+
+
+
+        solicitud.setActividad(activi.getIdActividad());
         solicitud.setMotivoSolicitud(motivo);
         solicitud.setTarifa(1);
         solicitud.setSolicitante(soli.getIdSolicitante());
         solicitud.setEstadoSolicitud("pendiente");
         solicitud.setFechaCreacion(fechaCreacion);
 
-        helper.abrir();
+
         regInsertados = helper.insertar(solicitud);
         helper.cerrar();
         Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
@@ -132,6 +165,36 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
     public void limpiarSolicitud(View v) {
         editMotivo.setText("");
+    }
+
+    public ArrayList<String> actividades() {
+        List<String> a = new ArrayList<String>();
+        Cursor ac;
+
+        helper = new ControlBDPoliUES(this);
+        helper.leer();
+
+        ac = helper.consultarActividad();
+
+        if (ac.moveToFirst()) {
+
+            do {
+
+                Actividad act = new Actividad();
+
+                act.setIdActividad(ac.getInt(0));
+                act.setNombreActividad(ac.getString(1));
+                act.setDescripcionActividad(ac.getString(2));
+
+
+                a.add(act.getNombreActividad());
+
+
+            } while (ac.moveToNext());
+
+        }
+
+        return (ArrayList<String>) a;
     }
 }
 

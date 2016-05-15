@@ -175,15 +175,13 @@ public class AdministradorActivity extends AppCompatActivity
 
 
             startActivity(inte);
-        }/* else if (id == R.id.nav_slideshow) {
+        }
+        else if (id == R.id.cerrarSesionAdmin) {
+            finish();
+            Intent inte = new Intent(this, LoginActivity.class);
+            startActivity(inte);
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

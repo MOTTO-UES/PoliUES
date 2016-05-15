@@ -128,23 +128,41 @@ public class verSolicitudActivity extends AppCompatActivity {
         //helper.cerrar();
 
         Cursor cursor2 = helper.consultarDetalleSolicitud();
+        Cursor cursor3 = helper.consultarActividad();
 
         Solicitud solicitud = null;
         DetalleSolicitud DS = null;
         Area area = null;
+        Actividad actividad = null;
 
         solicitud = helper.buscarSolicitud(cursor,motivo);
-
         DS = helper.buscarDetalleSolicitud(cursor2,solicitud.getIdSolicitud());
         area = helper.consultarAreaJ(String.valueOf(DS.getArea()));
 
+        if (cursor3.moveToFirst()){
+
+            do {
+                Actividad actividadC= new Actividad();
+
+                actividadC.setIdActividad(cursor3.getInt(0));
+                actividadC.setNombreActividad(cursor3.getString(1));
+                actividadC.setDescripcionActividad(cursor3.getString(2));
+
+                if (actividadC.getIdActividad() == solicitud.getActividad()){
+                    actividad = actividadC;
+                    break;
+                }
 
 
-        if(solicitud == null && DS == null && area == null){
+            }while (cursor3.moveToNext());
+
+        }
+
+        if(solicitud == null || DS == null || area == null || actividad==null){
             Toast.makeText(this,"no encontrado", Toast.LENGTH_LONG).show();
         }
         else{
-            actividadET.setText(String.valueOf(solicitud.getActividad()));
+            actividadET.setText(actividad.getNombreActividad());
             motivoET.setText(solicitud.getMotivoSolicitud());
             areaET.setText(area.getNombrearea());
             FI.setText(DS.getFechaInicio());

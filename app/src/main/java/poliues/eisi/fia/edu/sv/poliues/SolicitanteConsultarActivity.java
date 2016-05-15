@@ -130,6 +130,12 @@ public class SolicitanteConsultarActivity extends AppCompatActivity
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
         }
+        else if (id == R.id.cerrarSesionAdmin) {
+            finish();
+            Intent inte = new Intent(this, LoginActivity.class);
+            startActivity(inte);
+
+        }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

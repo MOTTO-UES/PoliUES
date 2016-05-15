@@ -472,12 +472,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     startActivity(inte);
                 }else {
                     Intent inte = new Intent(LoginActivity.this, PrincipalUsuario.class);
-                    /*
+
                     inte.putExtra("EnvioSolicitanteID",solicitante.getIdSolicitante());
                     inte.putExtra("EnvioSolicitanteNOMBRE", solicitante.getNombre());
                     inte.putExtra("EnvioSolicitantePASS", solicitante.getPassword());
                     inte.putExtra("EnvioSolicitanteCORREO", solicitante.getCorreo());
-                    */
+
                     startActivity(inte);
                 }
                 /////////////////////////////////////////////////////////////////////////////////

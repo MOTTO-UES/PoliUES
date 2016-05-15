@@ -75,7 +75,7 @@ public class ControlBDPoliUES {
                 //TABLAS RODRIGO
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-                        "actividad VARCHAR(20), " +
+                        "actividad INTEGER), " +
                         "tarifa INTEGER, " +
                         "administrador INTEGER," +
                         "solicitante INTEGER, " +
@@ -495,7 +495,7 @@ public class ControlBDPoliUES {
             Solicitud solicitud = new Solicitud();
 
             solicitud.setIdSolicitud(cursor.getInt(0));
-            solicitud.setActividad(cursor.getString(1));
+            solicitud.setActividad(cursor.getInt(1));
             solicitud.setTarifa(cursor.getInt(2));
             solicitud.setAdministrador(cursor.getInt(3));
             solicitud.setSolicitante(cursor.getInt(4));
@@ -520,7 +520,7 @@ public class ControlBDPoliUES {
                 solicitud = new Solicitud();
 
                 solicitud.setIdSolicitud(C.getInt(0));
-                solicitud.setActividad(C.getString(1));
+                solicitud.setActividad(C.getInt(1));
                 solicitud.setTarifa(C.getInt(2));
                 solicitud.setAdministrador(C.getInt(3));
                 solicitud.setSolicitante(C.getInt(4));
@@ -733,7 +733,7 @@ public class ControlBDPoliUES {
 
            /*REGISTROS TABLA SOLICITUD*/
         final int[] TSidSolicitud = {1,2};
-        final String[] TSactividad = {"politica","academica"};
+        final int[] TSactividad = {1,2};
         final int[] TStarifa = {1,1};
         final int[] TSadministrador = {1,1};
         final int[] TSsolicitante = {1,2};

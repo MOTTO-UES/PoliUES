@@ -148,15 +148,12 @@ public class AdministradorInsertarActivity extends AppCompatActivity implements 
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
-        }/* else if (id == R.id.nav_slideshow) {
+        }else if (id == R.id.cerrarSesionAdmin) {
+            finish();
+            Intent inte = new Intent(this, LoginActivity.class);
+            startActivity(inte);
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
