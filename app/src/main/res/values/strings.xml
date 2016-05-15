@@ -4,6 +4,7 @@
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
+    <string name="GestionarActividad">Gestionar Actividad</string>
     <string name="otroGrupo">Comunicacion</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
@@ -44,6 +45,10 @@
     <string name="txtpassAdministrador">Password</string>
     <string name="txtcorreoAdministrador">Correo</string>
 
+    <!-- ACTIVIDAD _ MOTTO -->
+
+    <string name="txtnombreActividad">Nombre</string>
+    <string name="txtdescripcionActividad">Descripcion</string>
 
     <!-- SOLICITANTE _ MOTTO -->
 
@@ -117,6 +122,10 @@ en el menu lateral o en el superior</string>
     <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
     <string name="texto7">\u00092.2) Editar solicitud.</string>
     <string name="texto8">\u00092.3) Eliminar solicitud</string>
+    <string name="title_activity_actividad">ActividadActivity</string>
+    <string name="title_activity_actividad_insertar">ActividadInsertarActivity</string>
+    <string name="title_activity_actividad_editar">ActividadEditarActivity</string>
+    <string name="title_activity_actividad_consultar">ActividadConsultarActivity</string>
 
     <!--RESERVA ALEX-->
 

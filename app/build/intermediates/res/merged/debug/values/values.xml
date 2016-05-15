@@ -301,6 +301,7 @@
     <string name="Administrador">Administrador</string>
     <string name="CrearSolicitudUsuario">Crear Solicitud</string>
     <string name="Estado">Estado Solicitud</string>
+    <string name="GestionarActividad">Gestionar Actividad</string>
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
@@ -436,6 +437,10 @@ en el menu lateral o en el superior</string>
     <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
     <string name="texto7">\u00092.2) Editar solicitud.</string>
     <string name="texto8">\u00092.3) Eliminar solicitud</string>
+    <string name="title_activity_actividad">ActividadActivity</string>
+    <string name="title_activity_actividad_consultar">ActividadConsultarActivity</string>
+    <string name="title_activity_actividad_editar">ActividadEditarActivity</string>
+    <string name="title_activity_actividad_insertar">ActividadInsertarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
@@ -459,6 +464,8 @@ en el menu lateral o en el superior</string>
     <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
     <string name="txtcorreoAdministrador">Correo</string>
     <string name="txtcorreoSolicitante">Correo</string>
+    <string name="txtdescripcionActividad">Descripcion</string>
+    <string name="txtnombreActividad">Nombre</string>
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtnombreSolicitante">Nombre</string>
     <string name="txtpassAdministrador">Password</string>

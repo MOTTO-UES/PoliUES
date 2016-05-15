@@ -88,8 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/entrar_principal_usuario"
-                android:textStyle="bold" />
-            -->
+                android:textStyle="bold" />-->
 
         </LinearLayout>
     </ScrollView>

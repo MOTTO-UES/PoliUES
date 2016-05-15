@@ -95,7 +95,7 @@ public class AdministradorActivity extends AppCompatActivity
             showAdministrador();
         }catch (Exception e){
             e.printStackTrace();
-            Toast.makeText(this, "error papu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No existen Administradores", Toast.LENGTH_SHORT).show();
         }
 
         /////////////////////////////////////////////////////////////////////////////////////
@@ -146,7 +146,7 @@ public class AdministradorActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.administrador) {
-            // Handle the camera action
+            //
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
@@ -155,6 +155,7 @@ public class AdministradorActivity extends AppCompatActivity
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
+
         }else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
             inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
@@ -162,6 +163,16 @@ public class AdministradorActivity extends AppCompatActivity
             inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
+
+        }else if (id == R.id.actividad) {
+            Intent inte = new Intent(this, ActividadActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
 
             startActivity(inte);
         }/* else if (id == R.id.nav_slideshow) {

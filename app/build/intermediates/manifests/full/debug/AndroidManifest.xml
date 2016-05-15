@@ -109,6 +109,22 @@
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteConsultarActivity" />
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteEliminarActivity" />
         <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteInsertarActivity" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.ActividadActivity"
+            android:label="@string/title_activity_actividad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.ActividadInsertarActivity"
+            android:label="@string/title_activity_actividad_insertar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.ActividadEditarActivity"
+            android:label="@string/title_activity_actividad_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.ActividadConsultarActivity"
+            android:label="@string/title_activity_actividad_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -34,15 +34,19 @@ public class principal extends AppCompatActivity
 
         //////////////////////////////////////////////
         ////// admin  contiene Administrador Logueado
+
         admin= administradorLogueado();
+
+        //final Administrador admin = administradorLogueado();
+
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "BIENVENIDO "+String.valueOf(admin.getNombreAdmin()), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "BIENVENIDO "+String.valueOf(admin.getNombreAdmin()), Snackbar.LENGTH_LONG)
+                  //      .setAction("Action", null).show();
             }
         });
 
@@ -126,6 +130,7 @@ public class principal extends AppCompatActivity
             inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
             startActivity(inte);
+
         } else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
             inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
@@ -134,6 +139,16 @@ public class principal extends AppCompatActivity
             inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
             inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+
+        } else if (id == R.id.actividad) {
+            Intent inte = new Intent(this, ActividadActivity.class);
+            inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+            inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+            inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+
             startActivity(inte);
         } else if (id == R.id.cerrarSesionAdmin) {
             finish();
@@ -176,6 +191,19 @@ public class principal extends AppCompatActivity
                 inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
                 inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
                 startActivity(inte);
+            }
+            else if(id == R.id.actiAlmacenar){
+                dbhelper.abrir();
+                String tost = dbhelper.llenarActividades();
+                Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+                dbhelper.cerrar();
+            }
+            else if (id == R.id.areaAlmacenar){
+                dbhelper.abrir();
+                String tost = dbhelper.llenarBDPolideportivo();
+                Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+                dbhelper.cerrar();
+
             }
 
         }

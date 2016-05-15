@@ -121,6 +121,7 @@ public class AdministradorConsultarActivity extends AppCompatActivity
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
+
         }else if (id == R.id.solicitud) {
             Intent inte = new Intent(this, SolicitudConsultarActivity.class);
             inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
@@ -128,6 +129,17 @@ public class AdministradorConsultarActivity extends AppCompatActivity
             inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
+
+        }else if (id == R.id.actividad) {
+            Intent inte = new Intent(this, ActividadActivity.class);
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+
+
             startActivity(inte);
         }
 
