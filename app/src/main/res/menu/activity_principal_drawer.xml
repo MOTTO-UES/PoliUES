@@ -39,4 +39,23 @@
         </menu>
     </item>
 
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_listar_reserva"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Gestionar Reserva" />
+
+
+    </group>
+
+    <item android:title="Data">
+        <menu>
+            <item
+                android:id="@+id/nav_almacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Almacenar Datos" />
+        </menu>
+    </item>
+
 </menu>

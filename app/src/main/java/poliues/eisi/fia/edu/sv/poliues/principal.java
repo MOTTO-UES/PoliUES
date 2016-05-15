@@ -13,11 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
         String identificador=null;
         Administrador admin = null;
+    ControlBDPoliUES dbhelper;
 
 
     @Override
@@ -26,6 +29,8 @@ public class principal extends AppCompatActivity
         setContentView(R.layout.activity_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        dbhelper = new ControlBDPoliUES(this);
+
 
         //////////////////////////////////////////////
         ////// admin  contiene Administrador Logueado
@@ -134,11 +139,32 @@ public class principal extends AppCompatActivity
             finish();
             Intent inte = new Intent(this, LoginActivity.class);
             startActivity(inte);
-        } /*else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        }
+        else {
+            if (id == R.id.nav_listar_reserva) {
+                // Handle the camera action
+                try{
+                    Class<?> clase=Class.forName("poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity");
+                    Intent inte = new Intent(this,clase);
+                    this.startActivity(inte);
+                }catch(ClassNotFoundException e){
+                    e.printStackTrace();
+                }
 
-        }*/
+
+
+            } else if (id == R.id.nav_almacenar) {
+                dbhelper.abrir();
+                String tost = dbhelper.llenarBDPoli();
+                Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+                dbhelper.cerrar();
+
+            }
+
+        }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

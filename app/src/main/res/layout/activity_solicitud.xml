@@ -33,7 +33,7 @@
         android:layout_marginTop="20dip"/>
 
     <TableRow>
-        <TextView android:text="@string/opciones" />
+        <TextView android:text="@string/opcionesSO" />
     </TableRow>
 
     <TableRow></TableRow>
@@ -45,12 +45,12 @@
 
         <Button
             android:onClick="limpiarSolicitud"
-            android:text="@string/limpiar"
+            android:text="@string/limpiarS"
             android:layout_column="0" />
 
         <Button
             android:onClick="InsertarSolicitud"
-            android:text="@string/insertar"
+            android:text="@string/insertarSo"
             android:layout_column="1" />
     </TableRow>
 

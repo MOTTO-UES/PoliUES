@@ -1,32 +1,32 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:2:1-83:12
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:2:1-101:12
 	package
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:3:5-46
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:2:11-52
 		INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:3:11-69
 	android:versionCode
 		INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:6:5-71
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:6:5-70
 	android:name
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:7:5-71
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:7:5-70
 	android:name
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:8:5-72
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:8:5-71
 	android:name
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:8:22-69
 application
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:10:5-81:19
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:10:5-99:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
@@ -66,128 +66,144 @@ ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\Pol
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:20:17-68
 	android:name
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:22:17-76
 	android:name
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:22:27-74
 activity#poliues.eisi.fia.edu.sv.poliues.principal
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:25:9-28:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:25:9-29:59
 	android:label
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:27:13-61
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:29:13-56
 	android:name
 		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:26:13-38
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudInsertarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:29:9-63
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:30:9-63
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:29:19-60
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:30:19-60
 activity#poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudInsertarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:30:9-70
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:31:9-70
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:30:19-67
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:31:19-67
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudActualizarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:31:9-65
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:32:9-65
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:31:19-62
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:32:19-62
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudEliminarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:32:9-63
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:33:9-63
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:32:19-60
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:33:19-60
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudConsultarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:33:9-64
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:34:9-64
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:33:19-61
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:34:19-61
 activity#poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudActualizarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:34:9-72
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:35:9-72
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:34:19-69
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:35:19-69
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:35:9-38:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:36:9-39:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:37:13-65
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:38:13-65
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:38:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:36:13-50
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:37:13-50
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorInsertarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:39:9-42:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:40:9-43:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:41:13-73
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:42:13-73
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:42:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:43:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:40:13-58
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:41:13-58
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:43:9-46:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:44:9-47:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:45:13-63
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:46:13-63
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:46:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:47:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:44:13-48
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:45:13-48
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorEditarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:47:9-50:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:48:9-51:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:49:13-72
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:50:13-72
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:50:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:51:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:48:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:49:13-56
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorConsultarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:51:9-54:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:52:9-55:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:53:13-75
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:54:13-75
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:54:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:55:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:52:13-59
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:53:13-59
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteEditarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:55:9-58:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:56:9-59:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:57:13-70
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:58:13-70
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:58:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:59:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:56:13-54
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:57:13-54
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteConsultarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:59:9-62:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:60:9-63:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:61:13-73
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:62:13-73
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:62:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:63:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:60:13-57
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:61:13-57
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteInsertarActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:63:9-66:59
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:64:9-67:59
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:65:13-72
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:66:13-72
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:66:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:67:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:64:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:65:13-56
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:72:9-74:69
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:73:9-75:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:74:13-66
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:75:13-66
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:73:13-58
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:74:13-58
 activity#poliues.eisi.fia.edu.sv.poliues.verSolicitudActivity
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:76:9-58
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:77:9-58
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:76:19-55
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:77:19-55
 activity#poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario
-ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:77:9-80:68
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:78:9-81:68
 	android:label
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:79:13-69
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:80:13-69
 	android:theme
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:80:13-56
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:81:13-56
 	android:name
-		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:78:13-45
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:79:13-45
+activity#poliues.eisi.fia.edu.sv.poliues.ReservaInsertarActivity
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:85:9-86:20
+	android:name
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:85:19-58
+activity#poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:87:9-90:20
+	android:label
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:88:19-51
+	android:theme
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:89:19-62
+	android:name
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:87:19-56
+activity#poliues.eisi.fia.edu.sv.poliues.ReservaConsultarActivity
+ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:91:9-92:20
+	android:name
+		ADDED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml:91:19-59
 uses-sdk
 INJECTED from C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\RodrigoDaniel\Desktop\Rodrigo\UES\PDM-115\Tarea 1 github\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78

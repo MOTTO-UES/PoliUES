@@ -92,6 +92,7 @@
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="fechaCreacion">fecha de creacion</string>
+
     <string name="Estado">Estado Solicitud</string>
 
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
@@ -117,6 +118,26 @@ en el menu lateral o en el superior</string>
     <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
     <string name="texto7">\u00092.2) Editar solicitud.</string>
     <string name="texto8">\u00092.3) Eliminar solicitud</string>
+
+    <!--RESERVA ALEX-->
+
+    <string name="facultad">Facultad:</string>
+    <string name="numeropersonas">N° de Personas:</string>
+    <string name="motivo">Motivo:</string>
+    <string name="descripcionreserva">Descripcion:</string>
+    <string name="fechareserva">Fecha Reserva:</string>
+    <string name="horarioinicioreserva">Hora Inicio:</string>
+    <string name="horariofinreserva">Hora Fin:</string>
+    <string name="opcionesSO">Opciones:</string>
+    <string name="insertarSo">Guardar</string>
+    <string name="limpiarS">Limpiar</string>
+    <string name="selectfecha">Seleccione la Fecha</string>
+    <string name="selecthora">Seleccione de hora</string>
+    <string name="consultar">Consultar</string>
+    <string name="nuevareserva">Nueva</string>
+    <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
+    <string name="fechacreada">Fecha Creada</string>
+
 
 
 </resources>

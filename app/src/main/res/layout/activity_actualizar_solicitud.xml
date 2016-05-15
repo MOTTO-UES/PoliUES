@@ -92,7 +92,7 @@
 
 
         <TableRow>
-            <TextView android:text="@string/opciones" />
+            <TextView android:text="@string/opcionesSO" />
         </TableRow>
 
 

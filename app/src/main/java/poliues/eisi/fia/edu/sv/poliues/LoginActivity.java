@@ -45,6 +45,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     /**
      * Id to identity READ_CONTACTS permission request.
      */
+    //ControlDBPoliUES BDhelper;
+
+
 
     private static final int REQUEST_READ_CONTACTS = 0;
 
@@ -78,8 +81,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         BDhelper = new ControlBDPoliUES(this);
 
+        Administrador ad = new Administrador();
+        ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
+        ad.setNombreAdmin("Rodrigo Romero");
+        ad.setPasswordAdmin("12345");
+
 
         BDhelper.abrir();
+        BDhelper.insertarAdministrador(ad);
 
         BDhelper.cerrar();
 

@@ -48,6 +48,9 @@
     <color name="colorAccent">#010000</color>
     <color name="colorPrimary">#5c0009</color>
     <color name="colorPrimaryDark">#5c0009</color>
+    <color name="colorResaltadorc">#270808</color>
+    <color name="colorResaltadorf">#270808</color>
+    <color name="colorResaltadorm">#270808</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
     <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
@@ -337,6 +340,7 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
+    <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>
@@ -371,6 +375,8 @@
     <string name="common_google_play_services_updating_title">Google Play services are updating</string>
     <string name="common_open_on_phone">Open on phone</string>
     <string name="comsultar">CONSULTAR</string>
+    <string name="consultar">Consultar</string>
+    <string name="descripcionreserva">Descripcion:</string>
     <string name="editar">EDITAR</string>
     <string name="entrar_principal">Puerta Trasera</string>
     <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
@@ -378,21 +384,34 @@
     <string name="error_incorrect_password">Contraseña incorecta</string>
     <string name="error_invalid_email">Direccion de correo erronea</string>
     <string name="error_invalid_password">Contraseña muy corta</string>
+    <string name="facultad">Facultad:</string>
     <string name="fechaCreacion">fecha de creacion</string>
     <string name="fechaFinal">fecha Final</string>
     <string name="fechaInicio">fecha Inicio</string>
+    <string name="fechacreada">Fecha Creada</string>
+    <string name="fechareserva">Fecha Reserva:</string>
+    <string name="horariofinreserva">Hora Fin:</string>
+    <string name="horarioinicioreserva">Hora Inicio:</string>
     <string name="idDescripcion">idDescripcion</string>
     <string name="idSolicitud">id solicitud</string>
     <string name="insertar">Insertar</string>
+    <string name="insertarSo">Guardar</string>
     <string name="limpiar">Limpiar</string>
+    <string name="limpiarS">Limpiar</string>
+    <string name="motivo">Motivo:</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="nuevareserva">Nueva</string>
+    <string name="numeropersonas">N° de Personas:</string>
     <string name="opciones">opciones</string>
+    <string name="opcionesSO">Opciones:</string>
     <string name="otroGrupo">Comunicacion</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="selectfecha">Seleccione la Fecha</string>
+    <string name="selecthora">Seleccione de hora</string>
     <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tarifa">Tarifa</string>
