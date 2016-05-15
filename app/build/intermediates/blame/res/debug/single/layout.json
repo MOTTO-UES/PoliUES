@@ -20,12 +20,12 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_solicitante.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_layout_snackbar_include.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_solicitante_editar.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\content_solicitante_editar.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.1\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
@@ -140,12 +140,12 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_listar_reserva.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_listar_reserva.xml"
-    },
-    {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_listar_reserva.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_listar_reserva.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
@@ -156,16 +156,16 @@
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_solicitante_insertar.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\app_bar_solicitante_insertar.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_detalle_solicitud.xml",
         "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\activity_detalle_solicitud.xml"
     },
     {
-        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_solicitante_insertar.xml",
-        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\src\\main\\res\\layout\\app_bar_solicitante_insertar.xml"
+        "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",

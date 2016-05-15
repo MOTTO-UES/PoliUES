@@ -90,8 +90,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         BDhelper.abrir();
         //BDhelper.insertarAdministrador(ad);
-        BDhelper.llenarBDPolideportivo();
-        BDhelper.llenarBDPoli();
+        //BDhelper.llenarBDPolideportivo();
+        //BDhelper.llenarBDPoli();
         BDhelper.cerrar();
 
 
@@ -482,5 +482,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
+
+    public void llenarAdmin(View v){
+        BDhelper.abrir();
+        BDhelper.crearAdmin();
+        BDhelper.cerrar();
+    }
+
 }
 

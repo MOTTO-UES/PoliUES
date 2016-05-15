@@ -131,19 +131,22 @@ public class verSolicitudActivity extends AppCompatActivity {
 
         Solicitud solicitud = null;
         DetalleSolicitud DS = null;
+        Area area = null;
 
         solicitud = helper.buscarSolicitud(cursor,motivo);
 
         DS = helper.buscarDetalleSolicitud(cursor2,solicitud.getIdSolicitud());
+        area = helper.consultarAreaJ(String.valueOf(DS.getArea()));
 
 
-        if(solicitud == null && DS == null){
+
+        if(solicitud == null && DS == null && area == null){
             Toast.makeText(this,"no encontrado", Toast.LENGTH_LONG).show();
         }
         else{
             actividadET.setText(String.valueOf(solicitud.getActividad()));
             motivoET.setText(solicitud.getMotivoSolicitud());
-            areaET.setText(String.valueOf(DS.getArea()));
+            areaET.setText(area.getNombrearea());
             FI.setText(DS.getFechaInicio());
             FF.setText(DS.getFechaFinal());
             CT.setText(String.valueOf(DS.getCobroTotal()));

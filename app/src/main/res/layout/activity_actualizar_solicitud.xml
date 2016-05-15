@@ -9,15 +9,6 @@
         android:paddingTop="30dip"
         android:stretchColumns="1">
 
-        <TableRow>
-            <TextView android:text="@string/Actividad" />
-            <Spinner
-                android:id="@+id/SpinnerActividad"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:prompt="@string/Actividad"
-                />
-        </TableRow>
 
         <TextView android:text=""
             android:layout_marginTop="20dip"/>

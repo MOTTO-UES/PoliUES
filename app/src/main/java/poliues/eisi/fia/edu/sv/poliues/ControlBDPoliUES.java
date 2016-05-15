@@ -491,7 +491,6 @@ public class ControlBDPoliUES {
 
         }
 
-
         return regInsertados;
     }
 
@@ -599,6 +598,68 @@ public class ControlBDPoliUES {
         }
 
         return DS;
+    }
+
+    public Cursor obtenerAreas(){
+        Cursor c= db.query("area",camposarea,null,null,null,null,null,null);
+
+        return c;
+    }
+
+    public Area consultarAreaNombre(Cursor cursor,String nombre){
+        Area area = null;
+        if(cursor.moveToFirst()){
+
+            do {
+                area = new Area();
+                area.setIdarea(cursor.getInt(0));
+                area.setMaximopersonas(cursor.getInt(1));
+                area.setNombrearea(cursor.getString(2));
+                area.setDescripcionarea(cursor.getString(3));
+
+                if(nombre.equals(area.getNombrearea())){
+
+                    System.out.println("mombre area buscado:"+area.getNombrearea());
+                    System.out.println("id area buscado:"+area.getIdarea());
+                    break;
+                }
+
+            }while(cursor.moveToNext());
+
+
+
+            return area;
+        }else{
+            return null;
+        }
+    }
+
+    public Area consultarAreaID(Cursor cursor,int id){
+        Area area = null;
+        if(cursor.moveToFirst()){
+
+            do {
+                area = new Area();
+                area.setIdarea(cursor.getInt(0));
+                area.setMaximopersonas(cursor.getInt(1));
+                area.setNombrearea(cursor.getString(2));
+                area.setDescripcionarea(cursor.getString(3));
+
+                if(id == area.getIdarea()){
+
+                    System.out.println("mombre area buscado:"+area.getNombrearea());
+                    System.out.println("id area buscado:"+area.getIdarea());
+                    break;
+                }
+
+            }while(cursor.moveToNext());
+
+
+
+            return area;
+        }else{
+            return null;
+        }
     }
 
 
@@ -1074,6 +1135,16 @@ public class ControlBDPoliUES {
             insertar(horario);
         }
 
+
+
+
+        cerrar();
+        System.out.println("se crearon todas las insert");
+        return "Guardo Correctamente";
+    }
+
+
+    public void crearAdmin(){
         Administrador ad = new Administrador();
         ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
         ad.setNombreAdmin("Rodrigo Romero");
@@ -1082,12 +1153,7 @@ public class ControlBDPoliUES {
         db.execSQL("DELETE FROM ADMINISTRADOR");
         insertarAdministrador(ad);
 
-
-        cerrar();
-        System.out.println("se crearon todas las insert");
-        return "Guardo Correctamente";
     }
-
 
 
     //CODIGO DE JW
@@ -1133,9 +1199,13 @@ public class ControlBDPoliUES {
             area.setMaximopersonas(cursor.getInt(1));
             area.setNombrearea(cursor.getString(2));
             area.setDescripcionarea(cursor.getString(3));
+
+            System.out.println("encontrado:"+area.getIdarea() );
             return area;
 
-        }else{ return null;
+        }else{
+            System.out.println("NO encontrado:");
+            return null;
         }
     }
 
@@ -1167,6 +1237,8 @@ public class ControlBDPoliUES {
         return regInsertados;
 
     }
+
+
 
     public String eliminarDeporte(Deporte deporte){
 
@@ -1201,6 +1273,8 @@ public class ControlBDPoliUES {
         }else{ return null;
         }
     }
+
+
 
     public String llenarBDPolideportivo(){
 

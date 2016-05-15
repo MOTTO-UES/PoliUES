@@ -18,7 +18,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class SolicitudActualizarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     ControlBDPoliUES helper;
@@ -28,8 +30,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
     TextView FI;
     TextView FF;
     EditText CT;
-    String actividadSeleccionada;
-    Spinner spinnerActividad;
+
     Spinner spinnerAreas;
     String AreaSeleccionada;
     String FechaInicio;
@@ -51,7 +52,9 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
     static final int DATE_DIALOG_ID_Inicio = 0;
     static final int DATE_DIALOG_ID_Fin = 1;
 
+
     Solicitante soli=null;
+    List<String> areas = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,17 +78,13 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         FI= (TextView) findViewById(R.id.dateDisplayInicio);
         FF= (TextView) findViewById(R.id.dateDisplayFin);
 
+        spinnerAreas = (Spinner) findViewById(R.id.SpinnerArea);
 
-        //LLENAR ACTIVIDADES
-        spinnerActividad = (Spinner) findViewById(R.id.SpinnerActividad);
-
-
-        ArrayAdapter<CharSequence> adapterAct = ArrayAdapter.createFromResource(this, R.array.Actividades, android.R.layout.simple_spinner_item);
-
-
-        adapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerActividad.setAdapter(adapterAct);
-        spinnerActividad.setOnItemSelectedListener(this);
+        areas = areas();
+        ArrayAdapter<String> adapterAr= new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item, areas);
+        adapterAr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAreas.setAdapter(adapterAr);
+        spinnerAreas.setOnItemSelectedListener(this);
 
 
         //CREAR CALENDARIOS
@@ -162,7 +161,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        this.actividadSeleccionada = parent.getItemAtPosition(position).toString();
+        this.AreaSeleccionada = parent.getItemAtPosition(position).toString();
     }
 
     @Override
@@ -271,21 +270,25 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
 
     public void ActualizarSolicitudYDS(View v){
 
-        String actividad = this.actividadSeleccionada;
+        String area= this.AreaSeleccionada;
         String motivo = motivoET.getText().toString();
 
         String regInsertados;
+        Area areaOb;
 
         solicitud.setMotivoSolicitud(motivo);
-        solicitud.setActividad(actividad);
-        solicitud.setTarifa(2);
+
+        Cursor OA = helper.obtenerAreas();
+        helper.abrir();
+        areaOb = helper.consultarAreaNombre(OA,AreaSeleccionada);
+
 
         DS.setCobroTotal(80);
-        DS.setArea(2);
+        DS.setArea(areaOb.getIdarea());
         DS.setFechaInicio(FI.getText().toString());
         DS.setFechaFinal(FF.getText().toString());
 
-        helper.abrir();
+
         String estado = helper.actualizar(solicitud);
         String estado2 = helper.actualizar(DS);
         helper.cerrar();
@@ -296,5 +299,38 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         o.putExtra("motivo",motivo);
         startActivity(o);
 
+    }
+
+
+    public ArrayList<String> areas() {
+        List<String> a = new ArrayList<String>();
+        Cursor ar;
+
+        helper = new ControlBDPoliUES(this);
+        helper.leer();
+
+        ar = helper.obtenerAreas();
+
+        if (ar.moveToFirst()) {
+
+            do {
+
+                Area are = new Area();
+
+                are.setIdarea(ar.getInt(0));
+                are.setMaximopersonas(ar.getInt(1));
+                are.setNombrearea(ar.getString(2));
+                are.setDescripcionarea(ar.getString(3));
+
+                a.add(are.getNombrearea());
+
+
+            } while (ar.moveToNext());
+
+
+
+        }
+
+        return (ArrayList<String>) a;
     }
 }
