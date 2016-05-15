@@ -1,49 +1,38 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 /**
- * Created by jonathan on 2/5/2016.
+ * Created by JhonyWilliam on 08/05/2016.
  */
-public class Area {
-    private int idarea;
-    private int maximopersona;
-    private String foto;
+public class Area extends Deporte {
+    private Integer idarea;
+    private Integer maximopersonas;
     private String nombrearea;
     private String descripcionarea;
 
-    public Area(){
-
+    public Area() {
     }
 
-    public Area(int idarea, int maximopersona, String foto, String nombrearea, String descripcionarea) {
+    public Area(Integer idarea, Integer maximopersonas, String nombrearea, String descripcionarea) {
         this.idarea = idarea;
-        this.maximopersona = maximopersona;
-        this.foto = foto;
+        this.maximopersonas = maximopersonas;
         this.nombrearea = nombrearea;
         this.descripcionarea = descripcionarea;
     }
 
-    public int getIdarea() {
+    public Integer getIdarea() {
         return idarea;
     }
 
-    public void setIdarea(int idarea) {
+    public void setIdarea(Integer idarea) {
         this.idarea = idarea;
     }
 
-    public int getMaximopersona() {
-        return maximopersona;
+    public Integer getMaximopersonas() {
+        return maximopersonas;
     }
 
-    public void setMaximopersona(int maximopersona) {
-        this.maximopersona = maximopersona;
-    }
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setMaximopersonas(Integer maximopersonas) {
+        this.maximopersonas = maximopersonas;
     }
 
     public String getNombrearea() {

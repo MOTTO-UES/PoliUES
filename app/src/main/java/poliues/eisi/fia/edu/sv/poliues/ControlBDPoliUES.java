@@ -40,6 +40,9 @@ public class ControlBDPoliUES {
     private static final  String[] camposfacultad = new String[] {"idfacultad","nombrefacultad"};
 
 
+    private static final String[]camposDeporte = new String [] {"iddeporte","nombredeporte","descripciondeporte"};
+    private static final String[]camposArea = new String [] {"idarea","maximopersonas","nombrearea","descripcionarea"};
+
     private final Context context;
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
@@ -67,7 +70,7 @@ public class ControlBDPoliUES {
             try{
 
                 ////////////////////////////////////////////////////////////////////////////////////
-
+                //TABLAS RODRIGO
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                         "actividad VARCHAR(20), " +
@@ -110,27 +113,48 @@ public class ControlBDPoliUES {
                 //FIN CREACION TBL MOTTO
                 //////////////////////////////////////////////////////////////////
 
+
+                //TABLAS ALEX
                 db.execSQL("create table reserva (idreserva  INTEGER PRIMARY KEY AUTOINCREMENT,idfacultad INTEGER NOT NULL,fechaingreso VARCHAR(50) NOT NULL,numeropersonas INTEGER NOT NULL, motivo VARCHAR(25) NOT NULL,descripcionreserva   VARCHAR(50) NOT NULL);");
                 db.execSQL("create table detallereserva ( iddetallereserva INTEGER PRIMARY KEY AUTOINCREMENT,idarea INTEGER NOT NULL, idreserva INTEGER NOT NULL);");
                 db.execSQL("create table horario ( idhorario INTEGER PRIMARY KEY AUTOINCREMENT,idreserva INTEGER,fechareserva VARCHAR(50) NOT NULL, horarioinicio VARCHAR(50) NOT NULL, horariofin VARCHAR(50)  NOT NULL);");
-                db.execSQL("create table area (idarea INTEGER PRIMARY KEY AUTOINCREMENT,maximopersonas INTEGER NOT NULL,nombrearea  VARCHAR(30) NOT NULL,descripcionarea VARCHAR(50) NOT NULL);");
                 db.execSQL("create table facultad(idfacultad INTEGER PRIMARY KEY AUTOINCREMENT ,nombrefacultad VARCHAR(40));");
-                /*Creamos nuestros triggers*/
 
+
+                //TABLAS JW
+                db.execSQL("create table deporte (" +
+                        "iddeporte INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        "nombredeporte VARCHAR(50) NOT NULL," +
+                        "descripciondeporte  VARCHAR(30) NOT NULL)");
+
+                db.execSQL("create table area (" +
+                        "idarea INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        "maximopersonas INTEGER NOT NULL," +
+                        "nombrearea  VARCHAR(30) NOT NULL," +
+                        "descripcionarea VARCHAR(50) NOT NULL)");
+
+                db.execSQL("create table deportearea (" +
+                        "iddeportearea  INTEGER not null ," +
+                        "idarea  INTEGER,iddeporte  INTEGER," +
+                        "constraint PK_DEPORTEAREA primary key (iddeportearea))");
+
+                //Creamos nuestros triggers
+
+                /*
                 db.execSQL("CREATE TRIGGER exiten_id_detallereserva" +
                         "BEFORE INSERT ON detallereserva" +
                         "FOR EACH ROW" +
                         "BEGIN" +
                         "SELECT CASE" +
-                        /*verifica que exista el area para detallereserva*/
+                        //verifica que exista el area para detallereserva
                         "WHEN((SELECT idarea from area WHERE idarea = NEW.idarea) IS NULL)" +
                         "THEN RAISE(ABORT, 'no existe el area')" +
-                        /*verifica que exista la reserva para detallereserva*/
+                        //verifica que exista la reserva para detallereserva
                         "WHEN((SELECT idreserva from reserva WHERE idreserva = NEW.idreserva) IS NULL)" +
                         "THEN RAISE(ABORT, 'no existe la reserva')" +
                         "END;" +
                         "END;");
-                /*verifica que exista el reserva para horario*/
+                //verifica que exista el reserva para horario
                 db.execSQL("CREATE TRIGGER exite_idreserva_en_reserva_horario" +
                         "BEFORE INSERT ON horario" +
                         "FOR EACH ROW" +
@@ -140,7 +164,7 @@ public class ControlBDPoliUES {
                         "THEN RAISE(ABORT, 'no existe la reserva')" +
                         "END;" +
                         "END;");
-                /*verifica que exista la faculta para reserva*/
+                //verifica que exista la faculta para reserva
                 db.execSQL("CREATE TRIGGER exite_idfacultad_en_facultad_reserva" +
                         "BEFORE INSERT ON reserva" +
                         "FOR EACH ROW" +
@@ -150,6 +174,7 @@ public class ControlBDPoliUES {
                         "THEN RAISE(ABORT, 'no existe la facultad')" +
                         "END;" +
                         "END;");
+                        */
 
 
 
@@ -677,7 +702,7 @@ public class ControlBDPoliUES {
 
         ContentValues area1 = new ContentValues();
         //area1.put("idarea", area.getIdarea());
-        area1.put("maximopersonas", area.getMaximopersona());
+        area1.put("maximopersonas", area.getMaximopersonas());
         area1.put("nombrearea", area.getNombrearea());
         area1.put("descripcionarea", area.getDescripcionarea());
                 contador = db.insert("area", null, area1);
@@ -807,12 +832,11 @@ public class ControlBDPoliUES {
 
     public Area consultarArea(String idarea){
         String[] id = {idarea};
-        Cursor cursor = db.query("area", camposarea, "idarea = ?", id,
-                null, null, null);
+        Cursor cursor = db.query("area", camposarea, "idarea = ?", id, null, null, null);
         if(cursor.moveToFirst()){
             Area area = new Area();
             area.setIdarea(Integer.parseInt(cursor.getString(0)));
-            area.setMaximopersona(Integer.parseInt(cursor.getString(1)));
+            area.setMaximopersonas(Integer.parseInt(cursor.getString(1)));
             area.setNombrearea(cursor.getString(2));
             area.setDescripcionarea(cursor.getString(3));
 
@@ -1007,7 +1031,6 @@ public class ControlBDPoliUES {
 
         abrir();
         db.execSQL("DELETE FROM facultad");
-        db.execSQL("DELETE FROM area");
         db.execSQL("DELETE FROM reserva");
         db.execSQL("DELETE FROM horario ");
         db.execSQL("DELETE FROM detallereserva");
@@ -1020,14 +1043,6 @@ public class ControlBDPoliUES {
             insertar(facultad);
         }
 
-        Area area = new Area();
-        for(int i=0;i<3;i++){
-            area.setIdarea(Integer.parseInt(VAidarea[i]));
-            area.setMaximopersona(Integer.parseInt(VAmaximopersona[i]));
-            area.setNombrearea(VAnombrearea[i]);
-            area.setDescripcionarea(VAdescripcionarea[i]);
-            insertar(area);
-        }
 
         Reserva reserva = new Reserva();
         for(int i=0;i<3;i++){
@@ -1070,6 +1085,154 @@ public class ControlBDPoliUES {
 
         cerrar();
         System.out.println("se crearon todas las insert");
+        return "Guardo Correctamente";
+    }
+
+
+
+    //CODIGO DE JW
+    public String insertarArea(Area area){
+        String regInsertados="Area Insertado N =";
+        long contador=0;
+
+        ContentValues are =new ContentValues();
+        are.put("idarea",area.getIdarea());
+        are.put("maximopersonas",area.getMaximopersonas());
+        are.put("nombrearea",area.getNombrearea());
+        are.put("descripcionarea",area.getDescripcionarea());
+
+        contador=db.insert("area", null,are);
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el area, Registro Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+        return regInsertados;
+
+    }
+
+    public String actualizarArea(Area area){
+        String[] id = {String.valueOf(area.getIdarea())};
+        ContentValues cv = new ContentValues();
+        cv.put("maximopersonas",area.getMaximopersonas());
+        cv.put("nombrearea",area.getNombrearea());
+        cv.put("descripcionarea",area.getDescripcionarea());
+        db.update("area", cv, "idarea = ?", id);
+        return "Area Actualizada Correctamente";
+
+    }
+
+    public Area consultarAreaJ(String idArea){
+        String[] id = {idArea};
+        Cursor cursor = db.query("area", camposArea, "idarea = ?",id, null, null,null,null);
+        if(cursor.moveToFirst()){
+            Area area = new Area();
+            area.setIdarea(cursor.getInt(0));
+            area.setMaximopersonas(cursor.getInt(1));
+            area.setNombrearea(cursor.getString(2));
+            area.setDescripcionarea(cursor.getString(3));
+            return area;
+
+        }else{ return null;
+        }
+    }
+
+    public String eliminarArea(Area area){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+        String where="idarea='"+area.getIdarea()+"'";
+        contador+=db.delete("area", where, null);
+        regAfectados+=contador;
+        return regAfectados;
+    }
+
+    public String insertar(Deporte deporte) {
+        String regInsertados="Deporte Insertado N =";
+        long contador=0;
+        ContentValues alum =new ContentValues();
+        alum.put("iddeporte", deporte.getIddeporte());
+        alum.put("nombredeporte",deporte.getNombredeporte());
+        alum.put("descripciondeporte",deporte.getDescripciondeporte());
+        contador=db.insert("deporte", null, alum);
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el deporte, Registro Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+        return regInsertados;
+
+    }
+
+    public String eliminarDeporte(Deporte deporte){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+        String where="iddeporte='"+deporte.getIddeporte()+"'";
+        contador+=db.delete("deporte", where, null);
+        regAfectados+=contador;
+        return regAfectados;
+    }
+
+    public String actualizar(Deporte deporte){
+        String[] id = {String.valueOf(deporte.getIddeporte())};
+        ContentValues cv = new ContentValues();
+        cv.put("nombredeporte",deporte.getNombredeporte());
+        cv.put("descripciondeporte",deporte.getDescripciondeporte());
+        db.update("deporte", cv, "iddeporte = ?", id);
+        return "Deporte Actualizado Correctamente";
+        //return "Registro con id Deporte "+ String.valueOf(deporte.getIddeporte()) + "no Existente";
+    }
+
+    public Deporte consultarDeporte(String idDeporte){
+        String[] id = {idDeporte};
+        Cursor cursor = db.query("deporte", camposDeporte, "iddeporte = ?",id, null, null,null);
+        if(cursor.moveToFirst()){
+            Deporte deporte = new Deporte();
+            deporte.setIddeporte(cursor.getInt(0));
+            deporte.setNombredeporte(cursor.getString(1));
+            deporte.setDescripciondeporte(cursor.getString(2));
+            return deporte;
+
+        }else{ return null;
+        }
+    }
+
+    public String llenarBDPolideportivo(){
+
+        final Integer[] VDiddeporte = {1,2,3,4,5,6};
+        final String[] VDnombre = {"Futbol","Boxeo","Baloncesto","Natacion","Futbo Sala","Voleibol"};
+        final String[] VDdescripcion = {"es un deporte de equipo jugado entre dos conjuntos de once jugadores cada uno y algunos árbitros","también llamado a veces boxeo inglés o boxeo irlandés, y coloquialmente conocido como box, es un deporte de combate en el que dos contrincantes luchan utilizando únicamente sus puños con guantes, golpeando a su adversario","es un deporte de equipo que se puede desarrollar tanto en pista cubierta como en descubierta, en el que dos conjuntos de cinco jugadores cada uno, intentan anotar puntos, también llamados canastas o dobles y/o triples introduciendo un balón en un aro colocado a 3,05 metros del suelo del que cuelga una red, lo que le da un aspecto de cesta o canasta","La natación es el movimiento y el desplazamiento a través del agua mediante el uso de las extremidades corporales y por lo general sin utilizar ningún instrumento o apoyo para avanzar","es un deporte colectivo de pelota practicado entre dos equipos de 5 jugadores cada uno, dentro de una cancha de suelo duro. Surgió inspirado en otros deportes como el fútbol, que es la base del juego; el waterpolo; el voleibol; el balonmano y el baloncesto","es un deporte donde dos equipos se enfrentan sobre un terreno de juego liso separados por una red central, tratando de pasar el balón por encima de la red hacia el suelo del campo contrario. El balón debe ser tocado o impulsado con golpes limpios, pero no puede ser parado, sujetado, retenido o acompañado"};
+
+        final Integer[] VAidarea = {1,2,3,4,5,6};
+        final Integer[] VAmaximoP = {100,200,300,400,500,600};
+        final String[] VAnombre = {"Estadio","Ring","Cancha Techada","Piscina","Cancha Techada F","Cancha de Arena"};
+        final String[] VAdescripcion = {"Estadio Martires","Ring de Boxeo","Cancha de Baloncesto","Piscina de 1000L","Duela","Cancha de Voleibol"};
+        abrir();
+        db.execSQL("DELETE FROM deporte");
+        db.execSQL("DELETE FROM area");
+
+
+        Deporte deporte = new Deporte();
+        for(int i=0;i<6;i++){
+            deporte.setIddeporte(VDiddeporte[i]);
+            deporte.setNombredeporte(VDnombre[i]);
+            deporte.setDescripciondeporte(VDdescripcion[i]);
+            insertar(deporte);
+        }
+        Area area = new Area();
+        for(int i=0;i<6;i++){
+            area.setIdarea(VAidarea[i]);
+            area.setMaximopersonas(VAmaximoP[i]);
+            area.setNombrearea(VAnombre[i]);
+            area.setDescripcionarea(VAdescripcion[i]);
+            insertar(area);
+        }
+        cerrar();
         return "Guardo Correctamente";
     }
 

@@ -167,6 +167,16 @@ public class principal extends AppCompatActivity
                 dbhelper.cerrar();
 
             }
+            else if(id == R.id.areasPoli){
+                Intent inte = new Intent(this, PolideportivoActivity.class);
+                inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
+                inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+                inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+                inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+                inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+                inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+                startActivity(inte);
+            }
 
         }
 
@@ -186,6 +196,8 @@ public class principal extends AppCompatActivity
         String ExtraPASS = getIntent().getExtras().getString("EnvioAdministradorPASS");
         String ExtraCORREO = getIntent().getExtras().getString("EnvioAdministradorCORREO");
         identificador = getIntent().getExtras().getString("EnvioAdministradorIDENTIFICADOR");
+
+        System.out.println("ES ADMIN?: "+identificador);
 
         administrador.setIdAdministrador(ExtraID);
         administrador.setNombreAdmin(ExtraNOMBRE);

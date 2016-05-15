@@ -90,6 +90,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         BDhelper.abrir();
         //BDhelper.insertarAdministrador(ad);
+        BDhelper.llenarBDPolideportivo();
         BDhelper.llenarBDPoli();
         BDhelper.cerrar();
 

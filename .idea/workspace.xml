@@ -5,21 +5,7 @@
       <config />
     </shared>
     <layouts>
-<<<<<<< HEAD
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-=======
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_listar_reserva.xml">
-        <config>
-          <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_consultar.xml">
-        <config>
-          <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_insertar.xml">
->>>>>>> origin/bautista
         <config>
           <theme>@style/AppTheme</theme>
         </config>

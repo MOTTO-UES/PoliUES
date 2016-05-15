@@ -46,6 +46,11 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Gestionar Reserva" />
 
+        <item android:id="@+id/areasPoli"
+            android:icon="@android:drawable/ic_lock_idle_lock"
+            android:title="Areas polideportivo"
+            />
+
 
     </group>
 
