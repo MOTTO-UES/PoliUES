@@ -1507,7 +1507,6 @@ en el menu lateral o en el superior</string><string name="selecthora">Seleccione
         <item>Cultural</item>
         <item>Deportiva</item>
         <item>Politica</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
     </string-array><string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string><string name="solicitud">solicitud</string><string name="title_activity_administrador_editar">AdministradorEditarActivity</string><string name="CrearSolicitudUsuario">Crear Solicitud</string><string name="fechareserva">Fecha Reserva:</string><string-array name="Areas">
         <item>Boleybolo</item>
         <item>Papi futbol</item>

@@ -111,7 +111,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         System.out.println(fechaCreacion);
         Solicitud solicitud = new Solicitud();
 
-        solicitud.setActividad(4);
+        solicitud.setActividad(actividad);
         solicitud.setMotivoSolicitud(motivo);
         solicitud.setTarifa(1);
         solicitud.setSolicitante(soli.getIdSolicitante());

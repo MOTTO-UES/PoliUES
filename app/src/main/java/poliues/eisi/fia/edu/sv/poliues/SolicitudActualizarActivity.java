@@ -277,7 +277,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         String regInsertados;
 
         solicitud.setMotivoSolicitud(motivo);
-        solicitud.setActividad(2);
+        solicitud.setActividad(actividad);
         solicitud.setTarifa(2);
 
         DS.setCobroTotal(80);

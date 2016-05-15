@@ -70,7 +70,7 @@ public class ControlBDPoliUES {
 
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-                        "actividad INTEGER, " +
+                        "actividad VARCHAR(20), " +
                         "tarifa INTEGER, " +
                         "administrador INTEGER," +
                         "solicitante INTEGER, " +
@@ -404,7 +404,7 @@ public class ControlBDPoliUES {
             Solicitud solicitud = new Solicitud();
 
             solicitud.setIdSolicitud(cursor.getInt(0));
-            solicitud.setActividad(cursor.getInt(1));
+            solicitud.setActividad(cursor.getString(1));
             solicitud.setTarifa(cursor.getInt(2));
             solicitud.setAdministrador(cursor.getInt(3));
             solicitud.setSolicitante(cursor.getInt(4));
@@ -429,7 +429,7 @@ public class ControlBDPoliUES {
                 solicitud = new Solicitud();
 
                 solicitud.setIdSolicitud(C.getInt(0));
-                solicitud.setActividad(C.getInt(1));
+                solicitud.setActividad(C.getString(1));
                 solicitud.setTarifa(C.getInt(2));
                 solicitud.setAdministrador(C.getInt(3));
                 solicitud.setSolicitante(C.getInt(4));
@@ -581,7 +581,7 @@ public class ControlBDPoliUES {
 
            /*REGISTROS TABLA SOLICITUD*/
         final int[] TSidSolicitud = {1,2};
-        final int[] TSactividad = {1,3};
+        final String[] TSactividad = {"politica","academica"};
         final int[] TStarifa = {1,1};
         final int[] TSadministrador = {1,1};
         final int[] TSsolicitante = {1,2};
@@ -1058,6 +1058,15 @@ public class ControlBDPoliUES {
 
             insertar(horario);
         }
+
+        Administrador ad = new Administrador();
+        ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
+        ad.setNombreAdmin("Rodrigo Romero");
+        ad.setPasswordAdmin("12345");
+
+        db.execSQL("DELETE FROM ADMINISTRADOR");
+        insertarAdministrador(ad);
+
 
         cerrar();
         System.out.println("se crearon todas las insert");
