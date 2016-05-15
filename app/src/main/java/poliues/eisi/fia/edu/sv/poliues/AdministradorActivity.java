@@ -86,7 +86,7 @@ public class AdministradorActivity extends AppCompatActivity
             showAdministrador();
         }catch (Exception e){
             e.printStackTrace();
-            Toast.makeText(this, "error papu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No existen Administradores", Toast.LENGTH_SHORT).show();
         }
 
         /////////////////////////////////////////////////////////////////////////////////////
@@ -132,12 +132,12 @@ public class AdministradorActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.administrador) {
-            // Handle the camera action
+            //
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
-        }else if (id == R.id.solicitud) {
-            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+        }else if (id == R.id.actividad) {
+            Intent inte = new Intent(this, ActividadActivity.class);
             startActivity(inte);
         }/* else if (id == R.id.nav_slideshow) {
 

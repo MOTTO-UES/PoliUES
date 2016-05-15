@@ -92,13 +92,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         System.out.println("el toast");
 
         //////////////////////////////////////////////////////
-        /*
+
         Button boton, botonUsuario;
         boton = (Button) findViewById(R.id.entrar_principal);
-        boton.setOnClickListener(this);
+        boton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inte = new Intent(LoginActivity.this, principal.class);
+                startActivity(inte);
+            }
+        });
         botonUsuario = (Button) findViewById(R.id.entrar_principal_usuario);
-        botonUsuario.setOnClickListener(this);
-        */
+        botonUsuario.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, PrincipalUsuario.class);
+                startActivity(intent);
+            }
+        });
+
 
         //////////////////////////////////////////////////////
 
@@ -455,12 +467,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     startActivity(inte);
                 }else {
                     Intent inte = new Intent(LoginActivity.this, PrincipalUsuario.class);
-
+                    /*
                     inte.putExtra("EnvioSolicitanteID",solicitante.getIdSolicitante());
                     inte.putExtra("EnvioSolicitanteNOMBRE", solicitante.getNombre());
                     inte.putExtra("EnvioSolicitantePASS", solicitante.getPassword());
                     inte.putExtra("EnvioSolicitanteCORREO", solicitante.getCorreo());
-
+                    */
                     startActivity(inte);
                 }
                 /////////////////////////////////////////////////////////////////////////////////

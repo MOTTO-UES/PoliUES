@@ -33,15 +33,15 @@ public class principal extends AppCompatActivity
 
         //////////////////////////////////////////////
         ////// admin  contiene Administrador Logueado
-        final Administrador admin = administradorLogueado();
+        //final Administrador admin = administradorLogueado();
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "BIENVENIDO "+String.valueOf(admin.getNombreAdmin()), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "BIENVENIDO "+String.valueOf(admin.getNombreAdmin()), Snackbar.LENGTH_LONG)
+                  //      .setAction("Action", null).show();
             }
         });
 
@@ -100,8 +100,8 @@ public class principal extends AppCompatActivity
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
-        } else if (id == R.id.solicitud) {
-            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+        } else if (id == R.id.actividad) {
+            Intent inte = new Intent(this, ActividadActivity.class);
             startActivity(inte);
         } else if (id == R.id.cerrarSesionAdmin) {
             finish();

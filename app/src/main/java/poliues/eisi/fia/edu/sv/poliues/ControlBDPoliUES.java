@@ -24,6 +24,8 @@ public class ControlBDPoliUES {
     private static final String[] camposSolicitante = new String[]
             {"IDSOLICITANTE","NOMBRE","PASSWORD","CORREO"};
 
+    private static final String[] camposActividad = new String[]
+            {"IDACTIVIDAD","NOMBREACTIVIDAD","DESCRIPCIONACTIVIDAD"};
 
     private final Context context;
     private DatabaseHelper DBHelper;
@@ -91,6 +93,13 @@ public class ControlBDPoliUES {
                                 "CORREO VARCHAR(25)  NOT NULL" +
                                 ")"
                 );
+                db.execSQL(
+                        "CREATE TABLE ACTIVIDAD (" +
+                                "IDACTIVIDAD INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                "NOMBREACTIVIDAD VARCHAR(25)  NOT NULL," +
+                                "DESCRIPCIONACTIVIDAD VARCHAR(25)  NOT NULL" +
+                                ")"
+                );
 
                 //FIN CREACION TBL MOTTO
                 //////////////////////////////////////////////////////////////////
@@ -115,8 +124,9 @@ public class ControlBDPoliUES {
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
                 ////////////////////////////////////////////////////////////////////
                 //DROP TBL_MOTTO
-                //db.execSQL("DROP TABLE IF EXIST ADMINISTRADOR");
-                //db.execSQL("DROP TABLE IF EXIST SOLICITANTE");
+                db.execSQL("DROP TABLE IF EXIST ADMINISTRADOR");
+                db.execSQL("DROP TABLE IF EXIST SOLICITANTE");
+                db.execSQL("DROP TABLE IF EXIST ACTIVIDAD");
                 ////////////////////////////////////////////////////////////////////
 
                 onCreate(db);
@@ -161,6 +171,7 @@ public class ControlBDPoliUES {
         }
 
         return regInsertados;
+
     }
     //Consultar Administrador
     public Cursor consultarAdministrador(){
@@ -211,6 +222,8 @@ public class ControlBDPoliUES {
         }
         return administrador;
     }
+
+
     /////////////////////////////////////////////////////////////////////////////
     //Agregar Solicitante
     public String insertarSolicitante(Solicitante solicitante){
@@ -287,6 +300,59 @@ public class ControlBDPoliUES {
         }
         return solicitante;
     }
+    ///////////////////////////////////////////////////////////////////////////
+    //Insertar Actividad
+    public String insertarActividad(Actividad actividad){
+        String regInsertados="Registro Insertado Nº= ";
+        long contador=0;
+
+        ContentValues val = new ContentValues();
+
+        val.put(camposActividad[1],actividad.getNombreActividad());
+        val.put(camposActividad[2],actividad.getDescripcionActividad());
+
+        contador=db.insert("ACTIVIDAD", null, val);
+
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar la Actividad, Actividad Duplicada. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+
+        return regInsertados;
+    }
+    //Consultar Actividad
+    public Cursor consultarActividad(){
+        Cursor c = db.query("ACTIVIDAD",camposActividad,null,null,null,null,null,null);
+        return c;
+    }
+    //Eliminar Actividad
+    public String eliminarActividad(Actividad actividad){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        contador+=db.delete("ACTIVIDAD", "IDACTIVIDAD='"+actividad.getIdActividad()+"'", null);
+        regAfectados+=contador;
+
+        return regAfectados;
+    }
+    //Actualizar Actividad
+    public String actualizarActividad(Actividad actividad){
+
+        String[] IDACTIVIDAD = {String.valueOf(actividad.getIdActividad())};
+        ContentValues val = new ContentValues();
+
+        val.put(camposActividad[1],actividad.getNombreActividad());
+        val.put(camposActividad[2],actividad.getDescripcionActividad());
+
+        db.update("ACTIVIDAD", val, "IDACTIVIDAD = ?", IDACTIVIDAD);
+
+        return "ACTIVIDAD Actualizada Correctamente";
+    }
+
 
     /////////////////////////////////////////////////////////////////////////////
 

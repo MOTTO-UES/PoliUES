@@ -14,6 +14,10 @@
             android:id="@+id/solicitud"
             android:icon="@drawable/ic_menu_send"
             android:title="@string/GestionarSolicitud" />
+        <item
+            android:id="@+id/actividad"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/GestionarActividad" />
         <!--
         <item
             android:id="@+id/nav_gallery"

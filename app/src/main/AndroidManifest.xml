@@ -77,6 +77,22 @@
         <activity
             android:name=".PrincipalUsuario"
             android:label="@string/title_activity_principal_usuario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActividadActivity"
+            android:label="@string/title_activity_actividad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActividadInsertarActivity"
+            android:label="@string/title_activity_actividad_insertar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActividadEditarActivity"
+            android:label="@string/title_activity_actividad_editar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActividadConsultarActivity"
+            android:label="@string/title_activity_actividad_consultar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

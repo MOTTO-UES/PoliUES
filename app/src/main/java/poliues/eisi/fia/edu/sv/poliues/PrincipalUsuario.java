@@ -28,15 +28,15 @@ public class PrincipalUsuario extends AppCompatActivity
 
         //////////////////////////////////////////////
         ////// soli  contiene Solicitante Logueado
-        final Solicitante soli = solicitanteLogueado();
+        //final Solicitante soli = solicitanteLogueado();
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "BIENVENIDO "+String.valueOf(soli.getNombre()), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+               // Snackbar.make(view, "BIENVENIDO "+String.valueOf(soli.getNombre()), Snackbar.LENGTH_LONG)
+                   //     .setAction("Action", null).show();
             }
         });
 

@@ -120,8 +120,8 @@ public class AdministradorEditarActivity extends AppCompatActivity
         } else if (id == R.id.solicitante) {
             Intent inte = new Intent(this, SolicitanteActivity.class);
             startActivity(inte);
-        }else if (id == R.id.solicitud) {
-            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+        }else if (id == R.id.actividad) {
+            Intent inte = new Intent(this, ActividadActivity.class);
             startActivity(inte);
         }
 
