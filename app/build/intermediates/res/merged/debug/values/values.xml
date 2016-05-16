@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="Actividades">
-        <item>Academica</item>
-        <item>Cultural</item>
-        <item>Deportiva</item>
-        <item>Politica</item>
-    </string-array>
-    <string-array name="Areas">
-        <item>Boleybolo</item>
-        <item>Papi futbol</item>
-        <item>Cancha de arena</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
-        <item>basquetball</item>
-        <item>Estadio</item>
-    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>

@@ -65,14 +65,6 @@
     <string name="idDescripcion">idDescripcion</string>
     <string name="solicitud">solicitud</string>
     <string name="area">area</string>
-    <string-array name="Areas">
-        <item>Boleybolo</item>
-        <item>Papi futbol</item>
-        <item>Cancha de arena</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
-        <item>basquetball</item>
-        <item>Estadio</item>
-    </string-array>
     <string name="fechaInicio">fecha Inicio</string>
     <string name="fechaFinal">fecha Final</string>
     <string name="cobroTotal">cobro total</string>
@@ -86,12 +78,7 @@
 
     <string name="idSolicitud">id solicitud</string>
     <string name="Actividad">actividad</string>
-    <string-array name="Actividades">
-        <item>Academica</item>
-        <item>Cultural</item>
-        <item>Deportiva</item>
-        <item>Politica</item>
-    </string-array>
+
     <string name="tarifa">Tarifa</string>
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>

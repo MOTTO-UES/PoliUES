@@ -361,7 +361,24 @@ public class ControlBDPoliUES {
         String regAfectados="filas afectadas= ";
         int contador=0;
 
+
+
+        Cursor c = consultarSolicitud();
+
+        if(c.moveToFirst()){
+
+            do {
+
+                if(c.getInt(4)== solicitante.getIdSolicitante()){
+                    contador+=db.delete("DetalleSolicitud", "solicitud='"+c.getInt(0)+"'", null);
+                }
+
+            }while (c.moveToNext());
+
+        }
+        contador+=db.delete("Solicitud", "solicitante='"+solicitante.getIdSolicitante()+"'", null);
         contador+=db.delete("SOLICITANTE", "IDSOLICITANTE='"+solicitante.getIdSolicitante()+"'", null);
+
         regAfectados+=contador;
 
         return regAfectados;
@@ -433,6 +450,22 @@ public class ControlBDPoliUES {
 
         String regAfectados="filas afectadas= ";
         int contador=0;
+
+        Cursor c = consultarSolicitud();
+
+        if(c.moveToFirst()){
+
+            do {
+
+                if(c.getInt(1)== actividad.getIdActividad()){
+                    contador+=db.delete("DetalleSolicitud", "solicitud='"+c.getInt(0)+"'", null);
+                    contador+=db.delete("Solicitud", "actividad='"+c.getInt(1)+"'", null);
+
+                }
+
+            }while (c.moveToNext());
+
+        }
 
         contador+=db.delete("ACTIVIDAD", "IDACTIVIDAD='"+actividad.getIdActividad()+"'", null);
         regAfectados+=contador;
@@ -554,6 +587,12 @@ public class ControlBDPoliUES {
         return solicitud;
     }
 
+    public void eliminarSolicitud(int id){
+
+        db.delete("Solicitud", "idSolicitud='"+id+"'", null);
+
+    }
+
 
     /*CRUD DETALLESOLICITUD-RODRIGO*/
     public String insertarDS(DetalleSolicitud detalleSolicitud) {
@@ -568,10 +607,12 @@ public class ControlBDPoliUES {
         detSol.put("cobroTotal", detalleSolicitud.getCobroTotal());
 
 
-        contador = db.insert("DetalleSolicitud", null, detSol);
+        contador+= db.insert("DetalleSolicitud", null, detSol);
         if (contador == -1 || contador == 0) {
             regInsertados = "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
 
+        }else{
+            regInsertados=regInsertados+contador;
         }
 
         return regInsertados;
@@ -1247,7 +1288,7 @@ public class ControlBDPoliUES {
         long contador=0;
 
         ContentValues are =new ContentValues();
-        are.put("idarea",area.getIdarea());
+        //are.put("idarea",area.getIdarea());
         are.put("maximopersonas",area.getMaximopersonas());
         are.put("nombrearea",area.getNombrearea());
         are.put("descripcionarea",area.getDescripcionarea());
@@ -1298,6 +1339,22 @@ public class ControlBDPoliUES {
 
         String regAfectados="filas afectadas= ";
         int contador=0;
+
+        Cursor c = consultarDetalleSolicitud();
+
+        if(c.moveToFirst()){
+
+            do {
+
+                if(c.getInt(2)== area.getIdarea()){
+                    contador+=db.delete("DetalleSolicitud", "area='"+c.getInt(0)+"'", null);
+                    contador+=db.delete("Solicitud","idSolicitud='"+c.getInt(1)+"'",null);
+                }
+
+            }while (c.moveToNext());
+
+        }
+
         String where="idarea='"+area.getIdarea()+"'";
         contador+=db.delete("area", where, null);
         regAfectados+=contador;

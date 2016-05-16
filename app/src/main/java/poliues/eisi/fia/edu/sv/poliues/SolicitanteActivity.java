@@ -228,7 +228,7 @@ public class SolicitanteActivity extends AppCompatActivity
                                 ///////////////////////////////////
                                 AlertDialog.Builder dialogo1 = new AlertDialog.Builder(SolicitanteActivity.this);
                                 dialogo1.setTitle("BORRAR");
-                                dialogo1.setMessage("¿ Desea Eliminar este Administrador ?");
+                                dialogo1.setMessage("¿ Desea Eliminar este Solicitante ?");
                                 dialogo1.setCancelable(false);
                                 dialogo1.setPositiveButton("BORRAR", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialogo1, int id) {

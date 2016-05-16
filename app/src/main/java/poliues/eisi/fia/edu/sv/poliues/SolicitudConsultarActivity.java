@@ -255,33 +255,66 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llenarSolicitudes(){
         helper = new ControlBDPoliUES(this);
-        helper.leer();
+        helper.abrir();
         cursor = helper.consultarSolicitud();
+        Cursor cursor2 = helper.consultarDetalleSolicitud();
+        int esta =0;
         //helper.cerrar();
 
         item = new ArrayList<String>();
 
-        if(cursor.moveToFirst()){
+
+        if (cursor.moveToFirst() && cursor2.moveToFirst()){
+            do {
+
+
+                    do {
+                        if(cursor.getInt(0)== cursor2.getInt(1)){
+                            esta+=1;
+                        }
+
+                    }while (cursor2.moveToNext());
+
+
+
+                if (esta==0){
+                    cursor2.moveToFirst();
+                    helper.eliminarSolicitud(cursor.getInt(0));
+                    esta=0;
+                }else {
+                    cursor2.moveToFirst();
+                    esta=0;
+                }
+
+            }while (cursor.moveToNext());
+        }
+
+
+        Cursor cursor3 = helper.consultarSolicitud();
+
+        if(cursor3.moveToFirst()){
 
             do {
 
                 Solicitud solicitud = new Solicitud();
 
 
-                solicitud.setIdSolicitud(cursor.getInt(0));
+                solicitud.setIdSolicitud(cursor3.getInt(0));
 
-                solicitud.setSolicitante(cursor.getInt(4));
+                solicitud.setSolicitante(cursor3.getInt(4));
 
-                solicitud.setMotivoSolicitud(cursor.getString(5));
+                solicitud.setMotivoSolicitud(cursor3.getString(5));
 
                 if (soli.getIdSolicitante() == solicitud.getSolicitante() || esAdmin.equals("admin")){
+
                     item.add(solicitud.getMotivoSolicitud());
+
                 }
 
 
 
 
-            }while(cursor.moveToNext());
+            }while(cursor3.moveToNext());
         }
 
 
