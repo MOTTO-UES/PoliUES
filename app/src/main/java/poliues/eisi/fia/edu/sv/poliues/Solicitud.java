@@ -6,18 +6,19 @@ package poliues.eisi.fia.edu.sv.poliues;
 public class Solicitud {
     private int idSolicitud;
     private int actividad;
-    private int tarifa;
+    private double tarifa;
     private int administrador;
     private int solicitante;
     private String motivoSolicitud;
     private String estadoSolicitud;
     private String fechaCreacion;
+    private int cantidadPersonas;
 
     public Solicitud(){
 
     }
 
-    public Solicitud(int idSolicitud, int actividad, int tarifa, int administrador, int solicitante, String motivoSolicitud, String fechaCreacion) {
+    public Solicitud(int idSolicitud, int actividad, double tarifa, int administrador, int solicitante, String motivoSolicitud, String fechaCreacion, int cantidadPersonas) {
         this.idSolicitud = idSolicitud;
         this.actividad = actividad;
         this.tarifa = tarifa;
@@ -25,6 +26,7 @@ public class Solicitud {
         this.solicitante = solicitante;
         this.motivoSolicitud = motivoSolicitud;
         this.fechaCreacion = fechaCreacion;
+        this.cantidadPersonas = cantidadPersonas;
     }
 
 
@@ -45,11 +47,11 @@ public class Solicitud {
         this.actividad = actividad;
     }
 
-    public int getTarifa() {
+    public double getTarifa() {
         return tarifa;
     }
 
-    public void setTarifa(int tarifa) {
+    public void setTarifa(double tarifa) {
         this.tarifa = tarifa;
     }
 
@@ -91,5 +93,13 @@ public class Solicitud {
 
     public void setEstadoSolicitud(String estadoSolicitud) {
         this.estadoSolicitud = estadoSolicitud;
+    }
+
+    public int getCantidadPersonas() {
+        return cantidadPersonas;
+    }
+
+    public void setCantidadPersonas(int cantidadPersonas) {
+        this.cantidadPersonas = cantidadPersonas;
     }
 }

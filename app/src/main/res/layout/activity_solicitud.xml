@@ -1,57 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="30dip"
-    android:stretchColumns="1"
+
     >
 
-
-    <TableRow>
-        <TextView android:text="@string/Actividad" />
-        <Spinner
-            android:id="@+id/SpinnerActividad"
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:prompt="@string/Actividad"
-            />
-    </TableRow>
-
-    <TextView android:text=""
-        android:layout_marginTop="20dip"/>
-
-    <TableRow>
-        <TextView android:text="@string/motivoSolicitud" />
-        <EditText
-            android:id="@+id/editMotivoSolicitud"
-            android:inputType="text"
-            android:maxLength="50"
-            />
-    </TableRow>
-
-    <TextView android:text=""
-        android:layout_marginTop="20dip"/>
-
-    <TableRow>
-        <TextView android:text="@string/opcionesSO" />
-    </TableRow>
-
-    <TableRow></TableRow>
-
-
-    <TableRow
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:paddingTop="30dip"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView android:text="@string/Actividad" />
+            <Spinner
+                android:id="@+id/SpinnerActividad"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:prompt="@string/Actividad"
+                />
+        </TableRow>
 
-        <Button
-            android:onClick="limpiarSolicitud"
-            android:text="@string/limpiarS"
-            android:layout_column="0" />
+        <TextView android:text=""
+            android:layout_marginTop="20dip"/>
 
-        <Button
-            android:onClick="InsertarSolicitud"
-            android:text="@string/insertarSo"
-            android:layout_column="1" />
-    </TableRow>
+        <TableRow>
+            <TextView android:text="@string/motivoSolicitud" />
+            <EditText
+                android:id="@+id/editMotivoSolicitud"
+                android:inputType="text"
+                android:maxLength="50"
+                />
+        </TableRow>
 
-</TableLayout>
+        <TextView android:text=""
+            android:layout_marginTop="20dip"/>
+
+        <TableRow>
+            <TextView android:text="@string/cantidadPersonasSolicitud" />
+            <EditText
+                android:id="@+id/editCantidadPersonasSolicitud"
+                android:inputType="numberDecimal"
+                android:maxLength="4"
+                />
+        </TableRow>
+
+        <TextView android:text=""
+            android:layout_marginTop="20dip"/>
+
+        <TableRow>
+            <TextView android:text="@string/opcionesSO" />
+        </TableRow>
+
+        <TableRow></TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:onClick="limpiarSolicitud"
+                android:text="@string/limpiarS"
+                android:layout_column="0" />
+
+            <Button
+                android:onClick="InsertarSolicitud"
+                android:text="@string/insertarSo"
+                android:layout_column="1" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</ScrollView>

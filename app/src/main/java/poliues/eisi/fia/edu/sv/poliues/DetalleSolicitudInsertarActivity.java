@@ -48,13 +48,14 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
     static final int DATE_DIALOG_ID_Fin = 1;
     Solicitante soli = null;
     List<String> areas = null;
+    Bundle extras=null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_solicitud);
-
+        extras = getIntent().getExtras();
         soli = new Solicitante();
 
         soli.setIdSolicitante(getIntent().getExtras().getInt("IDUSUARIO"));
@@ -265,13 +266,14 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
                 System.out.println("numero de area: "+area.getIdarea());
                 System.out.println(Soli.getIdSolicitud());
                 System.out.println("dia " + ((fn - ini) / (24 * 60 * 60 * 1000)));
+                int dia = (int) ((fn - ini) / (24 * 60 * 60 * 1000));
 
 
                 Dsolicitud.setSolicitud(Soli.getIdSolicitud());
                 Dsolicitud.setArea(area.getIdarea());
                 Dsolicitud.setFechaInicio(fechaInicio);
                 Dsolicitud.setFechaFinal(fechaFinal);
-                Dsolicitud.setCobroTotal(60);
+                Dsolicitud.setCobroTotal(dia*extras.getDouble("tarifa"));
 
                 helper.abrir();
                 regInsertados = helper.insertarDS(Dsolicitud);

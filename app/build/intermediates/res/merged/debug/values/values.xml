@@ -331,6 +331,7 @@
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
     <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
     <string name="cantPersonas">Cantidad Personas</string>
+    <string name="cantidadPersonasSolicitud">Cantidad de personas</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>

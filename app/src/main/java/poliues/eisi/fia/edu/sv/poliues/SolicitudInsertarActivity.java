@@ -24,6 +24,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
     ControlBDPoliUES helper;
     EditText editMotivo;
+    EditText editPersonas;
     Spinner spinnerActividad;
     String actividadSeleccionada;
     Solicitante soli=null;
@@ -44,7 +45,9 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
         helper = new ControlBDPoliUES(this);
         editMotivo = (EditText) findViewById(R.id.editMotivoSolicitud);
+        editPersonas = (EditText) findViewById(R.id.editCantidadPersonasSolicitud);
         spinnerActividad = (Spinner) findViewById(R.id.SpinnerActividad);
+
 
         actividades = actividades();
 
@@ -108,6 +111,8 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     public void InsertarSolicitud(View v) {
         String actividad = this.actividadSeleccionada;
         String motivo = editMotivo.getText().toString();
+        int personas =  Integer.valueOf(editPersonas.getText().toString());
+        double tarifa=0;
         String regInsertados;
         String fechaCreacion;
         Solicitud solicitud = new Solicitud();
@@ -141,15 +146,26 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
         }
 
+        Cursor cursorTarifa = helper.obtenerTarifa();
 
+        if (cursorTarifa.moveToFirst()){
+            do {
+                if(personas>cursorTarifa.getInt(1)){
+                    tarifa = cursorTarifa.getDouble(2);
+                }
+
+            }while (cursorTarifa.moveToNext());
+
+        }
 
 
         solicitud.setActividad(activi.getIdActividad());
         solicitud.setMotivoSolicitud(motivo);
-        solicitud.setTarifa(1);
+        solicitud.setTarifa(tarifa);
         solicitud.setSolicitante(soli.getIdSolicitante());
         solicitud.setEstadoSolicitud("pendiente");
         solicitud.setFechaCreacion(fechaCreacion);
+        solicitud.setCantidadPersonas(personas);
 
 
         regInsertados = helper.insertar(solicitud);
@@ -159,6 +175,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
         Intent i = new Intent(this, DetalleSolicitudInsertarActivity.class);
         i.putExtra("IDUSUARIO",soli.getIdSolicitante());
+        i.putExtra("tarifa",tarifa);
         startActivity(i);
     }
 

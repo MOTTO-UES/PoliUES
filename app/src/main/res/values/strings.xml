@@ -78,13 +78,12 @@
 
     <string name="idSolicitud">id solicitud</string>
     <string name="Actividad">actividad</string>
-
     <string name="tarifa">Tarifa</string>
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="fechaCreacion">fecha de creacion</string>
-
     <string name="Estado">Estado Solicitud</string>
+    <string name="cantidadPersonasSolicitud">Cantidad de personas</string>
 
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>

@@ -24,7 +24,7 @@ public class ControlBDPoliUES {
 
 
     private static final  String[] camposSolicitud = new  String[]
-            {"idSolicitud", "actividad", "tarifa", "administrador","solicitante", "motivoSolicitud","estadoSolicitud", "fechaCreacion"};
+            {"idSolicitud", "actividad", "tarifa", "administrador","solicitante", "motivoSolicitud","estadoSolicitud", "fechaCreacion","cantidadPersonas"};
 
     private static final String[] camposDetalleSolicitud = new String[]
             {"idDescripcion", "solicitud", "area", "fechaInicio", "fechaFinal", "cobroTotal"};
@@ -87,7 +87,8 @@ public class ControlBDPoliUES {
                         "solicitante INTEGER, " +
                         "motivoSolicitud VARCHAR(100)," +
                         "estadoSolicitud VARCHAR (20)," +
-                        "fechaCreacion VARCHAR(25))");
+                        "fechaCreacion VARCHAR(25)," +
+                        "cantidadPersonas INTEGER)");
 
 
                 db.execSQL("CREATE TABLE DetalleSolicitud(" +
@@ -577,7 +578,7 @@ public class ControlBDPoliUES {
                 solicitud.setMotivoSolicitud(C.getString(5));
                 solicitud.setEstadoSolicitud(C.getString(6));
                 solicitud.setFechaCreacion(C.getString(7));
-
+                solicitud.setCantidadPersonas(C.getInt(8));
                 if (solicitud.getMotivoSolicitud().equals(motivo)){
                     break;
                 }
@@ -1568,6 +1569,12 @@ public class ControlBDPoliUES {
                 return false;
         }
 
+    }
+
+    public Cursor obtenerTarifa(){
+        Cursor c = db.query("TARIFA",camposTarifa,null,null,null,null,null,null);
+
+        return  c;
     }
 }
 
