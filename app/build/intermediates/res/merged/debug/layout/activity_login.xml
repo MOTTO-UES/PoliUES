@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Crear admin"
+                android:text="@string/CrearAdmin"
                 android:onClick="llenarAdmin"
                 android:textStyle="bold" />
             <!--

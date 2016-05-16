@@ -10,11 +10,9 @@ import android.widget.ListView;
 
 public class TarifaMenuActivity extends ListActivity {
 
-    String[] menu={"Insertar Registro","Consultar Registro",
-            "Actualizar Registro"};
+    String[] menu={"Insertar Registro","Consultar Registro", "Actualizar Registro","Eliminar Registo"};
     String[]
-            activities={"TarifaInsertarActivity","TarifaConsultarActivity",
-            "TarifaActualizarActivity"};
+            activities={"TarifaInsertarActivity","TarifaConsultarActivity", "TarifaActualizarActivity","TarifaEliminarActivity"};
     Bundle admi=null;
 
     @Override

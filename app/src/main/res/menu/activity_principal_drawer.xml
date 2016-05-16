@@ -22,23 +22,23 @@
         <item
             android:id="@+id/tarifa"
             android:icon="@drawable/ic_menu_send"
-            android:title="Gestionar Tarifa" />
+            android:title="@string/GestionarTarifa" />
 
         <item
             android:id="@+id/nav_listar_reserva"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Gestionar Reserva" />
+            android:title="@string/GestionarReserva" />
 
         <item android:id="@+id/areasPoli"
             android:icon="@drawable/ic_menu_send"
-            android:title="Areas polideportivo"
+            android:title="@string/AreasPolideportivo"
             />
 
 
         <item
             android:id="@+id/Principal"
             android:icon="@drawable/ic_menu_send"
-            android:title="Pagina principal" />
+            android:title="@string/PaginaPrincipal" />
 
 
         <!--
@@ -72,24 +72,24 @@
             <item
                 android:id="@+id/nav_almacenar"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Almacenar Datos Reserva" />
+                android:title="@string/AlmacenarDatosReserva" />
 
             <item
                 android:id="@+id/actiAlmacenar"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Almacenar Actividades"
+                android:title="@string/AlmacenarActividades"
                 />
 
             <item
                 android:id="@+id/areaAlmacenar"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Almacenar Areas"
+                android:title="@string/AlmacenarActividades"
                 />
 
             <item
                 android:id="@+id/tarifaAlmacenar"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Almacenar Tarifas"
+                android:title="@string/AlmacenarTarifas"
                 />
         </menu>
     </item>

@@ -78,7 +78,6 @@
             android:name=".PrincipalUsuario"
             android:label="@string/title_activity_principal_usuario"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".ReservaInsertarActivity" />
         <activity
             android:name=".ListarReservaActivity"
@@ -103,8 +102,7 @@
         <activity android:name=".DeporteActualizarActivity" />
         <activity android:name=".DeporteConsultarActivity" />
         <activity android:name=".DeporteEliminarActivity" />
-        <activity android:name=".DeporteInsertarActivity"></activity>
-
+        <activity android:name=".DeporteInsertarActivity" />
         <activity
             android:name=".ActividadActivity"
             android:label="@string/title_activity_actividad"
@@ -120,8 +118,7 @@
         <activity
             android:name=".ActividadConsultarActivity"
             android:label="@string/title_activity_actividad_consultar"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TarifaActivity"
             android:label="@string/tittle_activity_tarifa_menu"
@@ -141,8 +138,8 @@
         <activity
             android:name=".TarifaActualizarActivity"
             android:label="@string/title_activity_tarifa_actualizar"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TarifaEliminarActivity"></activity>
     </application>
 
 </manifest>

@@ -167,41 +167,52 @@ public class ControlBDPoliUES {
 
                 //Creamos nuestros triggers
 
-                /*
-                db.execSQL("CREATE TRIGGER exiten_id_detallereserva" +
-                        "BEFORE INSERT ON detallereserva" +
-                        "FOR EACH ROW" +
-                        "BEGIN" +
-                        "SELECT CASE" +
+
+                db.execSQL("CREATE TRIGGER exiten_id_detallereserva " +
+                        "BEFORE INSERT ON [detallereserva]" +
+                        "FOR EACH ROW " +
+                        "BEGIN " +
+                        "SELECT CASE " +
                         //verifica que exista el area para detallereserva
-                        "WHEN((SELECT idarea from area WHERE idarea = NEW.idarea) IS NULL)" +
-                        "THEN RAISE(ABORT, 'no existe el area')" +
+                        "WHEN((SELECT idarea from area WHERE idarea = NEW.idarea) IS NULL) " +
+                        "THEN RAISE(ABORT, 'no existe el area') " +
                         //verifica que exista la reserva para detallereserva
-                        "WHEN((SELECT idreserva from reserva WHERE idreserva = NEW.idreserva) IS NULL)" +
-                        "THEN RAISE(ABORT, 'no existe la reserva')" +
-                        "END;" +
-                        "END;");
+                        "WHEN((SELECT idreserva from reserva WHERE idreserva = NEW.idreserva) IS NULL) " +
+                        "THEN RAISE(ABORT, 'no existe la reserva') " +
+                        "END; " +
+                        "END; ");
                 //verifica que exista el reserva para horario
-                db.execSQL("CREATE TRIGGER exite_idreserva_en_reserva_horario" +
-                        "BEFORE INSERT ON horario" +
-                        "FOR EACH ROW" +
-                        "BEGIN" +
-                        "SELECT CASE" +
-                        "WHEN((SELECT idreserva from reserva WHERE idreserva = NEW.idreserva) IS NULL)" +
-                        "THEN RAISE(ABORT, 'no existe la reserva')" +
-                        "END;" +
-                        "END;");
+                db.execSQL("CREATE TRIGGER exite_idreserva_en_reserva_horario " +
+                        "BEFORE INSERT ON [horario] " +
+                        "FOR EACH ROW " +
+                        "BEGIN " +
+                        "SELECT CASE " +
+                        "WHEN((SELECT idreserva from reserva WHERE idreserva = NEW.idreserva) IS NULL) " +
+                        "THEN RAISE(ABORT, 'no existe la reserva') " +
+                        "END; " +
+                        "END; ");
                 //verifica que exista la faculta para reserva
-                db.execSQL("CREATE TRIGGER exite_idfacultad_en_facultad_reserva" +
-                        "BEFORE INSERT ON reserva" +
-                        "FOR EACH ROW" +
-                        "BEGIN" +
-                        "SELECT CASE" +
-                        "WHEN((SELECT idfacultad from facultad WHERE idfacultad = NEW.idfacultad) IS NULL)" +
-                        "THEN RAISE(ABORT, 'no existe la facultad')" +
-                        "END;" +
-                        "END;");
-                        */
+                db.execSQL("CREATE TRIGGER exite_idfacultad_en_facultad_reserva " +
+                        "BEFORE INSERT ON [reserva] " +
+                        "FOR EACH ROW " +
+                        "BEGIN " +
+                        "SELECT CASE " +
+                        "WHEN((SELECT idfacultad from facultad WHERE idfacultad = NEW.idfacultad) IS NULL) " +
+                        "THEN RAISE(ABORT, 'no existe la facultad') " +
+                        "END; " +
+                        "END; ");
+
+/*
+                db.execSQL("CREATE TRIGGER exite_correo_en_administrador_ " +
+                        "BEFORE INSERT ON [ADMINISTRADOR] " +
+                        "FOR EACH ROW " +
+                        "BEGIN " +
+                        "SELECT CASE " +
+                        "WHEN((SELECT CORREOADMINISTRADOR from ADMINISTRADOR WHERE CORREOADMINISTRADOR = NEW.CORREOADMINISTRADOR) NOT NULL) " +
+                        "THEN RAISE(ABORT, 'YA EXISTE EL CORREO') " +
+                        "END; " +
+                        "END; ");*/
+
 
 
 
@@ -282,7 +293,7 @@ public class ControlBDPoliUES {
     //Eliminar Administrador
     public String eliminarAdministrador(Administrador administrador){
 
-        String regAfectados="filas afectadas= ";
+       String regAfectados="filas afectadas= ";
         int contador=0;
 
         contador+=db.delete("ADMINISTRADOR", "IDADMINISTRADOR='"+administrador.getIdAdministrador()+"'", null);
@@ -1477,7 +1488,7 @@ public class ControlBDPoliUES {
     public String llenarTarifa(){
         //final int[] VTidtarifa = {1,2,3,4,5};
         final int[] VTcantpersonas = {100,200,300,400,500};
-        final double[] VTtarifaunitaria = {1.50, 2.50,3.40,4.25,5};
+        final double[] VTtarifaunitaria = {30.50, 50.50,90.40,100.25,125};
 
         abrir();
         db.execSQL("DELETE from Tarifa");
@@ -1542,7 +1553,25 @@ public class ControlBDPoliUES {
 
     }
 
-    public String eliminar(Tarifa tarifa){return null;}
+    public String eliminarTarifa(int idTarifa){
+
+        String regAfectados="";
+        int contador=0;
+
+        contador+=db.delete("TARIFA", "idtarifa='"+idTarifa+"'", null);
+
+
+        if(contador!=0){
+            regAfectados+="filas afectadas= ";
+            regAfectados+=contador;
+        }
+        else {
+            regAfectados+="No se encontro el registro";
+        }
+
+        return regAfectados;
+
+    }
 
     private boolean verificarIntegridadG(Object dato, int relacion) throws SQLException{
 

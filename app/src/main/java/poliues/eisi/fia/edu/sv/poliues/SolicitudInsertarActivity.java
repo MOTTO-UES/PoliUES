@@ -111,15 +111,19 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     public void InsertarSolicitud(View v) {
         String actividad = this.actividadSeleccionada;
         String motivo = editMotivo.getText().toString();
-        int personas =  Integer.valueOf(editPersonas.getText().toString());
+        int personas =  0;
         double tarifa=0;
+        double tarifaMinima=1000000;
         String regInsertados;
         String fechaCreacion;
         Solicitud solicitud = new Solicitud();
         Actividad activi =null;
+        int motivoExistente=0;
 
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         Calendar cal = Calendar.getInstance();
+
+        personas+=Integer.valueOf(editPersonas.getText().toString());
 
         fechaCreacion = String.valueOf(dateFormat.format(cal.getTime()));
         System.out.println(fechaCreacion);
@@ -146,37 +150,70 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
 
         }
 
-        Cursor cursorTarifa = helper.obtenerTarifa();
+        if(actividadSeleccionada.equals("Politica")){
 
-        if (cursorTarifa.moveToFirst()){
-            do {
-                if(personas>cursorTarifa.getInt(1)){
-                    tarifa = cursorTarifa.getDouble(2);
-                }
+            Cursor cursorTarifa = helper.obtenerTarifa();
 
-            }while (cursorTarifa.moveToNext());
+            if (cursorTarifa.moveToFirst()){
+                do {
+                    if(personas>cursorTarifa.getInt(1)){
+                        tarifa = cursorTarifa.getDouble(2);
+                    }
 
+                    if(tarifaMinima>cursorTarifa.getDouble(2)){
+                        tarifaMinima = cursorTarifa.getDouble(2);
+                    }
+
+                }while (cursorTarifa.moveToNext());
+
+            }
+
+            if(tarifa==0){
+                tarifa=tarifaMinima;
+            }
         }
 
 
-        solicitud.setActividad(activi.getIdActividad());
-        solicitud.setMotivoSolicitud(motivo);
-        solicitud.setTarifa(tarifa);
-        solicitud.setSolicitante(soli.getIdSolicitante());
-        solicitud.setEstadoSolicitud("pendiente");
-        solicitud.setFechaCreacion(fechaCreacion);
-        solicitud.setCantidadPersonas(personas);
+
+        Cursor cursorMotivo = helper.consultarSolicitud();
+
+        if (cursorMotivo.moveToFirst()){
+            do {
+                if(cursorMotivo.getString(5).equals(motivo)){
+                    motivoExistente+=1;
+                }
+
+            }while (cursorMotivo.moveToNext());
+        }
 
 
-        regInsertados = helper.insertar(solicitud);
+        if(motivoExistente==0){
+            solicitud.setActividad(activi.getIdActividad());
+            solicitud.setMotivoSolicitud(motivo);
+            solicitud.setTarifa(tarifa);
+            solicitud.setSolicitante(soli.getIdSolicitante());
+            solicitud.setEstadoSolicitud("pendiente");
+            solicitud.setFechaCreacion(fechaCreacion);
+            solicitud.setCantidadPersonas(personas);
+
+
+            regInsertados = helper.insertar(solicitud);
+            Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
+
+
+            Intent i = new Intent(this, DetalleSolicitudInsertarActivity.class);
+            i.putExtra("IDUSUARIO",soli.getIdSolicitante());
+            i.putExtra("tarifa",tarifa);
+            startActivity(i);
+
+        }
+        else {
+            Toast.makeText(this, "Motivo repetido ingrese uno nuevo", Toast.LENGTH_SHORT).show();
+
+        }
         helper.cerrar();
-        Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
 
 
-        Intent i = new Intent(this, DetalleSolicitudInsertarActivity.class);
-        i.putExtra("IDUSUARIO",soli.getIdSolicitante());
-        i.putExtra("tarifa",tarifa);
-        startActivity(i);
     }
 
 

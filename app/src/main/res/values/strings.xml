@@ -13,11 +13,11 @@
     <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
+    <string name="prompt_email">Correo</string>
+    <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Entrar</string>
 
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in_short">Iniciar sesion</string>
     <string name="error_invalid_email">Direccion de correo erronea</string>
     <string name="error_invalid_password">Contraseña muy corta</string>
     <string name="error_incorrect_password">Contraseña incorecta</string>
@@ -163,6 +163,7 @@ en el menu lateral o en el superior</string>
     <string name="descripcionarea">descripcionArea</string>
 
 
+    <!--Parte gerardo-->
     <string name="tittle_activity_tarifa_menu">TarifaMenuActivity</string>
     <string name="title_activity_tarifa_insertar">TarifaInsertarActivity</string>
     <string name="title_activity_tarifa_eliminar">TarifaEliminarActivity</string>
@@ -179,6 +180,21 @@ en el menu lateral o en el superior</string>
     <string name="tarifaUnitaria">Tarifa Unitaria</string>
     <string name="GestionarTarifa">Gestionar Tarifa</string>
 
+
+    <string name="FechaDeFinalizacion">Fecha de finalizacion</string>
+    <string name="FechaDeInicio">Fecha de Inicio</string>
+    <string name="ListaDeReservas">Lista de Reservas</string>
+    <string name="CrearAdmin">Crear administrador</string>
+    <string name="Comunicacion">Comunicacion</string>
+    <string name="GestionarReserva">Gestionar Reserva</string>
+    <string name="AreasPolideportivo">Areas polideportivo</string>
+    <string name="PaginaPrincipal">Pagina principal</string>
+    <string name="AlmacenarDatosReserva">Almacenar Datos Reserva</string>
+    <string name="AlmacenarActividades">Almacenar Actividades</string>
+    <string name="AlmacenarAreas">Almacenar Areas"</string>
+    <string name="AlmacenarTarifas">Almacenar Tarifas</string>
+    <string name="ConsultarSolicitud">Consultar solicitud</string>
+    <string name="CrearSolicitud">Crear solicitud</string>
 
 </resources>
 
