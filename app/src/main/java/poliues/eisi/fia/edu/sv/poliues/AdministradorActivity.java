@@ -146,35 +146,36 @@ public class AdministradorActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.administrador) {
-            //
+            finish();
+            Intent inte = new Intent(this, AdministradorActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
         } else if (id == R.id.solicitante) {
+            finish();
             Intent inte = new Intent(this, SolicitanteActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
             inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
             inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
             inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
             startActivity(inte);
-
-        }else if (id == R.id.solicitud) {
-            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
-            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
-            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
-            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
-            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
-            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
-
-
         }else if (id == R.id.actividad) {
+            finish();
             Intent inte = new Intent(this, ActividadActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
             inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
             inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
             inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
             inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
-
-
             startActivity(inte);
+
         }
         else if (id == R.id.cerrarSesionAdmin) {
             finish();
@@ -182,6 +183,68 @@ public class AdministradorActivity extends AppCompatActivity
             startActivity(inte);
 
         }
+        else if (id == R.id.solicitud) {
+            finish();
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }
+        else if(id == R.id.tarifa){
+            finish();
+            Intent inte = new Intent(this,TarifaMenuActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }
+        else if (id == R.id.nav_listar_reserva) {
+            // Handle the camera action
+            try{
+                Class<?> clase=Class.forName("poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity");
+                finish();
+                Intent inte = new Intent(this,clase);
+                inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+                inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+                this.startActivity(inte);
+            }catch(ClassNotFoundException e){
+                e.printStackTrace();
+            }
+        } else if(id == R.id.areasPoli){
+            finish();
+            Intent inte = new Intent(this, PolideportivoActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }
+        else if (id == R.id.Principal){
+            finish();
+            Intent inte = new Intent(this, principal.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

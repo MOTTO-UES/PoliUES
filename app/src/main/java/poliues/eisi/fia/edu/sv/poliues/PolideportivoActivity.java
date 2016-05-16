@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class PolideportivoActivity extends ListActivity {
-    String[] menu={"Deporte","Area","Pagina principal","Llenado de Base"};
+    String[] menu={"Deporte","Area","Pagina principal",};
     String[] activities={"DeporteMenuActivity","AreaMenuActivity","principal"};
     ControlBDPoliUES BDhelper;
     Bundle admi;
@@ -40,6 +40,7 @@ public class PolideportivoActivity extends ListActivity {
                 System.out.println("Numero de casilla: "+position);
                 Class<?> clase=Class.forName("poliues.eisi.fia.edu.sv.poliues."+nombreValue);
                 Intent inte = new Intent(this,clase);
+                inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
                 inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
                 inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
                 inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));

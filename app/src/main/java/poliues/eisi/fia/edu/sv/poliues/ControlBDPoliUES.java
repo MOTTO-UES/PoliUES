@@ -202,7 +202,7 @@ public class ControlBDPoliUES {
                         "END; " +
                         "END; ");
 
-/*
+
                 db.execSQL("CREATE TRIGGER exite_correo_en_administrador_ " +
                         "BEFORE INSERT ON [ADMINISTRADOR] " +
                         "FOR EACH ROW " +
@@ -211,7 +211,7 @@ public class ControlBDPoliUES {
                         "WHEN((SELECT CORREOADMINISTRADOR from ADMINISTRADOR WHERE CORREOADMINISTRADOR = NEW.CORREOADMINISTRADOR) NOT NULL) " +
                         "THEN RAISE(ABORT, 'YA EXISTE EL CORREO') " +
                         "END; " +
-                        "END; ");*/
+                        "END; ");
 
 
 
@@ -1287,8 +1287,18 @@ public class ControlBDPoliUES {
         ad.setNombreAdmin("Rodrigo Romero");
         ad.setPasswordAdmin("12345");
 
+        Solicitante so = new Solicitante();
+        so.setCorreo("rodrigoxj35@gmail.com");
+        so.setNombre("Rodrigo Daniel");
+        so.setPassword("54321");
+
         db.execSQL("DELETE FROM ADMINISTRADOR");
         mensaje = insertarAdministrador(ad);
+
+        db.execSQL("DELETE FROM SOLICITANTE");
+        mensaje+=" ";
+
+        mensaje+= insertarSolicitante(so);
 
         return mensaje;
     }
