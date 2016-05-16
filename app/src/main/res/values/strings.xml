@@ -176,5 +176,23 @@ en el menu lateral o en el superior</string>
     <string name="nombrearea">nombreArea</string>
     <string name="descripcionarea">descripcionArea</string>
 
+
+    <string name="tittle_activity_tarifa_menu">TarifaMenuActivity</string>
+    <string name="title_activity_tarifa_insertar">TarifaInsertarActivity</string>
+    <string name="title_activity_tarifa_eliminar">TarifaEliminarActivity</string>
+    <string name="title_activity_tarifa_actualizar">TarifaActualizarActivity</string>
+    <string name="title_activity_tarifa_consultar">TarifaConsultarActivity</string>
+    <string name="title_activity_tarifa_menu">TarifaMenuActivity</string>
+    <string name="tarifa_menu">Función a Ejecutar Tarifa</string>
+    <string name="insertar_registro">Insertar Registro</string>
+    <string name="eliminar_registro">Eliminar Registro</string>
+    <string name="consultar_registro">Consultar Registro</string>
+    <string name="actualizar_registro">Actualizar Registro</string>
+    <string name="idtarifa">Id Tarifa</string>
+    <string name="cantPersonas">Cantidad Personas</string>
+    <string name="tarifaUnitaria">Tarifa Unitaria</string>
+    <string name="GestionarTarifa">Gestionar Tarifa</string>
+
+
 </resources>
 

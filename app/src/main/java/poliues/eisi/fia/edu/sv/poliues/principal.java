@@ -139,6 +139,7 @@ public class principal extends AppCompatActivity
             inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
             inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+            startActivity(inte);
 
         } else if (id == R.id.actividad) {
             Intent inte = new Intent(this, ActividadActivity.class);
@@ -148,9 +149,18 @@ public class principal extends AppCompatActivity
             inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
             inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
             inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
-
             startActivity(inte);
-        } else if (id == R.id.cerrarSesionAdmin) {
+        }else if(id == R.id.tarifa){
+            Intent inte = new Intent(this,TarifaMenuActivity.class);
+            inte.putExtra("IDUSUARIO", admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+            inte.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+            inte.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+            inte.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+            startActivity(inte);
+        }
+        else if (id == R.id.cerrarSesionAdmin) {
             finish();
             Intent inte = new Intent(this, LoginActivity.class);
             startActivity(inte);
@@ -205,6 +215,14 @@ public class principal extends AppCompatActivity
                 dbhelper.cerrar();
 
             }
+            else if (id == R.id.tarifaAlmacenar){
+                dbhelper.abrir();
+                String tost = dbhelper.llenarTarifa();
+                Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+                dbhelper.cerrar();
+
+            }
+
 
         }
 

@@ -125,6 +125,26 @@
             android:name="poliues.eisi.fia.edu.sv.poliues.ActividadConsultarActivity"
             android:label="@string/title_activity_actividad_consultar"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaActivity"
+            android:label="@string/tittle_activity_tarifa_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaMenuActivity"
+            android:label="@string/title_activity_tarifa_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaInsertarActivity"
+            android:label="@string/title_activity_tarifa_insertar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaConsultarActivity"
+            android:label="@string/title_activity_tarifa_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaActualizarActivity"
+            android:label="@string/title_activity_tarifa_actualizar"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

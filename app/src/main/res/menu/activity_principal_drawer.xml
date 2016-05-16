@@ -20,9 +20,27 @@
             android:title="@string/GestionarActividad" />
 
         <item
+            android:id="@+id/tarifa"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Gestionar Tarifa" />
+
+        <item
+            android:id="@+id/nav_listar_reserva"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Gestionar Reserva" />
+
+        <item android:id="@+id/areasPoli"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Areas polideportivo"
+            />
+
+
+        <item
             android:id="@+id/Principal"
             android:icon="@drawable/ic_menu_send"
             android:title="Pagina principal" />
+
+
         <!--
         <item
             android:id="@+id/nav_gallery"
@@ -48,20 +66,6 @@
         </menu>
     </item>
 
-    <group android:checkableBehavior="single">
-
-        <item
-            android:id="@+id/nav_listar_reserva"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Gestionar Reserva" />
-
-        <item android:id="@+id/areasPoli"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Areas polideportivo"
-            />
-
-
-    </group>
 
     <item android:title="Data">
         <menu>
@@ -80,6 +84,12 @@
                 android:id="@+id/areaAlmacenar"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="Almacenar Areas"
+                />
+
+            <item
+                android:id="@+id/tarifaAlmacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Almacenar Tarifas"
                 />
         </menu>
     </item>

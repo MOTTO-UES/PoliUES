@@ -7,12 +7,15 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 /**
  * Created by jonathan on 21/4/2016.
@@ -45,6 +48,9 @@ public class ControlBDPoliUES {
     private static final String[]camposDeporte = new String [] {"iddeporte","nombredeporte","descripciondeporte"};
     private static final String[]camposArea = new String [] {"idarea","maximopersonas","nombrearea","descripcionarea"};
 
+    private static final String[] camposTarifa = new String[]
+            {"idtarifa", "cantpersonas", "tarifaunitaria"};
+
     private final Context context;
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
@@ -75,7 +81,7 @@ public class ControlBDPoliUES {
                 //TABLAS RODRIGO
                 db.execSQL("CREATE TABLE Solicitud(" +
                         "idSolicitud INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-                        "actividad INTEGER), " +
+                        "actividad INTEGER, " +
                         "tarifa INTEGER, " +
                         "administrador INTEGER," +
                         "solicitante INTEGER, " +
@@ -103,6 +109,7 @@ public class ControlBDPoliUES {
                                 "CORREOADMINISTRADOR VARCHAR(25)  NOT NULL" +
                                 ")"
                 );
+
                 db.execSQL(
                         "CREATE TABLE SOLICITANTE (" +
                                 "IDSOLICITANTE INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
@@ -146,6 +153,16 @@ public class ControlBDPoliUES {
                         "iddeportearea  INTEGER not null ," +
                         "idarea  INTEGER,iddeporte  INTEGER," +
                         "constraint PK_DEPORTEAREA primary key (iddeportearea))");
+
+
+                //TABLA GERARDO
+                db.execSQL(
+                        "CREATE TABLE TARIFA (" +
+                                "idtarifa INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
+                                "cantpersonas INTEGER NOT NULL,"+
+                                "tarifaunitaria REAL"+
+                                ")"
+                );
 
                 //Creamos nuestros triggers
 
@@ -1210,15 +1227,17 @@ public class ControlBDPoliUES {
     }
 
 
-    public void crearAdmin(){
+    public String crearAdmin(){
+        String mensaje = null;
         Administrador ad = new Administrador();
         ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
         ad.setNombreAdmin("Rodrigo Romero");
         ad.setPasswordAdmin("12345");
 
         db.execSQL("DELETE FROM ADMINISTRADOR");
-        insertarAdministrador(ad);
+        mensaje = insertarAdministrador(ad);
 
+        return mensaje;
     }
 
 
@@ -1396,6 +1415,103 @@ public class ControlBDPoliUES {
         return "Guardado correctamente";
     }
 
+
+    public String llenarTarifa(){
+        //final int[] VTidtarifa = {1,2,3,4,5};
+        final int[] VTcantpersonas = {100,200,300,400,500};
+        final double[] VTtarifaunitaria = {1.50, 2.50,3.40,4.25,5};
+
+        abrir();
+        db.execSQL("DELETE from Tarifa");
+
+
+        //tabla gerardo
+        Tarifa tarifa = new Tarifa();
+        for(int i=0;i<5;i++){
+           // tarifa.setIdTarifa(VTidtarifa[i]);
+            tarifa.setCantidadPersonas(VTcantpersonas[i]);
+            tarifa.setTarifaUnitaria(VTtarifaunitaria[i]);
+            InsertarTarifa(tarifa);
+        }
+
+        cerrar();
+        return "Guardo Correctamente";
+    }
+
+    public String InsertarTarifa(Tarifa tarifa){
+
+        String regInsertardo="tarifa Insertada N°:";
+        long contador;
+
+        ContentValues tari= new ContentValues();
+        //tari.put("idtarifa", tarifa.getIdTarifa());
+        tari.put("cantpersonas",tarifa.getCantidadPersonas());
+        tari.put("tarifaunitaria",tarifa.getTarifaUnitaria());
+        contador=db.insert("tarifa",null,tari);
+
+        regInsertardo=regInsertardo+contador;
+
+        return regInsertardo;
+
+    }
+
+    public String actualizarTarifa(Tarifa tarifa){
+
+        if(verificarIntegridadG(tarifa,1)){
+            String[] id = {String.valueOf(tarifa.getCantidadPersonas())};
+            ContentValues cv = new ContentValues();
+            cv.put("tarifaunitaria", tarifa.getTarifaUnitaria());
+            db.update("tarifa", cv, "cantpersonas = ?", id);
+            return "Registro Actualizado Correctamente";
+        }else{
+            return "Registro con Cantidad de Personas "+tarifa.getCantidadPersonas() +" no existe";
+        }
+    }
+
+    public Tarifa consultarTarifa(int cantpersona) {
+
+        String[] id = {String.valueOf(cantpersona)};
+        Cursor cursor = db.query("tarifa", camposTarifa, "cantpersonas = ?", id, null, null, null);
+        if(cursor.moveToFirst()){
+            Tarifa tarifa=new Tarifa();
+            tarifa.setIdTarifa(cursor.getInt(0));
+            tarifa.setCantidadPersonas(cursor.getInt(1));
+            tarifa.setTarifaUnitaria(cursor.getDouble(2));
+            return tarifa;
+        }else{
+            return null;
+        }
+
+    }
+
+    public String eliminar(Tarifa tarifa){return null;}
+
+    private boolean verificarIntegridadG(Object dato, int relacion) throws SQLException{
+
+        switch (relacion){
+            case 1:
+            {//verificar si existe rango de personas cantpersonas
+                Tarifa tarifa2= (Tarifa)dato;
+                String[] id= {String.valueOf(tarifa2.getCantidadPersonas())};
+                abrir();
+                Cursor c2= db.query("tarifa", null, "cantpersonas = ?", id, null, null, null);
+                if(c2.moveToFirst()){
+                    //tarifa encontrada
+                    return true;
+                }else{return false;}
+            }
+            /*case 2:
+            {
+                Tarifa tarifa= (Tarifa)dato;
+                Cursor c=db.query(true,"tarifaUnitaria", new String[]{""})
+
+            }*/
+            // Pro si necesito mas xD
+            default:
+                return false;
+        }
+
+    }
 }
 
 

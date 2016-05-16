@@ -497,8 +497,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     public void llenarAdmin(View v){
         BDhelper.abrir();
-        BDhelper.crearAdmin();
+        String menj = BDhelper.crearAdmin();
         BDhelper.cerrar();
+
+        Toast.makeText(this,menj,Toast.LENGTH_SHORT).show();
     }
 
 }

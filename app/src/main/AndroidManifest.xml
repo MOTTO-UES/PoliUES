@@ -122,6 +122,27 @@
             android:label="@string/title_activity_actividad_consultar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity
+            android:name=".TarifaActivity"
+            android:label="@string/tittle_activity_tarifa_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TarifaMenuActivity"
+            android:label="@string/title_activity_tarifa_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TarifaInsertarActivity"
+            android:label="@string/title_activity_tarifa_insertar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TarifaConsultarActivity"
+            android:label="@string/title_activity_tarifa_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TarifaActualizarActivity"
+            android:label="@string/title_activity_tarifa_actualizar"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

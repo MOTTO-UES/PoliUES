@@ -305,6 +305,7 @@
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
+    <string name="GestionarTarifa">Gestionar Tarifa</string>
     <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -332,6 +333,7 @@
     <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
     <string name="actualizar">Actualizar</string>
     <string name="actualizarJ">Actualizar</string>
+    <string name="actualizar_registro">Actualizar Registro</string>
     <string name="app_name">PoliUES</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="area">area</string>
@@ -342,6 +344,7 @@
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
     <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
+    <string name="cantPersonas">Cantidad Personas</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>
@@ -378,11 +381,13 @@
     <string name="comsultar">CONSULTAR</string>
     <string name="consultar">Consultar</string>
     <string name="consultarJ">Consultar</string>
+    <string name="consultar_registro">Consultar Registro</string>
     <string name="descripcionarea">descripcionArea</string>
     <string name="descripciondeporte">descripcion Deporte</string>
     <string name="descripcionreserva">Descripcion:</string>
     <string name="editar">EDITAR</string>
     <string name="eliminarJ">Eliminar</string>
+    <string name="eliminar_registro">Eliminar Registro</string>
     <string name="entrar_principal">Puerta Trasera</string>
     <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
     <string name="error_field_required">Campo requerido</string>
@@ -401,9 +406,11 @@
     <string name="idDescripcion">idDescripcion</string>
     <string name="idSolicitud">id solicitud</string>
     <string name="iddeporte">idDeporte</string>
+    <string name="idtarifa">Id Tarifa</string>
     <string name="insertar">Insertar</string>
     <string name="insertarJ">Insertar</string>
     <string name="insertarSo">Guardar</string>
+    <string name="insertar_registro">Insertar Registro</string>
     <string name="limpiar">Limpiar</string>
     <string name="limpiarJ">Limpiar</string>
     <string name="limpiarS">Limpiar</string>
@@ -428,6 +435,8 @@
     <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tarifa">Tarifa</string>
+    <string name="tarifaUnitaria">Tarifa Unitaria</string>
+    <string name="tarifa_menu">Función a Ejecutar Tarifa</string>
     <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
 en el menu lateral o en el superior</string>
     <string name="texto2">Dispone de las opciones:</string>
@@ -461,7 +470,13 @@ en el menu lateral o en el superior</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
+    <string name="title_activity_tarifa_actualizar">TarifaActualizarActivity</string>
+    <string name="title_activity_tarifa_consultar">TarifaConsultarActivity</string>
+    <string name="title_activity_tarifa_eliminar">TarifaEliminarActivity</string>
+    <string name="title_activity_tarifa_insertar">TarifaInsertarActivity</string>
+    <string name="title_activity_tarifa_menu">TarifaMenuActivity</string>
     <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
+    <string name="tittle_activity_tarifa_menu">TarifaMenuActivity</string>
     <string name="txtcorreoAdministrador">Correo</string>
     <string name="txtcorreoSolicitante">Correo</string>
     <string name="txtdescripcionActividad">Descripcion</string>
