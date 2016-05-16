@@ -29,12 +29,14 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     String actividadSeleccionada;
     Solicitante soli=null;
     List<String> actividades = null;
+    Bundle admi=null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solicitud);
+        admi = getIntent().getExtras();
 
         soli = new Solicitante();
 
@@ -109,6 +111,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
     }
 
     public void InsertarSolicitud(View v) {
+
         String actividad = this.actividadSeleccionada;
         String motivo = editMotivo.getText().toString();
         int personas =  0;
@@ -187,31 +190,53 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         }
 
 
-        if(motivoExistente==0){
-            solicitud.setActividad(activi.getIdActividad());
-            solicitud.setMotivoSolicitud(motivo);
-            solicitud.setTarifa(tarifa);
-            solicitud.setSolicitante(soli.getIdSolicitante());
-            solicitud.setEstadoSolicitud("pendiente");
-            solicitud.setFechaCreacion(fechaCreacion);
-            solicitud.setCantidadPersonas(personas);
 
+        if(admi.get("EnvioAdministradorIDENTIFICADOR").equals("admin")){
 
-            regInsertados = helper.insertar(solicitud);
-            Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"es un administrador no puede ingresar",Toast.LENGTH_LONG).show();
 
-
-            Intent i = new Intent(this, DetalleSolicitudInsertarActivity.class);
-            i.putExtra("IDUSUARIO",soli.getIdSolicitante());
-            i.putExtra("tarifa",tarifa);
-            startActivity(i);
+            Intent intent = new Intent(this,principal.class);
+            intent.putExtra("IDUSUARIO",admi.getInt("EnvioAdministradorID"));
+            intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(intent);
 
         }
         else {
-            Toast.makeText(this, "Motivo repetido ingrese uno nuevo", Toast.LENGTH_SHORT).show();
+
+
+            if(motivoExistente==0){
+                solicitud.setActividad(activi.getIdActividad());
+                solicitud.setMotivoSolicitud(motivo);
+                solicitud.setTarifa(tarifa);
+                solicitud.setSolicitante(soli.getIdSolicitante());
+                solicitud.setEstadoSolicitud("pendiente");
+                solicitud.setFechaCreacion(fechaCreacion);
+                solicitud.setCantidadPersonas(personas);
+
+
+                regInsertados = helper.insertar(solicitud);
+                Toast.makeText(this, regInsertados, Toast.LENGTH_SHORT).show();
+
+
+                Intent i = new Intent(this, DetalleSolicitudInsertarActivity.class);
+                i.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                i.putExtra("tarifa",tarifa);
+                startActivity(i);
+
+            }
+            else {
+                Toast.makeText(this, "Motivo repetido ingrese uno nuevo", Toast.LENGTH_SHORT).show();
+
+            }
+            helper.cerrar();
 
         }
-        helper.cerrar();
+
+
 
 
     }

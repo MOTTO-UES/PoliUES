@@ -101,6 +101,16 @@ public class principal extends AppCompatActivity
                 startActivity(inte);
                 return true;
             }
+           else if(id==R.id.actInsertar) {
+                Intent intent = new Intent(this, SolicitudInsertarActivity.class);
+                intent.putExtra("EnvioAdministradorID",admin.getIdAdministrador());
+                intent.putExtra("EnvioAdministradorNOMBRE",admin.getNombreAdmin());
+                intent.putExtra("EnvioAdministradorPASS",admin.getPasswordAdmin());
+                intent.putExtra("EnvioAdministradorCORREO",admin.getCorreoAdmin());
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",identificador);
+                intent.putExtra("IDUSUARIO", admin.getIdAdministrador());
+                startActivity(intent);
+            }
         }
 
         return super.onOptionsItemSelected(item);

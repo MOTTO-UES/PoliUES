@@ -22,7 +22,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/presentacion"
-            android:text="BIENVENIDO"
+            android:text="@string/BIENVENIDO"
             android:textSize="25sp"
             android:gravity="center"
             android:typeface="serif"

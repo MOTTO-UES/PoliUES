@@ -4,12 +4,18 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="Pagina Principal"
+        android:title="@string/PaginaPrincipal"
         app:showAsAction="never" />
 
     <item
         android:id="@id/consultarSolicitud"
-        android:title="Consultar solicitud"
+        android:title="@string/ConsultarSolicitud"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@id/actInsertar"
+        android:title="@string/CrearSolicitud"
         android:orderInCategory="100"
         app:showAsAction="never" />
 </menu>

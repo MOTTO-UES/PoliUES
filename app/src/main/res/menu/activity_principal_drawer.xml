@@ -83,7 +83,7 @@
             <item
                 android:id="@+id/areaAlmacenar"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="@string/AlmacenarActividades"
+                android:title="@string/AlmacenarAreas"
                 />
 
             <item
