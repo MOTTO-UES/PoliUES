@@ -115,6 +115,10 @@ public class DetalleSolicitudInsertarActivity extends AppCompatActivity implemen
                 intent = new Intent(this,SolicitudInsertarActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.actPrincipalUsuario:
+                intent = new Intent(this,PrincipalUsuario.class);
+                startActivity(intent);
+                break;
         }
 
 

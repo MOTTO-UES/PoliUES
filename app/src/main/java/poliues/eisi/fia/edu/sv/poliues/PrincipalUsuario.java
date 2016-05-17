@@ -1,5 +1,9 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+<<<<<<< HEAD
+=======
+import android.content.Intent;
+>>>>>>> remotes/origin/rodrigo
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -55,12 +59,17 @@ public class PrincipalUsuario extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+<<<<<<< HEAD
         getMenuInflater().inflate(R.menu.principal_usuario, menu);
+=======
+        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+>>>>>>> remotes/origin/rodrigo
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+<<<<<<< HEAD
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -71,6 +80,27 @@ public class PrincipalUsuario extends AppCompatActivity
             return true;
         }
 
+=======
+        int id = item.getItemId();
+        Intent intent;
+
+        switch (id){
+            case R.id.opcionesMenu:
+                intent = new Intent(this,SolicitudConsultarActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.actInsertar:
+                intent = new Intent(this,SolicitudInsertarActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.actPrincipalUsuario:
+                intent = new Intent(this,PrincipalUsuario.class);
+                startActivity(intent);
+                break;
+        }
+
+
+>>>>>>> remotes/origin/rodrigo
         return super.onOptionsItemSelected(item);
     }
 
@@ -80,10 +110,20 @@ public class PrincipalUsuario extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
     ////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
         if (id == R.id.solicitudUsuarioCrear) {
             // Codigo INTENT crear Solicitud Usuario
         } else if (id == R.id.solicitudUsuarioVer) {
             //COdigo INTENT para redirigir a ver solicitudes
+=======
+        Intent intent;
+        if (id == R.id.solicitudUsuarioCrear) {
+            intent = new Intent(this,SolicitudInsertarActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.solicitudUsuarioVer) {
+            intent = new Intent(this,SolicitudConsultarActivity.class);
+            startActivity(intent);
+>>>>>>> remotes/origin/rodrigo
         } else if (id == R.id.cerrarSesionUsuario) {
                 //Codigo para cerrar sesion y redirigir al login
         }

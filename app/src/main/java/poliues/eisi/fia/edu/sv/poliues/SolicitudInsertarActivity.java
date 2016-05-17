@@ -70,6 +70,10 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
                 intent = new Intent(this,SolicitudInsertarActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.actPrincipalUsuario:
+                intent = new Intent(this,PrincipalUsuario.class);
+                startActivity(intent);
+                break;
         }
 
 
