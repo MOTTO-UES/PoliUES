@@ -251,7 +251,7 @@ public class ActividadActivity extends AppCompatActivity implements NavigationVi
                     objActividad.add(actividad);
 
                     //Agregar Registro a la lista
-                    item.add(actividad.getIdActividad() + "   "+  actividad.getNombreActividad().toString() + "       "+ actividad.getDescripcionActividad().toString());
+                    item.add(actividad.getIdActividad() + "   "+  actividad.getNombreActividad().toString());
 
                 }while(c.moveToNext());
             }

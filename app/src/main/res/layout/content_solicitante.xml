@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="poliues.eisi.fia.edu.sv.poliues.SolicitanteActivity"
-    tools:showIn="@layout/app_bar_solicitante">
+    tools:showIn="@layout/app_bar_solicitante"
+    android:background="@color/fondoLista">
 
     <ListView
         android:layout_width="wrap_content"

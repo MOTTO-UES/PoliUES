@@ -218,7 +218,20 @@ public class ControlBDPoliUES {
                         "END; " +
                         "END; ");
 
-
+                /////////////// User Quemados
+                db.execSQL(
+                        "INSERT INTO ADMINISTRADOR VALUES(1,'DARIO MOTTO', '12345', 'dario_aratto@hotmail.com')"
+                );
+                db.execSQL(
+                        "INSERT INTO ADMINISTRADOR VALUES(2,'RODRIGO DANIEL', '12345', 'rodrigoxj32@hotmail.com')"
+                );
+                db.execSQL(
+                        "INSERT INTO SOLICITANTE VALUES(1,'DARIO MOTTO', '12345', 'dario.aratto@gmail.com')"
+                );
+                db.execSQL(
+                        "INSERT INTO SOLICITANTE VALUES(2,'RODRIGO DANIEL', '12345', 'rodrigoxj35@gmail.com')"
+                );
+                //////////////////////////////
 
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");
 
