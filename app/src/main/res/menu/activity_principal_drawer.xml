@@ -92,7 +92,7 @@
             <item
                 android:id="@+id/solicitudesALmacenar"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="@string/AlmacenarTarifas"
+                android:title="@string/AlmacenarSolicitudes"
                 />
 
             <item
