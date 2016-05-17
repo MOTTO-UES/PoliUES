@@ -196,6 +196,7 @@ en el menu lateral o en el superior</string>
     <string name="ConsultarSolicitud">Consultar solicitud</string>
     <string name="CrearSolicitud">Crear solicitud</string>
     <string name="BIENVENIDO">BIENVENIDO</string>
+    <string name="AlmacenarSolicitudes">Almacenar solicitudes</string>
 
 </resources>
 

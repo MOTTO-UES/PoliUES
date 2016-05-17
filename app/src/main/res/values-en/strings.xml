@@ -196,6 +196,7 @@ on the side menu or the top</string>
     <string name="ConsultarSolicitud">Check request</string>
     <string name="CrearSolicitud">Create request</string>
     <string name="BIENVENIDO">WELCOME</string>
+    <string name="AlmacenarSolicitudes">Store request</string>
 
 </resources>
 

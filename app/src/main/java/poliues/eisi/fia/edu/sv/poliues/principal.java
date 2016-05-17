@@ -232,6 +232,13 @@ public class principal extends AppCompatActivity
                 dbhelper.cerrar();
 
             }
+            else if (id == R.id.solicitudesALmacenar){
+                dbhelper.abrir();
+                String tost = dbhelper.llenarBDSR11038();
+                Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+                dbhelper.cerrar();
+            }
+
 
 
         }

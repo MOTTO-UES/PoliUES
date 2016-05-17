@@ -806,17 +806,18 @@ public class ControlBDPoliUES {
     public String llenarBDSR11038(){
 
            /*REGISTROS TABLA SOLICITUD*/
-        final int[] TSidSolicitud = {1,2};
+        //final int[] TSidSolicitud = {1,2};
         final int[] TSactividad = {1,2};
-        final int[] TStarifa = {1,1};
+        final double[] TStarifa = {0,0};
         final int[] TSadministrador = {1,1};
-        final int[] TSsolicitante = {1,2};
+        final int[] TSsolicitante = {1,1};
         final String[] TSmotivoSolicitud = {"intramuros","juegos interfacultad"};
+        final String[] TSestadoSolicitud = {"pendiente","pendiente"};
         final String[] TSfechaCreacion = {"2016-04-29","206-04-30"};
 
 
         /*REGISTROS TABLA DETALLESOLICITUD*/
-        final int[] TDSidDescripcion = {1,2};
+        //final int[] TDSidDescripcion = {1,2};
         final int[] TDSsolicitud = {1, 2};
         final int[] TDSarea = {1, 3};
         final String[] TDSfechaInicio ={"2016-05-02", "2016-05-04"};
@@ -833,18 +834,19 @@ public class ControlBDPoliUES {
 
         Solicitud soli = new Solicitud();
         for(int i=0;i<2;i++) {
-            soli.setIdSolicitud(TSidSolicitud[i]);
+            //soli.setIdSolicitud(TSidSolicitud[i]);
             soli.setActividad(TSactividad[i]);
             soli.setTarifa(TDSsolicitud[i]);
             soli.setAdministrador(TSadministrador[i]);
             soli.setSolicitante(TSsolicitante[i]);
             soli.setMotivoSolicitud(TSmotivoSolicitud[i]);
+            soli.setEstadoSolicitud(TSestadoSolicitud[i]);
             soli.setFechaCreacion(TSfechaCreacion[i]);
            insertar(soli);
         }
         DetalleSolicitud DS = new DetalleSolicitud();
         for(int i=0;i<2;i++){
-            DS.setIdDescripcion(TDSidDescripcion[i]);
+            //DS.setIdDescripcion(TDSidDescripcion[i]);
             DS.setSolicitud(TDSsolicitud[i]);
             DS.setArea(TDSarea[i]);
             DS.setFechaInicio(TDSfechaInicio[i]);
