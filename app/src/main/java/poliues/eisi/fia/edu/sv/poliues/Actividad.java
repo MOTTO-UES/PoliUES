@@ -4,21 +4,19 @@ package poliues.eisi.fia.edu.sv.poliues;
  * Created by Rodrigo Daniel on 29/04/2016.
  */
 public class Actividad {
-   private int idActividad;
-    private int prioridad;
+    private int idActividad;
+    private String nombreActividad;
     private String descripcionActividad;
 
     public Actividad(){
 
     }
 
-    public Actividad(int idActividad, int prioridad, String descripcionActividad) {
+    public Actividad(int idActividad, String nombreActividad, String descripcionActividad) {
         this.idActividad = idActividad;
-        this.prioridad = prioridad;
+        this.nombreActividad = nombreActividad;
         this.descripcionActividad = descripcionActividad;
     }
-
-
 
     public int getIdActividad() {
         return idActividad;
@@ -28,12 +26,12 @@ public class Actividad {
         this.idActividad = idActividad;
     }
 
-    public int getPrioridad() {
-        return prioridad;
+    public String getNombreActividad() {
+        return nombreActividad;
     }
 
-    public void setPrioridad(int prioridad) {
-        this.prioridad = prioridad;
+    public void setNombreActividad(String nombreActividad) {
+        this.nombreActividad = nombreActividad;
     }
 
     public String getDescripcionActividad() {
@@ -43,7 +41,4 @@ public class Actividad {
     public void setDescripcionActividad(String descripcionActividad) {
         this.descripcionActividad = descripcionActividad;
     }
-
-
-
 }

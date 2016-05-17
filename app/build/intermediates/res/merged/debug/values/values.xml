@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="Actividades">
-        <item>Academica</item>
-        <item>Cultural</item>
-        <item>Deportiva</item>
-        <item>Politica</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
-    </string-array>
-    <string-array name="Areas">
-        <item>Boleybolo</item>
-        <item>Papi futbol</item>
-        <item>Cancha de arena</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
-        <item>basquetball</item>
-        <item>Estadio</item>
-    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -48,6 +33,9 @@
     <color name="colorAccent">#010000</color>
     <color name="colorPrimary">#5c0009</color>
     <color name="colorPrimaryDark">#5c0009</color>
+    <color name="colorResaltadorc">#270808</color>
+    <color name="colorResaltadorf">#270808</color>
+    <color name="colorResaltadorm">#270808</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
     <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
@@ -297,11 +285,31 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="Actividad">actividad</string>
     <string name="Administrador">Administrador</string>
+    <string name="AlmacenarActividades">Almacenar Actividades</string>
+    <string name="AlmacenarAreas">Almacenar Areas"</string>
+    <string name="AlmacenarDatosReserva">Almacenar Datos Reserva</string>
+    <string name="AlmacenarSolicitudes">Almacenar solicitudes</string>
+    <string name="AlmacenarTarifas">Almacenar Tarifas</string>
+    <string name="AreasPolideportivo">Areas polideportivo</string>
+    <string name="BIENVENIDO">BIENVENIDO</string>
+    <string name="BIENVENIDOADMIN">BIENVENIDO ADMINISTRADOR</string>
+    <string name="Comunicacion">Comunicacion</string>
+    <string name="ConsultarSolicitud">Consultar solicitud</string>
+    <string name="CrearAdmin">Crear administrador</string>
+    <string name="CrearSolicitud">Crear solicitud</string>
     <string name="CrearSolicitudUsuario">Crear Solicitud</string>
     <string name="Estado">Estado Solicitud</string>
+    <string name="FechaDeFinalizacion">Fecha de finalizacion</string>
+    <string name="FechaDeInicio">Fecha de Inicio</string>
+    <string name="GestionarActividad">Gestionar Actividad</string>
     <string name="GestionarAdministrador">Gestionar Administrador</string>
+    <string name="GestionarReserva">Gestionar Reserva</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
+    <string name="GestionarTarifa">Gestionar Tarifa</string>
+    <string name="Instrucciones">INSTRUCCIONES</string>
+    <string name="ListaDeReservas">Lista de Reservas</string>
+    <string name="PaginaPrincipal">Pagina principal</string>
     <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -325,9 +333,11 @@
     <string name="action_administrador_agregar">AGREGAR NUEVO</string>
     <string name="action_settings">Settings</string>
     <string name="action_sign_in">Entrar</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in_short">Iniciar sesion</string>
     <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
     <string name="actualizar">Actualizar</string>
+    <string name="actualizarJ">Actualizar</string>
+    <string name="actualizar_registro">Actualizar Registro</string>
     <string name="app_name">PoliUES</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="area">area</string>
@@ -337,6 +347,9 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btnAgregarAdministrador">AGREGAR</string>
     <string name="btnLimpiarAdministrador">LIMPIAR</string>
+    <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
+    <string name="cantPersonas">Cantidad Personas</string>
+    <string name="cantidadPersonasSolicitud">Cantidad de personas</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="cobroTotal">cobro total</string>
@@ -371,31 +384,64 @@
     <string name="common_google_play_services_updating_title">Google Play services are updating</string>
     <string name="common_open_on_phone">Open on phone</string>
     <string name="comsultar">CONSULTAR</string>
+    <string name="consultar">Consultar</string>
+    <string name="consultarJ">Consultar</string>
+    <string name="consultar_registro">Consultar Registro</string>
+    <string name="descripcionarea">descripcionArea</string>
+    <string name="descripciondeporte">descripcion Deporte</string>
+    <string name="descripcionreserva">Descripcion:</string>
     <string name="editar">EDITAR</string>
+    <string name="eliminarJ">Eliminar</string>
+    <string name="eliminar_registro">Eliminar Registro</string>
     <string name="entrar_principal">Puerta Trasera</string>
     <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
     <string name="error_field_required">Campo requerido</string>
     <string name="error_incorrect_password">Contraseña incorecta</string>
     <string name="error_invalid_email">Direccion de correo erronea</string>
     <string name="error_invalid_password">Contraseña muy corta</string>
+    <string name="facultad">Facultad:</string>
     <string name="fechaCreacion">fecha de creacion</string>
     <string name="fechaFinal">fecha Final</string>
     <string name="fechaInicio">fecha Inicio</string>
+    <string name="fechacreada">Fecha Creada</string>
+    <string name="fechareserva">Fecha Reserva:</string>
+    <string name="horariofinreserva">Hora Fin:</string>
+    <string name="horarioinicioreserva">Hora Inicio:</string>
+    <string name="idArea">idArea</string>
     <string name="idDescripcion">idDescripcion</string>
     <string name="idSolicitud">id solicitud</string>
+    <string name="iddeporte">idDeporte</string>
+    <string name="idtarifa">Id Tarifa</string>
     <string name="insertar">Insertar</string>
+    <string name="insertarJ">Insertar</string>
+    <string name="insertarSo">Guardar</string>
+    <string name="insertar_registro">Insertar Registro</string>
     <string name="limpiar">Limpiar</string>
+    <string name="limpiarJ">Limpiar</string>
+    <string name="limpiarS">Limpiar</string>
+    <string name="maximopersonas">maximoPersonas</string>
+    <string name="motivo">Motivo:</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="nombrearea">nombreArea</string>
+    <string name="nombredeporte">nombre Deporte</string>
+    <string name="nuevareserva">Nueva</string>
+    <string name="numeropersonas">N° de Personas:</string>
     <string name="opciones">opciones</string>
+    <string name="opcionesJ">Opciones:</string>
+    <string name="opcionesSO">Opciones:</string>
     <string name="otroGrupo">Comunicacion</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
+    <string name="prompt_email">Correo</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="selectfecha">Seleccione la Fecha</string>
+    <string name="selecthora">Seleccione de hora</string>
     <string name="solicitud">solicitud</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="tarifa">Tarifa</string>
+    <string name="tarifaUnitaria">Tarifa Unitaria</string>
+    <string name="tarifa_menu">Función a Ejecutar Tarifa</string>
     <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
 en el menu lateral o en el superior</string>
     <string name="texto2">Dispone de las opciones:</string>
@@ -405,19 +451,41 @@ en el menu lateral o en el superior</string>
     <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
     <string name="texto7">\u00092.2) Editar solicitud.</string>
     <string name="texto8">\u00092.3) Eliminar solicitud</string>
+    <string name="title_activity_actividad">ActividadActivity</string>
+    <string name="title_activity_actividad_consultar">ActividadConsultarActivity</string>
+    <string name="title_activity_actividad_editar">ActividadEditarActivity</string>
+    <string name="title_activity_actividad_insertar">ActividadInsertarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
     <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
     <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
+    <string name="title_activity_area_actualizar">AreaActualizarActivity</string>
+    <string name="title_activity_area_consultar">AreaConsultarActivity</string>
+    <string name="title_activity_area_eliminar">AreaEliminarActivity</string>
+    <string name="title_activity_area_insertar">AreaInsertarActivity</string>
+    <string name="title_activity_area_menu">AreaMenuActivity</string>
+    <string name="title_activity_deporte_actualizar">DeporteActualizarActivity</string>
+    <string name="title_activity_deporte_consultar">DeporteConsultarActivity</string>
+    <string name="title_activity_deporte_eliminar">DeporteEliminarActivity</string>
+    <string name="title_activity_deporte_insertar">DeporteInsertarActivity</string>
+    <string name="title_activity_deporte_menu">DeporteMenuActivity</string>
     <string name="title_activity_principal">principal</string>
     <string name="title_activity_principal_usuario">PrincipalUsuario</string>
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
     <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
     <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
+    <string name="title_activity_tarifa_actualizar">TarifaActualizarActivity</string>
+    <string name="title_activity_tarifa_consultar">TarifaConsultarActivity</string>
+    <string name="title_activity_tarifa_eliminar">TarifaEliminarActivity</string>
+    <string name="title_activity_tarifa_insertar">TarifaInsertarActivity</string>
+    <string name="title_activity_tarifa_menu">TarifaMenuActivity</string>
     <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
+    <string name="tittle_activity_tarifa_menu">TarifaMenuActivity</string>
     <string name="txtcorreoAdministrador">Correo</string>
     <string name="txtcorreoSolicitante">Correo</string>
+    <string name="txtdescripcionActividad">Descripcion</string>
+    <string name="txtnombreActividad">Nombre</string>
     <string name="txtnombreAdministrador">Nombre</string>
     <string name="txtnombreSolicitante">Nombre</string>
     <string name="txtpassAdministrador">Password</string>

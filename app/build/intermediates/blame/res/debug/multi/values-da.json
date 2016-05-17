@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-da\\values-da.xml",
-=======
-        "outputFile": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\res\\merged\\debug\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 203
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 311
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 434
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 533
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 645
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 728
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 828
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 941
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 1018
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -222,11 +182,7 @@
                     "endOffset": 1095
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -245,11 +201,7 @@
                     "endOffset": 1174
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -268,11 +220,7 @@
                     "endOffset": 1283
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -291,11 +239,7 @@
                     "endOffset": 1391
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -314,11 +258,7 @@
                     "endOffset": 1487
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -337,11 +277,7 @@
                     "endOffset": 1601
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -360,11 +296,7 @@
                     "endOffset": 1703
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -383,11 +315,7 @@
                     "endOffset": 1804
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -406,11 +334,7 @@
                     "endOffset": 1920
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -429,11 +353,7 @@
                     "endOffset": 2017
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -452,11 +372,7 @@
                     "endOffset": 2204
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -475,11 +391,7 @@
                     "endOffset": 2386
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -498,11 +410,7 @@
                     "endOffset": 2498
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -521,11 +429,7 @@
                     "endOffset": 2756
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -544,11 +448,7 @@
                     "endOffset": 2886
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -567,11 +467,7 @@
                     "endOffset": 3082
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -590,11 +486,7 @@
                     "endOffset": 3210
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -613,11 +505,7 @@
                     "endOffset": 3380
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -636,11 +524,7 @@
                     "endOffset": 3508
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -659,11 +543,7 @@
                     "endOffset": 3721
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -682,11 +562,7 @@
                     "endOffset": 3933
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -705,11 +581,7 @@
                     "endOffset": 4058
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -728,11 +600,7 @@
                     "endOffset": 4232
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -751,11 +619,7 @@
                     "endOffset": 4354
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -774,11 +638,7 @@
                     "endOffset": 4512
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -797,11 +657,7 @@
                     "endOffset": 4701
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -820,11 +676,7 @@
                     "endOffset": 4820
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -843,11 +695,7 @@
                     "endOffset": 4989
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -866,11 +714,7 @@
                     "endOffset": 5124
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -889,11 +733,7 @@
                     "endOffset": 5300
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -912,11 +752,7 @@
                     "endOffset": 5425
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -935,11 +771,7 @@
                     "endOffset": 5567
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -958,11 +790,7 @@
                     "endOffset": 5815
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -981,11 +809,7 @@
                     "endOffset": 5941
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -1004,11 +828,7 @@
                     "endOffset": 6049
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -1027,11 +847,7 @@
                     "endOffset": 6242
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1050,11 +866,7 @@
                     "endOffset": 6371
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1073,11 +885,7 @@
                     "endOffset": 6575
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1096,11 +904,7 @@
                     "endOffset": 6707
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1119,11 +923,7 @@
                     "endOffset": 6802
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values-da\\common_strings.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -1142,11 +942,7 @@
                     "endOffset": 6903
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Dario\\Documents\\GitHub\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
-=======
-                    "file": "C:\\Users\\RodrigoDaniel\\Desktop\\Rodrigo\\UES\\PDM-115\\Tarea 1 github\\PoliUES\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\values-da\\values-da.xml",
->>>>>>> remotes/origin/rodrigo
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,

@@ -1,61 +1,53 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 /**
- * Created by Rodrigo Daniel on 29/04/2016.
+ * Created by JhonyWilliam on 08/05/2016.
  */
-public class Area {
-    private int idArea;
-    private int maximoPersona;
-    private String nombreArea;
+public class Area extends Deporte {
+    private Integer idarea;
+    private Integer maximopersonas;
+    private String nombrearea;
+    private String descripcionarea;
 
-    public Area(){
-
+    public Area() {
     }
 
-    public Area(int idArea, int maximoPersona, String nombreArea, String descripcionArea) {
-        this.idArea = idArea;
-        this.maximoPersona = maximoPersona;
-        this.nombreArea = nombreArea;
-        this.descripcionArea = descripcionArea;
+    public Area(Integer idarea, Integer maximopersonas, String nombrearea, String descripcionarea) {
+        this.idarea = idarea;
+        this.maximopersonas = maximopersonas;
+        this.nombrearea = nombrearea;
+        this.descripcionarea = descripcionarea;
     }
 
-    String descripcionArea;
-
-
-
-
-    public String getDescripcionArea() {
-        return descripcionArea;
+    public Integer getIdarea() {
+        return idarea;
     }
 
-    public void setDescripcionArea(String descripcionArea) {
-        this.descripcionArea = descripcionArea;
+    public void setIdarea(Integer idarea) {
+        this.idarea = idarea;
     }
 
-    public String getNombreArea() {
-        return nombreArea;
+    public Integer getMaximopersonas() {
+        return maximopersonas;
     }
 
-    public void setNombreArea(String nombreArea) {
-        this.nombreArea = nombreArea;
+    public void setMaximopersonas(Integer maximopersonas) {
+        this.maximopersonas = maximopersonas;
     }
 
-    public int getMaximoPersona() {
-        return maximoPersona;
+    public String getNombrearea() {
+        return nombrearea;
     }
 
-    public void setMaximoPersona(int maximoPersona) {
-        this.maximoPersona = maximoPersona;
+    public void setNombrearea(String nombrearea) {
+        this.nombrearea = nombrearea;
     }
 
-    public int getIdArea() {
-        return idArea;
+    public String getDescripcionarea() {
+        return descripcionarea;
     }
 
-    public void setIdArea(int idArea) {
-        this.idArea = idArea;
+    public void setDescripcionarea(String descripcionarea) {
+        this.descripcionarea = descripcionarea;
     }
-
-
-
 }

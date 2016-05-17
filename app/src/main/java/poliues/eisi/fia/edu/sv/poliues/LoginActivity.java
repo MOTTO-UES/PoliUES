@@ -20,6 +20,7 @@ import android.os.Build.VERSION;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.BidiFormatter;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -40,11 +41,14 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
+public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>/*, OnClickListener */{
 
     /**
      * Id to identity READ_CONTACTS permission request.
      */
+    //ControlDBPoliUES BDhelper;
+
+
 
     private static final int REQUEST_READ_CONTACTS = 0;
 
@@ -61,11 +65,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private UserLoginTask mAuthTask = null;
 
     // UI references.
+    private String Mensaje;
+    private boolean TipoAdmin;
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
     ControlBDPoliUES BDhelper;
+    Solicitante solicitante;
+    Administrador administrador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,26 +82,38 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         BDhelper = new ControlBDPoliUES(this);
 
-        System.out.println("antes de abrir");
-        BDhelper.abrir();
-        System.out.println("despues de abrir");
-        //String tost = BDhelper.llenarBDSR11038();
-        System.out.println("despues de llenar");
-        BDhelper.cerrar();
-        System.out.println("despues de cerrar");
-        //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+        /*Administrador ad = new Administrador();
+        ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
+        ad.setNombreAdmin("Rodrigo Romero");
+        ad.setPasswordAdmin("12345");*/
 
-        //String tost = DB
-        //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();sqlerrm
-        System.out.println("el toast");
+
+        BDhelper.abrir();
+        //BDhelper.insertarAdministrador(ad);
+        //BDhelper.llenarBDPolideportivo();
+        //BDhelper.llenarBDPoli();
+        BDhelper.cerrar();
+
 
         //////////////////////////////////////////////////////
 
-        Button boton, botonUsuario;
+       /* Button boton, botonUsuario;
         boton = (Button) findViewById(R.id.entrar_principal);
-        boton.setOnClickListener(this);
+        boton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inte = new Intent(LoginActivity.this, principal.class);
+                startActivity(inte);
+            }
+        });
         botonUsuario = (Button) findViewById(R.id.entrar_principal_usuario);
-        botonUsuario.setOnClickListener(this);
+        botonUsuario.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, PrincipalUsuario.class);
+                startActivity(intent);
+            }
+        });*/
 
 
         //////////////////////////////////////////////////////
@@ -307,6 +327,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     }
     ///////////////////////////////////////////////////////////////////////////
+    /*
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -320,6 +341,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 break;
         }
     }
+    */
     ///////////////////////////////////////////////////////////////////////////
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -389,22 +411,44 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // TODO: attempt authentication against a network service.
 
             try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
-            }
 
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
+                BDhelper.leer();
+                administrador = BDhelper.obtenerAdministradorPorCorreo(mEmail);
+                BDhelper.cerrar();
+                if(administrador.getIdAdministrador()>0){
+                    if(administrador.getPasswordAdmin().equals(mPassword)){
+                        TipoAdmin = true;
+                        return true;
+                    }else{
+                        Mensaje = "Password Admnistrador Incorrecto";
+                    }
+                }else{
+                    Mensaje = "Correo Administrador Incorrecto";
                 }
+                //////////////////////////////////////////////////////////////////
+                BDhelper.leer();
+                solicitante = BDhelper.obtenerSolicitantePorCorreo(mEmail);
+                BDhelper.cerrar();
+                if(solicitante.getIdSolicitante()>0){
+                    if(solicitante.getPassword().equals(mPassword)){
+                        TipoAdmin = false;
+                        return true;
+                    }else{
+                        Mensaje = "Password Usuario Incorrecto";
+                    }
+                }else{
+                    Mensaje = "Correo Usuario Incorrecto";
+                }
+
+                return false;
+
+            }finally {
+                if (BDhelper != null){
+                    BDhelper.cerrar();
+                }
+
             }
 
-            // TODO: register the new account here.
-            return true;
         }
 
         @Override
@@ -413,7 +457,31 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+
                 finish();
+                /////////////////////////////////////////////////////////////////////////////////
+                if(TipoAdmin){
+                    Intent inte = new Intent(LoginActivity.this, principal.class);
+
+                    inte.putExtra("EnvioAdministradorID", administrador.getIdAdministrador());
+                    inte.putExtra("EnvioAdministradorNOMBRE", administrador.getNombreAdmin());
+                    inte.putExtra("EnvioAdministradorPASS", administrador.getPasswordAdmin());
+                    inte.putExtra("EnvioAdministradorCORREO", administrador.getCorreoAdmin());
+                    inte.putExtra("EnvioAdministradorIDENTIFICADOR","admin");
+
+                    startActivity(inte);
+                }else {
+                    Intent inte = new Intent(LoginActivity.this, PrincipalUsuario.class);
+
+                    inte.putExtra("EnvioSolicitanteID",solicitante.getIdSolicitante());
+                    inte.putExtra("EnvioSolicitanteNOMBRE", solicitante.getNombre());
+                    inte.putExtra("EnvioSolicitantePASS", solicitante.getPassword());
+                    inte.putExtra("EnvioSolicitanteCORREO", solicitante.getCorreo());
+
+                    startActivity(inte);
+                }
+                /////////////////////////////////////////////////////////////////////////////////
+
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
@@ -426,5 +494,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
+
+    public void llenarAdmin(View v){
+        BDhelper.abrir();
+        String menj = BDhelper.crearAdmin();
+        BDhelper.cerrar();
+
+        Toast.makeText(this,menj,Toast.LENGTH_SHORT).show();
+    }
+
 }
 

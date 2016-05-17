@@ -64,11 +64,5 @@
                 android:id="@+id/editText_correoA"
                 />
 
-
-
-
-
-
-
 </LinearLayout>
 

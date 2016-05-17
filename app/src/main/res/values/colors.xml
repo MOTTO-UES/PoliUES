@@ -4,5 +4,11 @@
     <color name="colorPrimaryDark">#5c0009</color>
     <color name="colorAccent">#010000</color>
 
+
     <color name="fondoLista">#a19999</color>
+
+    <color name="colorResaltadorc">#270808</color>
+    <color name="colorResaltadorf">#270808</color>
+    <color name="colorResaltadorm">#270808</color>
+
 </resources>

@@ -4,6 +4,7 @@
     <string name="GestionarAdministrador">Gestionar Administrador</string>
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
+    <string name="GestionarActividad">Gestionar Actividad</string>
     <string name="otroGrupo">Comunicacion</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
@@ -12,11 +13,11 @@
     <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
+    <string name="prompt_email">Correo</string>
+    <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Entrar</string>
 
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in_short">Iniciar sesion</string>
     <string name="error_invalid_email">Direccion de correo erronea</string>
     <string name="error_invalid_password">Contraseña muy corta</string>
     <string name="error_incorrect_password">Contraseña incorecta</string>
@@ -44,6 +45,10 @@
     <string name="txtpassAdministrador">Password</string>
     <string name="txtcorreoAdministrador">Correo</string>
 
+    <!-- ACTIVIDAD _ MOTTO -->
+
+    <string name="txtnombreActividad">Nombre</string>
+    <string name="txtdescripcionActividad">Descripcion</string>
 
     <!-- SOLICITANTE _ MOTTO -->
 
@@ -60,14 +65,6 @@
     <string name="idDescripcion">idDescripcion</string>
     <string name="solicitud">solicitud</string>
     <string name="area">area</string>
-    <string-array name="Areas">
-        <item>Boleybolo</item>
-        <item>Papi futbol</item>
-        <item>Cancha de arena</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
-        <item>basquetball</item>
-        <item>Estadio</item>
-    </string-array>
     <string name="fechaInicio">fecha Inicio</string>
     <string name="fechaFinal">fecha Final</string>
     <string name="cobroTotal">cobro total</string>
@@ -81,18 +78,12 @@
 
     <string name="idSolicitud">id solicitud</string>
     <string name="Actividad">actividad</string>
-    <string-array name="Actividades">
-        <item>Academica</item>
-        <item>Cultural</item>
-        <item>Deportiva</item>
-        <item>Politica</item>
-        <item>cancha grama pequeña aaaaaaaaaaa</item>
-    </string-array>
     <string name="tarifa">Tarifa</string>
     <string name="Administrador">Administrador</string>
     <string name="motivoSolicitud">motivo solicitud</string>
     <string name="fechaCreacion">fecha de creacion</string>
     <string name="Estado">Estado Solicitud</string>
+    <string name="cantidadPersonasSolicitud">Cantidad de personas</string>
 
     <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
     <string name="title_activity_administrador">AdministradorActivity</string>
@@ -106,7 +97,7 @@
     <string name="title_activity_principal_usuario">PrincipalUsuario</string>
 
     <!--MENU RODRIGO-->
-    
+
     <!--PRINCIPAL RODRIGO pantalla usuario-->
     <string name="texto1">Para poder realizar las operaciones de la aplicacion elija
 en el menu lateral o en el superior</string>
@@ -117,7 +108,97 @@ en el menu lateral o en el superior</string>
     <string name="texto6">\u00092.1) Ver estado de la solicitud.</string>
     <string name="texto7">\u00092.2) Editar solicitud.</string>
     <string name="texto8">\u00092.3) Eliminar solicitud</string>
+    <string name="title_activity_actividad">ActividadActivity</string>
+    <string name="title_activity_actividad_insertar">ActividadInsertarActivity</string>
+    <string name="title_activity_actividad_editar">ActividadEditarActivity</string>
+    <string name="title_activity_actividad_consultar">ActividadConsultarActivity</string>
 
+    <!--RESERVA ALEX-->
+
+    <string name="facultad">Facultad:</string>
+    <string name="numeropersonas">N° de Personas:</string>
+    <string name="motivo">Motivo:</string>
+    <string name="descripcionreserva">Descripcion:</string>
+    <string name="fechareserva">Fecha Reserva:</string>
+    <string name="horarioinicioreserva">Hora Inicio:</string>
+    <string name="horariofinreserva">Hora Fin:</string>
+    <string name="opcionesSO">Opciones:</string>
+    <string name="insertarSo">Guardar</string>
+    <string name="limpiarS">Limpiar</string>
+    <string name="selectfecha">Seleccione la Fecha</string>
+    <string name="selecthora">Seleccione de hora</string>
+    <string name="consultar">Consultar</string>
+    <string name="nuevareserva">Nueva</string>
+    <string name="camposconsultar">Campos Requeridos para la Consulta!!</string>
+    <string name="fechacreada">Fecha Creada</string>
+
+    <!-- PARTE JW-->
+    <string name="title_activity_deporte_menu">DeporteMenuActivity</string>
+    <string name="title_activity_area_menu">AreaMenuActivity</string>
+
+    <string name="title_activity_deporte_insertar">DeporteInsertarActivity</string>
+    <string name="title_activity_deporte_eliminar">DeporteEliminarActivity</string>
+    <string name="title_activity_deporte_consultar">DeporteConsultarActivity</string>
+    <string name="title_activity_deporte_actualizar">DeporteActualizarActivity</string>
+
+    <string name="title_activity_area_insertar">AreaInsertarActivity</string>
+    <string name="title_activity_area_eliminar">AreaEliminarActivity</string>
+    <string name="title_activity_area_consultar">AreaConsultarActivity</string>
+    <string name="title_activity_area_actualizar">AreaActualizarActivity</string>
+
+    <string name="opcionesJ">Opciones:</string>
+    <string name="insertarJ">Insertar</string>
+    <string name="eliminarJ">Eliminar</string>
+    <string name="actualizarJ">Actualizar</string>
+    <string name="consultarJ">Consultar</string>
+    <string name="limpiarJ">Limpiar</string>
+
+    <string name="iddeporte">idDeporte</string>
+    <string name="nombredeporte">nombre Deporte</string>
+    <string name="descripciondeporte">descripcion Deporte</string>
+
+    <string name="idArea">idArea</string>
+    <string name="maximopersonas">maximoPersonas</string>
+    <string name="nombrearea">nombreArea</string>
+    <string name="descripcionarea">descripcionArea</string>
+
+
+    <!--Parte gerardo-->
+    <string name="tittle_activity_tarifa_menu">TarifaMenuActivity</string>
+    <string name="title_activity_tarifa_insertar">TarifaInsertarActivity</string>
+    <string name="title_activity_tarifa_eliminar">TarifaEliminarActivity</string>
+    <string name="title_activity_tarifa_actualizar">TarifaActualizarActivity</string>
+    <string name="title_activity_tarifa_consultar">TarifaConsultarActivity</string>
+    <string name="title_activity_tarifa_menu">TarifaMenuActivity</string>
+    <string name="tarifa_menu">Función a Ejecutar Tarifa</string>
+    <string name="insertar_registro">Insertar Registro</string>
+    <string name="eliminar_registro">Eliminar Registro</string>
+    <string name="consultar_registro">Consultar Registro</string>
+    <string name="actualizar_registro">Actualizar Registro</string>
+    <string name="idtarifa">Id Tarifa</string>
+    <string name="cantPersonas">Cantidad Personas</string>
+    <string name="tarifaUnitaria">Tarifa Unitaria</string>
+    <string name="GestionarTarifa">Gestionar Tarifa</string>
+
+
+    <string name="FechaDeFinalizacion">Fecha de finalizacion</string>
+    <string name="FechaDeInicio">Fecha de Inicio</string>
+    <string name="ListaDeReservas">Lista de Reservas</string>
+    <string name="CrearAdmin">Crear administrador</string>
+    <string name="Comunicacion">Comunicacion</string>
+    <string name="GestionarReserva">Gestionar Reserva</string>
+    <string name="AreasPolideportivo">Areas polideportivo</string>
+    <string name="PaginaPrincipal">Pagina principal</string>
+    <string name="AlmacenarDatosReserva">Almacenar Datos Reserva</string>
+    <string name="AlmacenarActividades">Almacenar Actividades</string>
+    <string name="AlmacenarAreas">Almacenar Areas"</string>
+    <string name="AlmacenarTarifas">Almacenar Tarifas</string>
+    <string name="ConsultarSolicitud">Consultar solicitud</string>
+    <string name="CrearSolicitud">Crear solicitud</string>
+    <string name="BIENVENIDO">BIENVENIDO</string>
+    <string name="BIENVENIDOADMIN">BIENVENIDO ADMINISTRADOR</string>
+    <string name="Instrucciones">INSTRUCCIONES</string>
+    <string name="AlmacenarSolicitudes">Almacenar solicitudes</string>
 
 </resources>
 

@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name">PoliUES</string>
+    <!-- MENU PRINCIPAL -->
+    <string name="GestionarAdministrador">Manage Administratorr</string>
+    <string name="GestionarSolicitante">Manage Applicant</string>
+    <string name="GestionarSolicitud">Manage Application</string>
+    <string name="GestionarActividad">Manage Activity</string>
+    <string name="otroGrupo">Communication</string>
+    <string name="cerrarSesion">Sign off</string>
+
+    <!-- MENU PRINCIPAL USUARIO -->
+    <string name="CrearSolicitudUsuario">Create Application</string>
+    <string name="VerSolicitudesUsuario">consult Applications</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">sign in</string>
+
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Wrong email address</string>
+    <string name="error_invalid_password">Password too short</string>
+    <string name="error_incorrect_password">Incorrect password</string>
+    <string name="error_field_required">Required field</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+    <string name="entrar_principal">Back door</string>
+    <string name="entrar_principal_usuario">Backdoor User</string>
+
+    <!-- Principal -->
+    <string name="title_activity_principal">principal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- MENUS CRUD POPUP-->
+    <string name="comsultar">CONSULTR</string>
+    <string name="editar">EDIT</string>
+    <string name="borrar">DELETE</string>
+
+    <!-- ADMINISTRADOR _ MOTTO -->
+
+    <string name="txtnombreAdministrador">Name</string>
+    <string name="txtpassAdministrador">Password</string>
+    <string name="txtcorreoAdministrador">Email</string>
+
+    <!-- ACTIVIDAD _ MOTTO -->
+
+    <string name="txtnombreActividad">Name</string>
+    <string name="txtdescripcionActividad">Descrition</string>
+
+    <!-- SOLICITANTE _ MOTTO -->
+
+    <string name="txtnombreSolicitante">Name</string>
+    <string name="txtpassSolicitante">Password</string>
+    <string name="txtcorreoSolicitante">Email</string>
+    <string name="action_solicitante_agregar">ADD APPLICANT</string>
+    <string name="btnAgregarAdministrador">ADD</string>
+    <string name="btnLimpiarAdministrador">CLEAN</string>
+    <string name="action_administrador_agregar">ADD NEW</string>
+
+    <!--DERALLE SOLICITUD, RODRIGO-->
+
+    <string name="idDescripcion">id Description</string>
+    <string name="solicitud">request</string>
+    <string name="area">area</string>
+    <string name="fechaInicio">start date</string>
+    <string name="fechaFinal">final date</string>
+    <string name="cobroTotal">Total collection</string>
+    <string name="limpiar">Clean</string>
+    <string name="insertar">Insert</string>
+    <string name="opciones">Options</string>
+    <string name="actualizar">update</string>
+
+
+    <!--SOLICITUD, RODRIGO-->
+
+    <string name="idSolicitud">id request</string>
+    <string name="Actividad">activity</string>
+    <string name="tarifa">Rate</string>
+    <string name="Administrador">administrator</string>
+    <string name="motivoSolicitud">reason request</string>
+    <string name="fechaCreacion">creation date</string>
+    <string name="Estado">State Request</string>
+    <string name="cantidadPersonasSolicitud">Number of person</string>
+
+    <string name="title_activity_administrador_editar">AdministradorEditarActivity</string>
+    <string name="title_activity_administrador">AdministradorActivity</string>
+    <string name="title_activity_administrador_agregar">AdministradorAgregarActivity</string>
+    <string name="title_activity_solicitante">SolicitanteActivity</string>
+    <string name="title_activity_administrador_consultar">AdministradorConsultarActivity</string>
+    <string name="title_activity_solicitante_editar">SolicitanteEditarActivity</string>
+    <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>
+    <string name="title_activity_solicitante_insertar">SolicitanteInsertarActivity</string>
+    <string name="title_activity_ver_solicitud">verSolicitudActivity</string>
+    <string name="title_activity_principal_usuario">PrincipalUsuario</string>
+
+    <!--MENU RODRIGO-->
+
+    <!--PRINCIPAL RODRIGO pantalla usuario-->
+    <string name="texto1">To perform the operations of the application choose
+on the side menu or the top</string>
+    <string name="texto2">Available options:</string>
+    <string name="texto3"></string>
+    <string name="texto4">1) Create request.</string>
+    <string name="texto5">2) Check Request.</string>
+    <string name="texto6">\u00092.1) View status of the application</string>
+    <string name="texto7">\u00092.2) Edit resquest.</string>
+    <string name="texto8">\u00092.3) remove request</string>
+    <string name="title_activity_actividad">ActividadActivity</string>
+    <string name="title_activity_actividad_insertar">ActividadInsertarActivity</string>
+    <string name="title_activity_actividad_editar">ActividadEditarActivity</string>
+    <string name="title_activity_actividad_consultar">ActividadConsultarActivity</string>
+
+    <!--RESERVA ALEX-->
+
+    <string name="facultad">Faculty:</string>
+    <string name="numeropersonas">No. of People:</string>
+    <string name="motivo">Reason:</string>
+    <string name="descripcionreserva">Description:</string>
+    <string name="fechareserva">date Book:</string>
+    <string name="horarioinicioreserva">Start Time:</string>
+    <string name="horariofinreserva">End time:</string>
+    <string name="opcionesSO">options:</string>
+    <string name="insertarSo">Save</string>
+    <string name="limpiarS">Clean</string>
+    <string name="selectfecha">Select Date</string>
+    <string name="selecthora">Selection Time</string>
+    <string name="consultar">Consult</string>
+    <string name="nuevareserva">New</string>
+    <string name="camposconsultar">Required fields for Consultation!!</string>
+    <string name="fechacreada">date Created</string>
+
+    <!-- PARTE JW-->
+    <string name="title_activity_deporte_menu">DeporteMenuActivity</string>
+    <string name="title_activity_area_menu">AreaMenuActivity</string>
+
+    <string name="title_activity_deporte_insertar">DeporteInsertarActivity</string>
+    <string name="title_activity_deporte_eliminar">DeporteEliminarActivity</string>
+    <string name="title_activity_deporte_consultar">DeporteConsultarActivity</string>
+    <string name="title_activity_deporte_actualizar">DeporteActualizarActivity</string>
+
+    <string name="title_activity_area_insertar">AreaInsertarActivity</string>
+    <string name="title_activity_area_eliminar">AreaEliminarActivity</string>
+    <string name="title_activity_area_consultar">AreaConsultarActivity</string>
+    <string name="title_activity_area_actualizar">AreaActualizarActivity</string>
+
+    <string name="opcionesJ">Opciones:</string>
+    <string name="insertarJ">Insert</string>
+    <string name="eliminarJ">Remove</string>
+    <string name="actualizarJ">update</string>
+    <string name="consultarJ">Consult</string>
+    <string name="limpiarJ">Clean</string>
+
+    <string name="iddeporte">idsport</string>
+    <string name="nombredeporte">name Sport</string>
+    <string name="descripciondeporte">Sport description</string>
+
+    <string name="idArea">idArea</string>
+    <string name="maximopersonas">maximum people</string>
+    <string name="nombrearea">Area Name</string>
+    <string name="descripcionarea">Area Description</string>
+
+
+    <!--Parte gerardo-->
+    <string name="tittle_activity_tarifa_menu">TarifaMenuActivity</string>
+    <string name="title_activity_tarifa_insertar">TarifaInsertarActivity</string>
+    <string name="title_activity_tarifa_eliminar">TarifaEliminarActivity</string>
+    <string name="title_activity_tarifa_actualizar">TarifaActualizarActivity</string>
+    <string name="title_activity_tarifa_consultar">TarifaConsultarActivity</string>
+    <string name="title_activity_tarifa_menu">TarifaMenuActivity</string>
+    <string name="tarifa_menu">Feature to Run Rate</string>
+    <string name="insertar_registro">insert Record</string>
+    <string name="eliminar_registro">delete Record</string>
+    <string name="consultar_registro">Check Register</string>
+    <string name="actualizar_registro">Update Record</string>
+    <string name="idtarifa">Id Rate</string>
+    <string name="cantPersonas">number People</string>
+    <string name="tarifaUnitaria">Unitarian rate</string>
+    <string name="GestionarTarifa">Manage rate</string>
+
+
+    <string name="FechaDeFinalizacion">Date of completion</string>
+    <string name="FechaDeInicio">Start date</string>
+    <string name="ListaDeReservas">List Reservations</string>
+    <string name="CrearAdmin">Create administrator</string>
+    <string name="Comunicacion">Communication</string>
+    <string name="GestionarReserva">Manage Booking</string>
+    <string name="AreasPolideportivo">Areas of sports center</string>
+    <string name="PaginaPrincipal">Homepage</string>
+    <string name="AlmacenarDatosReserva">Storing Data Book</string>
+    <string name="AlmacenarActividades">store Activities</string>
+    <string name="AlmacenarAreas">storing Areas"</string>
+    <string name="AlmacenarTarifas">Rate stores</string>
+    <string name="ConsultarSolicitud">Check request</string>
+    <string name="CrearSolicitud">Create request</string>
+    <string name="BIENVENIDO">WELCOME</string>
+    <string name="BIENVENIDOADMIN">WELCOME ADMINISTRATOR</string>
+    <string name="Instrucciones">INSTRUCTIONS</string>
+    <string name="AlmacenarSolicitudes">Store request</string>
+
+</resources>
+
