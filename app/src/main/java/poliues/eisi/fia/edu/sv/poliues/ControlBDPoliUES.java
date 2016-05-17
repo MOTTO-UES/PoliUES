@@ -690,7 +690,7 @@ public class ControlBDPoliUES {
         Con.put("area",detalleSolicitud.getArea());
         Con.put("fechaInicio",detalleSolicitud.getFechaInicio());
         Con.put("fechaFinal",detalleSolicitud.getFechaFinal());
-        Con.put("cobroTotal",detalleSolicitud.getCobroTotal());
+        //Con.put("cobroTotal",detalleSolicitud.getCobroTotal());
 
         db.update("DetalleSolicitud", Con,"solicitud = ?", IDSolicitud);
 

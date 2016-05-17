@@ -283,7 +283,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         areaOb = helper.consultarAreaNombre(OA,AreaSeleccionada);
 
 
-        DS.setCobroTotal(80);
+
         DS.setArea(areaOb.getIdarea());
         DS.setFechaInicio(FI.getText().toString());
         DS.setFechaFinal(FF.getText().toString());
