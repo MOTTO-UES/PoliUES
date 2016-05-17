@@ -214,7 +214,7 @@ public class TarifaActualizarActivity extends AppCompatActivity
     public void actualizarTarifa(View v){
         Tarifa tarifa = new Tarifa();
         tarifa.setCantidadPersonas(Integer.valueOf(editCantPersonas.getText().toString()));
-        tarifa.setTarifaUnitaria(Double.valueOf(editCantPersonas.getText().toString()));
+        tarifa.setTarifaUnitaria(Double.valueOf(editTarifaUnitaria.getText().toString()));
 
         helper.abrir();
         String estado = helper.actualizarTarifa(tarifa);

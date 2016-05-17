@@ -2,20 +2,11 @@ package poliues.eisi.fia.edu.sv.poliues;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import static android.widget.Toast.LENGTH_SHORT;
 
 /**
  * Created by jonathan on 21/4/2016.
@@ -203,16 +194,29 @@ public class ControlBDPoliUES {
                         "END; ");
 
 
-                db.execSQL("CREATE TRIGGER exite_correo_en_administrador_ " +
+                db.execSQL("CREATE TRIGGER exite_correo_en_administrador " +
                         "BEFORE INSERT ON [ADMINISTRADOR] " +
                         "FOR EACH ROW " +
                         "BEGIN " +
                         "SELECT CASE " +
                         "WHEN((SELECT CORREOADMINISTRADOR from ADMINISTRADOR WHERE CORREOADMINISTRADOR = NEW.CORREOADMINISTRADOR) NOT NULL) " +
                         "THEN RAISE(ABORT, 'YA EXISTE EL CORREO') " +
+                        "WHEN((SELECT CORREO from SOLICITANTE WHERE CORREO = NEW.CORREOADMINISTRADOR) NOT NULL) " +
+                        "THEN RAISE(ABORT, 'YA EXISTE EL CORREO') " +
                         "END; " +
                         "END; ");
 
+                db.execSQL("CREATE TRIGGER exite_correo_en_solicitante " +
+                        "BEFORE INSERT ON [SOLICITANTE] " +
+                        "FOR EACH ROW " +
+                        "BEGIN " +
+                        "SELECT CASE " +
+                        "WHEN((SELECT CORREOADMINISTRADOR from ADMINISTRADOR WHERE CORREOADMINISTRADOR = NEW.CORREO) NOT NULL) " +
+                        "THEN RAISE(ABORT, 'YA EXISTE EL CORREO') " +
+                        "WHEN((SELECT CORREO from SOLICITANTE WHERE CORREO = NEW.CORREO) NOT NULL) " +
+                        "THEN RAISE(ABORT, 'YA EXISTE EL CORREO') " +
+                        "END; " +
+                        "END; ");
 
 
 
@@ -860,7 +864,7 @@ public class ControlBDPoliUES {
         long contador = 0;
 
         ContentValues horario1 = new ContentValues();
-        horario1.put("idreserva", horario.getIdreserva());
+        //horario1.put("idreserva", horario.getIdreserva());
         horario1.put("fechareserva", horario.getFechareserva());
         horario1.put("horarioinicio", horario.getHorarioinicio());
         horario1.put("horariofin", horario.getHorariofin());
@@ -1207,7 +1211,7 @@ public class ControlBDPoliUES {
         final String[] VAnombrearea = {"Cancha Engramada","Cancha Duela","Cancha de Cemento"};
         final String[] VAdescripcionarea = {"La mejor Cancha","Multi Usos","Multi Uso 2"};
 
-        final String[] VDRidetalle = {"1","2","3"};
+       final String[] VDRidetalle = {"1","2","3"};
         final String[] VDRidarea = {"1","2","3"};
         final String[] VDRidreserva = {"1","2","3"};
 
@@ -1539,13 +1543,68 @@ public class ControlBDPoliUES {
         if(verificarIntegridadG(tarifa,1)){
             String[] id = {String.valueOf(tarifa.getCantidadPersonas())};
             ContentValues cv = new ContentValues();
+
+            Cursor soli = consultarSolicitud();
+            Cursor DS = consultarDetalleSolicitud();
+            Tarifa tari = consultarTarifa(tarifa.getCantidadPersonas());
+
+            System.out.println("id de la tarifa: "+tari.getIdTarifa());
+
+
+            if (soli.moveToFirst()){
+
+                do {
+                    if(soli.getDouble(2) == tari.getTarifaUnitaria()){
+                        System.out.println(" tarifa en la solicitud es: "+soli.getDouble(2));
+
+                        if (DS.moveToFirst()){
+
+                            do {
+                                if(DS.getInt(1) == soli.getInt(0)){
+                                    System.out.println("id soli en DS"+DS.getInt(1));
+                                    System.out.println("id soli "+soli.getInt(0));
+
+
+                                    ActualizarSoliTarifa(soli.getInt(0),tarifa.getTarifaUnitaria());
+                                    ActualizarDSTarifa(DS.getInt(0),tarifa.getTarifaUnitaria()*2);
+
+                                }
+
+                            }while (DS.moveToNext());
+                        }
+
+
+                    }
+
+                }while (soli.moveToNext());
+            }
+
+
             cv.put("tarifaunitaria", tarifa.getTarifaUnitaria());
             db.update("tarifa", cv, "cantpersonas = ?", id);
+
             return "Registro Actualizado Correctamente";
         }else{
             return "Registro con Cantidad de Personas "+tarifa.getCantidadPersonas() +" no existe";
         }
     }
+
+    public void ActualizarSoliTarifa(int id, double tarifa){
+        String[] So = {String.valueOf(id)};
+
+        ContentValues s = new ContentValues();
+        s.put("tarifa",tarifa);
+        db.update("Solicitud",s,"idSolicitud = ?",So);
+    }
+
+    public void ActualizarDSTarifa(int id, double tarifa){
+        String[] So = {String.valueOf(id)};
+
+        ContentValues s = new ContentValues();
+        s.put("cobroTotal",tarifa);
+        db.update("DetalleSolicitud",s,"idDescripcion = ?",So);
+    }
+
 
     public Tarifa consultarTarifa(int cantpersona) {
 
@@ -1616,6 +1675,7 @@ public class ControlBDPoliUES {
         return  c;
     }
 }
+
 
 
 

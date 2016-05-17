@@ -122,6 +122,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
         Solicitud solicitud = new Solicitud();
         Actividad activi =null;
         int motivoExistente=0;
+        String admin="";
 
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         Calendar cal = Calendar.getInstance();
@@ -189,9 +190,9 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
             }while (cursorMotivo.moveToNext());
         }
 
+        admin+= admi.getString("EnvioAdministradorIDENTIFICADOR");
 
-
-        if(admi.get("EnvioAdministradorIDENTIFICADOR").equals("admin")){
+        if(admin.equals("admin")){
 
             Toast.makeText(this,"es un administrador no puede ingresar",Toast.LENGTH_LONG).show();
 
@@ -205,10 +206,7 @@ public class SolicitudInsertarActivity extends AppCompatActivity implements Adap
             startActivity(intent);
 
         }
-        else {
-
-
-            if(motivoExistente==0){
+        else {if(motivoExistente==0){
                 solicitud.setActividad(activi.getIdActividad());
                 solicitud.setMotivoSolicitud(motivo);
                 solicitud.setTarifa(tarifa);
