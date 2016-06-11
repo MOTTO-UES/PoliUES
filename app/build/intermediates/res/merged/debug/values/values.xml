@@ -426,6 +426,7 @@
     <string name="insertar">Insertar</string>
     <string name="insertarJ">Insertar</string>
     <string name="insertarSo">Guardar</string>
+    <string name="insertarWeb">insertar localhost</string>
     <string name="insertar_registro">Insertar Registro</string>
     <string name="limpiar">Limpiar</string>
     <string name="limpiarJ">Limpiar</string>

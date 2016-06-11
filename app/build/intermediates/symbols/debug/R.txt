@@ -1175,6 +1175,7 @@ int string idtarifa 0x7f060087
 int string insertar 0x7f060088
 int string insertarJ 0x7f060089
 int string insertarSo 0x7f06008a
+int string insertarWeb 0x7f0600d9
 int string insertar_registro 0x7f06008b
 int string limpiar 0x7f06008c
 int string limpiarJ 0x7f06008d

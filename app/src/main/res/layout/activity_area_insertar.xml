@@ -44,4 +44,11 @@
             android:onClick="limpiarTexto"
             android:text="@string/limpiarJ" />
     </TableRow>
+
+
+    <TableRow>
+        <Button
+            android:onClick="insertarAreaWeb"
+            android:text="@string/insertarWeb" />
+    </TableRow>
 </TableLayout>

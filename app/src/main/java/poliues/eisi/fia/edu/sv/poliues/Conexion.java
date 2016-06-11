@@ -13,4 +13,5 @@ public class Conexion {
     public String getURLLocal() {
         return URLLocal;
     }
+
 }

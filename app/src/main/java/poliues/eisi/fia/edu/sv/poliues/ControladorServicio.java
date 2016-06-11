@@ -20,6 +20,7 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -90,6 +91,26 @@ public class ControladorServicio {
         }
 
         return respuesta;
+    }
+
+    public static void insertarAreaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+            int respuesta = resultado.getInt("resultado");
+
+            System.out.println(respuesta);
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro duplicado",
+                        Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 

@@ -2909,6 +2909,7 @@ containing a value of this type.
         public static final int insertar=0x7f060088;
         public static final int insertarJ=0x7f060089;
         public static final int insertarSo=0x7f06008a;
+        public static final int insertarWeb=0x7f0600d9;
         public static final int insertar_registro=0x7f06008b;
         public static final int limpiar=0x7f06008c;
         public static final int limpiarJ=0x7f06008d;
