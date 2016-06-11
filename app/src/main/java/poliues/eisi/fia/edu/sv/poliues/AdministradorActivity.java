@@ -276,7 +276,7 @@ public class AdministradorActivity extends AppCompatActivity
                     objAdministrador.add(administrador);
 
                     //Agregar Registro a la lista
-                    item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString() + "       "+ administrador.getPasswordAdmin().toString()+ "      "+administrador.getCorreoAdmin().toString());
+                    item.add(administrador.getIdAdministrador() + "   "+  administrador.getNombreAdmin().toString());
 
                 }while(c.moveToNext());
             }

@@ -41,8 +41,13 @@ public class PrincipalUsuario extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                // Snackbar.make(view, "BIENVENIDO "+String.valueOf(soli.getNombre()), Snackbar.LENGTH_LONG)
                    //     .setAction("Action", null).show();
+=======
+                Snackbar.make(view, "PoliUES Derechos Reservados UES \n Version ESTANDAR @BEHELIT", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+>>>>>>> master
             }
         });
 

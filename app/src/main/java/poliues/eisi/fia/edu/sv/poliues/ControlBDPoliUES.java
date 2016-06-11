@@ -218,7 +218,24 @@ public class ControlBDPoliUES {
                         "END; " +
                         "END; ");
 
+<<<<<<< HEAD
 
+=======
+                /////////////// User Quemados
+                db.execSQL(
+                        "INSERT INTO ADMINISTRADOR VALUES(1,'DARIO MOTTO', '12345', 'dario_aratto@hotmail.com')"
+                );
+                db.execSQL(
+                        "INSERT INTO ADMINISTRADOR VALUES(2,'RODRIGO DANIEL', '12345', 'rodrigoxj32@hotmail.com')"
+                );
+                db.execSQL(
+                        "INSERT INTO SOLICITANTE VALUES(1,'DARIO MOTTO', '12345', 'dario.aratto@gmail.com')"
+                );
+                db.execSQL(
+                        "INSERT INTO SOLICITANTE VALUES(2,'RODRIGO DANIEL', '12345', 'rodrigoxj35@gmail.com')"
+                );
+                //////////////////////////////
+>>>>>>> master
 
                 System.out.println("SE EJECUTO LA CREACION DE TABLAS");
 
@@ -240,9 +257,15 @@ public class ControlBDPoliUES {
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
                 ////////////////////////////////////////////////////////////////////
                 //DROP TBL_MOTTO
+<<<<<<< HEAD
                 db.execSQL("DROP TABLE IF EXIST ADMINISTRADOR");
                 db.execSQL("DROP TABLE IF EXIST SOLICITANTE");
                 db.execSQL("DROP TABLE IF EXIST ACTIVIDAD");
+=======
+                //db.execSQL("DROP TABLE IF EXIST ADMINISTRADOR");
+                //db.execSQL("DROP TABLE IF EXIST SOLICITANTE");
+                //db.execSQL("DROP TABLE IF EXIST ACTIVIDAD");
+>>>>>>> master
                 ////////////////////////////////////////////////////////////////////
 
                 onCreate(db);
@@ -647,6 +670,7 @@ public class ControlBDPoliUES {
         reserva1.put("motivo", reserva.getMotivo());
         reserva1.put("descripcionreserva ",reserva.getDescripcionreserva());
         contador=db.insert("reserva", null, reserva1);
+<<<<<<< HEAD
 
         if(contador==-1 || contador==0)
         {
@@ -659,6 +683,20 @@ public class ControlBDPoliUES {
 
     }
 
+=======
+
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el registro, Registro  Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+        return regInsertados;
+
+    }
+
+>>>>>>> master
     public String insertar(DetalleReserva detalleReserva){
 
         String regInsertados="Registro Insertado Nº= ";
@@ -866,7 +904,11 @@ public class ControlBDPoliUES {
         long contador = 0;
 
         ContentValues horario1 = new ContentValues();
+<<<<<<< HEAD
         //horario1.put("idreserva", horario.getIdreserva());
+=======
+        horario1.put("idreserva", horario.getIdreserva());
+>>>>>>> master
         horario1.put("fechareserva", horario.getFechareserva());
         horario1.put("horarioinicio", horario.getHorarioinicio());
         horario1.put("horariofin", horario.getHorariofin());
@@ -1221,6 +1263,7 @@ public class ControlBDPoliUES {
 
         final String[] VHidhorario = {"1","2","3"};
         final String[] VHidreserva = {"1","2","3"};
+<<<<<<< HEAD
         final String[] VHfechareserva = {"3/5/2016","3/5/2016","3/5/2016"};
         final String[] VHhorarioinicio = {"10 PM ","11:00 AM","10:00 PM"};
         final String[] VHhorariofin = {"11:00 AM","12:00 AM","11:00 PM"};
@@ -1228,6 +1271,15 @@ public class ControlBDPoliUES {
         final String[] VRidreserva = {"1","2","3"};
         final String[] VRidfacultad = {"1","2","3"};
         final String[] VRfechaingreso = {"3/5/2016","3/5/2016","3/5/2016"};
+=======
+        final String[] VHfechareserva = {"3-5-2016","3-5-2016","3-5-2016"};
+        final String[] VHhorarioinicio = {"10:00","11:00","10:00"};
+        final String[] VHhorariofin = {"11:00","12:00","11:00"};
+
+        final String[] VRidreserva = {"1","2","3"};
+        final String[] VRidfacultad = {"1","2","3"};
+        final String[] VRfechaingreso = {"3-5-2016","3-5-2016","3-5-2016"};
+>>>>>>> master
         final String[] VRnumeropersonaa = {"10","20","40"};
         final String[] VRmotivo = {"Intramuros","Graduaciones","Interfacultades"};
         final String[] VRdescripconreserva = {"Intramuros del Ricardone","Graduaciones de todas las Facultades","Juegos interfacultades"};
@@ -1282,6 +1334,7 @@ public class ControlBDPoliUES {
 
         cerrar();
         System.out.println("se crearon todas las insert");
+<<<<<<< HEAD
         return "Guardo Correctamente";
     }
 
@@ -1480,6 +1533,219 @@ public class ControlBDPoliUES {
         return "Guardo Correctamente";
     }
 
+=======
+        return "Guardo Correctamente";
+    }
+
+
+    public String crearAdmin(){
+        String mensaje = null, mensaje2 = null;
+
+        Administrador ad = new Administrador();
+        ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
+        ad.setNombreAdmin("Rodrigo Romero");
+        ad.setPasswordAdmin("12345");
+
+        Solicitante so = new Solicitante();
+        so.setCorreo("rodrigoxj35@gmail.com");
+        so.setNombre("Rodrigo Daniel");
+        so.setPassword("54321");
+        //
+        Administrador ad1 = new Administrador();
+        ad.setCorreoAdmin("dario_aratto@hotmail.com");
+        ad.setNombreAdmin("Dario Motto");
+        ad.setPasswordAdmin("12345");
+
+        Solicitante so1 = new Solicitante();
+        so.setCorreo("dario.aratto@gmail.com");
+        so.setNombre("Dario Motto");
+        so.setPassword("54321");
+        //
+        db.execSQL("DELETE FROM ADMINISTRADOR");
+        mensaje = insertarAdministrador(ad);
+        mensaje2 = insertarAdministrador(ad1);
+
+        db.execSQL("DELETE FROM SOLICITANTE");
+        mensaje+=" ";
+        mensaje2+="";
+
+        mensaje+= insertarSolicitante(so);
+        mensaje2+= insertarSolicitante(so1);
+        return mensaje+mensaje2;
+    }
+
+
+    //CODIGO DE JW
+    public String insertarArea(Area area){
+        String regInsertados="Area Insertado N =";
+        long contador=0;
+
+        ContentValues are =new ContentValues();
+        //are.put("idarea",area.getIdarea());
+        are.put("maximopersonas",area.getMaximopersonas());
+        are.put("nombrearea",area.getNombrearea());
+        are.put("descripcionarea",area.getDescripcionarea());
+
+        contador=db.insert("area", null,are);
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el area, Registro Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+        return regInsertados;
+
+    }
+
+    public String actualizarArea(Area area){
+        String[] id = {String.valueOf(area.getIdarea())};
+        ContentValues cv = new ContentValues();
+        cv.put("maximopersonas",area.getMaximopersonas());
+        cv.put("nombrearea",area.getNombrearea());
+        cv.put("descripcionarea",area.getDescripcionarea());
+        db.update("area", cv, "idarea = ?", id);
+        return "Area Actualizada Correctamente";
+
+    }
+
+    public Area consultarAreaJ(String idArea){
+        String[] id = {idArea};
+        Cursor cursor = db.query("area", camposArea, "idarea = ?",id, null, null,null,null);
+        if(cursor.moveToFirst()){
+            Area area = new Area();
+            area.setIdarea(cursor.getInt(0));
+            area.setMaximopersonas(cursor.getInt(1));
+            area.setNombrearea(cursor.getString(2));
+            area.setDescripcionarea(cursor.getString(3));
+
+            System.out.println("encontrado:"+area.getIdarea() );
+            return area;
+
+        }else{
+            System.out.println("NO encontrado:");
+            return null;
+        }
+    }
+
+    public String eliminarArea(Area area){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+
+        Cursor c = consultarDetalleSolicitud();
+
+        if(c.moveToFirst()){
+
+            do {
+
+                if(c.getInt(2)== area.getIdarea()){
+                    contador+=db.delete("DetalleSolicitud", "area='"+c.getInt(0)+"'", null);
+                    contador+=db.delete("Solicitud","idSolicitud='"+c.getInt(1)+"'",null);
+                }
+
+            }while (c.moveToNext());
+
+        }
+
+        String where="idarea='"+area.getIdarea()+"'";
+        contador+=db.delete("area", where, null);
+        regAfectados+=contador;
+        return regAfectados;
+    }
+
+    public String insertar(Deporte deporte) {
+        String regInsertados="Deporte Insertado N =";
+        long contador=0;
+        ContentValues alum =new ContentValues();
+        alum.put("iddeporte", deporte.getIddeporte());
+        alum.put("nombredeporte",deporte.getNombredeporte());
+        alum.put("descripciondeporte",deporte.getDescripciondeporte());
+        contador=db.insert("deporte", null, alum);
+        if(contador==-1 || contador==0)
+        {
+            regInsertados= "Error al Insertar el deporte, Registro Duplicado. Verificar inserción";
+        }
+        else {
+            regInsertados=regInsertados+contador;
+        }
+        return regInsertados;
+
+    }
+
+
+
+    public String eliminarDeporte(Deporte deporte){
+
+        String regAfectados="filas afectadas= ";
+        int contador=0;
+        String where="iddeporte='"+deporte.getIddeporte()+"'";
+        contador+=db.delete("deporte", where, null);
+        regAfectados+=contador;
+        return regAfectados;
+    }
+
+    public String actualizar(Deporte deporte){
+        String[] id = {String.valueOf(deporte.getIddeporte())};
+        ContentValues cv = new ContentValues();
+        cv.put("nombredeporte",deporte.getNombredeporte());
+        cv.put("descripciondeporte",deporte.getDescripciondeporte());
+        db.update("deporte", cv, "iddeporte = ?", id);
+        return "Deporte Actualizado Correctamente";
+        //return "Registro con id Deporte "+ String.valueOf(deporte.getIddeporte()) + "no Existente";
+    }
+
+    public Deporte consultarDeporte(String idDeporte){
+        String[] id = {idDeporte};
+        Cursor cursor = db.query("deporte", camposDeporte, "iddeporte = ?",id, null, null,null);
+        if(cursor.moveToFirst()){
+            Deporte deporte = new Deporte();
+            deporte.setIddeporte(cursor.getInt(0));
+            deporte.setNombredeporte(cursor.getString(1));
+            deporte.setDescripciondeporte(cursor.getString(2));
+            return deporte;
+
+        }else{ return null;
+        }
+    }
+
+
+
+    public String llenarBDPolideportivo(){
+
+        final Integer[] VDiddeporte = {1,2,3,4,5,6};
+        final String[] VDnombre = {"Futbol","Boxeo","Baloncesto","Natacion","Futbo Sala","Voleibol"};
+        final String[] VDdescripcion = {"es un deporte de equipo jugado entre dos conjuntos de once jugadores cada uno y algunos árbitros","también llamado a veces boxeo inglés o boxeo irlandés, y coloquialmente conocido como box, es un deporte de combate en el que dos contrincantes luchan utilizando únicamente sus puños con guantes, golpeando a su adversario","es un deporte de equipo que se puede desarrollar tanto en pista cubierta como en descubierta, en el que dos conjuntos de cinco jugadores cada uno, intentan anotar puntos, también llamados canastas o dobles y/o triples introduciendo un balón en un aro colocado a 3,05 metros del suelo del que cuelga una red, lo que le da un aspecto de cesta o canasta","La natación es el movimiento y el desplazamiento a través del agua mediante el uso de las extremidades corporales y por lo general sin utilizar ningún instrumento o apoyo para avanzar","es un deporte colectivo de pelota practicado entre dos equipos de 5 jugadores cada uno, dentro de una cancha de suelo duro. Surgió inspirado en otros deportes como el fútbol, que es la base del juego; el waterpolo; el voleibol; el balonmano y el baloncesto","es un deporte donde dos equipos se enfrentan sobre un terreno de juego liso separados por una red central, tratando de pasar el balón por encima de la red hacia el suelo del campo contrario. El balón debe ser tocado o impulsado con golpes limpios, pero no puede ser parado, sujetado, retenido o acompañado"};
+
+        final Integer[] VAidarea = {1,2,3,4,5,6};
+        final Integer[] VAmaximoP = {100,200,300,400,500,600};
+        final String[] VAnombre = {"Estadio","Ring","Cancha Techada","Piscina","Cancha Techada F","Cancha de Arena"};
+        final String[] VAdescripcion = {"Estadio Martires","Ring de Boxeo","Cancha de Baloncesto","Piscina de 1000L","Duela","Cancha de Voleibol"};
+        abrir();
+        db.execSQL("DELETE FROM deporte");
+        db.execSQL("DELETE FROM area");
+
+
+        Deporte deporte = new Deporte();
+        for(int i=0;i<6;i++){
+            deporte.setIddeporte(VDiddeporte[i]);
+            deporte.setNombredeporte(VDnombre[i]);
+            deporte.setDescripciondeporte(VDdescripcion[i]);
+            insertar(deporte);
+        }
+        Area area = new Area();
+        for(int i=0;i<6;i++){
+            area.setIdarea(VAidarea[i]);
+            area.setMaximopersonas(VAmaximoP[i]);
+            area.setNombrearea(VAnombre[i]);
+            area.setDescripcionarea(VAdescripcion[i]);
+            insertar(area);
+        }
+        cerrar();
+        return "Guardo Correctamente";
+    }
+
+>>>>>>> master
     public String llenarActividades(){
 
 

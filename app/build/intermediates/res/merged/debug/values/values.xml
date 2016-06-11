@@ -292,6 +292,15 @@
     <string name="AlmacenarTarifas">Almacenar Tarifas</string>
     <string name="AreasPolideportivo">Areas polideportivo</string>
     <string name="BIENVENIDO">BIENVENIDO</string>
+<<<<<<< HEAD
+=======
+    <string name="BIENVENIDOADMIN">BIENVENIDO ADMINISTRADOR</string>
+    <string name="Carnet1">AM11098</string>
+    <string name="Carnet2">SR11038</string>
+    <string name="Carnet3">BB11003</string>
+    <string name="Carnet4">LL08027</string>
+    <string name="Carnet5">MM08069</string>
+>>>>>>> master
     <string name="Comunicacion">Comunicacion</string>
     <string name="ConsultarSolicitud">Consultar solicitud</string>
     <string name="CrearAdmin">Crear administrador</string>
@@ -306,6 +315,16 @@
     <string name="GestionarSolicitante">Gestionar Solicitante</string>
     <string name="GestionarSolicitud">Gestionar Solicitud</string>
     <string name="GestionarTarifa">Gestionar Tarifa</string>
+<<<<<<< HEAD
+=======
+    <string name="Instrucciones">INSTRUCCIONES</string>
+    <string name="Integrante1">ARAYA MOTTO DARIO ROMAN</string>
+    <string name="Integrante2">SEGOVIA ROMERO RODRIGO DANIEL</string>
+    <string name="Integrante3">Bautista Jonathan Alexander</string>
+    <string name="Integrante4">Lopez Jhony William</string>
+    <string name="Integrante5">Marmol Murcia Jose Gerardo</string>
+    <string name="Integrantes">INTEGRANTES</string>
+>>>>>>> master
     <string name="ListaDeReservas">Lista de Reservas</string>
     <string name="PaginaPrincipal">Pagina principal</string>
     <string name="VerSolicitudesUsuario">Consultar Solicitudes</string>
@@ -329,7 +348,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_administrador_agregar">AGREGAR NUEVO</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ajustes</string>
     <string name="action_sign_in">Entrar</string>
     <string name="action_sign_in_short">Iniciar sesion</string>
     <string name="action_solicitante_agregar">AGREGAR SOLICITANTE</string>
@@ -413,6 +432,10 @@
     <string name="insertar">Insertar</string>
     <string name="insertarJ">Insertar</string>
     <string name="insertarSo">Guardar</string>
+<<<<<<< HEAD
+=======
+    <string name="insertarWeb">insertar localhost</string>
+>>>>>>> master
     <string name="insertar_registro">Insertar Registro</string>
     <string name="limpiar">Limpiar</string>
     <string name="limpiarJ">Limpiar</string>
@@ -467,7 +490,11 @@ en el menu lateral o en el superior</string>
     <string name="title_activity_deporte_eliminar">DeporteEliminarActivity</string>
     <string name="title_activity_deporte_insertar">DeporteInsertarActivity</string>
     <string name="title_activity_deporte_menu">DeporteMenuActivity</string>
+<<<<<<< HEAD
     <string name="title_activity_principal">principal</string>
+=======
+    <string name="title_activity_principal">Administrador</string>
+>>>>>>> master
     <string name="title_activity_principal_usuario">PrincipalUsuario</string>
     <string name="title_activity_solicitante">SolicitanteActivity</string>
     <string name="title_activity_solicitante_consultar">SolicitanteConsultarActivity</string>

@@ -253,7 +253,7 @@ public class SolicitanteActivity extends AppCompatActivity
                     objSolicitante.add(solicitante);
 
                     //Agregar Registro a la lista
-                    item.add(solicitante.getNombre().toString() + "       "+ solicitante.getPassword().toString()+ "      "+solicitante.getCorreo().toString());
+                    item.add(solicitante.getIdSolicitante() + "   "+ solicitante.getNombre().toString());
 
 
                 }while(c.moveToNext());

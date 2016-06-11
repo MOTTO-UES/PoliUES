@@ -45,8 +45,13 @@ public class principal extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 //Snackbar.make(view, "BIENVENIDO "+String.valueOf(admin.getNombreAdmin()), Snackbar.LENGTH_LONG)
                   //      .setAction("Action", null).show();
+=======
+                Snackbar.make(view, "PoliUES Derechos Reservados UES \n Version ADMINISTRADOR @BEHELIT", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+>>>>>>> master
             }
         });
 
