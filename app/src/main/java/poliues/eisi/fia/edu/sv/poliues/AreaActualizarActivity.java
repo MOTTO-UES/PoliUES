@@ -73,10 +73,10 @@ public class AreaActualizarActivity extends AppCompatActivity {
 
         int respuesta = ControladorServicio.actualizarAreaPHP(url, this);
 
-        if (respuesta == 1)
+        /*if (respuesta == 1)
             Toast.makeText(this, "Registro modificado", Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(this, "No se pudo modificar", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "No se pudo modificar", Toast.LENGTH_LONG).show();*/
 
     }
 

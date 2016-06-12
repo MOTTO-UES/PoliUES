@@ -81,10 +81,10 @@ public class AreaInsertarActivity extends AppCompatActivity {
           int respuesta = ControladorServicio.insertarAreaPHP(url, this);
 
 
-        if (respuesta == 1)
+       /* if (respuesta == 1)
             Toast.makeText(this, "Registro ingresado", Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(this, "Error registro duplicado", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error registro duplicado", Toast.LENGTH_LONG).show();*/
 
     }
 
