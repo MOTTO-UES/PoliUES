@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario"
-    tools:showIn="@layout/app_bar_principal_usuario">
+    tools:showIn="@layout/app_bar_principal_usuario"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -22,96 +23,97 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/presentacion"
-            android:text="BIENVENIDO"
-            android:textSize="25sp"
+            android:text="@string/BIENVENIDO"
+            android:textSize="35sp"
             android:gravity="center"
             android:typeface="serif"
-            android:textStyle="italic"
-            android:textColor="#883030"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
             />
 
 
-        <TextView android:text=""
-            android:layout_marginTop="30dip"
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent" />
 
         <ImageView
             android:id="@+id/ImagenUsuario"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-
             android:scaleType="fitStart"
             android:src="@drawable/complejo"
-
+            android:layout_margin="2dp"
             />
-        <TextView android:text=""
-            android:layout_marginTop="0.3dp"
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent" />
+
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Instrucciones"
+            android:text="@string/Instrucciones"
             android:textSize="20sp"
             android:gravity="center"
             android:typeface="serif"
             android:textStyle="bold"
+            android:textColor="#ffffff"
             />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto1"
-            android:textSize="12sp"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
             />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto2"
-            android:textSize="12sp"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
             />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto3"
-            android:textSize="12sp"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
             />
         <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/texto4"
-        android:textSize="12sp"
+        android:textSize="15sp"
+            android:textColor="#ffffff"
         />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto5"
-            android:textSize="12sp"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
             />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto6"
-            android:textSize="12sp"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
             />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto7"
-            android:textSize="12sp"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
             />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/texto8"
-            android:textSize="12sp"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
             />
 
     </LinearLayout>

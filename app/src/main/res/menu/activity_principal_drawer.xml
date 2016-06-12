@@ -18,6 +18,29 @@
             android:id="@+id/actividad"
             android:icon="@drawable/ic_menu_send"
             android:title="@string/GestionarActividad" />
+
+        <item
+            android:id="@+id/tarifa"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/GestionarTarifa" />
+
+        <item
+            android:id="@+id/nav_listar_reserva"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/GestionarReserva" />
+
+        <item android:id="@+id/areasPoli"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/AreasPolideportivo"
+            />
+
+
+        <item
+            android:id="@+id/Principal"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/PaginaPrincipal" />
+
+
         <!--
         <item
             android:id="@+id/nav_gallery"
@@ -40,6 +63,42 @@
                 android:id="@+id/cerrarSesionAdmin"
                 android:icon="@android:drawable/ic_lock_idle_lock"
                 android:title="@string/cerrarSesion" />
+        </menu>
+    </item>
+
+
+    <item android:title="Data">
+        <menu>
+
+
+            <item
+                android:id="@+id/actiAlmacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/AlmacenarActividades"
+                />
+
+            <item
+                android:id="@+id/areaAlmacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/AlmacenarAreas"
+                />
+
+            <item
+                android:id="@+id/tarifaAlmacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/AlmacenarTarifas"
+                />
+
+            <item
+                android:id="@+id/solicitudesALmacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/AlmacenarSolicitudes"
+                />
+
+            <item
+                android:id="@+id/nav_almacenar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/AlmacenarDatosReserva" />
         </menu>
     </item>
 

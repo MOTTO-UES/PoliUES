@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:2:1-99:12
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:2:1-146:12
 	xmlns:android
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -25,8 +25,12 @@ uses-permission#android.permission.READ_CONTACTS
 ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:8:5-72
 	android:name
 		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:8:22-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:9:22-64
 application
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:10:5-97:19
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:11:5-144:19
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
@@ -48,178 +52,282 @@ MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\Users\Da
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:14:9-41
 	android:allowBackup
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:12:9-35
 	android:icon
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:13:9-43
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:16:9-40
 activity#poliues.eisi.fia.edu.sv.poliues.LoginActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:16:9-24:20
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:18:13-45
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:19:13-45
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:17:13-42
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:18:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:23:27-74
 activity#poliues.eisi.fia.edu.sv.poliues.principal
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:25:9-28:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:26:9-29:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:27:13-61
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:28:13-61
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:29:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:26:13-38
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:27:13-38
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudInsertarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:29:9-63
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:30:9-63
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:29:19-60
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:30:19-60
 activity#poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudInsertarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:30:9-70
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:31:9-70
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:30:19-67
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:31:19-67
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudActualizarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:31:9-65
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:32:9-65
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:31:19-62
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:32:19-62
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudEliminarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:32:9-63
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:33:9-63
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:32:19-60
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:33:19-60
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitudConsultarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:33:9-64
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:34:9-64
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:33:19-61
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:34:19-61
 activity#poliues.eisi.fia.edu.sv.poliues.DetalleSolicitudActualizarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:34:9-72
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:35:9-72
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:34:19-69
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:35:19-69
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:35:9-38:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:36:9-39:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:37:13-65
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:38:13-65
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:38:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:36:13-50
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:37:13-50
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorInsertarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:39:9-42:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:40:9-43:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:41:13-73
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:42:13-73
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:42:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:43:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:40:13-58
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:41:13-58
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:43:9-46:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:44:9-47:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:45:13-63
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:46:13-63
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:46:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:47:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:44:13-48
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:45:13-48
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorEditarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:47:9-50:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:48:9-51:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:49:13-72
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:50:13-72
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:50:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:51:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:48:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:49:13-56
 activity#poliues.eisi.fia.edu.sv.poliues.AdministradorConsultarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:51:9-54:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:52:9-55:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:53:13-75
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:54:13-75
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:54:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:55:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:52:13-59
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:53:13-59
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteEditarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:55:9-58:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:56:9-59:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:57:13-70
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:58:13-70
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:58:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:59:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:56:13-54
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:57:13-54
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteConsultarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:59:9-62:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:60:9-63:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:61:13-73
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:62:13-73
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:62:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:63:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:60:13-57
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:61:13-57
 activity#poliues.eisi.fia.edu.sv.poliues.SolicitanteInsertarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:63:9-66:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:64:9-67:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:65:13-72
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:66:13-72
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:66:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:67:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:64:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:65:13-56
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:72:9-74:69
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:73:9-75:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:73:13-58
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:74:13-58
 	android:value
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:74:13-66
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:75:13-66
 activity#poliues.eisi.fia.edu.sv.poliues.verSolicitudActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:76:9-58
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:77:9-58
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:76:19-55
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:77:19-55
 activity#poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:77:9-80:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:78:9-81:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:79:13-69
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:80:13-69
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:80:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:81:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:78:13-45
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:79:13-45
+activity#poliues.eisi.fia.edu.sv.poliues.ReservaInsertarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:82:9-61
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:82:19-58
+activity#poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:83:9-86:59
+	android:label
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:85:13-45
+	android:theme
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:86:13-56
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:84:13-50
+activity#poliues.eisi.fia.edu.sv.poliues.ReservaConsultarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:87:9-62
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:87:19-59
+activity#poliues.eisi.fia.edu.sv.poliues.AreaActualizarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:96:9-60
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:96:19-57
+activity#poliues.eisi.fia.edu.sv.poliues.AreaConsultarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:97:9-59
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:97:19-56
+activity#poliues.eisi.fia.edu.sv.poliues.AreaEliminarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:98:9-58
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:98:19-55
+activity#poliues.eisi.fia.edu.sv.poliues.AreaInsertarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:99:9-58
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:99:19-55
+activity#poliues.eisi.fia.edu.sv.poliues.AreaMenuActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:100:9-54
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:100:19-51
+activity#poliues.eisi.fia.edu.sv.poliues.PolideportivoActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:101:9-59
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:101:19-56
+activity#poliues.eisi.fia.edu.sv.poliues.DeporteMenuActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:102:9-57
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:102:19-54
+activity#poliues.eisi.fia.edu.sv.poliues.DeporteActualizarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:103:9-63
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:103:19-60
+activity#poliues.eisi.fia.edu.sv.poliues.DeporteConsultarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:104:9-62
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:104:19-59
+activity#poliues.eisi.fia.edu.sv.poliues.DeporteEliminarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:105:9-61
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:105:19-58
+activity#poliues.eisi.fia.edu.sv.poliues.DeporteInsertarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:106:9-61
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:106:19-58
 activity#poliues.eisi.fia.edu.sv.poliues.ActividadActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:81:9-84:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:107:9-110:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:83:13-61
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:109:13-61
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:84:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:110:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:82:13-46
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:108:13-46
 activity#poliues.eisi.fia.edu.sv.poliues.ActividadInsertarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:85:9-88:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:111:9-114:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:87:13-70
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:113:13-70
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:88:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:114:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:86:13-54
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:112:13-54
 activity#poliues.eisi.fia.edu.sv.poliues.ActividadEditarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:89:9-92:59
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:115:9-118:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:91:13-68
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:117:13-68
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:92:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:118:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:90:13-52
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:116:13-52
 activity#poliues.eisi.fia.edu.sv.poliues.ActividadConsultarActivity
-ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:93:9-96:68
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:119:9-122:59
 	android:label
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:95:13-71
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:121:13-71
 	android:theme
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:96:13-56
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:122:13-56
 	android:name
-		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:94:13-55
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:120:13-55
+activity#poliues.eisi.fia.edu.sv.poliues.TarifaActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:123:9-126:59
+	android:label
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:125:13-64
+	android:theme
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:126:13-56
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:124:13-43
+activity#poliues.eisi.fia.edu.sv.poliues.TarifaMenuActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:127:9-130:59
+	android:label
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:129:13-63
+	android:theme
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:130:13-56
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:128:13-47
+activity#poliues.eisi.fia.edu.sv.poliues.TarifaInsertarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:131:9-134:59
+	android:label
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:133:13-67
+	android:theme
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:134:13-56
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:132:13-51
+activity#poliues.eisi.fia.edu.sv.poliues.TarifaConsultarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:135:9-138:59
+	android:label
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:137:13-68
+	android:theme
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:138:13-56
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:136:13-52
+activity#poliues.eisi.fia.edu.sv.poliues.TarifaActualizarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:139:9-142:59
+	android:label
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:141:13-69
+	android:theme
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:142:13-56
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:140:13-53
+activity#poliues.eisi.fia.edu.sv.poliues.TarifaEliminarActivity
+ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:143:9-69
+	android:name
+		ADDED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml:143:19-57
 uses-sdk
 INJECTED from C:\Users\Dario\Documents\GitHub\PoliUES\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\Dario\Documents\GitHub\PoliUES\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78

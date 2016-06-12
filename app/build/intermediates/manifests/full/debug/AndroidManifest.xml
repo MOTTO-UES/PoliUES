@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -84,6 +85,31 @@
             android:name="poliues.eisi.fia.edu.sv.poliues.PrincipalUsuario"
             android:label="@string/title_activity_principal_usuario"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.ReservaInsertarActivity" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.ReservaConsultarActivity" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.AreaActualizarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.AreaConsultarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.AreaEliminarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.AreaInsertarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.AreaMenuActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.PolideportivoActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteMenuActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteActualizarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteConsultarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteEliminarActivity" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.DeporteInsertarActivity" />
         <activity
             android:name="poliues.eisi.fia.edu.sv.poliues.ActividadActivity"
             android:label="@string/title_activity_actividad"
@@ -100,6 +126,27 @@
             android:name="poliues.eisi.fia.edu.sv.poliues.ActividadConsultarActivity"
             android:label="@string/title_activity_actividad_consultar"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaActivity"
+            android:label="@string/tittle_activity_tarifa_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaMenuActivity"
+            android:label="@string/title_activity_tarifa_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaInsertarActivity"
+            android:label="@string/title_activity_tarifa_insertar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaConsultarActivity"
+            android:label="@string/title_activity_tarifa_consultar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="poliues.eisi.fia.edu.sv.poliues.TarifaActualizarActivity"
+            android:label="@string/title_activity_tarifa_actualizar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="poliues.eisi.fia.edu.sv.poliues.TarifaEliminarActivity" />
     </application>
 
 </manifest>

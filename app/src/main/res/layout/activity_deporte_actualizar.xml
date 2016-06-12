@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dip"
+    android:stretchColumns="1" >
+    <TableRow>
+        <TextView android:text="@string/iddeporte" />
+        <EditText
+            android:id="@+id/editIddeporte"
+            android:inputType="text"
+            android:maxLength="7" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/nombredeporte" />
+        <EditText
+            android:id="@+id/editNombredeporte"
+            android:inputType="text"
+            android:maxLength="30" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/descripciondeporte" />
+        <EditText
+            android:id="@+id/editDescripciondeporte"
+            android:inputType="text"
+            android:maxLength="30" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:onClick="actualizarDeporte"
+            android:text="@string/actualizarJ" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:onClick="limpiarTextoA"
+            android:text="@string/limpiarJ" />
+    </TableRow>
+</TableLayout>

@@ -13,10 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class PrincipalUsuario extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        Solicitante soli = null;
+        Bundle admi=null;
 
 
     @Override
@@ -25,18 +26,23 @@ public class PrincipalUsuario extends AppCompatActivity
         setContentView(R.layout.activity_principal_usuario);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        admi = getIntent().getExtras();
 
         //////////////////////////////////////////////
         ////// soli  contiene Solicitante Logueado
+
+        soli = solicitanteLogueado();
+
         //final Solicitante soli = solicitanteLogueado();
+
         //////////////////////////////////////////////
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Snackbar.make(view, "BIENVENIDO "+String.valueOf(soli.getNombre()), Snackbar.LENGTH_LONG)
-                   //     .setAction("Action", null).show();
+                Snackbar.make(view, "PoliUES Derechos Reservados UES \n Version ESTANDAR @BEHELIT", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
 
@@ -76,16 +82,21 @@ public class PrincipalUsuario extends AppCompatActivity
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                System.out.println(soli.getIdSolicitante());
+                System.out.println(soli.getNombre());
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -102,16 +113,118 @@ public class PrincipalUsuario extends AppCompatActivity
         Intent intent;
         if (id == R.id.solicitudUsuarioCrear) {
             intent = new Intent(this,SolicitudInsertarActivity.class);
+            intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
             startActivity(intent);
         } else if (id == R.id.solicitudUsuarioVer) {
             intent = new Intent(this,SolicitudConsultarActivity.class);
+            intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
             startActivity(intent);
         } else if (id == R.id.cerrarSesionUsuario) {
             finish();
             intent = new Intent(this,LoginActivity.class);
             startActivity(intent);
         }
-    //////////////////////////////////////////////////////////////////////////
+        if (id == R.id.administrador) {
+            finish();
+            Intent inte = new Intent(this, AdministradorActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        } else if (id == R.id.solicitante) {
+            finish();
+            Intent inte = new Intent(this, SolicitanteActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }else if (id == R.id.actividad) {
+            finish();
+            Intent inte = new Intent(this, ActividadActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+
+        }
+        else if (id == R.id.cerrarSesionAdmin) {
+            finish();
+            Intent inte = new Intent(this, LoginActivity.class);
+            startActivity(inte);
+
+        }
+        else if (id == R.id.solicitud) {
+            finish();
+            Intent inte = new Intent(this, SolicitudConsultarActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }
+        else if(id == R.id.tarifa){
+            finish();
+            Intent inte = new Intent(this,TarifaMenuActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }
+        else if (id == R.id.nav_listar_reserva) {
+            // Handle the camera action
+            try{
+                Class<?> clase=Class.forName("poliues.eisi.fia.edu.sv.poliues.ListarReservaActivity");
+                finish();
+                Intent inte = new Intent(this,clase);
+                inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+                inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+                inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+                inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+                inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+                inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+                this.startActivity(inte);
+            }catch(ClassNotFoundException e){
+                e.printStackTrace();
+            }
+        } else if(id == R.id.areasPoli){
+            finish();
+            Intent inte = new Intent(this, PolideportivoActivity.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+        }
+        else if (id == R.id.Principal){
+            finish();
+            Intent inte = new Intent(this, principal.class);
+            inte.putExtra("IDUSUARIO", admi.getInt("EnvioAdministradorIDENTIFICADOR"));
+            inte.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+            inte.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+            inte.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+            inte.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+            inte.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+            startActivity(inte);
+
+        }
+
+        //////////////////////////////////////////////////////////////////////////
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -130,6 +243,9 @@ public class PrincipalUsuario extends AppCompatActivity
         solicitante.setNombre(ExtraNOMBRE);
         solicitante.setPassword(ExtraPASS);
         solicitante.setCorreo(ExtraCORREO);
+
+        System.out.println("PRINCIPAL ID: "+solicitante.getIdSolicitante());
+        System.out.println("PRINCIPAL NOMBRE: "+solicitante.getNombre());
 
         return solicitante;
     }

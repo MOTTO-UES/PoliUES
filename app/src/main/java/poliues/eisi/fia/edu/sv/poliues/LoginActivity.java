@@ -20,6 +20,7 @@ import android.os.Build.VERSION;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.BidiFormatter;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -45,6 +46,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     /**
      * Id to identity READ_CONTACTS permission request.
      */
+    //ControlDBPoliUES BDhelper;
+
+
 
     private static final int REQUEST_READ_CONTACTS = 0;
 
@@ -78,22 +82,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         BDhelper = new ControlBDPoliUES(this);
 
-        System.out.println("antes de abrir");
-        BDhelper.abrir();
-        System.out.println("despues de abrir");
-        //String tost = BDhelper.llenarBDSR11038();
-        System.out.println("despues de llenar");
-        BDhelper.cerrar();
-        System.out.println("despues de cerrar");
-        //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();
+        /*Administrador ad = new Administrador();
+        ad.setCorreoAdmin("rodrigoxj32@hotmail.com");
+        ad.setNombreAdmin("Rodrigo Romero");
+        ad.setPasswordAdmin("12345");*/
 
-        //String tost = DB
-        //Toast.makeText(this, tost, Toast.LENGTH_SHORT).show();sqlerrm
-        System.out.println("el toast");
+
+        BDhelper.abrir();
+        //BDhelper.insertarAdministrador(ad);
+        //BDhelper.llenarBDPolideportivo();
+        //BDhelper.llenarBDPoli();
+        BDhelper.cerrar();
+
 
         //////////////////////////////////////////////////////
 
-        Button boton, botonUsuario;
+       /* Button boton, botonUsuario;
         boton = (Button) findViewById(R.id.entrar_principal);
         boton.setOnClickListener(new OnClickListener() {
             @Override
@@ -109,7 +113,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 Intent intent = new Intent(LoginActivity.this, PrincipalUsuario.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
         //////////////////////////////////////////////////////
@@ -463,16 +467,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     inte.putExtra("EnvioAdministradorNOMBRE", administrador.getNombreAdmin());
                     inte.putExtra("EnvioAdministradorPASS", administrador.getPasswordAdmin());
                     inte.putExtra("EnvioAdministradorCORREO", administrador.getCorreoAdmin());
+                    inte.putExtra("EnvioAdministradorIDENTIFICADOR","admin");
 
                     startActivity(inte);
                 }else {
                     Intent inte = new Intent(LoginActivity.this, PrincipalUsuario.class);
-                    /*
+
                     inte.putExtra("EnvioSolicitanteID",solicitante.getIdSolicitante());
                     inte.putExtra("EnvioSolicitanteNOMBRE", solicitante.getNombre());
                     inte.putExtra("EnvioSolicitantePASS", solicitante.getPassword());
                     inte.putExtra("EnvioSolicitanteCORREO", solicitante.getCorreo());
-                    */
+
                     startActivity(inte);
                 }
                 /////////////////////////////////////////////////////////////////////////////////
@@ -489,5 +494,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
+
+    public void llenarAdmin(View v){
+        BDhelper.abrir();
+        String menj = BDhelper.crearAdmin();
+        BDhelper.cerrar();
+
+        Toast.makeText(this,menj,Toast.LENGTH_SHORT).show();
+    }
+
 }
 

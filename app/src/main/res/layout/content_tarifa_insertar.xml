@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="30dip"
+    android:stretchColumns="1"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="poliues.eisi.fia.edu.sv.poliues.TarifaInsertarActivity"
+    tools:showIn="@layout/app_bar_tarifa_insertar">
+
+
+    <TableRow>
+        <TextView android:text="@string/cantPersonas" />
+        <EditText
+            android:id="@+id/editCantPersonas"
+            android:inputType="number"
+            android:maxLength="8" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/tarifaUnitaria" />
+        <EditText
+            android:id="@+id/editTarifaUnitaria"
+            android:inputType="numberDecimal"
+            android:maxLength="5" />
+    </TableRow>
+
+    <TableRow>
+
+
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:onClick="insertarTarifa"
+            android:text="@string/insertar_registro" />
+        <Button
+            android:onClick="limpiarTexto"
+            android:text="@string/limpiar" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:onClick="insertarTarifaWeb"
+            android:text="@string/insertar_registroWeb" />
+    </TableRow>
+
+</TableLayout>

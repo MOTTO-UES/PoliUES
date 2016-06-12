@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="30dip"
+    android:stretchColumns="1" >
+    <TableRow>
+        <TextView android:text="@string/idArea"/>
+        <EditText
+            android:id="@+id/editidArea"
+            android:inputType="text"
+            android:maxLength="7" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/maximopersonas" />
+        <EditText
+            android:id="@+id/editmaximopersonas"
+            android:inputType="text"
+            android:maxLength="5" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/nombrearea" />
+        <EditText
+            android:id="@+id/editnombrearea"
+            android:inputType="text"
+            android:maxLength="30" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/descripcionarea" />
+        <EditText
+            android:id="@+id/editDescripcionarea"
+            android:inputType="text"
+            android:maxLength="50" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="@string/opciones" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:onClick="insertarArea"
+            android:text="@string/insertarJ" />
+        <Button
+            android:onClick="limpiarTexto"
+            android:text="@string/limpiarJ" />
+    </TableRow>
+
+
+    <TableRow>
+        <Button
+            android:onClick="insertarAreaWeb"
+            android:text="@string/insertarWeb" />
+    </TableRow>
+</TableLayout>

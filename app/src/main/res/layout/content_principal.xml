@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,14 +11,153 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="poliues.eisi.fia.edu.sv.poliues.principal"
-    tools:showIn="@layout/app_bar_principal">
+    tools:showIn="@layout/app_bar_principal"
+    android:background="@color/colorPrimary">
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
-</RelativeLayout>
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/presentacion"
+            android:text="@string/BIENVENIDOADMIN"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+
+
+        <ImageView
+            android:id="@+id/ImagenUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/complejo"
+            android:layout_margin="3dp"/>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Integrantes"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView android:text=""
+            android:layout_marginTop="0.3dp"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Integrante1"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Carnet1"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Integrante2"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Carnet2"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Integrante3"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Carnet3"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Integrante4"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Carnet4"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Integrante5"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Carnet5"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            />
+
+
+
+    </LinearLayout>
+</ScrollView>

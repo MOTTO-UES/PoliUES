@@ -1,12 +1,10 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -31,12 +29,36 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
     Cursor cursor2;
     List<String> item = null;
     String datoAbuscar;
-;
+    Solicitante soli=null;
+    int creador=0;
+    String esAdmin=null;
+    Bundle usuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solicitud_consultar);
+
+        usuario = getIntent().getExtras();
+
+
+        esAdmin = usuario.getString("EnvioAdministradorIDENTIFICADOR");
+        if(esAdmin==null){
+            esAdmin="noEsAdmin";
+            creador = usuario.getInt("IDUSUARIO");
+            System.out.println(esAdmin);
+        }
+        else {
+           // creador = usuario.getInt("EnvioAdministradorID");
+            System.out.println(esAdmin);
+        }
+
+        soli = new Solicitante();
+        soli.setIdSolicitante(creador);
+
+
+        System.out.println("variable int: " +creador);
+        System.out.println("OBJETO SOLICITUD " +soli.getIdSolicitante());
 
 
         alertDialog = new AlertDialog.Builder(this).create();
@@ -46,16 +68,21 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
                 llamarConsultar();
             }
         });
-        alertDialog.setButton2("Actualizar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                llamarActualizar();
-                            }
-        });
-        alertDialog.setButton3("Eliminar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                llamarEliminar();
-            }
-        });
+
+        if (!(esAdmin.equals("admin"))){
+            alertDialog.setButton2("Actualizar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    llamarActualizar();
+                }
+            });
+            alertDialog.setButton3("Eliminar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    llamarEliminar();
+                }
+            });
+
+        }
+
 
 
         alertDialogE = new AlertDialog.Builder(this).create();
@@ -101,7 +128,10 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
+        if (esAdmin.equals("admin"))
+            getMenuInflater().inflate(R.menu.principal,menu);
+        else
+            getMenuInflater().inflate(R.menu.opcionessolicitante,menu);
 
         return  true;
     }
@@ -113,16 +143,46 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                if (esAdmin.equals("admin")){
+                    intent.putExtra("IDUSUARIO",usuario.getInt("EnvioAdministradorID"));
+                }
+                else {
+                    intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                }
+                intent.putExtra("EnvioAdministradorID",usuario.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",usuario.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",usuario.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",usuario.getString("EnvioAdministradorIDENTIFICADOR"));
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
+                startActivity(intent);
+                break;
+            case R.id.action_settings:
+                intent = new Intent(this,principal.class);
+                Administrador administrador = new Administrador();
+                if (esAdmin.equals("admin")){
+                    intent.putExtra("IDUSUARIO",usuario.getInt("EnvioAdministradorID"));
+                }
+                else {
+                    intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
+                }
+
+                intent.putExtra("EnvioAdministradorID",usuario.getInt("EnvioAdministradorID"));
+                intent.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
+                intent.putExtra("EnvioAdministradorPASS",usuario.getString("EnvioAdministradorPASS"));
+                intent.putExtra("EnvioAdministradorCORREO",usuario.getString("EnvioAdministradorCORREO"));
+                intent.putExtra("EnvioAdministradorIDENTIFICADOR",usuario.getString("EnvioAdministradorIDENTIFICADOR"));
                 startActivity(intent);
                 break;
         }
@@ -134,6 +194,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llamarActualizar(){
         Intent o = new Intent(this,SolicitudActualizarActivity.class);
+        o.putExtra("IDUSUARIO",soli.getIdSolicitante());
         o.putExtra("motivo",datoAbuscar);
         startActivity(o);
     }
@@ -145,7 +206,19 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llamarConsultar(){
         Intent o = new Intent(this, verSolicitudActivity.class);
+        if (esAdmin.equals("admin")){
+            o.putExtra("IDUSUARIO", usuario.getInt("EnvioAdministradorID"));
+        }
+        else {
+            o.putExtra("IDUSUARIO", soli.getIdSolicitante());
+        }
         o.putExtra("motivo",datoAbuscar);
+
+        o.putExtra("EnvioAdministradorID", usuario.getInt("EnvioAdministradorID"));
+        o.putExtra("EnvioAdministradorNOMBRE",usuario.getString("EnvioAdministradorNOMBRE"));
+        o.putExtra("EnvioAdministradorPASS",usuario.getString("EnvioAdministradorPASS"));
+        o.putExtra("EnvioAdministradorCORREO",usuario.getString("EnvioAdministradorCORREO"));
+        o.putExtra("EnvioAdministradorIDENTIFICADOR",usuario.getString("EnvioAdministradorIDENTIFICADOR"));
         startActivity(o);
     }
 
@@ -172,6 +245,7 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Se elimino correctamente ", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this,SolicitudConsultarActivity.class);
+            intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
             startActivity(intent);
         }
 
@@ -181,26 +255,66 @@ public class SolicitudConsultarActivity extends AppCompatActivity {
 
     public void llenarSolicitudes(){
         helper = new ControlBDPoliUES(this);
-        helper.leer();
+        helper.abrir();
         cursor = helper.consultarSolicitud();
+        Cursor cursor2 = helper.consultarDetalleSolicitud();
+        int esta =0;
         //helper.cerrar();
 
         item = new ArrayList<String>();
 
-        if(cursor.moveToFirst()){
+
+        if (cursor.moveToFirst() && cursor2.moveToFirst()){
+            do {
+
+
+                    do {
+                        if(cursor.getInt(0)== cursor2.getInt(1)){
+                            esta+=1;
+                        }
+
+                    }while (cursor2.moveToNext());
+
+
+
+                if (esta==0){
+                    cursor2.moveToFirst();
+                    helper.eliminarSolicitud(cursor.getInt(0));
+                    esta=0;
+                }else {
+                    cursor2.moveToFirst();
+                    esta=0;
+                }
+
+            }while (cursor.moveToNext());
+        }
+
+
+        Cursor cursor3 = helper.consultarSolicitud();
+
+        if(cursor3.moveToFirst()){
 
             do {
 
                 Solicitud solicitud = new Solicitud();
 
-                solicitud.setIdSolicitud(cursor.getInt(0));
 
-                solicitud.setMotivoSolicitud(cursor.getString(5));
+                solicitud.setIdSolicitud(cursor3.getInt(0));
 
-                item.add(solicitud.getMotivoSolicitud());
+                solicitud.setSolicitante(cursor3.getInt(4));
+
+                solicitud.setMotivoSolicitud(cursor3.getString(5));
+
+                if (soli.getIdSolicitante() == solicitud.getSolicitante() || esAdmin.equals("admin")){
+
+                    item.add(solicitud.getMotivoSolicitud());
+
+                }
 
 
-            }while(cursor.moveToNext());
+
+
+            }while(cursor3.moveToNext());
         }
 
 

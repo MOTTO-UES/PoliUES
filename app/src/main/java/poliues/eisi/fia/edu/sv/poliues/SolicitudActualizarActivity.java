@@ -18,7 +18,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class SolicitudActualizarActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     ControlBDPoliUES helper;
@@ -28,8 +30,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
     TextView FI;
     TextView FF;
     EditText CT;
-    String actividadSeleccionada;
-    Spinner spinnerActividad;
+
     Spinner spinnerAreas;
     String AreaSeleccionada;
     String FechaInicio;
@@ -51,12 +52,22 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
     static final int DATE_DIALOG_ID_Inicio = 0;
     static final int DATE_DIALOG_ID_Fin = 1;
 
+
+    Solicitante soli=null;
+    List<String> areas = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_solicitud);
 
         Bundle bundle = getIntent().getExtras();
+
+        soli = new Solicitante();
+
+        soli.setIdSolicitante(getIntent().getExtras().getInt("IDUSUARIO"));
+
+        System.out.println("usuario: "+soli.getIdSolicitante());
 
         helper = new ControlBDPoliUES(this);
 
@@ -67,17 +78,13 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         FI= (TextView) findViewById(R.id.dateDisplayInicio);
         FF= (TextView) findViewById(R.id.dateDisplayFin);
 
+        spinnerAreas = (Spinner) findViewById(R.id.SpinnerArea);
 
-        //LLENAR ACTIVIDADES
-        spinnerActividad = (Spinner) findViewById(R.id.SpinnerActividad);
-
-
-        ArrayAdapter<CharSequence> adapterAct = ArrayAdapter.createFromResource(this, R.array.Actividades, android.R.layout.simple_spinner_item);
-
-
-        adapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerActividad.setAdapter(adapterAct);
-        spinnerActividad.setOnItemSelectedListener(this);
+        areas = areas();
+        ArrayAdapter<String> adapterAr= new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item, areas);
+        adapterAr.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAreas.setAdapter(adapterAr);
+        spinnerAreas.setOnItemSelectedListener(this);
 
 
         //CREAR CALENDARIOS
@@ -131,16 +138,19 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
         Intent intent;
 
         switch (id){
-            case R.id.opcionesMenu:
+            case R.id.consultarSolicitud:
                 intent = new Intent(this,SolicitudConsultarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actInsertar:
                 intent = new Intent(this,SolicitudInsertarActivity.class);
+                intent.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
             case R.id.actPrincipalUsuario:
                 intent = new Intent(this,PrincipalUsuario.class);
+                intent.putExtra("EnvioSolicitanteID",soli.getIdSolicitante());
                 startActivity(intent);
                 break;
         }
@@ -151,7 +161,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        this.actividadSeleccionada = parent.getItemAtPosition(position).toString();
+        this.AreaSeleccionada = parent.getItemAtPosition(position).toString();
     }
 
     @Override
@@ -241,6 +251,7 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
             if (solicitud.getEstadoSolicitud().equals("aprobado")){
                 Toast.makeText(this,"YA FUE APROBADO NO SE PUEDE MODIFICAR", Toast.LENGTH_LONG).show();
                 Intent o = new Intent(this, verSolicitudActivity.class);
+                o.putExtra("IDUSUARIO",soli.getIdSolicitante());
                 o.putExtra("motivo",motivo);
                 startActivity(o);
             }
@@ -259,29 +270,67 @@ public class SolicitudActualizarActivity extends AppCompatActivity implements Ad
 
     public void ActualizarSolicitudYDS(View v){
 
-        String actividad = this.actividadSeleccionada;
+        String area= this.AreaSeleccionada;
         String motivo = motivoET.getText().toString();
 
         String regInsertados;
+        Area areaOb;
 
         solicitud.setMotivoSolicitud(motivo);
-        solicitud.setActividad(2);
-        solicitud.setTarifa(2);
 
-        DS.setCobroTotal(80);
-        DS.setArea(2);
+        Cursor OA = helper.obtenerAreas();
+        helper.abrir();
+        areaOb = helper.consultarAreaNombre(OA,AreaSeleccionada);
+
+
+
+        DS.setArea(areaOb.getIdarea());
         DS.setFechaInicio(FI.getText().toString());
         DS.setFechaFinal(FF.getText().toString());
 
-        helper.abrir();
+
         String estado = helper.actualizar(solicitud);
         String estado2 = helper.actualizar(DS);
         helper.cerrar();
         Toast.makeText(this, estado + estado2, Toast.LENGTH_SHORT).show();
 
         Intent o = new Intent(this, verSolicitudActivity.class);
+        o.putExtra("IDUSUARIO",soli.getIdSolicitante());
         o.putExtra("motivo",motivo);
         startActivity(o);
 
+    }
+
+
+    public ArrayList<String> areas() {
+        List<String> a = new ArrayList<String>();
+        Cursor ar;
+
+        helper = new ControlBDPoliUES(this);
+        helper.leer();
+
+        ar = helper.obtenerAreas();
+
+        if (ar.moveToFirst()) {
+
+            do {
+
+                Area are = new Area();
+
+                are.setIdarea(ar.getInt(0));
+                are.setMaximopersonas(ar.getInt(1));
+                are.setNombrearea(ar.getString(2));
+                are.setDescripcionarea(ar.getString(3));
+
+                a.add(are.getNombrearea());
+
+
+            } while (ar.moveToNext());
+
+
+
+        }
+
+        return (ArrayList<String>) a;
     }
 }
