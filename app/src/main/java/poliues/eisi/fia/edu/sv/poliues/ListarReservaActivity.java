@@ -153,8 +153,8 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
         startActivity(intent);
     }
 
-    public void consultarReserva(View v){
-        Intent intent = new Intent(this,ReservaConsultarActivity.class);
+    public void eliminarReserva(View v){
+        Intent intent = new Intent(this,ReservaEliminarActivity.class);
         intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
         intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
         intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));

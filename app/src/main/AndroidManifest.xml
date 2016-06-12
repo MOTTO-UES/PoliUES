@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="poliues.eisi.fia.edu.sv.poliues">
+<manifest package="poliues.eisi.fia.edu.sv.poliues"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -18,53 +18,53 @@
             android:name=".LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".principal"
             android:label="@string/title_activity_principal"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SolicitudInsertarActivity" />
-        <activity android:name=".DetalleSolicitudInsertarActivity" />
-        <activity android:name=".SolicitudActualizarActivity" />
-        <activity android:name=".SolicitudEliminarActivity" />
-        <activity android:name=".SolicitudConsultarActivity" />
-        <activity android:name=".DetalleSolicitudActualizarActivity" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SolicitudInsertarActivity"/>
+        <activity android:name=".DetalleSolicitudInsertarActivity"/>
+        <activity android:name=".SolicitudActualizarActivity"/>
+        <activity android:name=".SolicitudEliminarActivity"/>
+        <activity android:name=".SolicitudConsultarActivity"/>
+        <activity android:name=".DetalleSolicitudActualizarActivity"/>
         <activity
             android:name=".AdministradorActivity"
             android:label="@string/title_activity_administrador"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".AdministradorInsertarActivity"
             android:label="@string/title_activity_administrador_agregar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SolicitanteActivity"
             android:label="@string/title_activity_solicitante"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".AdministradorEditarActivity"
             android:label="@string/title_activity_administrador_editar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".AdministradorConsultarActivity"
             android:label="@string/title_activity_administrador_consultar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SolicitanteEditarActivity"
             android:label="@string/title_activity_solicitante_editar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SolicitanteConsultarActivity"
             android:label="@string/title_activity_solicitante_consultar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".SolicitanteInsertarActivity"
             android:label="@string/title_activity_solicitante_insertar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -72,75 +72,77 @@
         -->
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version"/>
 
-        <activity android:name=".verSolicitudActivity" />
+        <activity android:name=".verSolicitudActivity"/>
         <activity
             android:name=".PrincipalUsuario"
             android:label="@string/title_activity_principal_usuario"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ReservaInsertarActivity" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ReservaInsertarActivity"/>
         <activity
             android:name=".ListarReservaActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ReservaConsultarActivity" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ReservaConsultarActivity"/>
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version"/>
 
-        <activity android:name=".AreaActualizarActivity" />
-        <activity android:name=".AreaConsultarActivity" />
-        <activity android:name=".AreaEliminarActivity" />
-        <activity android:name=".AreaInsertarActivity" />
-        <activity android:name=".AreaMenuActivity" />
-        <activity android:name=".PolideportivoActivity" />
-        <activity android:name=".DeporteMenuActivity" />
-        <activity android:name=".DeporteActualizarActivity" />
-        <activity android:name=".DeporteConsultarActivity" />
-        <activity android:name=".DeporteEliminarActivity" />
-        <activity android:name=".DeporteInsertarActivity" />
+        <activity android:name=".AreaActualizarActivity"/>
+        <activity android:name=".AreaConsultarActivity"/>
+        <activity android:name=".AreaEliminarActivity"/>
+        <activity android:name=".AreaInsertarActivity"/>
+        <activity android:name=".AreaMenuActivity"/>
+        <activity android:name=".PolideportivoActivity"/>
+        <activity android:name=".DeporteMenuActivity"/>
+        <activity android:name=".DeporteActualizarActivity"/>
+        <activity android:name=".DeporteConsultarActivity"/>
+        <activity android:name=".DeporteEliminarActivity"/>
+        <activity android:name=".DeporteInsertarActivity"/>
         <activity
             android:name=".ActividadActivity"
             android:label="@string/title_activity_actividad"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ActividadInsertarActivity"
             android:label="@string/title_activity_actividad_insertar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ActividadEditarActivity"
             android:label="@string/title_activity_actividad_editar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ActividadConsultarActivity"
             android:label="@string/title_activity_actividad_consultar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TarifaActivity"
             android:label="@string/tittle_activity_tarifa_menu"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TarifaMenuActivity"
             android:label="@string/title_activity_tarifa_menu"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TarifaInsertarActivity"
             android:label="@string/title_activity_tarifa_insertar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TarifaConsultarActivity"
             android:label="@string/title_activity_tarifa_consultar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".TarifaActualizarActivity"
             android:label="@string/title_activity_tarifa_actualizar"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".TarifaEliminarActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".TarifaEliminarActivity"/>
+        <activity android:name=".ReservaEliminarActivity">
+        </activity>
     </application>
 
 </manifest>

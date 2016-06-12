@@ -1259,7 +1259,7 @@ public class ControlBDPoliUES {
             insertar(facultad);
         }
 
-
+       /*
         Reserva reserva = new Reserva();
         for(int i=0;i<3;i++){
             reserva.setIdreserva(Integer.parseInt(VRidreserva[i]));
@@ -1289,7 +1289,7 @@ public class ControlBDPoliUES {
 
             insertar(horario);
         }
-
+          */
 
 
 

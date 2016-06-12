@@ -421,6 +421,7 @@
     <string name="horarioinicioreserva">Hora Inicio:</string>
     <string name="idArea">idArea</string>
     <string name="idDescripcion">idDescripcion</string>
+    <string name="idReserva">idReserva:</string>
     <string name="idSolicitud">id solicitud</string>
     <string name="iddeporte">idDeporte</string>
     <string name="idtarifa">Id Tarifa</string>

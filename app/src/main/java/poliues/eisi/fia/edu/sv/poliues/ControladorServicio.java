@@ -114,7 +114,7 @@ public class ControladorServicio {
 
 
             if (respuesta == 1)
-                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Registro ingresado en Reserva", Toast.LENGTH_LONG).show();
 
             else
                 Toast.makeText(ctx, "Error registro duplicado",
@@ -133,7 +133,7 @@ public class ControladorServicio {
 
 
             if (respuesta == 1)
-                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Registro ingresado en DetalleReserva", Toast.LENGTH_LONG).show();
 
             else
                 Toast.makeText(ctx, "Error registro duplicado",
@@ -151,7 +151,25 @@ public class ControladorServicio {
 
 
             if (respuesta == 1)
-                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, "Registro ingresado en Horario", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro duplicado",
+                        Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void eliminarReservaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+            int respuesta = resultado.getInt("resultado");
+
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro Eliminado", Toast.LENGTH_LONG).show();
 
             else
                 Toast.makeText(ctx, "Error registro duplicado",
@@ -176,6 +194,72 @@ public class ControladorServicio {
                     Toast.LENGTH_LONG).show();
             return 0;
         }
+    }
+
+    public static int actualizarReservaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta+= resultado.getInt("resultado");
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro actualizado de Reserva", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "no se modifico",
+                        Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return respuesta;
+    }
+
+    public static int actualizarDetalleReservaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta+= resultado.getInt("resultado");
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro actualizado Detalle Reserva", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "no se modifico",
+                        Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return respuesta;
+    }
+
+    public static int actualizarHorarioPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta+= resultado.getInt("resultado");
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro actualizado Horario", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "no se modifico",
+                        Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return respuesta;
     }
 
 
