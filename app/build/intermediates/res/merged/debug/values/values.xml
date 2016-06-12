@@ -350,6 +350,7 @@
     <string name="actualizar">Actualizar</string>
     <string name="actualizarJ">Actualizar</string>
     <string name="actualizar_registro">Actualizar Registro</string>
+    <string name="actualizarreserva">Actualizar</string>
     <string name="app_name">PoliUES</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="area">area</string>
@@ -421,6 +422,7 @@
     <string name="horarioinicioreserva">Hora Inicio:</string>
     <string name="idArea">idArea</string>
     <string name="idDescripcion">idDescripcion</string>
+    <string name="idReserva">idReserva:</string>
     <string name="idSolicitud">id solicitud</string>
     <string name="iddeporte">idDeporte</string>
     <string name="idtarifa">Id Tarifa</string>

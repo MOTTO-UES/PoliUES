@@ -213,6 +213,8 @@ en el menu lateral o en el superior</string>
 
     <string name="Instrucciones">INSTRUCCIONES</string>
     <string name="AlmacenarSolicitudes">Almacenar solicitudes</string>
+    <string name="actualizarreserva">Actualizar</string>
+    <string name="idReserva">idReserva:</string>
 
     <string name="insertarWeb">insertar localhost</string>
 

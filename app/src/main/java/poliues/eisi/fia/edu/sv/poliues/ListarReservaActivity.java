@@ -1,6 +1,7 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 import android.app.ActionBar;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -37,12 +38,17 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
 
     private static ListView reservaList;
     Bundle admi;
+    Conexion conn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_reserva);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        conn=new Conexion();
        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
        // setSupportActionBar(toolbar);
 
@@ -52,138 +58,26 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
 
 
         //instance variables
-        reservaList = (ListView) findViewById(R.id.reservaList);
+        //reservaList = (ListView) findViewById(R.id.reservaList);
         dbhelper = new ControlBDPoliUES(this);
-        //movieC = new MovieController();
-
-        //click in item of list view
-        reservaList.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> arg0, View view,
-                                            int position, long id) {
-
-                        //obtain an Id to selected
-                        int realId = obtainSelectedId(position);
-
-                        //change the activity, and send parameters, true if is update
-                        //and false if isn't
-                        Intent i = new Intent(ListarReservaActivity.this, ReservaInsertarActivity.class);
-                        i.putExtra("isEdit", true);
-                        i.putExtra("realId", realId);
-                        i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
-                        i.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
-                        i.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
-                        i.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
-                        i.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
-                        startActivity(i);
-                    }
-                }
-        );
-
-        //if the user press long in a item selected, the system delete this row
-        reservaList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-                                           int pos, long id) {
 
 
-                //obtain an Id to selected
-                realIdD = obtainSelectedId(pos);
-                creardialogo();
 
-                /*dbhelper.abrir();
-
-                //Creamos un Objeto reserva
-                Reserva reserva = new Reserva();
-                reserva.setIdreserva(realId);
-
-
-                //delete the item selected
-                String toastinfo = dbhelper.eliminar(reserva);
-                dbhelper.cerrar();
-                mensajes(toastinfo);
-
-
-                //refresh the listview
-                refreshListView();*/
-                return true;
-
-            }
-        });
 
 
     }
 
 
-    /**
-     * This method refresh list view
-     */
-    private void refreshListView() {
-        ArrayList<String> reservaResults = new ArrayList<String>();
-        dbhelper.abrir();
 
 
-        //obtain the cursor of get all
-        Cursor getReserva = dbhelper.todaslasreservas();
-
-        if (getReserva != null) {
-            //Move cursor to first row
-            if (getReserva.moveToFirst()) {
-                do {
-                    //Get version from Cursor
-                    String firstName = getReserva.getString(getReserva.getColumnIndex("motivo"));
-                    //Add the version to Arraylist 'results'
-                    reservaResults.add(firstName);
-                } while (getReserva.moveToNext()); //Move to next row
-            }
-        }
-
-        ArrayAdapter adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, reservaResults);
-        reservaList.setAdapter(adapter);
-        dbhelper.cerrar();
-    }
 
 
-    /**
-     * Obtain the id of selected item
-     * if position is equals to listViewPosition
-     * obtain the respective Id
-     *
-     * @param position the int position of list view
-     * @return id of real id
-     */
-    private int obtainSelectedId(int position) {
-        int toStop = 0;
-        int returnId = 0;
-        dbhelper.abrir();
-        Cursor getReservas = dbhelper.todaslasreservas();
-        if (getReservas != null) {
-            //Move cursor to first row
-            if (getReservas.moveToFirst()) {
-                do {
-                    if (position == toStop) {
-                        //Get version from Cursor
-                        returnId = getReservas.getInt(getReservas.getColumnIndex("idreserva"));
-                    }
-                    toStop++;
-                } while (getReservas.moveToNext()); //Move to next row
-            }
-        }
-        dbhelper.cerrar();
-        return returnId;
-    }
     public void mensajes(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
 
 
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        refreshListView();
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -247,8 +141,10 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
         intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
         startActivity(intent);
     }
-    public void consultarReserva(View v){
-        Intent intent = new Intent(this,ReservaConsultarActivity.class);
+
+    public void actualizarReserva(View v){
+        Intent intent = new Intent(this,ReservaInsertarActivity.class);
+        intent.putExtra("isEdit", true);
         intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
         intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
         intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
@@ -257,7 +153,17 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
         startActivity(intent);
     }
 
-    public void creardialogo(){
+    public void eliminarReserva(View v){
+        Intent intent = new Intent(this,ReservaEliminarActivity.class);
+        intent.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
+        intent.putExtra("EnvioAdministradorNOMBRE",admi.getString("EnvioAdministradorNOMBRE"));
+        intent.putExtra("EnvioAdministradorPASS",admi.getString("EnvioAdministradorPASS"));
+        intent.putExtra("EnvioAdministradorCORREO",admi.getString("EnvioAdministradorCORREO"));
+        intent.putExtra("EnvioAdministradorIDENTIFICADOR",admi.getString("EnvioAdministradorIDENTIFICADOR"));
+        startActivity(intent);
+    }
+
+   /* public void creardialogo(){
         AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
         dialogo1.setTitle("Importante");
         dialogo1.setMessage("¿Seguro que Quiere Eliminar esta Reserva ?");
@@ -289,6 +195,6 @@ public class ListarReservaActivity extends AppCompatActivity implements Navigati
             }
         });
         dialogo1.show();
-    }
+    }*/
 }
 

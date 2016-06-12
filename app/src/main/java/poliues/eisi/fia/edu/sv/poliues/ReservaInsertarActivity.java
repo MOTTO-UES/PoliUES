@@ -7,10 +7,15 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnFocusChangeListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.LayoutAnimationController;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,6 +23,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -29,10 +35,16 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import android.annotation.SuppressLint;
+
+import org.json.JSONObject;
+
 
 public class ReservaInsertarActivity extends AppCompatActivity implements View.OnClickListener {
+    private LinearLayout layoutAnimado;
 
     ControlBDPoliUES dbhelper;
+    EditText editIdReserva;
     Spinner spfacultades;
     Spinner spareas;
     EditText editnumeropersonas;
@@ -40,6 +52,7 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
     EditText editdescripcionreserva;
     EditText editfechareserva;
     Button btnGuardar;
+
 
     ImageButton ib1,ib2,ib3;
     Calendar cal1,cal2,cal3;
@@ -65,11 +78,16 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
 
     int idReserva=0;
     Bundle admi;
+    Conexion conn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserva_insertar);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        conn=new Conexion();
 
         //obtain the param of Intent of last activity
         isUpdate = getIntent().getBooleanExtra("isEdit", false);
@@ -86,6 +104,12 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
         //if is update charge the data, in the form
         if(isUpdate)
         {
+            //mensajes("se activo Actualizar");
+            if (layoutAnimado.getVisibility() == View.GONE)
+            {
+                animar(true);
+                layoutAnimado.setVisibility(View.VISIBLE);
+            }
             dbhelper.abrir();
             Reserva getReserva = dbhelper.consultarReserva(Integer.toString(realId));
             DetalleReserva getDReserva = dbhelper.consultarDetalleReserva(Integer.toString(realId));
@@ -114,9 +138,36 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
 
 
     private void setUIComponents(){
+        layoutAnimado =(LinearLayout) findViewById(R.id.animado);
+        if (layoutAnimado.getVisibility() == View.VISIBLE)
+        {
+            animar(false);
+            layoutAnimado.setVisibility(View.GONE);
+        }
+        editIdReserva=(EditText) findViewById(R.id.editidreserva);
+        editIdReserva.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+
+            @Override
+            public void onFocusChange(View v,boolean hasFocus){
+                if(TextUtils.isEmpty(editIdReserva.getText().toString())){
+                    editIdReserva.setError("El campo esta Vacio");
+
+                }else if(Integer.parseInt(editIdReserva.getText().toString())<=0){
+                    editIdReserva.setError("Debe de ingresar un numero entero positivo");
+                }else{
+                    editIdReserva.setError(null);
+                }
+            }
+
+
+        });
+
         spfacultades = (Spinner) findViewById(R.id.spfacultades);
         editnumeropersonas = (EditText) findViewById(R.id.editnumeropersonas);
         editnumeropersonas.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+
             @Override
             public void onFocusChange(View v,boolean hasFocus){
                 if(TextUtils.isEmpty(editnumeropersonas.getText().toString())){
@@ -132,6 +183,10 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
 
 
         });
+
+
+
+
 
 
         editmotivo = (EditText) findViewById(R.id.editmotivo);
@@ -230,7 +285,34 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                                 mensajes("Error no se realizo la accion porque La hora fin debe ser mayor que la de inicio");
                                                             }else{
                                                                 String me;
+                                                                String url = null;
 
+
+
+                                                                url=conn.getURLLocal()+"/ws_reserva_insertar.php"+ "?idfacultad=" + realFacultadId + "&fechaingreso="
+                                                                        + fechaActual() + "&numeropersonas=" + Integer.parseInt(editnumeropersonas.getText().toString()) + "&motivo=" + editmotivo.getText().toString()+ "&descripcionreserva=" + editdescripcionreserva.getText().toString();
+                                                                ControladorServicio.insertarReservaPHP(url, ReservaInsertarActivity.this);
+
+                                                                url="";
+
+                                                                url=conn.getURLLocal()+"/ws_reservaid_query.php";
+
+                                                                String idreservaJSON = ControladorServicio.obtenerRespuestaPeticion(url, ReservaInsertarActivity.this);
+                                                                realId=ControladorServicio.obtenerIdReservaJSON(idreservaJSON,ReservaInsertarActivity.this);
+
+                                                                url=conn.getURLLocal()+"/ws_detallereserva_insertar.php"+ "?idreserva=" + realId + "&idarea="
+                                                                        + realAreaId;
+                                                                ControladorServicio.insertarDetalleReservaPHP(url, ReservaInsertarActivity.this);
+
+
+
+                                                                url=conn.getURLLocal()+"/ws_horario_insertar.php"+ "?idreserva=" + realId + "&fechareserva="
+                                                                        + editfechareserva.getText().toString() + "&horarioinicio=" + edithorainicio.getText().toString() + "&horariofin=" + edithorafin.getText().toString();
+                                                                ControladorServicio.insertarHorarioPHP(url, ReservaInsertarActivity.this);
+
+                                                                mensajes("Reserva Insertada N°: "+realId);
+
+                                                                //base Local
                                                                 dbhelper.abrir();
                                                                 Reserva reservaguardar = new Reserva();
                                                                 reservaguardar.setIdfacultad(realFacultadId);
@@ -239,8 +321,8 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                                 reservaguardar.setDescripcionreserva(editdescripcionreserva.getText().toString());
                                                                 reservaguardar.setFechaingreso(fechaActual());
                                                                 me = dbhelper.insertar(reservaguardar);
-                                                                mensajes(me );
-                                                                me=" ";
+                                                                System.out.println(me);
+
                                                                 Cursor getReservas = dbhelper.todaslasreservas();
 
                                                                 if(getReservas!=null)
@@ -252,7 +334,7 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                                 detallereservaguardar.setIdarea(realAreaId);
                                                                 detallereservaguardar.setIdreserva(idReserva);
                                                                 me = dbhelper.insertar(detallereservaguardar);
-                                                                mensajes(me );
+                                                                System.out.println(me);
                                                                 me=" ";
                                                                 Horario horarioguardar = new Horario();
                                                                 horarioguardar.setIdreserva(idReserva);
@@ -260,9 +342,14 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                                 horarioguardar.setHorarioinicio(edithorainicio.getText().toString());
                                                                 horarioguardar.setHorariofin(edithorafin.getText().toString());
                                                                 me = dbhelper.insertar(horarioguardar);
-                                                                mensajes(me );
+                                                                System.out.println(me );
                                                                 me=" ";
                                                                 dbhelper.cerrar();
+
+
+                                                                 //termina base local
+
+
                                                                 //go to the list activity
                                                                 Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
                                                                 i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
@@ -279,7 +366,7 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                     }
                                                 }//if is update
                                                 else {
-                                                    if(!(TextUtils.isEmpty(editmotivo.getText().toString()) || TextUtils.isEmpty(editnumeropersonas.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editfechareserva.getText().toString()) || TextUtils.isEmpty(edithorainicio.getText().toString()) || TextUtils.isEmpty(edithorafin.getText().toString()))){
+                                                    if(!(TextUtils.isEmpty(editIdReserva.getText().toString()) ||TextUtils.isEmpty(editmotivo.getText().toString()) || TextUtils.isEmpty(editnumeropersonas.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editdescripcionreserva.getText().toString()) || TextUtils.isEmpty(editfechareserva.getText().toString()) || TextUtils.isEmpty(edithorainicio.getText().toString()) || TextUtils.isEmpty(edithorafin.getText().toString()))){
                                                         Date fechahoy = null;
                                                         Date fechainput = null;
                                                         String fecha = editfechareserva.getText().toString();
@@ -316,7 +403,46 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                             }else{
                                                                 String m;
                                                                 // realId
+                                                                String url = null;
+                                                                int r=0;
 
+                                                                realId=Integer.valueOf(editIdReserva.getText().toString());
+                                                                url="";
+
+
+                                                                url=conn.getURLLocal()+"/ws_reserva_actualizar.php"+ "?idreserva=" + realId +"&idfacultad=" + realFacultadId + "&fechaingreso="
+                                                                        + fechaActual() + "&numeropersonas=" + Integer.parseInt(editnumeropersonas.getText().toString()) + "&motivo=" + editmotivo.getText().toString()+ "&descripcionreserva=" + editdescripcionreserva.getText().toString();
+                                                                r=ControladorServicio.actualizarReservaPHP(url, ReservaInsertarActivity.this);
+
+                                                                url="";
+
+                                                                if(r==1){
+                                                                    mensajes("Reserva Actualizada N°: " + realId);
+                                                                }else {
+                                                                    mensajes("No se  Actualizo la reserva N°: " + realId);
+                                                                }
+
+
+
+                                                                url=conn.getURLLocal()+"/ws_detallereserva_actualizar.php"+ "?idreserva=" + realId + "&idarea="+ realAreaId;
+                                                                r=ControladorServicio.actualizarDetalleReservaPHP(url, ReservaInsertarActivity.this);
+                                                                if(r==1){
+                                                                    mensajes("Detalle Actualizada N°: " + realId);
+                                                                }else {
+                                                                    mensajes("No se  Actualizo la Detalle N°: " + realId);
+                                                                }
+
+                                                                url=conn.getURLLocal()+"/ws_horario_actualizar.php"+ "?idreserva=" + realId + "&fechareserva="
+                                                                        + editfechareserva.getText().toString() + "&horarioinicio=" + edithorainicio.getText().toString() + "&horariofin=" + edithorafin.getText().toString();
+                                                                r=ControladorServicio.actualizarHorarioPHP(url, ReservaInsertarActivity.this);
+
+                                                                if(r==1){
+                                                                    mensajes("horario Actualizada N°: " + realId);
+                                                                }else {
+                                                                    mensajes("No se  Actualizo la horaio N°: " + realId);
+                                                                }
+
+                                                                //base local
                                                                 dbhelper.abrir();
                                                                 Reserva reservaactualizar = new Reserva();
                                                                 reservaactualizar.setIdreserva(realId);
@@ -326,22 +452,25 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                                 reservaactualizar.setDescripcionreserva(editdescripcionreserva.getText().toString());
                                                                 reservaactualizar.setFechaingreso(fechaActual());
                                                                 m = dbhelper.actualizar(reservaactualizar);
-                                                                    mensajes(m);
-                                                                    m=" ";
+                                                                System.out.println(m);
+                                                                m=" ";
                                                                 DetalleReserva detallereservaactualizar = new DetalleReserva();
                                                                 detallereservaactualizar.setIdarea(realAreaId);
                                                                 detallereservaactualizar.setIdreserva(realId);
                                                                 m= dbhelper.actualizar(detallereservaactualizar);
-                                                                    mensajes(m);
-                                                                    m=" ";
+                                                                System.out.println(m);
+                                                                m=" ";
                                                                 Horario horarioactualizar = new Horario();
                                                                 horarioactualizar.setIdreserva(realId);
                                                                 horarioactualizar.setFechareserva(editfechareserva.getText().toString());
                                                                 horarioactualizar.setHorarioinicio(edithorainicio.getText().toString());
                                                                 horarioactualizar.setHorariofin(edithorafin.getText().toString());
                                                                 m = dbhelper.actualizar(horarioactualizar);
-                                                                mensajes(m);
+                                                                System.out.println(m);
                                                                 dbhelper.cerrar();
+
+
+                                                                //termina Base local
                                                                 //go to the list activity
                                                                 Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
                                                                 i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
@@ -411,6 +540,7 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
         dbhelper.cerrar();
         return returnId;
     }
+
     private int obtainAreaSelectedId(int position){
         int toStop=0;
         int returnId=0;
@@ -611,6 +741,28 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
 
 
+    }
+
+    private void animar(boolean mostrar)
+    {
+        AnimationSet set = new AnimationSet(true);
+        Animation animation = null;
+        if (mostrar)
+        {
+            //desde la esquina inferior derecha a la superior izquierda
+            animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+        }
+        else
+        {    //desde la esquina superior izquierda a la esquina inferior derecha
+            animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 1.0f);
+        }
+        //duración en milisegundos
+        animation.setDuration(500);
+        set.addAnimation(animation);
+        LayoutAnimationController controller = new LayoutAnimationController(set, 0.25f);
+
+        layoutAnimado.setLayoutAnimation(controller);
+        layoutAnimado.startAnimation(animation);
     }
 
 }

@@ -12,7 +12,7 @@ android {
         versionName "1.0"
     }
 
-    useLibrary 'org.apache.http.legacy'
+
 
     buildTypes {
         release {
@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile files('libs/org.apache.http.legacy.jar')
 }

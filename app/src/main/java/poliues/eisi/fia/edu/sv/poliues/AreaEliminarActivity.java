@@ -1,12 +1,13 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AreaEliminarActivity extends AppCompatActivity {
+public class AreaEliminarActivity extends Activity {
 
     EditText editIdarea;
     ControlBDPoliUES controlhelper;
@@ -19,7 +20,7 @@ public class AreaEliminarActivity extends AppCompatActivity {
         editIdarea=(EditText)findViewById(R.id.editidArea);
     }
 
-    public void eliminarArea(View v){
+    public void eliminarReserva(View v){
         String regEliminadas;
         Area area=new Area();
         area.setIdarea(Integer.parseInt(editIdarea.getText().toString()));
