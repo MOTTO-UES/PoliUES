@@ -22,46 +22,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f5b01cb-a76c-4b9a-a765-51e523dc67b4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_eliminar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/poliues/eisi/fia/edu/sv/poliues/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/AreaEliminarActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/AreaEliminarActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControlBDPoliUES.java" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControlBDPoliUES.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControladorServicio.java" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControladorServicio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/poliues/eisi/fia/edu/sv/poliues/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/poliues/eisi/fia/edu/sv/poliues/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaInsertarActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaInsertarActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_listar_reserva.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_listar_reserva.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_insertar.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_insertar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PoliUES.iws" />
@@ -103,29 +72,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReservaInsertarActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReservaInsertarActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaInsertarActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="293" column="95" selection-start-line="293" selection-start-column="95" selection-end-line="293" selection-end-column="95" />
+            <state vertical-scroll-proportion="0.07880435">
+              <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4704#5258#0" expanded="true" />
-                <element signature="e#5257#5258#0" expanded="true" />
-                <element signature="e#5459#6047#0" expanded="true" />
-                <element signature="e#6046#6047#0" expanded="true" />
-                <element signature="e#6163#6538#0" expanded="true" />
-                <element signature="e#6537#6538#0" expanded="true" />
-                <element signature="e#6686#7102#0" expanded="true" />
-                <element signature="e#7101#7102#0" expanded="true" />
-                <element signature="e#8321#22287#0" expanded="true" />
-                <element signature="e#22286#22287#0" expanded="true" />
-                <element signature="e#27619#28765#0" expanded="true" />
-                <element signature="e#28764#28765#0" expanded="true" />
-                <element signature="e#28838#29306#0" expanded="true" />
-                <element signature="e#29305#29306#0" expanded="true" />
-                <element signature="e#29379#30584#0" expanded="true" />
-                <element signature="e#30583#30584#0" expanded="true" />
+                <element signature="e#4706#5260#0" expanded="true" />
+                <element signature="e#5259#5260#0" expanded="true" />
+                <element signature="e#5461#6049#0" expanded="true" />
+                <element signature="e#6048#6049#0" expanded="true" />
+                <element signature="e#6165#6540#0" expanded="true" />
+                <element signature="e#6539#6540#0" expanded="true" />
+                <element signature="e#6688#7104#0" expanded="true" />
+                <element signature="e#7103#7104#0" expanded="true" />
+                <element signature="e#8323#29842#0" expanded="true" />
+                <element signature="e#29841#29842#0" expanded="true" />
+                <element signature="e#32275#32283#0" expanded="true" />
+                <element signature="e#33211#33219#0" expanded="true" />
+                <element signature="e#35174#36320#0" expanded="true" />
+                <element signature="e#36319#36320#0" expanded="true" />
+                <element signature="e#36393#36861#0" expanded="true" />
+                <element signature="e#36860#36861#0" expanded="true" />
+                <element signature="e#36934#38139#0" expanded="true" />
+                <element signature="e#38138#38139#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,11 +119,15 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="27" />
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#945#1339#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1064#1458#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#2116#3155#0" expanded="true" />
+                <element signature="e#3154#3155#0" expanded="true" />
+                <element signature="e#3205#3403#0" expanded="true" />
+                <element signature="e#3402#3403#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,21 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListarReservaActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="193" column="34" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlBDPoliUES.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControlBDPoliUES.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControlBDPoliUES.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.532609">
-              <caret line="1301" column="31" selection-start-line="1301" selection-start-column="31" selection-end-line="1301" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1866,14 +1831,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/Conexion.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_listar_reserva.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/AreaEliminarActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_eliminar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reserva_insertar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaInsertarActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControladorServicio.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControlBDPoliUES.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaInsertarActivity.java" />
       </list>
     </option>
   </component>
@@ -2261,27 +2226,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3527454" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34109816" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34109816" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34109816" sideWeight="0.49092284" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35097003" sideWeight="0.49092284" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39863843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25113463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -2321,14 +2286,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="496" column="0" selection-start-line="496" selection-start-column="0" selection-end-line="496" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ActividadActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2354,22 +2311,24 @@
           <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4704#5258#0" expanded="true" />
-            <element signature="e#5257#5258#0" expanded="true" />
-            <element signature="e#5459#6047#0" expanded="true" />
-            <element signature="e#6046#6047#0" expanded="true" />
-            <element signature="e#6163#6538#0" expanded="true" />
-            <element signature="e#6537#6538#0" expanded="true" />
-            <element signature="e#6686#7102#0" expanded="true" />
-            <element signature="e#7101#7102#0" expanded="true" />
-            <element signature="e#8321#22287#0" expanded="true" />
-            <element signature="e#22286#22287#0" expanded="true" />
-            <element signature="e#27619#28765#0" expanded="true" />
-            <element signature="e#28764#28765#0" expanded="true" />
-            <element signature="e#28838#29306#0" expanded="true" />
-            <element signature="e#29305#29306#0" expanded="true" />
-            <element signature="e#29379#30584#0" expanded="true" />
-            <element signature="e#30583#30584#0" expanded="true" />
+            <element signature="e#4706#5260#0" expanded="true" />
+            <element signature="e#5259#5260#0" expanded="true" />
+            <element signature="e#5461#6049#0" expanded="true" />
+            <element signature="e#6048#6049#0" expanded="true" />
+            <element signature="e#6165#6540#0" expanded="true" />
+            <element signature="e#6539#6540#0" expanded="true" />
+            <element signature="e#6688#7104#0" expanded="true" />
+            <element signature="e#7103#7104#0" expanded="true" />
+            <element signature="e#8323#29842#0" expanded="true" />
+            <element signature="e#29841#29842#0" expanded="true" />
+            <element signature="e#32275#32283#0" expanded="true" />
+            <element signature="e#33211#33219#0" expanded="true" />
+            <element signature="e#35174#36320#0" expanded="true" />
+            <element signature="e#36319#36320#0" expanded="true" />
+            <element signature="e#36393#36861#0" expanded="true" />
+            <element signature="e#36860#36861#0" expanded="true" />
+            <element signature="e#36934#38139#0" expanded="true" />
+            <element signature="e#38138#38139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2729,15 +2688,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaConsultarActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0110803">
+          <caret line="223" column="4" selection-start-line="223" selection-start-column="4" selection-end-line="227" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_listar_reserva.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.034483">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControladorServicio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="27" />
+          <caret line="178" column="9" selection-start-line="178" selection-start-column="9" selection-end-line="178" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#945#1339#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/AreaInsertarActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50133336">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControlBDPoliUES.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.7272725">
+          <caret line="197" column="7" selection-start-line="197" selection-start-column="7" selection-end-line="197" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2771,74 +2773,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ListarReservaActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaEliminarActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="193" column="34" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaConsultarActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0110803">
-          <caret line="223" column="4" selection-start-line="223" selection-start-column="4" selection-end-line="227" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_listar_reserva.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.034483">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1064#1458#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#2116#3155#0" expanded="true" />
+            <element signature="e#3154#3155#0" expanded="true" />
+            <element signature="e#3205#3403#0" expanded="true" />
+            <element signature="e#3402#3403#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ReservaInsertarActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="293" column="95" selection-start-line="293" selection-start-column="95" selection-end-line="293" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.07880435">
+          <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4704#5258#0" expanded="true" />
-            <element signature="e#5257#5258#0" expanded="true" />
-            <element signature="e#5459#6047#0" expanded="true" />
-            <element signature="e#6046#6047#0" expanded="true" />
-            <element signature="e#6163#6538#0" expanded="true" />
-            <element signature="e#6537#6538#0" expanded="true" />
-            <element signature="e#6686#7102#0" expanded="true" />
-            <element signature="e#7101#7102#0" expanded="true" />
-            <element signature="e#8321#22287#0" expanded="true" />
-            <element signature="e#22286#22287#0" expanded="true" />
-            <element signature="e#27619#28765#0" expanded="true" />
-            <element signature="e#28764#28765#0" expanded="true" />
-            <element signature="e#28838#29306#0" expanded="true" />
-            <element signature="e#29305#29306#0" expanded="true" />
-            <element signature="e#29379#30584#0" expanded="true" />
-            <element signature="e#30583#30584#0" expanded="true" />
+            <element signature="e#4706#5260#0" expanded="true" />
+            <element signature="e#5259#5260#0" expanded="true" />
+            <element signature="e#5461#6049#0" expanded="true" />
+            <element signature="e#6048#6049#0" expanded="true" />
+            <element signature="e#6165#6540#0" expanded="true" />
+            <element signature="e#6539#6540#0" expanded="true" />
+            <element signature="e#6688#7104#0" expanded="true" />
+            <element signature="e#7103#7104#0" expanded="true" />
+            <element signature="e#8323#29842#0" expanded="true" />
+            <element signature="e#29841#29842#0" expanded="true" />
+            <element signature="e#32275#32283#0" expanded="true" />
+            <element signature="e#33211#33219#0" expanded="true" />
+            <element signature="e#35174#36320#0" expanded="true" />
+            <element signature="e#36319#36320#0" expanded="true" />
+            <element signature="e#36393#36861#0" expanded="true" />
+            <element signature="e#36860#36861#0" expanded="true" />
+            <element signature="e#36934#38139#0" expanded="true" />
+            <element signature="e#38138#38139#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControladorServicio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="9" selection-start-line="178" selection-start-column="9" selection-end-line="178" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/poliues/eisi/fia/edu/sv/poliues/ControlBDPoliUES.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.532609">
-          <caret line="1301" column="31" selection-start-line="1301" selection-start-column="31" selection-end-line="1301" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
