@@ -37,10 +37,16 @@
         <Button
             android:onClick="actualizarArea"
             android:text="@string/actualizarJ" />
-    </TableRow>
-    <TableRow>
+
         <Button
             android:onClick="limpiarAA"
             android:text="@string/limpiarJ" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:onClick="actualizarAreaWeb"
+            android:text="actualizar localhost" />
     </TableRow>
 </TableLayout>

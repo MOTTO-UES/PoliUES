@@ -1,11 +1,15 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+import android.annotation.SuppressLint;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+@SuppressLint("NewApi")
 public class AreaActualizarActivity extends AppCompatActivity {
     ControlBDPoliUES helper;
     EditText editIdarea;
@@ -13,10 +17,20 @@ public class AreaActualizarActivity extends AppCompatActivity {
     EditText editNombreArea;
     EditText editDescripcionarea;
 
+    Conexion conn;
+
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_actualizar);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        conn=new Conexion();
+
+
         helper = new ControlBDPoliUES(this);
         editIdarea = (EditText) findViewById(R.id.editidArea);
         editMaximopersonas = (EditText) findViewById(R.id.editmaximopersonas);
@@ -43,4 +57,28 @@ public class AreaActualizarActivity extends AppCompatActivity {
         editDescripcionarea.setText("");
 
     }
+
+
+    public void actualizarAreaWeb(View v){
+
+        String id = editIdarea.getText().toString();
+        String maxPersonas = editMaximopersonas.getText().toString();
+        String nombre = editNombreArea.getText().toString();
+        String descripcion = editDescripcionarea.getText().toString();
+
+
+        String url = "";
+
+        url+=conn.getURLLocal()+"/ws_area_update.php"+ "?idArea=" + id + "&maximoPersonas=" + maxPersonas + "&nombArea=" + nombre + "&descripcionArea=" + descripcion;
+
+        int respuesta = ControladorServicio.actualizarAreaPHP(url, this);
+
+        if (respuesta == 1)
+            Toast.makeText(this, "Registro modificado", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this, "No se pudo modificar", Toast.LENGTH_LONG).show();
+
+    }
+
+
 }

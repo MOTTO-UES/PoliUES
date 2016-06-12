@@ -116,6 +116,29 @@ public class ControladorServicio {
     }
 
 
+    public static int actualizarAreaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta+= resultado.getInt("resultado");
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro actualizado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "no se modifico",
+                        Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return respuesta;
+    }
+
+
 
 
 

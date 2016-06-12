@@ -66,30 +66,20 @@ public class AreaInsertarActivity extends AppCompatActivity {
 
 
     public void insertarAreaWeb(View v) {
-        System.out.println("entro en el metodo");
-
 
         String idArea=editIdarea.getText().toString();
-        System.out.println("1 lectura");
         String maximopersonas=editMaximopersonas.getText().toString();
-        System.out.println("2 lectura");
         String nombrearea=editNombreArea.getText().toString();
-        System.out.println("3 lectura");
         String descripcionarea=editDescripcionarea.getText().toString();
-        System.out.println("4 lectura");
 
 
         String url = "";
 
-        System.out.println("obtener url");
         url+=conn.getURLLocal()+"/ws_area_insert.php"+ "?idArea=" + idArea + "&maximoPersonas=" + maximopersonas + "&nombArea=" + nombrearea + "&descripcionArea=" + descripcionarea;
 
-        System.out.println("antes de invocar el metodo php");
+
           int respuesta = ControladorServicio.insertarAreaPHP(url, this);
 
-        System.out.println("despues de invocar el metodo php");
-
-        System.out.println("valor del resultado:"+respuesta);
 
         if (respuesta == 1)
             Toast.makeText(this, "Registro ingresado", Toast.LENGTH_LONG).show();
