@@ -5,7 +5,6 @@
     android:paddingTop="30dip"
     android:stretchColumns="1" >
 
-    
     <TableRow>
         <TextView android:text="@string/idArea"/>
         <EditText

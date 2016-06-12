@@ -55,8 +55,7 @@ public class ControladorServicio {
 
     }
 
-    public static String obtenerRespuestaPost(String url, JSONObject obj,
-                                              Context ctx) {
+    public static String obtenerRespuestaPost(String url, JSONObject obj, Context ctx) {
         String respuesta = " ";
         try {
             HttpParams parametros = new BasicHttpParams();
@@ -69,7 +68,7 @@ public class ControladorServicio {
 
             StringEntity nuevaEntidad = new StringEntity(obj.toString());
             httpPost.setEntity(nuevaEntidad);
-            Log.v("Peticion",url);
+            Log.v("Peticion", url);
             Log.v("POST", httpPost.toString());
             HttpResponse httpRespuesta = cliente.execute(httpPost);
             StatusLine estado = httpRespuesta.getStatusLine();
@@ -78,10 +77,9 @@ public class ControladorServicio {
 
             if (codigoEstado == 200) {
                 respuesta = Integer.toString(codigoEstado);
-                Log.v("respuesta",respuesta);
-            }
-            else{
-                Log.v("respuesta",Integer.toString(codigoEstado));
+                Log.v("respuesta", respuesta);
+            } else {
+                Log.v("respuesta", Integer.toString(codigoEstado));
             }
         } catch (Exception e) {
             Toast.makeText(ctx, "Error en la conexion", Toast.LENGTH_LONG)
@@ -93,14 +91,15 @@ public class ControladorServicio {
         return respuesta;
     }
 
+
     public static int insertarAreaPHP(String peticion, Context ctx) {
 
         String json = obtenerRespuestaPeticion(peticion, ctx);
-        int respuesta=0;
+        int respuesta = 0;
 
         try {
             JSONObject resultado = new JSONObject(json);
-            respuesta+= resultado.getInt("resultado");
+            respuesta += resultado.getInt("resultado");
 
             if (respuesta == 1)
                 Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
@@ -108,12 +107,13 @@ public class ControladorServicio {
             else
                 Toast.makeText(ctx, "Error registro duplicado",
                         Toast.LENGTH_LONG).show();
-        }catch (JSONException e) {
+        } catch (JSONException e) {
             e.printStackTrace();
         }
 
         return respuesta;
     }
+
 
 
     public static int actualizarAreaPHP(String peticion, Context ctx) {
@@ -139,7 +139,53 @@ public class ControladorServicio {
     }
 
 
+    public static void insertarTarifaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+            int respuesta = resultado.getInt("resultado");
+
+            System.out.println(respuesta);
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro WEB ingresado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro WEB duplicado", Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
 
+    }
+
+
+    public static void eliminarTarifaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+            int respuesta = resultado.getInt("resultado");
+
+            System.out.println(respuesta);
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro WEB eliminado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro WEB no existe",
+                        Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }
+
+
+
+
+
+

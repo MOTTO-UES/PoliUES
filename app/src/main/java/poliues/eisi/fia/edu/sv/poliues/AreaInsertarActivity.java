@@ -78,13 +78,8 @@ public class AreaInsertarActivity extends AppCompatActivity {
         url+=conn.getURLLocal()+"/ws_area_insert.php"+ "?idArea=" + idArea + "&maximoPersonas=" + maximopersonas + "&nombArea=" + nombrearea + "&descripcionArea=" + descripcionarea;
 
 
-          int respuesta = ControladorServicio.insertarAreaPHP(url, this);
+        int respuesta = ControladorServicio.insertarAreaPHP(url, this);
 
-
-       /* if (respuesta == 1)
-            Toast.makeText(this, "Registro ingresado", Toast.LENGTH_LONG).show();
-        else
-            Toast.makeText(this, "Error registro duplicado", Toast.LENGTH_LONG).show();*/
 
     }
 

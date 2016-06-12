@@ -69,6 +69,8 @@
     <string name="fechaFinal">fecha Final</string>
     <string name="cobroTotal">cobro total</string>
     <string name="limpiar">Limpiar</string>
+    <string name="insertar_registroWeb">Insertar Registro WEB</string>
+    <string name="EliminarWeb">Eliminar WEB</string>
     <string name="insertar">Insertar</string>
     <string name="opciones">opciones</string>
     <string name="actualizar">Actualizar</string>

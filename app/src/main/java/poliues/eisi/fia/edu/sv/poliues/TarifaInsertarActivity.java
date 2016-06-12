@@ -2,6 +2,9 @@ package poliues.eisi.fia.edu.sv.poliues;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import android.os.StrictMode;
+
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +22,9 @@ public class TarifaInsertarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ControlBDPoliUES helper;
+
+    Conexion conn;
+
     //EditText editidTarifa;
     EditText editCantPersonas;
     EditText editTarifaUnitaria;
@@ -28,6 +34,14 @@ public class TarifaInsertarActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarifa_insertar);
+
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        conn=new Conexion();
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         admi = getIntent().getExtras();
@@ -239,6 +253,26 @@ public class TarifaInsertarActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public void insertarTarifaWeb(View v) {
+
+
+        String cantPersonas = editCantPersonas.getText().toString();
+
+        String tarifaUnitaria =editTarifaUnitaria.getText().toString();
+
+
+        String url = "";
+
+        System.out.println("obtener url");
+        url+=conn.getURLLocal()+"/ws_tarifa_insert.php"+ "?cantPersonas=" + cantPersonas + "&tarifaUnitaria=" + tarifaUnitaria;
+
+
+        ControladorServicio.insertarTarifaPHP(url, this);
+
+
     }
 
 

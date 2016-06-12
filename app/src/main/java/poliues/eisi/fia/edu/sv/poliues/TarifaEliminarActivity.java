@@ -1,6 +1,9 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
 import android.database.Cursor;
+
+import android.os.StrictMode;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +14,18 @@ public class TarifaEliminarActivity extends AppCompatActivity {
     EditText editIdTarifa;
     ControlBDPoliUES helper;
 
+    Conexion conn;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarifa_eliminar);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        conn=new Conexion();
 
         helper = new ControlBDPoliUES(this);
 
@@ -51,4 +62,26 @@ public class TarifaEliminarActivity extends AppCompatActivity {
 
 
     }
+
+
+    public void eliminarTarifaWeb(View v) {
+        System.out.println("entro en el metodo");
+
+
+        String idTarifa = editIdTarifa.getText().toString();
+        System.out.println("1 lectura");
+
+
+        String url = "";
+
+        System.out.println("obtener url");
+        url+=conn.getURLLocal()+"/ws_tarifa_delete.php"+ "?idTarifa=" + idTarifa;
+
+        System.out.println("antes de invocar el metodo php");
+        ControladorServicio.eliminarTarifaPHP(url, this);
+
+        System.out.println("despues de invocar el metodo php");
+
+    }
+
 }

@@ -303,6 +303,7 @@
     <string name="CrearAdmin">Crear administrador</string>
     <string name="CrearSolicitud">Crear solicitud</string>
     <string name="CrearSolicitudUsuario">Crear Solicitud</string>
+    <string name="EliminarWeb">Eliminar WEB</string>
     <string name="Estado">Estado Solicitud</string>
     <string name="FechaDeFinalizacion">Fecha de finalizacion</string>
     <string name="FechaDeInicio">Fecha de Inicio</string>
@@ -428,6 +429,7 @@
     <string name="insertarSo">Guardar</string>
     <string name="insertarWeb">insertar localhost</string>
     <string name="insertar_registro">Insertar Registro</string>
+    <string name="insertar_registroWeb">Insertar Registro WEB</string>
     <string name="limpiar">Limpiar</string>
     <string name="limpiarJ">Limpiar</string>
     <string name="limpiarS">Limpiar</string>
