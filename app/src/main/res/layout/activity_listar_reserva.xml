@@ -20,22 +20,19 @@
                   android:layout_height="wrap_content"/>
 
         <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
             <Button
-                android:onClick="consultarReserva"
-                android:text="@string/consultar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"/>
-            <Button
-                android:onClick="insertarReserva"
-                android:text="@string/nuevareserva"
+                android:onClick="eliminarReserva"
+                android:text="@string/eliminarJ"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                />
+
 
         </LinearLayout>
         <LinearLayout
@@ -43,17 +40,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/ListaDeReservas"
-                android:id="@+id/titulo"/>
+            <Button
+                android:onClick="insertarReserva"
+                android:text="@string/nuevareserva"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"/>
+
 
         </LinearLayout>
-        <ListView android:id="@+id/reservaList"
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="actualizarReserva"
+                android:text="@string/actualizarreserva"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
 
 
     </LinearLayout>

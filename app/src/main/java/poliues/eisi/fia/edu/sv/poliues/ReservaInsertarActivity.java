@@ -7,6 +7,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -29,6 +30,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import android.annotation.SuppressLint;
+
+import org.json.JSONObject;
 
 public class ReservaInsertarActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,6 +44,7 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
     EditText editdescripcionreserva;
     EditText editfechareserva;
     Button btnGuardar;
+
 
     ImageButton ib1,ib2,ib3;
     Calendar cal1,cal2,cal3;
@@ -65,11 +70,16 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
 
     int idReserva=0;
     Bundle admi;
+    Conexion conn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserva_insertar);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                .permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        conn=new Conexion();
 
         //obtain the param of Intent of last activity
         isUpdate = getIntent().getBooleanExtra("isEdit", false);
@@ -86,6 +96,7 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
         //if is update charge the data, in the form
         if(isUpdate)
         {
+            mensajes("se activo Actulizar");
             dbhelper.abrir();
             Reserva getReserva = dbhelper.consultarReserva(Integer.toString(realId));
             DetalleReserva getDReserva = dbhelper.consultarDetalleReserva(Integer.toString(realId));
@@ -230,39 +241,32 @@ public class ReservaInsertarActivity extends AppCompatActivity implements View.O
                                                                 mensajes("Error no se realizo la accion porque La hora fin debe ser mayor que la de inicio");
                                                             }else{
                                                                 String me;
+                                                                String url = null;
 
-                                                                dbhelper.abrir();
-                                                                Reserva reservaguardar = new Reserva();
-                                                                reservaguardar.setIdfacultad(realFacultadId);
-                                                                reservaguardar.setNumeropersonas(Integer.parseInt(editnumeropersonas.getText().toString()));
-                                                                reservaguardar.setMotivo(editmotivo.getText().toString());
-                                                                reservaguardar.setDescripcionreserva(editdescripcionreserva.getText().toString());
-                                                                reservaguardar.setFechaingreso(fechaActual());
-                                                                me = dbhelper.insertar(reservaguardar);
-                                                                mensajes(me );
-                                                                me=" ";
-                                                                Cursor getReservas = dbhelper.todaslasreservas();
 
-                                                                if(getReservas!=null)
-                                                                {
-                                                                    getReservas.moveToLast();
-                                                                    idReserva = getReservas.getInt(getReservas.getColumnIndex("idreserva"));
-                                                                }
-                                                                DetalleReserva detallereservaguardar = new DetalleReserva();
-                                                                detallereservaguardar.setIdarea(realAreaId);
-                                                                detallereservaguardar.setIdreserva(idReserva);
-                                                                me = dbhelper.insertar(detallereservaguardar);
-                                                                mensajes(me );
-                                                                me=" ";
-                                                                Horario horarioguardar = new Horario();
-                                                                horarioguardar.setIdreserva(idReserva);
-                                                                horarioguardar.setFechareserva(editfechareserva.getText().toString());
-                                                                horarioguardar.setHorarioinicio(edithorainicio.getText().toString());
-                                                                horarioguardar.setHorariofin(edithorafin.getText().toString());
-                                                                me = dbhelper.insertar(horarioguardar);
-                                                                mensajes(me );
-                                                                me=" ";
-                                                                dbhelper.cerrar();
+
+                                                                url=conn.getURLLocal()+"/ws_reserva_insertar.php"+ "?idfacultad=" + realFacultadId + "&fechaingreso="
+                                                                        + fechaActual() + "&numeropersonas=" + Integer.parseInt(editnumeropersonas.getText().toString()) + "&motivo=" + editmotivo.getText().toString()+ "&descripcionreserva=" + editdescripcionreserva.getText().toString();
+                                                                ControladorServicio.insertarReservaPHP(url, ReservaInsertarActivity.this);
+
+                                                                url="";
+
+                                                                url=conn.getURLLocal()+"/ws_reservaid_query.php";
+
+                                                                String idreservaJSON = ControladorServicio.obtenerRespuestaPeticion(url, ReservaInsertarActivity.this);
+                                                                realId=ControladorServicio.obtenerIdReservaJSON(idreservaJSON,ReservaInsertarActivity.this);
+
+                                                                url=conn.getURLLocal()+"/ws_detallereserva_insertar.php"+ "?idreserva=" + realId + "&idarea="
+                                                                        + realAreaId;
+                                                                ControladorServicio.insertarDetalleReservaPHP(url, ReservaInsertarActivity.this);
+
+
+
+                                                                url=conn.getURLLocal()+"/ws_horario_insertar.php"+ "?idreserva=" + realId + "&fechareserva="
+                                                                        + editfechareserva.getText().toString() + "&horarioinicio=" + edithorainicio.getText().toString() + "&horariofin=" + edithorafin.getText().toString();
+                                                                ControladorServicio.insertarHorarioPHP(url, ReservaInsertarActivity.this);
+
+
                                                                 //go to the list activity
                                                                 Intent i = new Intent(ReservaInsertarActivity.this, ListarReservaActivity.class);
                                                                 i.putExtra("EnvioAdministradorID",admi.getInt("EnvioAdministradorID"));
