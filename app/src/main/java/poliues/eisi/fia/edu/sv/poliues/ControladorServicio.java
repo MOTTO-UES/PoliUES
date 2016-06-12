@@ -93,14 +93,14 @@ public class ControladorServicio {
         return respuesta;
     }
 
-    public static void insertarAreaPHP(String peticion, Context ctx) {
+    public static int insertarAreaPHP(String peticion, Context ctx) {
 
         String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+
         try {
             JSONObject resultado = new JSONObject(json);
-            int respuesta = resultado.getInt("resultado");
-
-            System.out.println(respuesta);
+            respuesta+= resultado.getInt("resultado");
 
             if (respuesta == 1)
                 Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
@@ -111,6 +111,8 @@ public class ControladorServicio {
         }catch (JSONException e) {
             e.printStackTrace();
         }
+
+        return respuesta;
     }
 
 
