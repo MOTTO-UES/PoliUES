@@ -67,15 +67,18 @@ public class ReservaEliminarActivity extends  AppCompatActivity {
                 String url = null;
 
                 realIdD=Integer.valueOf(editIdReserva.getText().toString());
-
-
-
+                
+                int r=0;
                 url=conn.getURLLocal()+"/ws_reserva_eliminar.php"+ "?idreserva=" + realIdD;
-                ControladorServicio.eliminarReservaPHP(url, ReservaEliminarActivity.this);
-                mensajes("Registro Eliminado con exito Reserva N°: "+realIdD);
+                r=ControladorServicio.eliminarReservaPHP(url, ReservaEliminarActivity.this);
 
-                //Empieza la base local
+                if(r==1){
+                    mensajes("Registro Eliminado con exito Reserva N°: "+realIdD);
+                }else {
+                    mensajes("No se  encontro la reserva N°: " + realIdD);
+                }
 
+                
                 //aceptar();
                 controlhelper.abrir();
 

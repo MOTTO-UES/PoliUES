@@ -159,7 +159,9 @@ public class ControladorServicio {
             e.printStackTrace();
         }
     }
-    public static void eliminarReservaPHP(String peticion, Context ctx) {
+
+
+   /* public static void eliminarReservaPHP(String peticion, Context ctx) {
 
         String json = obtenerRespuestaPeticion(peticion, ctx);
         try {
@@ -176,6 +178,28 @@ public class ControladorServicio {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }*/
+
+
+    public static int eliminarReservaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta = resultado.getInt("resultado");
+
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro Eliminado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro no exite",
+                        Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return respuesta;
     }
 
     public static int obtenerIdReservaJSON(String json, Context ctx) {
