@@ -3,13 +3,13 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 $CANTPERSONAS=$_REQUEST['cantPersonas'];
 $TARIFAUNITARIA=$_REQUEST['tarifaUnitaria'];
 $servidor="localhost";
-$usuario="root";
-$password="";
+$usuario="pdm115";
+$password="pdm115";
 $respuesta=array('resultado'=>0);
 json_encode($respuesta);
 $conexion=mysql_connect($servidor,$usuario,$password) or
 die ("Problemas en la conexion");
-$baseDatos="poliues";
+$baseDatos="poliues24";
 mysql_select_db($baseDatos,$conexion)
   or  die("Problemas en la seleccion de la base de datos");
 $query = "INSERT INTO TARIFA (CANTPERSONAS,TARIFAUNITARIA)VALUES(".$CANTPERSONAS.",".$TARIFAUNITARIA.");";

@@ -351,6 +351,30 @@ public class ControladorServicio {
 
     }
 
+
+    public static int insertarDeportePHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta = 0;
+
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta += resultado.getInt("resultado");
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro duplicado",
+                        Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return respuesta;
+    }
+
+
 }
 
 

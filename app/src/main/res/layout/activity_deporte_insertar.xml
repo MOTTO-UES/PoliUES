@@ -37,4 +37,12 @@
             android:onClick="limpiarTexto"
             android:text="@string/limpiarJ" />
     </TableRow>
+
+    <TableRow>
+        <Button
+            android:onClick="insertarDeporteWeb"
+            android:text="insertar localhost" />
+
+    </TableRow>
+
 </TableLayout>
