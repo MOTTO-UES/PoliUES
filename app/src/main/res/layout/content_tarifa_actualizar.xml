@@ -33,13 +33,17 @@
         <Button
             android:onClick="actualizarTarifa"
             android:text="@string/actualizar_registro" />
+
+        <Button
+            android:onClick="limpiarTexto"
+            android:text="@string/limpiar" />
     </TableRow>
 
 
     <TableRow>
         <Button
-            android:onClick="limpiarTexto"
-            android:text="@string/limpiar" />
+            android:onClick="actualizarTarifaWeb"
+            android:text="Actuailizar localhost" />
     </TableRow>
 
 </TableLayout>

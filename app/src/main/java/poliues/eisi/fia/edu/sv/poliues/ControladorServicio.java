@@ -383,7 +383,7 @@ public class ControladorServicio {
 
         try {
             JSONObject resultado = new JSONObject(json);
-            respuesta += resultado.getInt("resultado");
+            respuesta = resultado.getInt("resultado");
 
             if (respuesta == 1)
                 Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
@@ -392,6 +392,28 @@ public class ControladorServicio {
                 Toast.makeText(ctx, "Error registro duplicado",
                         Toast.LENGTH_LONG).show();
         } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return respuesta;
+    }
+
+
+    public static int actualizarTarifaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        int respuesta=0;
+
+        try {
+            JSONObject resultado = new JSONObject(json);
+            respuesta+= resultado.getInt("resultado");
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro actualizado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "no se modifico", Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
             e.printStackTrace();
         }
 

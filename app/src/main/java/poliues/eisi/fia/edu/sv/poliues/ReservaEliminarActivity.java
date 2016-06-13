@@ -78,7 +78,7 @@ public class ReservaEliminarActivity extends  AppCompatActivity {
                     mensajes("No se  encontro la reserva N°: " + realIdD);
                 }
 
-                
+
                 //aceptar();
                 controlhelper.abrir();
 

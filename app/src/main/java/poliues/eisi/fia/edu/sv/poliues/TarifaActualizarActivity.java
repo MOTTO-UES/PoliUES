@@ -1,7 +1,9 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
+@SuppressLint("NewApi")
 public class TarifaActualizarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -23,12 +25,23 @@ public class TarifaActualizarActivity extends AppCompatActivity
     EditText editTarifaUnitaria;
     Bundle admi= null;
 
+
+    Conexion conn;
+
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarifa_actualizar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        conn=new Conexion();
+
         admi = getIntent().getExtras();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -228,6 +241,19 @@ public class TarifaActualizarActivity extends AppCompatActivity
 
         editCantPersonas.setText("");
         editTarifaUnitaria.setText("");
+
+    }
+
+    public void actualizarTarifaWeb(View v){
+
+        String cantPersonas = editCantPersonas.getText().toString();
+        String tarifa = editTarifaUnitaria.getText().toString();
+
+        String url = "";
+
+        url+=conn.getURLLocal()+"/ws_tarifa_update.php"+ "?cantidadPersonas=" +cantPersonas + "&tarifaUnitaria=" +tarifa;
+
+        ControladorServicio.actualizarTarifaPHP(url, this);
 
     }
 
