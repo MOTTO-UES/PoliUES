@@ -2892,6 +2892,7 @@ containing a value of this type.
         public static final int descripcionreserva=0x7f060071;
         public static final int editar=0x7f060072;
         public static final int eliminarJ=0x7f060073;
+        public static final int eliminarJWEB=0x7f0600db;
         public static final int eliminar_registro=0x7f060074;
         public static final int entrar_principal=0x7f060075;
         public static final int entrar_principal_usuario=0x7f060076;
@@ -2909,16 +2910,16 @@ containing a value of this type.
         public static final int horarioinicioreserva=0x7f060082;
         public static final int idArea=0x7f060083;
         public static final int idDescripcion=0x7f060084;
-        public static final int idReserva=0x7f0600db;
+        public static final int idReserva=0x7f0600dc;
         public static final int idSolicitud=0x7f060085;
         public static final int iddeporte=0x7f060086;
         public static final int idtarifa=0x7f060087;
         public static final int insertar=0x7f060088;
         public static final int insertarJ=0x7f060089;
         public static final int insertarSo=0x7f06008a;
-        public static final int insertarWeb=0x7f0600dc;
+        public static final int insertarWeb=0x7f0600dd;
         public static final int insertar_registro=0x7f06008b;
-        public static final int insertar_registroWeb=0x7f0600dd;
+        public static final int insertar_registroWeb=0x7f0600de;
         public static final int limpiar=0x7f06008c;
         public static final int limpiarJ=0x7f06008d;
         public static final int limpiarS=0x7f06008e;

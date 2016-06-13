@@ -1158,6 +1158,7 @@ int string descripciondeporte 0x7f060070
 int string descripcionreserva 0x7f060071
 int string editar 0x7f060072
 int string eliminarJ 0x7f060073
+int string eliminarJWEB 0x7f0600db
 int string eliminar_registro 0x7f060074
 int string entrar_principal 0x7f060075
 int string entrar_principal_usuario 0x7f060076
@@ -1175,16 +1176,16 @@ int string horariofinreserva 0x7f060081
 int string horarioinicioreserva 0x7f060082
 int string idArea 0x7f060083
 int string idDescripcion 0x7f060084
-int string idReserva 0x7f0600db
+int string idReserva 0x7f0600dc
 int string idSolicitud 0x7f060085
 int string iddeporte 0x7f060086
 int string idtarifa 0x7f060087
 int string insertar 0x7f060088
 int string insertarJ 0x7f060089
 int string insertarSo 0x7f06008a
-int string insertarWeb 0x7f0600dc
+int string insertarWeb 0x7f0600dd
 int string insertar_registro 0x7f06008b
-int string insertar_registroWeb 0x7f0600dd
+int string insertar_registroWeb 0x7f0600de
 int string limpiar 0x7f06008c
 int string limpiarJ 0x7f06008d
 int string limpiarS 0x7f06008e

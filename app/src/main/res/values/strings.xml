@@ -151,6 +151,7 @@ en el menu lateral o en el superior</string>
     <string name="opcionesJ">Opciones:</string>
     <string name="insertarJ">Insertar</string>
     <string name="eliminarJ">Eliminar</string>
+    <string name="eliminarJWEB">Eliminar WEB</string>
     <string name="actualizarJ">Actualizar</string>
     <string name="consultarJ">Consultar</string>
     <string name="limpiarJ">Limpiar</string>

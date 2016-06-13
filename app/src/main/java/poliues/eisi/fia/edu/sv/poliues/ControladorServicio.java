@@ -398,6 +398,25 @@ public class ControladorServicio {
         return respuesta;
     }
 
+    public static void eliminarAreaPHP(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+            int respuesta = resultado.getInt("resultado");
+
+            System.out.println(respuesta);
+
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro WEB eliminado", Toast.LENGTH_LONG).show();
+
+            else
+                Toast.makeText(ctx, "Error registro WEB no existe",Toast.LENGTH_LONG).show();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static int actualizarTarifaPHP(String peticion, Context ctx) {
 

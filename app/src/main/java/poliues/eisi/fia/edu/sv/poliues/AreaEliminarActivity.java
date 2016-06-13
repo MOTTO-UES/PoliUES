@@ -1,6 +1,10 @@
 package poliues.eisi.fia.edu.sv.poliues;
 
+
 import android.app.Activity;
+
+import android.os.StrictMode;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,11 +15,17 @@ public class AreaEliminarActivity extends Activity {
 
     EditText editIdarea;
     ControlBDPoliUES controlhelper;
+    Conexion conn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_eliminar);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        conn=new Conexion();
         controlhelper=new ControlBDPoliUES(this);
         editIdarea=(EditText)findViewById(R.id.editidArea);
     }
@@ -28,5 +38,21 @@ public class AreaEliminarActivity extends Activity {
         regEliminadas=controlhelper.eliminarArea(area);
         controlhelper.cerrar();
         Toast.makeText(this, regEliminadas, Toast.LENGTH_SHORT).show();
+    }
+
+    public void eliminarAreaWeb(View v) {
+
+
+        String idArea = editIdarea.getText().toString();
+
+
+        String url = "";
+
+
+        url+=conn.getURLLocal()+"/ws_area_delete.php"+ "?idArea=" + idArea;
+
+        ControladorServicio.eliminarAreaPHP(url, this);
+
+
     }
 }
