@@ -404,6 +404,7 @@
     <string name="descripcionreserva">Descripcion:</string>
     <string name="editar">EDITAR</string>
     <string name="eliminarJ">Eliminar</string>
+    <string name="eliminarJWEB">Eliminar WEB</string>
     <string name="eliminar_registro">Eliminar Registro</string>
     <string name="entrar_principal">Puerta Trasera</string>
     <string name="entrar_principal_usuario">Puerta Trasera Usuario</string>
